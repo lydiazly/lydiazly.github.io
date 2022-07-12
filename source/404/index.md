@@ -1,9 +1,11 @@
 ---
+layout: page
 title: 404
 permalink: /404.html
+comments: false
 ---
+**Page not found :(**
 
-<p><strong>Page not found :(</strong></p>
 <pre>
 +------------------------------------------------+
 |                                                |

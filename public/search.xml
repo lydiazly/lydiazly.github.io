@@ -556,6 +556,72 @@ mayavi2<span aria-hidden="true" class="line-numbers-rows"><span></span><span></s
       <tags>
         <tag>python</tag>
         <tag>conda</tag>
+        <tag>install</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>使用 pickle 模块存取 dict</title>
+    <url>/2018/pickle/</url>
+    <content><![CDATA[<p>Python 自带一个存取 dict 到二进制文件的工具 <a href="https://docs.python.org/3/library/pickle.html">pickle</a>, 支持数值型的 key (<a href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.savez.html">numpy.savez</a> 和 <a href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.savez_compressed.html">numpy.savez_compressed</a> 只支持字符串作为 key).</p>
+<span id="more"></span>
+
+<p>用法:</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> pickle
+<span class="token comment"># 存入</span>
+pickle<span class="token punctuation">.</span>dump<span class="token punctuation">(</span>data<span class="token punctuation">,</span> <span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">"filename.p"</span><span class="token punctuation">,</span> <span class="token string">"wb"</span><span class="token punctuation">)</span><span class="token punctuation">)</span>  <span class="token comment"># type(data): dict</span>
+<span class="token comment"># 读取</span>
+data <span class="token operator">=</span> pickle<span class="token punctuation">.</span>load<span class="token punctuation">(</span><span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">"filename.p"</span><span class="token punctuation">,</span> <span class="token string">"rb"</span><span class="token punctuation">)</span><span class="token punctuation">)</span>  <span class="token comment"># 返回一个 dict</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>以下示例特地使用了数值型的 key:</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token operator">>></span><span class="token operator">></span> <span class="token keyword">import</span> pickle
+<span class="token operator">>></span><span class="token operator">></span> a <span class="token operator">=</span> <span class="token punctuation">&#123;</span><span class="token number">1.1</span><span class="token punctuation">:</span><span class="token number">1.1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">:</span><span class="token number">2</span><span class="token punctuation">&#125;</span>  <span class="token comment"># 以 float 和 int 作为 key</span>
+<span class="token operator">>></span><span class="token operator">></span> <span class="token keyword">import</span> pickle
+<span class="token operator">>></span><span class="token operator">></span> pickle<span class="token punctuation">.</span>dump<span class="token punctuation">(</span>a<span class="token punctuation">,</span> <span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">"data.p"</span><span class="token punctuation">,</span> <span class="token string">"wb"</span><span class="token punctuation">)</span><span class="token punctuation">)</span>  <span class="token comment"># 并不会自动添加后缀名</span>
+<span class="token operator">>></span><span class="token operator">></span> b <span class="token operator">=</span> pickle<span class="token punctuation">.</span>load<span class="token punctuation">(</span><span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">"data.p"</span><span class="token punctuation">,</span> <span class="token string">"rb"</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token operator">>></span><span class="token operator">></span> b<span class="token punctuation">.</span>keys<span class="token punctuation">(</span><span class="token punctuation">)</span>
+dict_keys<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">1.1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span class="token operator">>></span><span class="token operator">></span> b<span class="token punctuation">[</span><span class="token number">1.1</span><span class="token punctuation">]</span>
+<span class="token number">1.1</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>注意 <code>pickle.load()</code> 返回的类型是 dict, 但 <code>numpy.load()</code> 读取 ‘*.npz’ 文件所返回是一个可以像 dict 一样使用 key 来索引数据的 <code>numpy.lib.npyio.NpzFile</code> 对象.</p>
+<p>‘*.p’ 文件的大小和非压缩的 ‘*.npz’ (<code>numpy.savez()</code>) 一致, 然而压缩过的 ‘*.npz’ (<code>numpy.savez_compressed()</code>) 显然占用空间更小, 因此在方便的情况下 (例如 key 是字符串, 读取后直接操作数据而不需要得到一个 dict), 推荐优先使用 numpy.<br><br><br><br>如果要存入上述示例中同样的数据到 ‘*.npz’ 格式, 需要转换 key 的类型 (读取时也需要使用字符串型的 key):</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token operator">>></span><span class="token operator">></span> a <span class="token operator">=</span> <span class="token punctuation">&#123;</span><span class="token builtin">str</span><span class="token punctuation">(</span>key<span class="token punctuation">)</span><span class="token punctuation">:</span>value <span class="token keyword">for</span> key<span class="token punctuation">,</span> value <span class="token keyword">in</span> a<span class="token punctuation">.</span>items<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">&#125;</span>
+<span class="token operator">>></span><span class="token operator">></span> a
+<span class="token punctuation">&#123;</span><span class="token string">'1.1'</span><span class="token punctuation">:</span> <span class="token number">1.1</span><span class="token punctuation">,</span> <span class="token string">'2'</span><span class="token punctuation">:</span> <span class="token number">2</span><span class="token punctuation">&#125;</span>
+<span class="token operator">>></span><span class="token operator">></span> np<span class="token punctuation">.</span>savez_compressed<span class="token punctuation">(</span><span class="token string">'data2'</span><span class="token punctuation">,</span> <span class="token operator">**</span>a<span class="token punctuation">)</span>  <span class="token comment"># 会自动添加后缀名, 得到 'data2.npz'</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<!-- ---
+
+其他数据存取教程:
+
+- [Python 简易教程 (for Solar Group)](/main.html#4-常见数据文件读写)
+<ul>
+<li><p>[4.1. 一般情况](&#x2F;main.html#41-一般情况)</p>
+</li>
+<li><p>[4.2. txt, csv 文件读写](&#x2F;main.html#42-txt-csv-文件读写)</p>
+</li>
+<li><p>[4.3. numpy save 文件读写](&#x2F;main.html#43-numpy-save-文件读写)</p>
+</li>
+<li><p>[4.4. IDL sav 文件读取](&#x2F;main.html#44-idl-sav-文件读取)</p>
+</li>
+<li><p>[4.5. FITS 文件读取](&#x2F;main.html#45-fits-文件读取)</p>
+</li>
+<li><p>[Python 进阶 (for Solar Group)](&#x2F;advance.html#9-其他格式文件读写)</p>
+<ul>
+<li>[9.1. 用 pandas 读 csv](&#x2F;advance.html#91-用-pandas-读-csv)</li>
+<li>[9.2. Fortran 二进制文件读写](&#x2F;advance.html#92-fortran-二进制文件读写)</li>
+<li>[9.3. HDF5 文件读写, NCDF, CDF 文件读取](&#x2F;advance.html#93-hdf5-文件读写  -ncdf-cdf-文件读取)</li>
+<li>[9.4. NumPy to VTK](&#x2F;advance.html#94-numpy-to-vtk)</li>
+<li>[9.5. Matlab mat 文件读写](&#x2F;advance.html#95-matlab-mat-文件读写) –&gt;</li>
+</ul>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>python</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
       </tags>
   </entry>
   <entry>
@@ -658,68 +724,10 @@ a <span class="token operator">=</span> <span class="token number">1</span><span
       </tags>
   </entry>
   <entry>
-    <title>使用 pickle 模块存取 dict</title>
-    <url>/2018/pickle/</url>
-    <content><![CDATA[<p>Python 自带一个存取 dict 到二进制文件的工具 <a href="https://docs.python.org/3/library/pickle.html">pickle</a>, 支持数值型的 key (<a href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.savez.html">numpy.savez</a> 和 <a href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.savez_compressed.html">numpy.savez_compressed</a> 只支持字符串作为 key).</p>
-<span id="more"></span>
-
-<p>用法:</p>
-<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> pickle
-<span class="token comment"># 存入</span>
-pickle<span class="token punctuation">.</span>dump<span class="token punctuation">(</span>data<span class="token punctuation">,</span> <span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">"filename.p"</span><span class="token punctuation">,</span> <span class="token string">"wb"</span><span class="token punctuation">)</span><span class="token punctuation">)</span>  <span class="token comment"># type(data): dict</span>
-<span class="token comment"># 读取</span>
-data <span class="token operator">=</span> pickle<span class="token punctuation">.</span>load<span class="token punctuation">(</span><span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">"filename.p"</span><span class="token punctuation">,</span> <span class="token string">"rb"</span><span class="token punctuation">)</span><span class="token punctuation">)</span>  <span class="token comment"># 返回一个 dict</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p>以下示例特地使用了数值型的 key:</p>
-<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token operator">>></span><span class="token operator">></span> <span class="token keyword">import</span> pickle
-<span class="token operator">>></span><span class="token operator">></span> a <span class="token operator">=</span> <span class="token punctuation">&#123;</span><span class="token number">1.1</span><span class="token punctuation">:</span><span class="token number">1.1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">:</span><span class="token number">2</span><span class="token punctuation">&#125;</span>  <span class="token comment"># 以 float 和 int 作为 key</span>
-<span class="token operator">>></span><span class="token operator">></span> <span class="token keyword">import</span> pickle
-<span class="token operator">>></span><span class="token operator">></span> pickle<span class="token punctuation">.</span>dump<span class="token punctuation">(</span>a<span class="token punctuation">,</span> <span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">"data.p"</span><span class="token punctuation">,</span> <span class="token string">"wb"</span><span class="token punctuation">)</span><span class="token punctuation">)</span>  <span class="token comment"># 并不会自动添加后缀名</span>
-<span class="token operator">>></span><span class="token operator">></span> b <span class="token operator">=</span> pickle<span class="token punctuation">.</span>load<span class="token punctuation">(</span><span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">"data.p"</span><span class="token punctuation">,</span> <span class="token string">"rb"</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
-<span class="token operator">>></span><span class="token operator">></span> b<span class="token punctuation">.</span>keys<span class="token punctuation">(</span><span class="token punctuation">)</span>
-dict_keys<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">1.1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
-<span class="token operator">>></span><span class="token operator">></span> b<span class="token punctuation">[</span><span class="token number">1.1</span><span class="token punctuation">]</span>
-<span class="token number">1.1</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p>注意 <code>pickle.load()</code> 返回的类型是 dict, 但 <code>numpy.load()</code> 读取 ‘*.npz’ 文件所返回是一个可以像 dict 一样使用 key 来索引数据的 <code>numpy.lib.npyio.NpzFile</code> 对象.</p>
-<p>‘*.p’ 文件的大小和非压缩的 ‘*.npz’ (<code>numpy.savez()</code>) 一致, 然而压缩过的 ‘*.npz’ (<code>numpy.savez_compressed()</code>) 显然占用空间更小, 因此在方便的情况下 (例如 key 是字符串, 读取后直接操作数据而不需要得到一个 dict), 推荐优先使用 numpy.<br><br><br><br>如果要存入上述示例中同样的数据到 ‘*.npz’ 格式, 需要转换 key 的类型 (读取时也需要使用字符串型的 key):</p>
-<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token operator">>></span><span class="token operator">></span> a <span class="token operator">=</span> <span class="token punctuation">&#123;</span><span class="token builtin">str</span><span class="token punctuation">(</span>key<span class="token punctuation">)</span><span class="token punctuation">:</span>value <span class="token keyword">for</span> key<span class="token punctuation">,</span> value <span class="token keyword">in</span> a<span class="token punctuation">.</span>items<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">&#125;</span>
-<span class="token operator">>></span><span class="token operator">></span> a
-<span class="token punctuation">&#123;</span><span class="token string">'1.1'</span><span class="token punctuation">:</span> <span class="token number">1.1</span><span class="token punctuation">,</span> <span class="token string">'2'</span><span class="token punctuation">:</span> <span class="token number">2</span><span class="token punctuation">&#125;</span>
-<span class="token operator">>></span><span class="token operator">></span> np<span class="token punctuation">.</span>savez_compressed<span class="token punctuation">(</span><span class="token string">'data2'</span><span class="token punctuation">,</span> <span class="token operator">**</span>a<span class="token punctuation">)</span>  <span class="token comment"># 会自动添加后缀名, 得到 'data2.npz'</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-
-<!-- ---
-
-其他数据存取教程:
-
-- [Python 简易教程 (for Solar Group)](/main.html#4-常见数据文件读写)
-<ul>
-<li><p>[4.1. 一般情况](&#x2F;main.html#41-一般情况)</p>
-</li>
-<li><p>[4.2. txt, csv 文件读写](&#x2F;main.html#42-txt-csv-文件读写)</p>
-</li>
-<li><p>[4.3. numpy save 文件读写](&#x2F;main.html#43-numpy-save-文件读写)</p>
-</li>
-<li><p>[4.4. IDL sav 文件读取](&#x2F;main.html#44-idl-sav-文件读取)</p>
-</li>
-<li><p>[4.5. FITS 文件读取](&#x2F;main.html#45-fits-文件读取)</p>
-</li>
-<li><p>[Python 进阶 (for Solar Group)](&#x2F;advance.html#9-其他格式文件读写)</p>
-<ul>
-<li>[9.1. 用 pandas 读 csv](&#x2F;advance.html#91-用-pandas-读-csv)</li>
-<li>[9.2. Fortran 二进制文件读写](&#x2F;advance.html#92-fortran-二进制文件读写)</li>
-<li>[9.3. HDF5 文件读写, NCDF, CDF 文件读取](&#x2F;advance.html#93-hdf5-文件读写  -ncdf-cdf-文件读取)</li>
-<li>[9.4. NumPy to VTK](&#x2F;advance.html#94-numpy-to-vtk)</li>
-<li>[9.5. Matlab mat 文件读写](&#x2F;advance.html#95-matlab-mat-文件读写) –&gt;</li>
-</ul>
-</li>
-</ul>
+    <title>Coming back soon ...</title>
+    <url>/2022/Coming-back-soon/</url>
+    <content><![CDATA[<p>I’m keep on restoring my old posts, as the original site has not been accessable for quit a long time.</p>
+<p>See you later~</p>
 ]]></content>
-      <categories>
-        <category>python</category>
-      </categories>
-      <tags>
-        <tag>python</tag>
-      </tags>
   </entry>
 </search>

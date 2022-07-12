@@ -1,7 +1,7 @@
 ---
 title: "Python 安装和配置"
 categories: python
-tags: [python, conda]
+tags: [python, conda, install]
 date: 2018-07-02 20:45:13
 ---
 
