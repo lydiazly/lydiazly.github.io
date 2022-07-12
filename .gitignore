@@ -1,5 +1,6 @@
 **/.ipynb_checkpoints
 *Thumbs.db
+/.deploy_git
 
 # Logs
 logs

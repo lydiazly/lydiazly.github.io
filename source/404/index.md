@@ -1,6 +1,6 @@
 ---
 title: 404
-date: 2022-07-12 21:20:51
+permalink: /404.html
 ---
 
 <p><strong>Page not found :(</strong></p>

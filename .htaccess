@@ -1,0 +1,4 @@
+RewriteEngine On
+RewriteBase /
+RewriteCond %{HTTP_HOST} !lydiazly.coding.me/python-notes$ [NC]
+RewriteRule ^(.*)$ https://lydiazly.github.io/$1 [L,R=301]
