@@ -558,4 +558,168 @@ mayavi2<span aria-hidden="true" class="line-numbers-rows"><span></span><span></s
         <tag>conda</tag>
       </tags>
   </entry>
+  <entry>
+    <title>Python 的脚本与交互式环境</title>
+    <url>/2018/scripts-and-interactive-mode/</url>
+    <content><![CDATA[<p>目的是从交互环境调用脚本产生的变量, 可用于调试脚本和测试数据等等.</p>
+<span id="more"></span>
+
+<p>比如当前目录下有一个包含如下内容的脚本:</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment">#!/usr/bin/env python</span>
+a<span class="token operator">=</span><span class="token number">1</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'a ='</span><span class="token punctuation">,</span> a<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="方法-1-shell-gt-interactive-mode-推荐"><a href="#方法-1-shell-gt-interactive-mode-推荐" class="headerlink" title="方法 1. shell -&gt; interactive mode (推荐)"></a>方法 1. shell -&gt; interactive mode (推荐)</h3><p>使用 <code>-i</code> 选项:</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># shell</span>
+$ python -i test.py<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p>执行结束随即进入 python 交互环境, 并且保留了脚本中定义的变量:</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># python</span>
+a <span class="token operator">=</span> <span class="token number">1</span>
+<span class="token operator">>></span><span class="token operator">></span> a
+<span class="token number">1</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="方法-2-In-ipython-x2F-jupyter-第二推荐"><a href="#方法-2-In-ipython-x2F-jupyter-第二推荐" class="headerlink" title="方法 2. In ipython &#x2F; jupyter (第二推荐)"></a>方法 2. In ipython &#x2F; jupyter (第二推荐)</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># ipython</span>
+In <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">:</span> <span class="token operator">%</span>run test<span class="token punctuation">.</span>py
+a <span class="token operator">=</span> <span class="token number">1</span>
+
+In <span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">:</span> a
+Out<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">:</span> <span class="token number">1</span>
+
+In <span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">:</span> <span class="token operator">%</span>who
+a
+
+In <span class="token punctuation">[</span><span class="token number">4</span><span class="token punctuation">]</span><span class="token punctuation">:</span> <span class="token operator">%</span>whos
+Variable   Type    Data<span class="token operator">/</span>Info
+<span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span>
+a          <span class="token builtin">int</span>     <span class="token number">1</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="方法-3-In-interactive-mode"><a href="#方法-3-In-interactive-mode" class="headerlink" title="方法 3. In interactive mode"></a>方法 3. In interactive mode</h3><blockquote>
+<p><strong>NOTE</strong>: Python 3 取消了 <code>execfile()</code> 这个函数! 如今使用 <code>exec()</code>.</p>
+</blockquote>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># python</span>
+<span class="token operator">>></span><span class="token operator">></span> <span class="token keyword">exec</span><span class="token punctuation">(</span><span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">'test.py'</span><span class="token punctuation">)</span><span class="token punctuation">.</span>read<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+a <span class="token operator">=</span> <span class="token number">1</span>
+<span class="token operator">>></span><span class="token operator">></span> a
+<span class="token number">1</span>
+<span class="token operator">>></span><span class="token operator">></span> <span class="token string">'a'</span> <span class="token keyword">in</span> <span class="token builtin">dir</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token boolean">True</span>
+<span class="token operator">>></span><span class="token operator">></span> <span class="token builtin">globals</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token string">'a'</span><span class="token punctuation">]</span>  <span class="token comment"># same as vars()['a']</span>
+<span class="token number">1</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>但这之后文件并没有关闭, 虽然多数时候没有影响, 但如果实在要关闭, 建议使用 <code>with</code> :</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># python</span>
+<span class="token keyword">with</span> <span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">'test.py'</span><span class="token punctuation">)</span> <span class="token keyword">as</span> f<span class="token punctuation">:</span>
+    <span class="token keyword">exec</span><span class="token punctuation">(</span>f<span class="token punctuation">.</span>read<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>  <span class="token comment"># ctrl+D to exit the block</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<p>总之十分不方便, 因此不推荐.<br><br><br><br>对于没有使用 <code>if __name__ == &quot;__main__&quot;</code> 的脚本, 当脚本处在当前目录或 <code>$PYTHONPATH</code> 中时, 也可以有比较方便的办法<br>(<br>注意这里因为是调用 module 的形式, 所以不要加 ‘.py’ ):</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># python</span>
+<span class="token operator">>></span><span class="token operator">></span> <span class="token keyword">import</span> test
+a <span class="token operator">=</span> <span class="token number">1</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<br>
+补充说明在 python 交互环境中查看当前环境中的变量的方法 (ipython / jupyter 使用 `%who`, `%whos` 即可):
+
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token builtin">dir</span><span class="token punctuation">(</span><span class="token punctuation">)</span>  <span class="token comment"># without an argument, return the names in the current scope</span>
+<span class="token builtin">globals</span><span class="token punctuation">(</span><span class="token punctuation">)</span>  <span class="token comment"># a dictionary containing the current scope's global variables</span>
+<span class="token builtin">locals</span><span class="token punctuation">(</span><span class="token punctuation">)</span>  <span class="token comment"># a dictionary containing the current scope's local variables</span>
+<span class="token builtin">vars</span><span class="token punctuation">(</span><span class="token punctuation">)</span>  <span class="token comment"># without arguments, equivalent to locals();</span>
+        <span class="token comment"># with an argument, equivalent to object.__dict__.</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+]]></content>
+      <categories>
+        <category>python</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Pandas sep=&#39;\s+&#39; 的问题</title>
+    <url>/2018/pandas-sep/</url>
+    <content><![CDATA[<p>Pandas 的 <code>read_table</code>(<a href="https://pandas.pydata.org/pandas-docs/stable/generated/pandas.read_table.html">官方文档</a>)<br>和 <code>read_csv</code>(<a href="https://pandas.pydata.org/pandas-docs/stable/generated/pandas.read_csv.html">官方文档</a>)<br>(指定分隔符的情况下两者无区别),<br>有关键字 <code>sep=</code> (<code>read_table</code> 默认为 <code>sep=&#39;\t&#39;</code>, <code>read_csv</code> 默认为 <code>sep=&#39;,&#39;</code>).</p>
+<p>但当需要指定多个空格的情况下, 指定 <code>sep=&#39;\s+&#39;</code> 可能无法被正确识别.</p>
+<span id="more"></span>
+
+<p>请使用 <strong><code>&#39; +&#39;</code></strong> 代替.</p>
+<p>官方文档中关于 <code>sep</code> 关键字的说明有如下描述:</p>
+<blockquote>
+<p>In addition, separators longer than 1 character and<br><strong>different from <code>&#39;\s+&#39;</code></strong> will be interpreted as regular expressions and<br>will also force the use of the Python parsing engine.</p>
+</blockquote>
+<p>指定 <code>sep=&#39;\s+&#39;</code> 可能无法被正确识别, </p>
+<p>暂时的办法是:<br><br>加上参数 <code>engine=&#39;python&#39;</code>, 或使用 <strong><code>&#39; +&#39;</code></strong> 代替 (此时 <code>engine=&#39;python&#39;</code>).<br><br>如果设为 <code>engine=&#39;c&#39;</code>, 速度较快, 但不便识别正则表达, 追求效率的话可以配合使用:<br><br><code>quoting=3</code> (即使用 <code>csv.QUOTE_NONE</code>)</p>
+<hr>
+<!-- Pandas 的读取方法简单介绍参见:
+[用 pandas 读 csv](/advance.html#91-用-pandas-读-csv) -->]]></content>
+      <categories>
+        <category>python</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>使用 pickle 模块存取 dict</title>
+    <url>/2018/pickle/</url>
+    <content><![CDATA[<p>Python 自带一个存取 dict 到二进制文件的工具 <a href="https://docs.python.org/3/library/pickle.html">pickle</a>, 支持数值型的 key (<a href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.savez.html">numpy.savez</a> 和 <a href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.savez_compressed.html">numpy.savez_compressed</a> 只支持字符串作为 key).</p>
+<span id="more"></span>
+
+<p>用法:</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> pickle
+<span class="token comment"># 存入</span>
+pickle<span class="token punctuation">.</span>dump<span class="token punctuation">(</span>data<span class="token punctuation">,</span> <span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">"filename.p"</span><span class="token punctuation">,</span> <span class="token string">"wb"</span><span class="token punctuation">)</span><span class="token punctuation">)</span>  <span class="token comment"># type(data): dict</span>
+<span class="token comment"># 读取</span>
+data <span class="token operator">=</span> pickle<span class="token punctuation">.</span>load<span class="token punctuation">(</span><span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">"filename.p"</span><span class="token punctuation">,</span> <span class="token string">"rb"</span><span class="token punctuation">)</span><span class="token punctuation">)</span>  <span class="token comment"># 返回一个 dict</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>以下示例特地使用了数值型的 key:</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token operator">>></span><span class="token operator">></span> <span class="token keyword">import</span> pickle
+<span class="token operator">>></span><span class="token operator">></span> a <span class="token operator">=</span> <span class="token punctuation">&#123;</span><span class="token number">1.1</span><span class="token punctuation">:</span><span class="token number">1.1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">:</span><span class="token number">2</span><span class="token punctuation">&#125;</span>  <span class="token comment"># 以 float 和 int 作为 key</span>
+<span class="token operator">>></span><span class="token operator">></span> <span class="token keyword">import</span> pickle
+<span class="token operator">>></span><span class="token operator">></span> pickle<span class="token punctuation">.</span>dump<span class="token punctuation">(</span>a<span class="token punctuation">,</span> <span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">"data.p"</span><span class="token punctuation">,</span> <span class="token string">"wb"</span><span class="token punctuation">)</span><span class="token punctuation">)</span>  <span class="token comment"># 并不会自动添加后缀名</span>
+<span class="token operator">>></span><span class="token operator">></span> b <span class="token operator">=</span> pickle<span class="token punctuation">.</span>load<span class="token punctuation">(</span><span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">"data.p"</span><span class="token punctuation">,</span> <span class="token string">"rb"</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token operator">>></span><span class="token operator">></span> b<span class="token punctuation">.</span>keys<span class="token punctuation">(</span><span class="token punctuation">)</span>
+dict_keys<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">1.1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span class="token operator">>></span><span class="token operator">></span> b<span class="token punctuation">[</span><span class="token number">1.1</span><span class="token punctuation">]</span>
+<span class="token number">1.1</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>注意 <code>pickle.load()</code> 返回的类型是 dict, 但 <code>numpy.load()</code> 读取 ‘*.npz’ 文件所返回是一个可以像 dict 一样使用 key 来索引数据的 <code>numpy.lib.npyio.NpzFile</code> 对象.</p>
+<p>‘*.p’ 文件的大小和非压缩的 ‘*.npz’ (<code>numpy.savez()</code>) 一致, 然而压缩过的 ‘*.npz’ (<code>numpy.savez_compressed()</code>) 显然占用空间更小, 因此在方便的情况下 (例如 key 是字符串, 读取后直接操作数据而不需要得到一个 dict), 推荐优先使用 numpy.<br><br><br><br>如果要存入上述示例中同样的数据到 ‘*.npz’ 格式, 需要转换 key 的类型 (读取时也需要使用字符串型的 key):</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token operator">>></span><span class="token operator">></span> a <span class="token operator">=</span> <span class="token punctuation">&#123;</span><span class="token builtin">str</span><span class="token punctuation">(</span>key<span class="token punctuation">)</span><span class="token punctuation">:</span>value <span class="token keyword">for</span> key<span class="token punctuation">,</span> value <span class="token keyword">in</span> a<span class="token punctuation">.</span>items<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">&#125;</span>
+<span class="token operator">>></span><span class="token operator">></span> a
+<span class="token punctuation">&#123;</span><span class="token string">'1.1'</span><span class="token punctuation">:</span> <span class="token number">1.1</span><span class="token punctuation">,</span> <span class="token string">'2'</span><span class="token punctuation">:</span> <span class="token number">2</span><span class="token punctuation">&#125;</span>
+<span class="token operator">>></span><span class="token operator">></span> np<span class="token punctuation">.</span>savez_compressed<span class="token punctuation">(</span><span class="token string">'data2'</span><span class="token punctuation">,</span> <span class="token operator">**</span>a<span class="token punctuation">)</span>  <span class="token comment"># 会自动添加后缀名, 得到 'data2.npz'</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<!-- ---
+
+其他数据存取教程:
+
+- [Python 简易教程 (for Solar Group)](/main.html#4-常见数据文件读写)
+<ul>
+<li><p>[4.1. 一般情况](&#x2F;main.html#41-一般情况)</p>
+</li>
+<li><p>[4.2. txt, csv 文件读写](&#x2F;main.html#42-txt-csv-文件读写)</p>
+</li>
+<li><p>[4.3. numpy save 文件读写](&#x2F;main.html#43-numpy-save-文件读写)</p>
+</li>
+<li><p>[4.4. IDL sav 文件读取](&#x2F;main.html#44-idl-sav-文件读取)</p>
+</li>
+<li><p>[4.5. FITS 文件读取](&#x2F;main.html#45-fits-文件读取)</p>
+</li>
+<li><p>[Python 进阶 (for Solar Group)](&#x2F;advance.html#9-其他格式文件读写)</p>
+<ul>
+<li>[9.1. 用 pandas 读 csv](&#x2F;advance.html#91-用-pandas-读-csv)</li>
+<li>[9.2. Fortran 二进制文件读写](&#x2F;advance.html#92-fortran-二进制文件读写)</li>
+<li>[9.3. HDF5 文件读写, NCDF, CDF 文件读取](&#x2F;advance.html#93-hdf5-文件读写  -ncdf-cdf-文件读取)</li>
+<li>[9.4. NumPy to VTK](&#x2F;advance.html#94-numpy-to-vtk)</li>
+<li>[9.5. Matlab mat 文件读写](&#x2F;advance.html#95-matlab-mat-文件读写) –&gt;</li>
+</ul>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>python</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+      </tags>
+  </entry>
 </search>
