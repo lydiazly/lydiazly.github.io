@@ -1,0 +1,1 @@
+Figures included in posts converted by jupyter notebooks.

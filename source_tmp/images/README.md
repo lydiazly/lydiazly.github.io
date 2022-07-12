@@ -1,0 +1,1 @@
+Output figures in posts converted by jupyter notebooks.
