@@ -1,0 +1,3 @@
+<!-- In 'xxx.md' -->
+{% include_code download-main.md %}
+<!-- more -->
