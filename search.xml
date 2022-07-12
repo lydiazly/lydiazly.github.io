@@ -634,30 +634,6 @@ a <span class="token operator">=</span> <span class="token number">1</span><span
       </tags>
   </entry>
   <entry>
-    <title>Pandas sep=&#39;\s+&#39; 的问题</title>
-    <url>/2018/pandas-sep/</url>
-    <content><![CDATA[<p>Pandas 的 <code>read_table</code>(<a href="https://pandas.pydata.org/pandas-docs/stable/generated/pandas.read_table.html">官方文档</a>)<br>和 <code>read_csv</code>(<a href="https://pandas.pydata.org/pandas-docs/stable/generated/pandas.read_csv.html">官方文档</a>)<br>(指定分隔符的情况下两者无区别),<br>有关键字 <code>sep=</code> (<code>read_table</code> 默认为 <code>sep=&#39;\t&#39;</code>, <code>read_csv</code> 默认为 <code>sep=&#39;,&#39;</code>).</p>
-<p>但当需要指定多个空格的情况下, 指定 <code>sep=&#39;\s+&#39;</code> 可能无法被正确识别.</p>
-<span id="more"></span>
-
-<p>请使用 <strong><code>&#39; +&#39;</code></strong> 代替.</p>
-<p>官方文档中关于 <code>sep</code> 关键字的说明有如下描述:</p>
-<blockquote>
-<p>In addition, separators longer than 1 character and<br><strong>different from <code>&#39;\s+&#39;</code></strong> will be interpreted as regular expressions and<br>will also force the use of the Python parsing engine.</p>
-</blockquote>
-<p>指定 <code>sep=&#39;\s+&#39;</code> 可能无法被正确识别, </p>
-<p>暂时的办法是:<br><br>加上参数 <code>engine=&#39;python&#39;</code>, 或使用 <strong><code>&#39; +&#39;</code></strong> 代替 (此时 <code>engine=&#39;python&#39;</code>).<br><br>如果设为 <code>engine=&#39;c&#39;</code>, 速度较快, 但不便识别正则表达, 追求效率的话可以配合使用:<br><br><code>quoting=3</code> (即使用 <code>csv.QUOTE_NONE</code>)</p>
-<hr>
-<!-- Pandas 的读取方法简单介绍参见:
-[用 pandas 读 csv](/advance.html#91-用-pandas-读-csv) -->]]></content>
-      <categories>
-        <category>python</category>
-      </categories>
-      <tags>
-        <tag>python</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>使用 pickle 模块存取 dict</title>
     <url>/2018/pickle/</url>
     <content><![CDATA[<p>Python 自带一个存取 dict 到二进制文件的工具 <a href="https://docs.python.org/3/library/pickle.html">pickle</a>, 支持数值型的 key (<a href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.savez.html">numpy.savez</a> 和 <a href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.savez_compressed.html">numpy.savez_compressed</a> 只支持字符串作为 key).</p>
@@ -715,6 +691,30 @@ dict_keys<span class="token punctuation">(</span><span class="token punctuation"
 </li>
 </ul>
 ]]></content>
+      <categories>
+        <category>python</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Pandas sep=&#39;\s+&#39; 的问题</title>
+    <url>/2018/pandas-sep/</url>
+    <content><![CDATA[<p>Pandas 的 <code>read_table</code>(<a href="https://pandas.pydata.org/pandas-docs/stable/generated/pandas.read_table.html">官方文档</a>)<br>和 <code>read_csv</code>(<a href="https://pandas.pydata.org/pandas-docs/stable/generated/pandas.read_csv.html">官方文档</a>)<br>(指定分隔符的情况下两者无区别),<br>有关键字 <code>sep=</code> (<code>read_table</code> 默认为 <code>sep=&#39;\t&#39;</code>, <code>read_csv</code> 默认为 <code>sep=&#39;,&#39;</code>).</p>
+<p>但当需要指定多个空格的情况下, 指定 <code>sep=&#39;\s+&#39;</code> 可能无法被正确识别.</p>
+<span id="more"></span>
+
+<p>请使用 <strong><code>&#39; +&#39;</code></strong> 代替.</p>
+<p>官方文档中关于 <code>sep</code> 关键字的说明有如下描述:</p>
+<blockquote>
+<p>In addition, separators longer than 1 character and<br><strong>different from <code>&#39;\s+&#39;</code></strong> will be interpreted as regular expressions and<br>will also force the use of the Python parsing engine.</p>
+</blockquote>
+<p>指定 <code>sep=&#39;\s+&#39;</code> 可能无法被正确识别, </p>
+<p>暂时的办法是:<br><br>加上参数 <code>engine=&#39;python&#39;</code>, 或使用 <strong><code>&#39; +&#39;</code></strong> 代替 (此时 <code>engine=&#39;python&#39;</code>).<br><br>如果设为 <code>engine=&#39;c&#39;</code>, 速度较快, 但不便识别正则表达, 追求效率的话可以配合使用:<br><br><code>quoting=3</code> (即使用 <code>csv.QUOTE_NONE</code>)</p>
+<hr>
+<!-- Pandas 的读取方法简单介绍参见:
+[用 pandas 读 csv](/advance.html#91-用-pandas-读-csv) -->]]></content>
       <categories>
         <category>python</category>
       </categories>
