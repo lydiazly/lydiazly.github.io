@@ -19,31 +19,29 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"lydiazly.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.12.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":"mac"},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"manual","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="Welcome! This is Lydia Zhang. This blog is about my notes of Python, basically related to solar physics, but not restricted. Some of the posts and Jupyter notebooks (in Chinese) are backups of my two">
+    <meta name="description" content="Pandas 的 read_table (官方文档) 和 read_csv (官方文档) (指定分隔符的情况下两者无区别), 有关键字 sep&#x3D; (read_table 默认为 sep&#x3D;&#39;\t&#39;, read_csv 默认为 sep&#x3D;&#39;,&#39;). 但当需要指定多个空格的情况下, 指定 sep&#x3D;&#39;\s+&#39; 可能无法被正确识别.">
 <meta property="og:type" content="blog">
-<meta property="og:title" content="About">
-<meta property="og:url" content="https://lydiazly.github.io/about/index.html">
+<meta property="og:title" content="Pandas sep&#x3D;&#39;\s+&#39; 的问题">
+<meta property="og:url" content="https://lydiazly.github.io/2018-12-04-pandas-sep">
 <meta property="og:site_name" content="Lydia&#39;s notes">
-<meta property="og:description" content="Welcome! This is Lydia Zhang. This blog is about my notes of Python, basically related to solar physics, but not restricted. Some of the posts and Jupyter notebooks (in Chinese) are backups of my two">
+<meta property="og:description" content="Pandas 的 read_table (官方文档) 和 read_csv (官方文档) (指定分隔符的情况下两者无区别), 有关键字 sep&#x3D; (read_table 默认为 sep&#x3D;&#39;\t&#39;, read_csv 默认为 sep&#x3D;&#39;,&#39;). 但当需要指定多个空格的情况下, 指定 sep&#x3D;&#39;\s+&#39; 可能无法被正确识别.">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://i.creativecommons.org/l/by-sa/4.0/88x31.png">
-<meta property="article:published_time" content="2022-07-14T03:28:03.390Z">
-<meta property="article:modified_time" content="2022-07-14T03:28:03.390Z">
+<meta property="article:published_time" content="2018-12-04T09:00:03.000Z">
+<meta property="article:modified_time" content="2018-12-04T09:00:03.000Z">
 <meta property="article:author" content="Lydia Zhang">
-<meta property="article:tag" content="python, coding">
+<meta property="article:tag" content="python">
+<meta property="article:tag" content="pandas">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://i.creativecommons.org/l/by-sa/4.0/88x31.png">
 
 
-<link rel="canonical" href="https://lydiazly.github.io/about/">
+<link rel="canonical" href="https://lydiazly.github.io/2018-12-04-pandas-sep.html">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":false,"lang":"en","comments":"","permalink":"https://lydiazly.github.io/about/index.html","path":"about/index.html","title":"About"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"https://lydiazly.github.io/2018-12-04-pandas-sep","path":"2018-12-04-pandas-sep.html","title":"Pandas sep='\\s+' 的问题"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>About | Lydia's notes
-</title>
+<title>Pandas sep='\s+' 的问题 | Lydia's notes</title>
   
 
 
@@ -207,46 +205,128 @@
 </noscript>
 
 
-    <div class="main-inner page posts-expand">
+    <div class="main-inner post posts-expand">
 
 
-    
-    
-    
-    <div class="post-block" lang="en"><header class="post-header">
+  
 
-<h1 class="post-title" itemprop="name headline">About
-</h1>
 
-<div class="post-meta-container">
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://lydiazly.github.io/2018-12-04-pandas-sep">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Lydia Zhang">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Lydia's notes">
+      <meta itemprop="description" content="Tips of Python, etc.">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="Pandas sep='\s+' 的问题 | Lydia's notes">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Pandas sep='\s+' 的问题
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2018-12-04 17:00:03" itemprop="dateCreated datePublished" datetime="2018-12-04T17:00:03+08:00">2018-12-04</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Solar-Physics/" itemprop="url" rel="index"><span itemprop="name">Solar Physics</span></a>
+        </span>
+    </span>
+
+  
 </div>
 
-</header>
+        </div>
+      </header>
 
-      
-      
-      <div class="post-body">
-          <p>Welcome! This is Lydia Zhang. This blog is about my notes of Python,
-basically related to solar physics, but not restricted.</p>
-<p>Some of the posts and Jupyter notebooks (in Chinese) are backups of
-my two Python lectures in 2018 when I was in the Solar Physics Group,
-Nanjing University. The lectures are given to students, as well as
-researchers who are new to Python or SunPy. The contents are based on my
-own research experience. Hope they help.</p>
-<p>Custom scripts and modules are just examples. Due to the development
-of SciPy, Astropy, and SunPy, some user-defined functions may no longer
-be necessary.</p>
-<p>Please contact me if you have any questions. :)</p>
-<!-- <a rel="license noopener" target="_blank" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license noopener" target="_blank" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>. -->
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p>Pandas 的 <code>read_table</code> (<a
+target="_blank" rel="noopener" href="https://pandas.pydata.org/pandas-docs/stable/generated/pandas.read_table.html">官方文档</a>)
+和 <code>read_csv</code> (<a
+target="_blank" rel="noopener" href="https://pandas.pydata.org/pandas-docs/stable/generated/pandas.read_csv.html">官方文档</a>)
+(指定分隔符的情况下两者无区别), 有关键字 <code>sep=</code>
+(<code>read_table</code> 默认为 <code>sep='\t'</code>,
+<code>read_csv</code> 默认为 <code>sep=','</code>).</p>
+<p>但当需要指定多个空格的情况下, 指定 <code>sep='\s+'</code>
+可能无法被正确识别. <span id="more"></span></p>
+<p>请使用 <strong><code>' +'</code></strong> 代替.</p>
+<p>官方文档中关于 <code>sep</code> 关键字的说明有如下描述:</p>
+<blockquote>
+<p>In addition, separators longer than 1 character and <strong>different
+from <code>'\s+'</code></strong> will be interpreted as regular
+expressions and will also force the use of the Python parsing
+engine.</p>
+</blockquote>
+<p>指定 <code>sep='\s+'</code> 可能无法被正确识别,</p>
+<p>暂时的办法是:<br> 加上参数 <code>engine='python'</code>, 或使用
+<strong><code>' +'</code></strong> 代替 (此时
+<code>engine='python'</code>).<br> 如果设为 <code>engine='c'</code>,
+速度较快, 但不便识别正则表达, 追求效率的话可以配合使用:<br>
+<code>quoting=3</code> (即使用 <code>csv.QUOTE_NONE</code>)</p>
+<hr />
+<p>Pandas 的读取方法简单介绍参见: <a
+href="advance.html#91-用-pandas-读-csv">用 pandas 读 csv</a></p>
 
-      </div>
-      
-      
-      
     </div>
 
     
     
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/python/" rel="tag"># python</a>
+              <a href="/tags/pandas/" rel="tag"># pandas</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2018-10-20-pickle" rel="prev" title="使用 pickle 模块存取 dict">
+                  <i class="fa fa-chevron-left"></i> 使用 pickle 模块存取 dict
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2022-07-12-Coming-back-soon" rel="next" title="Coming back soon ...">
+                  Coming back soon ... <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
 
 
 </div>
