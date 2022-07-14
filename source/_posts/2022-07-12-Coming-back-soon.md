@@ -1,8 +1,10 @@
 ---
-title: "Coming back soon ..."
+title: "Coming back"
 date: 2022-07-12 23:39:03
 sticky: 100
 ---
-I'm keep on restoring my old posts, as the original site has not been accessable for quit a long time.
+Welcome!
 
-See you later~
+The posts in my old blog have been transferred here (the original site has not been accessible for quit a long time).
+
+I'm working on something new. See you later ~
