@@ -18,7 +18,7 @@ Ubuntu 16.04 LTS
 
 Date|Python|Sunpy|NumPy|SciPy|Matplotlib|Astropy|Pandas
 :---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:
-2018-10-13|3.6.6|**0.9.3**|1.15.2|1.1.0|3.0.0|3.0.4|0.23.4highlight 
+2018-10-13|3.6.6|**0.9.3**|1.15.2|1.1.0|3.0.0|3.0.4|0.23.4
 
 - Add `aiaprep_usr()`.
 - Change parameter list of `plot_map()`, `plot_vmap()`, `proj_matrix()`.

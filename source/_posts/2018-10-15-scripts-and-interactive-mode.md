@@ -14,7 +14,7 @@ date: 2018-10-15 22:46:01
 a=1
 print('a =', a)
 ```
-<!-- more -->highlight 
+<!-- more -->
 
 ### 方法 1. shell -> interactive mode (推荐)
 
