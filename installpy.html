@@ -17,7 +17,7 @@
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha256-DfWjNxDkM94fVBWx1H5BMMp0Zq7luBlV8QRcSES7s+0=" crossorigin="anonymous">
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"lydiazly.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.12.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"manual","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+<script class="next-config" data-name="main" type="application/json">{"hostname":"lydiazly.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.12.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":"mac"},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"manual","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
     <meta name="description" content="Jupyter Notebook [Update 2022-07-12] Some outputs are updated with python 3.10.">
 <meta property="og:type" content="blog">
@@ -38,7 +38,7 @@
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="https://lydiazly.github.io/installpy">
+<link rel="canonical" href="https://lydiazly.github.io/installpy.html">
 
 
 
@@ -92,7 +92,7 @@
 
 
 <nav class="site-nav">
-  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags<span class="badge">6</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories<span class="badge">1</span></a></li>
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags<span class="badge">7</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories<span class="badge">1</span></a></li>
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
         </a>
@@ -149,11 +149,11 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85-python"><span class="nav-text">## 安装 python</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%85-python-3"><span class="nav-text">安装 python 3</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#pip"><span class="nav-text">pip</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AE%89%E8%A3%85-pip"><span class="nav-text">安装 pip</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%94%A8-pip-%E5%AE%89%E8%A3%85-python-%E5%8C%85"><span class="nav-text">用 pip 安装 python 包</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BD%BF-pip-%E5%AE%89%E8%A3%85-python-%E5%8C%85%E5%88%B0%E7%94%A8%E6%88%B7%E8%B7%AF%E5%BE%84"><span class="nav-text">使 pip 安装 python
-包到用户路径</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#anaconda"><span class="nav-text">Anaconda</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AE%89%E8%A3%85-anaconda-%E6%88%96-miniconda-%E6%8E%A8%E8%8D%90"><span class="nav-text">安装 Anaconda 或 Miniconda
-(推荐)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#environment"><span class="nav-text">environment</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8-conda-%E5%91%BD%E4%BB%A4"><span class="nav-text">使用 conda 命令</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%95%9C%E5%83%8F%E6%BA%90"><span class="nav-text">镜像源</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#pip-%E9%95%9C%E5%83%8F%E6%BA%90"><span class="nav-text">pip 镜像源</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#conda-%E9%95%9C%E5%83%8F%E6%BA%90"><span class="nav-text">conda 镜像源</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#troubleshooting"><span class="nav-text">Troubleshooting</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#conda-%E5%AE%89%E8%A3%85%E6%97%B6%E6%8C%87%E5%AE%9A%E6%BA%90%E4%B8%94%E7%A6%81%E7%94%A8%E5%85%B6%E4%BB%96%E6%BA%90"><span class="nav-text">conda
-安装时指定源且禁用其他源</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#astropy-%E6%96%B0%E7%89%88%E4%B8%8D%E5%86%8D%E6%94%AF%E6%8C%81%E6%97%A7%E7%89%88-python"><span class="nav-text">Astropy 新版不再支持旧版
-Python</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85%E5%B8%B8%E7%94%A8%E5%8C%85"><span class="nav-text">## 安装常用包</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#numpy-scipy-matplotlib"><span class="nav-text">numpy, scipy, matplotlib</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#astropy-sunpy"><span class="nav-text">Astropy, SunPy</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#jupyter"><span class="nav-text">Jupyter</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%B6%E4%BB%96"><span class="nav-text">其他</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85-python"><span class="nav-number">1.</span> <span class="nav-text">安装 python</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%85-python-3"><span class="nav-number">1.1.</span> <span class="nav-text">安装 python 3</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#pip"><span class="nav-number">1.2.</span> <span class="nav-text">pip</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AE%89%E8%A3%85-pip"><span class="nav-number">1.2.1.</span> <span class="nav-text">安装 pip</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%94%A8-pip-%E5%AE%89%E8%A3%85-python-%E5%8C%85"><span class="nav-number">1.2.2.</span> <span class="nav-text">用 pip 安装 python 包</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BD%BF-pip-%E5%AE%89%E8%A3%85-python-%E5%8C%85%E5%88%B0%E7%94%A8%E6%88%B7%E8%B7%AF%E5%BE%84"><span class="nav-number">1.2.3.</span> <span class="nav-text">使 pip 安装 python
+包到用户路径</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#anaconda"><span class="nav-number">1.3.</span> <span class="nav-text">Anaconda</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AE%89%E8%A3%85-anaconda-%E6%88%96-miniconda-%E6%8E%A8%E8%8D%90"><span class="nav-number">1.3.1.</span> <span class="nav-text">安装 Anaconda 或 Miniconda
+(推荐)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#environment"><span class="nav-number">1.3.2.</span> <span class="nav-text">environment</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8-conda-%E5%91%BD%E4%BB%A4"><span class="nav-number">1.3.3.</span> <span class="nav-text">使用 conda 命令</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%95%9C%E5%83%8F%E6%BA%90"><span class="nav-number">1.4.</span> <span class="nav-text">镜像源</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#pip-%E9%95%9C%E5%83%8F%E6%BA%90"><span class="nav-number">1.4.1.</span> <span class="nav-text">pip 镜像源</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#conda-%E9%95%9C%E5%83%8F%E6%BA%90"><span class="nav-number">1.4.2.</span> <span class="nav-text">conda 镜像源</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#troubleshooting"><span class="nav-number">1.5.</span> <span class="nav-text">Troubleshooting</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#conda-%E5%AE%89%E8%A3%85%E6%97%B6%E6%8C%87%E5%AE%9A%E6%BA%90%E4%B8%94%E7%A6%81%E7%94%A8%E5%85%B6%E4%BB%96%E6%BA%90"><span class="nav-number">1.5.1.</span> <span class="nav-text">conda
+安装时指定源且禁用其他源</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#astropy-%E6%96%B0%E7%89%88%E4%B8%8D%E5%86%8D%E6%94%AF%E6%8C%81%E6%97%A7%E7%89%88-python"><span class="nav-number">1.5.2.</span> <span class="nav-text">Astropy 新版不再支持旧版
+Python</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85%E5%B8%B8%E7%94%A8%E5%8C%85"><span class="nav-number">2.</span> <span class="nav-text">安装常用包</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#numpy-scipy-matplotlib"><span class="nav-number">2.1.</span> <span class="nav-text">numpy, scipy, matplotlib</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#astropy-sunpy"><span class="nav-number">2.2.</span> <span class="nav-text">Astropy, SunPy</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#jupyter"><span class="nav-number">2.3.</span> <span class="nav-text">Jupyter</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%B6%E4%BB%96"><span class="nav-number">2.4.</span> <span class="nav-text">其他</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -166,7 +166,7 @@ Python</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a cl
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">9</span>
+          <span class="site-state-item-count">7</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -177,7 +177,7 @@ Python</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a cl
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">6</span>
+        <span class="site-state-item-count">7</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -188,7 +188,7 @@ Python</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a cl
       </span>
   </div>
   <div class="cc-license site-overview-item animated" itemprop="license">
-    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/en" class="cc-opacity" rel="noopener" target="_blank"><img src="https://cdnjs.cloudflare.com/ajax/libs/creativecommons-vocabulary/2020.11.3/assets/license_badges/small/by_nc_sa.svg" alt="Creative Commons"></a>
+    <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.en" class="cc-opacity" rel="noopener" target="_blank"><img src="https://cdnjs.cloudflare.com/ajax/libs/creativecommons-vocabulary/2020.11.3/assets/license_badges/small/by_sa.svg" alt="Creative Commons"></a>
   </div>
 
 
@@ -262,7 +262,7 @@ Python</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a cl
       </span>
       <span class="post-meta-item-text">In</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/python/" itemprop="url" rel="index"><span itemprop="name">python</span></a>
+          <a href="/categories/Solar-Physics/" itemprop="url" rel="index"><span itemprop="name">Solar Physics</span></a>
         </span>
     </span>
 
@@ -282,7 +282,7 @@ Jupyter Notebook</a></p>
 <p><small><font color=gray>[Update 2022-07-12] Some outputs are updated
 with python 3.10.</font></small></p>
 <span id="more"></span>
-<h2 id="安装-python">## 安装 python</h2>
+<h2 id="安装-python">安装 python</h2>
 <h3 id="安装-python-3">安装 python 3</h3>
 <ul>
 <li>检查系统自带的版本:</li>
@@ -334,7 +334,7 @@ pip show <span class="token operator">&lt;</span>package<span class="token opera
 </tr>
 <tr class="odd">
 <td style="text-align: left;">-I, --ignore-installed</td>
-<td style="text-align: left;">强制安装(无论是否已安装)</td>
+<td style="text-align: left;">强制安装 (无论是否已安装)</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">--no-cache-dir</td>
@@ -343,14 +343,14 @@ pip show <span class="token operator">&lt;</span>package<span class="token opera
 <tr class="odd">
 <td style="text-align: left;">-i
 <font color=blue><em>url</em></font></td>
-<td style="text-align: left;">使用指定源(更改配置见 <a
+<td style="text-align: left;">使用指定源 (更改配置见 <a
 href="#pip-镜像源">pip 镜像源</a>)</td>
 </tr>
 <tr class="even">
 <td
 style="text-align: left;"><font color=blue><em>package</em></font>==x.x.x</td>
-<td style="text-align: left;">指定版本,
-错误版本号(或为空)将返回可用版本号</td>
+<td style="text-align: left;">指定版本, 错误版本号 (或为空)
+将返回可用版本号</td>
 </tr>
 <tr class="odd">
 <td
@@ -359,7 +359,7 @@ style="text-align: left;">"<font color=blue><em>package</em></font>&lt;x.x.x"</t
 </tr>
 </tbody>
 </table>
-<p>检查包(尝试导入, 查看包版本):</p>
+<p>检查包 (尝试导入, 查看包版本):</p>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">python -c <span class="token string">"import &lt;package>"</span>
 python -c <span class="token string">"import &lt;package>; print(&lt;package>.__version__)"</span>  <span class="token comment"># 版本号</span>
 python -c <span class="token string">"import &lt;package>; print(&lt;package>.version)"</span>  <span class="token comment"># 安装位置</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
@@ -391,8 +391,8 @@ pip list --outdated --user<span aria-hidden="true" class="line-numbers-rows"><sp
 <ul>
 <li><p>安装 miniconda 64位 (默认安装到
 <font color=blue>~/miniconda3/</font>)</p>
-<p>下载 <a
-target="_blank" rel="noopener" href="https://conda.io/miniconda.html">https://conda.io/miniconda.html</a></p></li>
+<p>下载 <a target="_blank" rel="noopener" href="https://conda.io/miniconda.html"
+class="uri">https://conda.io/miniconda.html</a></p></li>
 </ul>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">bash</span> Miniconda3-latest-Linux-x86_64.sh<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <ul>
@@ -410,8 +410,10 @@ target="_blank" rel="noopener" href="https://conda.io/miniconda.html">https://co
 <li>帮助</li>
 </ul>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">conda <span class="token punctuation">[</span>cmd<span class="token punctuation">]</span> --help<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>miniconda 下载 https://conda.io/miniconda.html<br> 安装参考
-https://conda.io/docs/user-guide/install/index.html</p>
+<p>miniconda 下载 <a target="_blank" rel="noopener" href="https://conda.io/miniconda.html"
+class="uri">https://conda.io/miniconda.html</a><br> 安装参考 <a
+target="_blank" rel="noopener" href="https://conda.io/docs/user-guide/install/index.html"
+class="uri">https://conda.io/docs/user-guide/install/index.html</a></p>
 <h4 id="environment">environment</h4>
 <p>默认环境为 base<br> <code>-n, --name &lt;env_name&gt;</code>
 指定环境</p>
@@ -448,7 +450,8 @@ conda remove/uninstall <span class="token operator">&lt;</span>packages<span cla
 conda clean --all<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>见 <code>conda --help</code> 或 <code>conda cmd --help</code>,
 <code>conda search</code> 语法见 <a
-target="_blank" rel="noopener" href="https://github.com/conda/conda/blob/master/conda/models/match_spec.py">https://github.com/conda/conda/blob/master/conda/models/match_spec.py</a></p>
+target="_blank" rel="noopener" href="https://github.com/conda/conda/blob/master/conda/models/match_spec.py"
+class="uri">https://github.com/conda/conda/blob/master/conda/models/match_spec.py</a></p>
 <p>配置: <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 安装确认时显示源的 url, 默认已开启</span>
 conda config --set show_channel_urls True
 
@@ -458,7 +461,7 @@ conda config --set auto_update_conda False
 <span class="token comment"># 禁止源优先而使用版本优先, 默认True</span>
 conda config --set channel_priority False
 
-<span class="token comment"># 增加设置, 例如增加源(可使用 url 或别名)</span>
+<span class="token comment"># 增加设置, 例如增加源 (可使用 url 或别名)</span>
 conda config --add channels <span class="token operator">&lt;</span>channel<span class="token operator">></span>
 
 <span class="token comment"># 删除某项设置的所有值, 例如删除所有自定义源</span>
@@ -468,7 +471,8 @@ conda config --remove-key channels
 conda config --remove channels <span class="token operator">&lt;</span>channel<span class="token operator">></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></p>
 <p>用户配置文件 <code>~/.condarc</code> (见 <a
 href="#conda-镜像源">conda 镜像源</a>)<br> 参考链接 <a
-target="_blank" rel="noopener" href="https://conda.io/docs/user-guide/configuration/use-condarc.html">https://conda.io/docs/user-guide/configuration/use-condarc.html</a></p>
+target="_blank" rel="noopener" href="https://conda.io/docs/user-guide/configuration/use-condarc.html"
+class="uri">https://conda.io/docs/user-guide/configuration/use-condarc.html</a></p>
 <p>也可以在不同的环境用不同的配置文件:
 <code>~/miniconda3/envs/&lt;env_name&gt;/.condarc</code></p>
 <h3 id="镜像源">镜像源</h3>
@@ -477,27 +481,30 @@ target="_blank" rel="noopener" href="https://conda.io/docs/user-guide/configurat
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">%%bash
 <span class="token function">cat</span> ~/.pip/pip.conf<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 <pre><code>[global]
-index-url = [https://pypi.douban.com/simple](https://pypi.douban.com/simple)
+index-url = &lt;https://pypi.douban.com/simple&gt;
 trusted-host = pypi.doubanio.com</code></pre>
 <h4 id="conda-镜像源">conda 镜像源</h4>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">conda config --add/--prepend channels <span class="token operator">&lt;</span>new_channel<span class="token operator">></span>
 conda config --append channels <span class="token operator">&lt;</span>new_channel<span class="token operator">></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 <p>清华源:<br> <a
-target="_blank" rel="noopener" href="https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/">https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/</a><br>
+target="_blank" rel="noopener" href="https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/"
+class="uri">https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/</a><br>
+<a target="_blank" rel="noopener" href="https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/"
+class="uri">https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/</a><br>
 <a
-target="_blank" rel="noopener" href="https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/">https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/</a><br>
-<a
-target="_blank" rel="noopener" href="https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/conda-forge/">https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/conda-forge/</a><br></p>
+target="_blank" rel="noopener" href="https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/conda-forge/"
+class="uri">https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/conda-forge/</a><br></p>
 <p>channels 的默认的优先级为: 前排优先<br> 镜像源中
 <code>pkgs/main</code> 通常比 <code>pkgs/free</code> 新,
 因此将其放在最前.<br> 或使用 <code>channel_priority: false</code>,
 见上一节 <a href="#使用-conda-命令">conda 设置</a>.</p>
 <p>e.g.</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">conda config --add channels <span class="token punctuation">[</span>https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/conda-forge/<span class="token punctuation">]</span><span class="token punctuation">(</span>https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/conda-forge/<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">conda config --add channels <span class="token operator">&lt;</span>https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/conda-forge/<span class="token operator">></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>此时 <code>~/.condarc</code> 的内容:</p>
 <blockquote>
 <p>channels:<br>  - <a
-target="_blank" rel="noopener" href="https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/conda-forge/">https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/conda-forge/</a><br>
+target="_blank" rel="noopener" href="https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/conda-forge/"
+class="uri">https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/conda-forge/</a><br>
  - defaults</p>
 </blockquote>
 <h3 id="troubleshooting">Troubleshooting</h3>
@@ -507,7 +514,7 @@ target="_blank" rel="noopener" href="https://mirrors.tuna.tsinghua.edu.cn/anacon
 <h4 id="astropy-新版不再支持旧版-python">Astropy 新版不再支持旧版
 Python</h4>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">pip <span class="token function">install</span> <span class="token string">"astropy&lt;3.0"</span> <span class="token comment"># for python &lt; 3.5</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<h2 id="安装常用包">## 安装常用包</h2>
+<h2 id="安装常用包">安装常用包</h2>
 <h3 id="numpy-scipy-matplotlib">numpy, scipy, matplotlib</h3>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">conda <span class="token function">install</span> numpy
 conda <span class="token function">install</span> scipy
@@ -515,7 +522,7 @@ conda <span class="token function">install</span> matplotlib<span aria-hidden="t
 <p> Or <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">pip <span class="token function">install</span> numpy
 pip <span class="token function">install</span> scipy
 pip <span class="token function">install</span> matplotlib<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre></p>
-<p>配置启动文件(Ubuntu), 在 <code>~/.bashrc</code> 中添加:
+<p>配置启动文件 (Ubuntu), 在 <code>~/.bashrc</code> 中添加:
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token builtin class-name">export</span> <span class="token assign-left variable">PYTHONSTARTUP</span><span class="token operator">=</span><span class="token environment constant">$HOME</span>/.pythonrc<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></p>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python">cat <span class="token operator">~</span><span class="token operator">/</span><span class="token punctuation">.</span>pythonrc<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <pre><code># Python startup file
@@ -597,7 +604,7 @@ build number: 0
 size        : 5.7 MB
 license     : BSD-2-Clause
 subdir      : linux-64
-url         : [https://conda.anaconda.org/conda-forge/linux-64/sunpy-4.0.3-py310hde88566_0.tar.bz2](https://conda.anaconda.org/conda-forge/linux-64/sunpy-4.0.3-py310hde88566_0.tar.bz2)
+url         : &lt;https://conda.anaconda.org/conda-forge/linux-64/sunpy-4.0.3-py310hde88566_0.tar.bz2&gt;
 md5         : 5831b8fde0edd2aa0ff9f42b237b7ba2
 timestamp   : 2022-07-08 16:21:32 UTC
 dependencies: 
@@ -680,7 +687,8 @@ sqlalchemy: 1.4.39
 tqdm: 4.64.0
 zeep: 4.1.0</code></pre>
 <p>设置下载位置:<br> (参考 <a
-target="_blank" rel="noopener" href="http://docs.sunpy.org/en/stable/guide/customization.html?highlight=sunpy.config.set">http://docs.sunpy.org/en/stable/guide/customization.html?highlight=sunpy.config.set)</a>)</p>
+target="_blank" rel="noopener" href="http://docs.sunpy.org/en/stable/guide/customization.html?highlight=sunpy.config.set)"
+class="uri">http://docs.sunpy.org/en/stable/guide/customization.html?highlight=sunpy.config.set)</a></p>
 <p>e.g. &gt; [downloads]<br>  download_dir = ...</p>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token operator">>></span><span class="token operator">></span> <span class="token keyword">import</span> sunpy
 <span class="token operator">>></span><span class="token operator">></span> sunpy<span class="token punctuation">.</span>config<span class="token punctuation">.</span><span class="token builtin">set</span><span class="token punctuation">(</span><span class="token string">'downloads'</span><span class="token punctuation">,</span> <span class="token string">'download_dir'</span><span class="token punctuation">,</span>
@@ -764,7 +772,7 @@ Cell 内导入) <pre class="line-numbers language-python" data-language="python"
 <ul>
 <li>PeakUtils (http://peakutils.readthedocs.io/en/latest/)</li>
 </ul>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> clone <span class="token punctuation">[</span>https://bitbucket.org/lucashnegri/peakutils.git<span class="token punctuation">]</span><span class="token punctuation">(</span>https://bitbucket.org/lucashnegri/peakutils.git<span class="token punctuation">)</span>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> clone <span class="token operator">&lt;</span>https://bitbucket.org/lucashnegri/peakutils.git<span class="token operator">></span>
 <span class="token builtin class-name">cd</span> peakutils
 python setup.py <span class="token function">install</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token operator">>></span><span class="token operator">></span> <span class="token keyword">import</span> peakutils<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
@@ -786,13 +794,13 @@ pip <span class="token function">install</span> lmfit<span aria-hidden="true" cl
 </ul>
 <p>安装 spacepy (https://pythonhosted.org/SpacePy)</p>
 <p>或</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">pip <span class="token function">install</span> cdflib <span class="token comment"># [https://github.com/MAVENSDC/cdflib](https://github.com/MAVENSDC/cdflib)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">pip <span class="token function">install</span> cdflib <span class="token comment"># &lt;https://github.com/MAVENSDC/cdflib></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <ul>
 <li>EVTK (https://bitbucket.org/pauloh/pyevtk)</li>
 </ul>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">sudo</span> <span class="token function">apt-get</span> <span class="token function">install</span> mercurial  <span class="token comment"># 得到 hg 命令</span>
 
-<span class="token function">hg</span> clone <span class="token punctuation">[</span>https://bitbucket.org/pauloh/pyevtk<span class="token punctuation">]</span><span class="token punctuation">(</span>https://bitbucket.org/pauloh/pyevtk<span class="token punctuation">)</span>
+<span class="token function">hg</span> clone <span class="token operator">&lt;</span>https://bitbucket.org/pauloh/pyevtk<span class="token operator">></span>
 <span class="token builtin class-name">cd</span> pyevtk
 python setup.py build --debug <span class="token function">install</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">hg</span> pull <span class="token operator">&amp;&amp;</span> <span class="token function">hg</span> update default <span class="token comment"># 更新</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
@@ -849,7 +857,7 @@ mayavi2<span aria-hidden="true" class="line-numbers-rows"><span></span><span></s
 
 
 <div class="copyright">
-  &copy; 
+  &copy; 2018 – 
   <span itemprop="copyrightYear">2022</span>
   <span class="with-love">
     <i class="fa fa-user"></i>
