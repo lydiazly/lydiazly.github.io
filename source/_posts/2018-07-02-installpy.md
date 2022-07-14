@@ -527,7 +527,7 @@ sunpy.util.system_info()
 
 
 设置下载位置:<br>
-(参考 <http://docs.sunpy.org/en/stable/guide/customization.html?highlight=sunpy.config.set)>
+(参考 <http://docs.sunpy.org/en/stable/guide/customization.html?highlight =sunpy.config.set)>
 
 e.g.
 > [downloads]<br>
