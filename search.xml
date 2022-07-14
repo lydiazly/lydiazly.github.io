@@ -30,7 +30,7 @@ dependencies between packages and platforms.<br>
 href="http://jakevdp.github.io/blog/2016/08/25/conda-myths-and-misconceptions/)"
 class="uri">http://jakevdp.github.io/blog/2016/08/25/conda-myths-and-misconceptions/)</a>
 <span id="more"></span></p>
-<p><img src='/advance/Screenshot_20180617-181206.png' width='650'/></p>
+<p><img data-src='/advance/Screenshot_20180617-181206.png' width='650'/></p>
 <ul>
 <li>python 位置 (未使用 conda 时)</li>
 </ul>
@@ -281,7 +281,7 @@ class="uri">http://pythontutor.com/</a></p>
 l1<span class="token operator">=</span> <span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span>
 l2 <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 <p><a href="http://t.cn/Rg9J3bf">网页版演示</a></p>
-<p><img src='/advance/nbtutor1.png' width='550'/></p>
+<p><img data-src='/advance/nbtutor1.png' width='550'/></p>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token operator">%</span><span class="token operator">%</span>nbtutor <span class="token operator">-</span>r <span class="token operator">-</span>f <span class="token operator">-</span>i
 a <span class="token operator">=</span> <span class="token number">3</span>
 b <span class="token operator">=</span> <span class="token number">4</span>
@@ -291,7 +291,7 @@ t<span class="token punctuation">[</span><span class="token number">2</span><spa
 <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">print</span><span class="token punctuation">(</span>t<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <pre><code>(1, 2, [&#39;xx&#39;, 4])</code></pre>
 <p><a href="http://t.cn/Rg9idUn">网页版演示</a></p>
-<p><img src='/advance/nbtutor2.png' width='550'/></p>
+<p><img data-src='/advance/nbtutor2.png' width='550'/></p>
 <h3 id="包含判断的单行循环">包含判断的单行循环</h3>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python">l <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">]</span>
 <span class="token punctuation">[</span>i <span class="token keyword">for</span> i <span class="token keyword">in</span> l <span class="token keyword">if</span> i <span class="token operator">></span> <span class="token number">2</span><span class="token punctuation">]</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
@@ -363,7 +363,7 @@ f<span class="token punctuation">(</span><span class="token number">1</span><spa
 <p><a
 href="https://sebastianraschka.com/Articles/2014_python_scope_and_namespaces.html"
 class="uri">https://sebastianraschka.com/Articles/2014_python_scope_and_namespaces.html</a></p>
-<p><img src='/advance/scope_resolution_1.png' width='400' /></p>
+<p><img data-src='/advance/scope_resolution_1.png' width='400' /></p>
 <ul>
 <li>Built-in Functions <a
 href="https://docs.python.org/3/library/functions.html"
@@ -643,7 +643,7 @@ array<span class="token punctuation">(</span><span class="token punctuation">[</
 href="https://matplotlib.org/tutorials/introductory/usage.html"
 class="uri">https://matplotlib.org/tutorials/introductory/usage.html</a></li>
 </ul>
-<p><img src='/advance/anatomy.png' width='600' /></p>
+<p><img data-src='/advance/anatomy.png' width='600' /></p>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python">fig <span class="token operator">=</span> plt<span class="token punctuation">.</span>gcf<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment"># current figure</span>
 ax <span class="token operator">=</span> plt<span class="token punctuation">.</span>gca<span class="token punctuation">(</span><span class="token punctuation">)</span>  <span class="token comment"># current `Axes`</span>
 im <span class="token operator">=</span> plt<span class="token punctuation">.</span>gci<span class="token punctuation">(</span><span class="token punctuation">)</span>  <span class="token comment"># current artist(图像内容), 可由诸如 plt.imshow(...) 得到</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
@@ -722,7 +722,7 @@ smap <span class="token operator">=</span> sunpy<span class="token punctuation">
 plt<span class="token punctuation">.</span>imshow<span class="token punctuation">(</span>smap<span class="token punctuation">.</span>data<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">:</span><span class="token number">2000</span><span class="token punctuation">,</span> <span class="token punctuation">:</span><span class="token punctuation">]</span><span class="token punctuation">,</span> origin<span class="token operator">=</span><span class="token string">'lower'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 plt<span class="token punctuation">.</span>show<span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 <figure>
-<img src="/advance/advance_205_0.png" alt="png" />
+<img data-src="/advance/advance_205_0.png" alt="png" />
 <figcaption aria-hidden="true">png</figcaption>
 </figure>
 <h3 id="关于-scaled-image-data">关于 Scaled Image Data</h3>
@@ -984,7 +984,7 @@ class="uri">http://peakutils.readthedocs.io/en/latest/</a></li>
 (http://peakutils.readthedocs.io/en/latest/tutorial_a.html):</p>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> peakutils
 indexes <span class="token operator">=</span> peakutils<span class="token punctuation">.</span>indexes<span class="token punctuation">(</span>y<span class="token punctuation">,</span> thres<span class="token operator">=</span><span class="token number">0.5</span><span class="token punctuation">,</span> min_dist<span class="token operator">=</span><span class="token number">30</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-<p><img src='/advance/tut_a_2.png' width='500' /></p>
+<p><img data-src='/advance/tut_a_2.png' width='500' /></p>
 <p>Enhancing the resolution by interpolation: <pre class="line-numbers language-python" data-language="python"><code class="language-python">peaks_x <span class="token operator">=</span> peakutils<span class="token punctuation">.</span>interpolate<span class="token punctuation">(</span>x<span class="token punctuation">,</span> y<span class="token punctuation">,</span> ind<span class="token operator">=</span>indexes<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></p>
 <h3 id="拟合">拟合</h3>
 <ul>
@@ -1038,7 +1038,7 @@ plt<span class="token punctuation">.</span>plot<span class="token punctuation">(
     C(amplitude, gamma) =  0.821
     C(sigma, amplitude) = -0.651</code></pre>
 <figure>
-<img src="/advance/advance_279_1.png" alt="png" />
+<img data-src="/advance/advance_279_1.png" alt="png" />
 <figcaption aria-hidden="true">png</figcaption>
 </figure>
 <p>多个模型叠加:</p>
@@ -1070,7 +1070,7 @@ plt<span class="token punctuation">.</span>plot<span class="token punctuation">(
 <span class="token operator">%</span>run examples<span class="token operator">/</span>lmfits<span class="token operator">/</span>fit_peaks<span class="token punctuation">.</span>py<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python">output<span class="token punctuation">.</span>outputs<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <figure>
-<img src="/advance/advance_283_0.png" alt="png" />
+<img data-src="/advance/advance_283_0.png" alt="png" />
 <figcaption aria-hidden="true">png</figcaption>
 </figure>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token operator">%</span><span class="token operator">%</span>capture output
@@ -1078,7 +1078,7 @@ plt<span class="token punctuation">.</span>plot<span class="token punctuation">(
 <span class="token operator">%</span>run examples<span class="token operator">/</span>lmfits<span class="token operator">/</span>fit_peaks_components<span class="token punctuation">.</span>py<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python">output<span class="token punctuation">.</span>outputs<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <figure>
-<img src="/advance/advance_285_0.png" alt="png" />
+<img data-src="/advance/advance_285_0.png" alt="png" />
 <figcaption aria-hidden="true">png</figcaption>
 </figure>
 <p>自定义模型的方法见 <a
@@ -1112,7 +1112,7 @@ d<span class="token punctuation">[</span><span class="token number">2</span><spa
 <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">id</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token builtin">id</span><span class="token punctuation">(</span>b<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token builtin">id</span><span class="token punctuation">(</span>c<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token builtin">id</span><span class="token punctuation">(</span>d<span class="token punctuation">)</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <pre><code>23284866388232 23284866388232 23284855519880 23284856061064</code></pre>
 <p><a href="http://t.cn/RgK1OHf">网页版演示</a></p>
-<p><img src='/advance/nbtutor3.png' width='550'/></p>
+<p><img data-src='/advance/nbtutor3.png' width='550'/></p>
 <ul>
 <li>对于 dict 的情况</li>
 </ul>
@@ -1128,7 +1128,7 @@ d<span class="token punctuation">[</span><span class="token number">3</span><spa
 <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">id</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token builtin">id</span><span class="token punctuation">(</span>b<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token builtin">id</span><span class="token punctuation">(</span>c<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token builtin">id</span><span class="token punctuation">(</span>d<span class="token punctuation">)</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <pre><code>22492371132064 22492371132064 22492397510376 22492397507280</code></pre>
 <p><a href="http://t.cn/RgKrHOx">网页版演示</a></p>
-<p><img src='/advance/nbtutor4.png' width='550'/></p>
+<p><img data-src='/advance/nbtutor4.png' width='550'/></p>
 <ul>
 <li>对于 set 的情况</li>
 </ul>
@@ -1144,7 +1144,7 @@ d<span class="token punctuation">.</span>add<span class="token punctuation">(</s
 <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">id</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token builtin">id</span><span class="token punctuation">(</span>b<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token builtin">id</span><span class="token punctuation">(</span>c<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token builtin">id</span><span class="token punctuation">(</span>d<span class="token punctuation">)</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <pre><code>22492476895528 22492476895528 22492476895304 22492374233384</code></pre>
 <p><a href="http://t.cn/RgKd3E7">网页版演示</a></p>
-<p><img src='/advance/nbtutor5.png' width='550'/></p>
+<p><img data-src='/advance/nbtutor5.png' width='550'/></p>
 <ul>
 <li>对于 numpy 的情况</li>
 </ul>
@@ -1766,7 +1766,7 @@ class="uri">https://www.paraview.org/ParaView/Doc/Nightly/www/py-doc/index.html<
 <p>也可以使用文件头 <code>#!/usr/bin/env pvbatch</code>,
 加执行权限后直接执行: <pre class="line-numbers language-sh" data-language="sh"><code class="language-sh">.&#x2F;myscript.py<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre> 注意: 打包的 paraview 所使用的
 python 是 paraview 自带的 python2.7</p>
-<p><img src='/advance/Screenshot_20180618-151438.png' width='700' /></p>
+<p><img data-src='/advance/Screenshot_20180618-151438.png' width='700' /></p>
 <ul>
 <li>常用语句:</li>
 </ul>
@@ -2496,9 +2496,9 @@ class="uri">https://www.jetbrains.com/research/python-developers-survey-2017/</a
 <br><br> 2017年的 python 使用调查报告 <a
 href="https://www.jetbrains.com/research/python-developers-survey-2017/"
 class="uri">https://www.jetbrains.com/research/python-developers-survey-2017/</a>
-<img src='/main/Python Developers Survey 2017 - Results-018.png' >
-<img src='/main/Python Developers Survey 2017 - Results-019.png' >
-<img src='/main/Python Developers Survey 2017 - Results-020.png' ></p>
+<img data-src='/main/Python Developers Survey 2017 - Results-018.png' >
+<img data-src='/main/Python Developers Survey 2017 - Results-019.png' >
+<img data-src='/main/Python Developers Survey 2017 - Results-020.png' ></p>
 <p>参考网站:</p>
 <ul>
 <li>官方网站: <a href="https://www.python.org/"
@@ -2679,7 +2679,7 @@ href="advance.html#循环,-迭代器,-生成器">Python 进阶#迭代器</a></p>
     <span class="token operator">&lt;</span>执行<span class="token number">4</span><span class="token operator">></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></p>
 <h3 id="相关工具">相关工具</h3>
 <h4 id="pip">pip</h4>
-<p><img src='/main/logo-large.72ad8bf1.svg' /></p>
+<p><img data-src='/main/logo-large.72ad8bf1.svg' /></p>
 <blockquote>
 <p>The <strong>Python Package Index (PyPI)</strong> is a repository of
 software for the Python programming language.<br/> PyPI helps you find
@@ -2690,9 +2690,9 @@ and install software developed and shared by the Python community.<br/>
 <p>    (其他命令见 <a href="installpy.html#用-pip-安装-python-包">Python
 安装和配置#用 pip 安装 python 包</a>)</p>
 <h4 id="anaconda">Anaconda</h4>
-<p><img src='/main/DataScienceLibraries-01.png' />
-<img src='/main/Conda-DistributionDiagram-01.png' /></p>
-<p><img src='/main/Conda — Conda documentation.png' /></p>
+<p><img data-src='/main/DataScienceLibraries-01.png' />
+<img data-src='/main/Conda-DistributionDiagram-01.png' /></p>
+<p><img data-src='/main/Conda — Conda documentation.png' /></p>
 <p><strong>Anaconda</strong> (https://www.anaconda.com/)<br> 安装好的
 conda 包含独立于系统的 python 版本, 一部分已编译好的包, pip 工具,
 以及不同环境的子目录.<br/> 可根据需要切换不同的 conda 环境以使用不同的
@@ -2702,7 +2702,7 @@ python 版本或不同的包的组合.</p>
 安装和配置#使用 conda 命令</a><br> 详细说明见 <a
 href="advance.html#Anaconda">Python 进阶#Anaconda</a></p>
 <h4 id="ipython-jupyter">IPython &amp; Jupyter</h4>
-<p><img style='float: center;' src='/main/IPython.png' /></p>
+<p><img style='float: center;' data-src='/main/IPython.png' /></p>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># Have a look (ipython)</span>
 !cd <span class="token operator">&amp;</span><span class="token operator">&amp;</span> gnome<span class="token operator">-</span>terminal <span class="token operator">-</span><span class="token operator">-</span>window<span class="token operator">-</span><span class="token keyword">with</span><span class="token operator">-</span>profile<span class="token operator">=</span><span class="token string">'lydia_white'</span>
 !sleep <span class="token number">0.5</span> <span class="token operator">&amp;</span><span class="token operator">&amp;</span> xdotool <span class="token builtin">type</span> <span class="token operator">-</span><span class="token operator">-</span>delay <span class="token number">200</span> <span class="token string">"ipython"</span> <span class="token operator">&amp;</span><span class="token operator">&amp;</span> xdotool key Return
@@ -2712,12 +2712,12 @@ href="advance.html#Anaconda">Python 进阶#Anaconda</a></p>
 <center>
 <a href="http://jupyter.org/" class="uri">http://jupyter.org/</a>
 </center>
-<p><img style='float: center;' src='/main/jupyterlogo.png' /></p>
+<p><img style='float: center;' data-src='/main/jupyterlogo.png' /></p>
 <center>
 <a href="https://nbviewer.jupyter.org/"
 class="uri">https://nbviewer.jupyter.org/</a>
 </center>
-<p><img style='float: center;' src='/main/nbviewer.png' /></p>
+<p><img style='float: center;' data-src='/main/nbviewer.png' /></p>
 <p>参考文档 <a href="http://jupyter-notebook.readthedocs.io/en/stable/"
 class="uri">http://jupyter-notebook.readthedocs.io/en/stable/</a></p>
 <ul>
@@ -2737,13 +2737,13 @@ class="uri">http://jupyter-notebook.readthedocs.io/en/stable/</a></p>
 <center>
 <a href="https://www.scipy.org" class="uri">https://www.scipy.org</a>
 </center>
-<p><img src='/main/SciPy.png' /></p>
+<p><img data-src='/main/SciPy.png' /></p>
 <center>
 <a href="http://scikit-image.org"
 class="uri">http://scikit-image.org</a>
 </center>
-<p><img src='/main/scikitlogo.png' />
-<img src='/main/skimage01.png' /></p>
+<p><img data-src='/main/scikitlogo.png' />
+<img data-src='/main/skimage01.png' /></p>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> numpy <span class="token keyword">as</span> np<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>导入包的不同方式将在各例子中看到.</p>
 <p>参考:</p>
@@ -2873,9 +2873,9 @@ class="uri">https://docs.scipy.org/doc/numpy/reference/routines.array-manipulati
 <ul>
 <li><p>官方示例 <a href="https://matplotlib.org/tutorials/index.html"
 class="uri">https://matplotlib.org/tutorials/index.html</a>
-<img src='/main/Matplotlib.png' />
-<img src='/main/annotation_demo2_00.png' />
-<img src='/main/contour_demo_05.png' /></p></li>
+<img data-src='/main/Matplotlib.png' />
+<img data-src='/main/annotation_demo2_00.png' />
+<img data-src='/main/contour_demo_05.png' /></p></li>
 <li><p>官方教程 <a
 href="https://matplotlib.org/tutorials/introductory/usage.html"
 class="uri">https://matplotlib.org/tutorials/introductory/usage.html</a></p></li>
@@ -2904,11 +2904,11 @@ href="https://matplotlib.org/examples/color/colormaps_reference.html"
 class="uri">https://matplotlib.org/examples/color/colormaps_reference.html</a></li>
 <li>legend <a href="https://matplotlib.org/users/legend_guide.html"
 class="uri">https://matplotlib.org/users/legend_guide.html</a> <br>
-<img src='/main/named_colors.png' /></li>
+<img data-src='/main/named_colors.png' /></li>
 </ul>
 <h3 id="天文相关包">天文相关包</h3>
 <h4 id="astropy">Astropy</h4>
-<p><img src='/main/astropy_banner.svg' /></p>
+<p><img data-src='/main/astropy_banner.svg' /></p>
 <p>官方文档 <a href="http://docs.astropy.org/en/stable/index.html"
 class="uri">http://docs.astropy.org/en/stable/index.html</a></p>
 <p>坐标系统 <a
@@ -2920,9 +2920,9 @@ class="uri">http://docs.astropy.org/en/stable/coordinates/index.html</a></p>
 href="https://python4astronomers.github.io/astropy/astropy.html"
 class="uri">https://python4astronomers.github.io/astropy/astropy.html</a></p>
 <h4 id="sunpy">SunPy</h4>
-<p><img src='/main/Screenshot_20180625-005924.png' />
-<img src='/main/sphx_glr_lat_lon_lines_001.png' />
-<img src='/main/sphx_glr_submaps_and_cropping_001.png' /></p>
+<p><img data-src='/main/Screenshot_20180625-005924.png' />
+<img data-src='/main/sphx_glr_lat_lon_lines_001.png' />
+<img data-src='/main/sphx_glr_submaps_and_cropping_001.png' /></p>
 <p><br> HMI 示例见 <a href="advance.html#SunPy-示例">Python 进阶#SunPy
 示例</a><br> <a
 href="https://coding.net/u/lydiazly/p/scripts-sunpy/git?public=true"
@@ -2970,7 +2970,7 @@ plt<span class="token punctuation">.</span>colorbar<span class="token punctuatio
 <pre><code>/home/lydia/miniconda3/lib/python3.6/site-packages/sunpy/map/sources/sdo.py:48: SunpyDeprecationWarning: Use Matplotlib to load the colormaps
   self.plot_settings[&#39;cmap&#39;] = cm.get_cmap(self._get_cmap_name())</code></pre>
 <figure>
-<img src="/main/main_126_1.png" alt="png" />
+<img data-src="/main/main_126_1.png" alt="png" />
 <figcaption aria-hidden="true">png</figcaption>
 </figure>
 <p>获取一些常数:</p>
@@ -3159,13 +3159,13 @@ distribution plus key integrated tools for iterative data analysis, data
 visualization, and application development. Users have the ability to
 extend and innovate with scripting and open platform APIs, driving the
 creation and sharing of innovative workflows, tools, and applications.
-<img src='/main/Canopy-Packages-min-1.png' > <br><br></li>
+<img data-src='/main/Canopy-Packages-min-1.png' > <br><br></li>
 <li>PyCharm <a href="https://www.jetbrains.com/pycharm/"
 class="uri">https://www.jetbrains.com/pycharm/</a>
-<img src='/main/pycharm.jpg' > <br><br></li>
+<img data-src='/main/pycharm.jpg' > <br><br></li>
 <li>Jupyterlab <a href="http://jupyterlab.readthedocs.io/en/stable/"
 class="uri">http://jupyterlab.readthedocs.io/en/stable/</a>
-<img src='/main/jupyterlab.png' ></li>
+<img data-src='/main/jupyterlab.png' ></li>
 </ul>
 ]]></content>
       <categories>
@@ -3971,7 +3971,7 @@ class="uri">https://github.com/kbg/drms</a> - <a
 href="http://drms.readthedocs.io/en/stable/tutorial.html"
 class="uri">http://drms.readthedocs.io/en/stable/tutorial.html</a></p>
 <h3 id="series">Series</h3>
-<p><img src='/jsoc/hmi01.png'/></p>
+<p><img data-src='/jsoc/hmi01.png'/></p>
 <p>Import the <code>drms</code> module and create an instance of the
 <code>drms.Client</code> class:</p>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> drms
@@ -5348,12 +5348,12 @@ class="uri">http://jsoc.stanford.edu/ajax/lookdata.html</a></p>
 href="http://jsoc.stanford.edu/ajax/register_email.html">register your
 email first</a> :</li>
 </ul>
-<p><img src='/jsoc/hmi03-1.png' width='800' /></p>
+<p><img data-src='/jsoc/hmi03-1.png' width='800' /></p>
 <p>Example of <a
 href="http://jsoc.stanford.edu/ajax/lookdata.html">online JSOC
 interface</a> :</p>
-<p><img src='/jsoc/hmi02.png' width='900' /></p>
-<p><img src='/jsoc/hmi03-2.png' width='900' /></p>
+<p><img data-src='/jsoc/hmi02.png' width='900' /></p>
+<p><img data-src='/jsoc/hmi03-2.png' width='900' /></p>
 <p>Use <pre class="line-numbers language-python" data-language="python"><code class="language-python">attrs<span class="token punctuation">.</span>jsoc<span class="token punctuation">.</span>Segment<span class="token punctuation">(</span><span class="token string">'...'</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>  attrs<span class="token punctuation">.</span>jsoc<span class="token punctuation">.</span><span class="token operator">&lt;</span>attr<span class="token operator">></span><span class="token punctuation">(</span><span class="token string">'...'</span><span class="token punctuation">)</span> <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre> <pre class="line-numbers language-python" data-language="python"><code class="language-python">attrs<span class="token punctuation">.</span>jsoc<span class="token punctuation">.</span>Segment<span class="token punctuation">(</span><span class="token string">'...'</span><span class="token punctuation">)</span> <span class="token operator">|</span>  attrs<span class="token punctuation">.</span>jsoc<span class="token punctuation">.</span><span class="token operator">&lt;</span>attr<span class="token operator">></span><span class="token punctuation">(</span><span class="token string">'...'</span><span class="token punctuation">)</span> <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre> or <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">from</span> sunpy<span class="token punctuation">.</span>net<span class="token punctuation">.</span>attr <span class="token keyword">import</span> AttrAnd<span class="token punctuation">,</span> AttrOr<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre> <pre class="line-numbers language-python" data-language="python"><code class="language-python">AttrAnd<span class="token punctuation">(</span><span class="token builtin">list</span><span class="token punctuation">(</span><span class="token builtin">map</span><span class="token punctuation">(</span>attrs<span class="token punctuation">.</span>jsoc<span class="token punctuation">.</span><span class="token operator">&lt;</span>attr<span class="token operator">></span><span class="token punctuation">,</span> <span class="token operator">&lt;</span><span class="token builtin">list</span><span class="token operator">></span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python">AttrOr<span class="token punctuation">(</span><span class="token builtin">list</span><span class="token punctuation">(</span><span class="token builtin">map</span><span class="token punctuation">(</span>attrs<span class="token punctuation">.</span>jsoc<span class="token punctuation">.</span><span class="token operator">&lt;</span>attr<span class="token operator">></span><span class="token punctuation">,</span> <span class="token operator">&lt;</span><span class="token builtin">list</span><span class="token operator">></span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre> to pass multiple attributes.</p>
 <p>Note: &gt; The attributes which support
@@ -6101,7 +6101,7 @@ center <span class="token operator">=</span> mapbz<span class="token punctuation
 <p>A quick look:</p>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python">mapbz<span class="token punctuation">.</span>peek<span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <pre><code>&lt;IPython.core.display.Javascript object&gt;</code></pre>
-<p><img src="/example_plothmi/plothmi1.png" width="640"></p>
+<p><img data-src="/example_plothmi/plothmi1.png" width="640"></p>
 <h2 id="plot">Plot</h2>
 <p><a
 href="https://docs.sunpy.org/en/stable/guide/plotting.html?highlight=peek#plotting-maps-with-wcsaxes"
@@ -6125,7 +6125,7 @@ ax1<span class="token punctuation">.</span>plot_coord<span class="token punctuat
 ax1<span class="token punctuation">.</span>legend<span class="token punctuation">(</span>loc<span class="token operator">=</span><span class="token string">'upper right'</span><span class="token punctuation">,</span> fontsize<span class="token operator">=</span><span class="token number">8</span><span class="token punctuation">,</span> markerscale<span class="token operator">=</span><span class="token number">0.6</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token comment"># fig1.savefig('example_plothmi_disk.png', dpi=200, bbox_inches='tight')</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <pre><code>&lt;IPython.core.display.Javascript object&gt;</code></pre>
-<p><img src="/example_plothmi/plothmi2.png" width="800"></p>
+<p><img data-src="/example_plothmi/plothmi2.png" width="800"></p>
 <h2 id="submap">Submap</h2>
 <p><a
 href="http://docs.sunpy.org/en/v0.9.3/code_ref/map.html?highlight=peek#sunpy.map.mapbase.GenericMap.submap"
@@ -6172,7 +6172,7 @@ valid_index <span class="token operator">=</span> np<span class="token punctuati
 ax1<span class="token punctuation">.</span>set_xlim<span class="token punctuation">(</span><span class="token punctuation">(</span>valid_index<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token builtin">min</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">-</span><span class="token number">100</span><span class="token punctuation">,</span> valid_index<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token builtin">max</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">+</span><span class="token number">100</span><span class="token punctuation">)</span><span class="token punctuation">)</span>  <span class="token comment"># pix</span>
 ax1<span class="token punctuation">.</span>set_ylim<span class="token punctuation">(</span><span class="token punctuation">(</span>valid_index<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token builtin">min</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">-</span><span class="token number">100</span><span class="token punctuation">,</span> valid_index<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token builtin">max</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">+</span><span class="token number">100</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment"># pix</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <pre><code>&lt;IPython.core.display.Javascript object&gt;</code></pre>
-<p><img src="/example_plothmi/plothmi3.png" width="800"></p>
+<p><img data-src="/example_plothmi/plothmi3.png" width="800"></p>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">from</span> usr_sunpy <span class="token keyword">import</span> plot_map<span class="token punctuation">,</span> plot_vmap
 
 fig2 <span class="token operator">=</span> plt<span class="token punctuation">.</span>figure<span class="token punctuation">(</span>figsize<span class="token operator">=</span><span class="token punctuation">(</span><span class="token number">9</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">)</span><span class="token punctuation">,</span> dpi<span class="token operator">=</span><span class="token number">100</span><span class="token punctuation">)</span>
@@ -6181,7 +6181,7 @@ im2 <span class="token operator">=</span> plot_map<span class="token punctuation
 plot_vmap<span class="token punctuation">(</span>smapbx<span class="token punctuation">,</span> smapby<span class="token punctuation">,</span> smapbz<span class="token punctuation">,</span> ax2<span class="token punctuation">,</span> cmin<span class="token operator">=</span><span class="token number">20.</span><span class="token punctuation">,</span> vmax<span class="token operator">=</span><span class="token number">500.</span><span class="token punctuation">,</span> cmap<span class="token operator">=</span><span class="token string">'binary'</span><span class="token punctuation">,</span>
           scale_units<span class="token operator">=</span><span class="token string">'xy'</span><span class="token punctuation">,</span> scale<span class="token operator">=</span><span class="token number">1</span><span class="token operator">/</span><span class="token number">0.05</span><span class="token punctuation">,</span> minlength<span class="token operator">=</span><span class="token number">0.02</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <pre><code>&lt;IPython.core.display.Javascript object&gt;</code></pre>
-<p><img src="/example_plothmi/plothmi4.png" width="900"></p>
+<p><img data-src="/example_plothmi/plothmi4.png" width="900"></p>
 <h3 id="without-disambiguation">Without disambiguation:</h3>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">from</span> usr_sunpy <span class="token keyword">import</span> plot_map<span class="token punctuation">,</span> plot_vmap
 
@@ -6191,7 +6191,7 @@ im2 <span class="token operator">=</span> plot_map<span class="token punctuation
 plot_vmap<span class="token punctuation">(</span>smapbx<span class="token punctuation">,</span> smapby<span class="token punctuation">,</span> smapbz<span class="token punctuation">,</span> ax2<span class="token punctuation">,</span> cmin<span class="token operator">=</span><span class="token number">20.</span><span class="token punctuation">,</span> vmax<span class="token operator">=</span><span class="token number">500.</span><span class="token punctuation">,</span> cmap<span class="token operator">=</span><span class="token string">'binary'</span><span class="token punctuation">,</span>
           scale_units<span class="token operator">=</span><span class="token string">'xy'</span><span class="token punctuation">,</span> scale<span class="token operator">=</span><span class="token number">1</span><span class="token operator">/</span><span class="token number">0.05</span><span class="token punctuation">,</span> minlength<span class="token operator">=</span><span class="token number">0.02</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <pre><code>&lt;IPython.core.display.Javascript object&gt;</code></pre>
-<p><img src="/example_plothmi/plothmi5.png" width="900"></p>
+<p><img data-src="/example_plothmi/plothmi5.png" width="900"></p>
 ]]></content>
       <categories>
         <category>Solar Physics</category>
@@ -6309,7 +6309,7 @@ ax1<span class="token punctuation">.</span>set_ylim<span class="token punctuatio
 
 
 &lt;IPython.core.display.Javascript object&gt;</code></pre>
-<p><img src="/example_projection/projection1.png" width="800"></p>
+<p><img data-src="/example_projection/projection1.png" width="800"></p>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">from</span> usr_sunpy <span class="token keyword">import</span> plot_map<span class="token punctuation">,</span> plot_vmap
 
 iskip<span class="token punctuation">,</span> jskip <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token number">12</span><span class="token punctuation">,</span> <span class="token number">12</span><span class="token punctuation">)</span>
@@ -6320,7 +6320,7 @@ im2 <span class="token operator">=</span> plot_map<span class="token punctuation
 plot_vmap<span class="token punctuation">(</span>smapbx<span class="token punctuation">,</span> smapby<span class="token punctuation">,</span> smapbz<span class="token punctuation">,</span> ax2<span class="token punctuation">,</span> iskip<span class="token operator">=</span>iskip<span class="token punctuation">,</span> jskip<span class="token operator">=</span>jskip<span class="token punctuation">,</span> cmin<span class="token operator">=</span><span class="token number">50.</span><span class="token punctuation">,</span> vmax<span class="token operator">=</span><span class="token number">500.</span><span class="token punctuation">,</span> cmap<span class="token operator">=</span><span class="token string">'binary'</span><span class="token punctuation">,</span>
           scale_units<span class="token operator">=</span><span class="token string">'xy'</span><span class="token punctuation">,</span> scale<span class="token operator">=</span><span class="token number">1</span><span class="token operator">/</span><span class="token number">0.05</span><span class="token punctuation">,</span> minlength<span class="token operator">=</span><span class="token number">0.02</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <pre><code>&lt;IPython.core.display.Javascript object&gt;</code></pre>
-<p><img src="/example_projection/projection2.png" width="900"></p>
+<p><img data-src="/example_projection/projection2.png" width="900"></p>
 <h2 id="projection">Projection</h2>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">from</span> usr_sunpy <span class="token keyword">import</span> image_to_helio
 
