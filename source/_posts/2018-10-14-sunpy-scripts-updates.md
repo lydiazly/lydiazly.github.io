@@ -6,11 +6,11 @@ date: "2018-10-14 16:07:46 +0800"
 ---
 Update:
 
-[Example: plot HMI](example_plothmi.html)<br>
+[<i class="fas fa-link"></i> Example: plot HMI](example_plothmi.html)<br>
 
-[Example: Example: projection](example_projection.html)<br>
+[<i class="fas fa-link"></i> Example: projection](example_projection.html)<br>
 
-[User Module Download](https://coding.net/u/lydiazly/p/scripts-sunpy/git/tree/master/modules) ([help](usr_sunpy.html))
+[<i class="fas fa-download"></i> User Module](https://github.com/lydiazly/lydiazly.github.io/raw/main/source/downloads/scripts/sunpy-modules.zip) ([help](usr_sunpy.html))
 
 [ Tested ]
 
@@ -25,4 +25,3 @@ Date|Python|Sunpy|NumPy|SciPy|Matplotlib|Astropy|Pandas
 - Change return value of `_get_image_params()` from a tuple to a dict.
 - Adjust positions of colorbar & title.
 - Fix docs.
-<!--more-->

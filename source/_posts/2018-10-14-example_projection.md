@@ -2,15 +2,14 @@
 title: "Example: projection"
 permalink: example_projection.html
 categories: 'Solar Physics'
-tags: [python, sunpy]
+tags: [python, jupyter, sunpy]
 date: 2018-10-14 16:06:31
 ---
 [<i class="fas fa-download"></i> Jupyter Notebook](/downloads/notebooks/example_hmi.zip)
 
-[<i class="fas fa-download"></i> Example Data](https://pan.baidu.com/s/1nwsIcDr) <span style="color:gray">(pswd:
-s5re)</span>
+[<i class="fas fa-download"></i> Example Data](https://pan.baidu.com/s/1nwsIcDr) <span style="color:gray">(pswd:s5re)</span>
 
-[<i class="fas fa-download"></i> User Module](https://github.com/lydiazly/lydiazly.github.io/raw/main/source/downloads/scripts/sunpy-modules.zip) ([help](https://lydiazly.github.io/usr_sunpy.html))
+[<i class="fas fa-download"></i> User Module](https://github.com/lydiazly/lydiazly.github.io/raw/main/source/downloads/scripts/sunpy-modules.zip) ([help](usr_sunpy.html))
 
 ```python
 from __future__ import division, print_function

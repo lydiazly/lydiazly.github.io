@@ -2,7 +2,7 @@
 title: "JSOC Download Example"
 permalink: jsoc-download-example.html
 categories: 'Solar Physics'
-tags: [python, sunpy]
+tags: [python, jupyter, sunpy]
 date: 2018-09-12 20:16:36
 ---
 [<i class="fas fa-download"></i> Jupyter Notebook](/downloads/notebooks/fido.zip)
