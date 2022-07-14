@@ -5926,8 +5926,7 @@ href="https://pan.baidu.com/s/1nwsIcDr"><i class="fas fa-download"></i>
 Example Data</a> <span style="color:gray">(pswd: s5re)</span></p>
 <p><a
 href="https://github.com/lydiazly/lydiazly.github.io/raw/main/source/downloads/scripts/sunpy-modules.zip"><i class="fas fa-download"></i>
-User Module</a> (<a
-href="https://lydiazly.github.io/usr_sunpy.html">help</a>)</p>
+User Module</a> (<a href="usr_sunpy.html">help</a>)</p>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">from</span> __future__ <span class="token keyword">import</span> division<span class="token punctuation">,</span> print_function
 
 <span class="token comment"># Reload user modules automatically</span>
@@ -6206,11 +6205,10 @@ href="/downloads/notebooks/example_hmi.zip"><i class="fas fa-download"></i>
 Jupyter Notebook</a></p>
 <p><a
 href="https://pan.baidu.com/s/1nwsIcDr"><i class="fas fa-download"></i>
-Example Data</a> <span style="color:gray">(pswd: s5re)</span></p>
+Example Data</a> <span style="color:gray">(pswd:s5re)</span></p>
 <p><a
 href="https://github.com/lydiazly/lydiazly.github.io/raw/main/source/downloads/scripts/sunpy-modules.zip"><i class="fas fa-download"></i>
-User Module</a> (<a
-href="https://lydiazly.github.io/usr_sunpy.html">help</a>)</p>
+User Module</a> (<a href="usr_sunpy.html">help</a>)</p>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">from</span> __future__ <span class="token keyword">import</span> division<span class="token punctuation">,</span> print_function
 
 <span class="token comment"># Reload user modules automatically</span>
@@ -6361,8 +6359,8 @@ ax3<span class="token punctuation">.</span>set_ylim<span class="token punctuatio
 <p><a href="example_projection.html">Example: Example:
 projection</a><br></p>
 <p><a
-href="https://coding.net/u/lydiazly/p/scripts-sunpy/git/tree/master/modules">User
-Module Download</a> (<a href="usr_sunpy.html">help</a>)</p>
+href="https://github.com/lydiazly/lydiazly.github.io/raw/main/source/downloads/scripts/sunpy-modules.zip"><i class="fas fa-download"></i>
+User Module</a> (<a href="usr_sunpy.html">help</a>)</p>
 <p>[ Tested ]</p>
 <p>Ubuntu 16.04 LTS</p>
 <table>
