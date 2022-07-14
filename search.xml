@@ -6415,6 +6415,82 @@ to a dict.</li>
       </tags>
   </entry>
   <entry>
+    <title>Python 的脚本与交互式环境</title>
+    <url>/2018-10-15-scripts-and-interactive-mode.html</url>
+    <content><![CDATA[<p>目的是从交互环境调用脚本产生的变量, 可用于调试脚本和测试数据等等.</p>
+<p>比如当前目录下有一个包含如下内容的脚本:</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment">#!/usr/bin/env python</span>
+a<span class="token operator">=</span><span class="token number">1</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'a ='</span><span class="token punctuation">,</span> a<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<span id="more"></span>
+<h3 id="方法-1.-shell---interactive-mode-推荐">方法 1. shell -&gt;
+interactive mode (推荐)</h3>
+<p>使用 <code>-i</code> 选项:</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># shell</span>
+$ python -i test.py<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<p>执行结束随即进入 python 交互环境, 并且保留了脚本中定义的变量:</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># python</span>
+a <span class="token operator">=</span> <span class="token number">1</span>
+<span class="token operator">>></span><span class="token operator">></span> a
+<span class="token number">1</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="方法-2.-in-ipython-jupyter-第二推荐">方法 2. In ipython /
+jupyter (第二推荐)</h3>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># ipython</span>
+In <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">:</span> <span class="token operator">%</span>run test<span class="token punctuation">.</span>py
+a <span class="token operator">=</span> <span class="token number">1</span>
+
+In <span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">:</span> a
+Out<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">:</span> <span class="token number">1</span>
+
+In <span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">:</span> <span class="token operator">%</span>who
+a
+
+In <span class="token punctuation">[</span><span class="token number">4</span><span class="token punctuation">]</span><span class="token punctuation">:</span> <span class="token operator">%</span>whos
+Variable   Type    Data<span class="token operator">/</span>Info
+<span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span>
+a          <span class="token builtin">int</span>     <span class="token number">1</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="方法-3.-in-interactive-mode">方法 3. In interactive mode</h3>
+<blockquote>
+<p><strong>NOTE</strong>: Python 3 取消了 <code>execfile()</code>
+这个函数! 如今使用 <code>exec()</code>.</p>
+</blockquote>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># python</span>
+<span class="token operator">>></span><span class="token operator">></span> <span class="token keyword">exec</span><span class="token punctuation">(</span><span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">'test.py'</span><span class="token punctuation">)</span><span class="token punctuation">.</span>read<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+a <span class="token operator">=</span> <span class="token number">1</span>
+<span class="token operator">>></span><span class="token operator">></span> a
+<span class="token number">1</span>
+<span class="token operator">>></span><span class="token operator">></span> <span class="token string">'a'</span> <span class="token keyword">in</span> <span class="token builtin">dir</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token boolean">True</span>
+<span class="token operator">>></span><span class="token operator">></span> <span class="token builtin">globals</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token string">'a'</span><span class="token punctuation">]</span>  <span class="token comment"># same as vars()['a']</span>
+<span class="token number">1</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>但这之后文件并没有关闭, 虽然多数时候没有影响, 但如果实在要关闭,
+建议使用 <code>with</code> :</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># python</span>
+<span class="token keyword">with</span> <span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">'test.py'</span><span class="token punctuation">)</span> <span class="token keyword">as</span> f<span class="token punctuation">:</span>
+    <span class="token keyword">exec</span><span class="token punctuation">(</span>f<span class="token punctuation">.</span>read<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>  <span class="token comment"># ctrl+D to exit the block</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<p>总之十分不方便, 因此不推荐. <br><br> 对于没有使用
+<code>if __name__ == "__main__"</code> 的脚本, 当脚本处在当前目录或
+<code>$PYTHONPATH</code> 中时, 也可以有比较方便的办法<br>(
+注意这里因为是调用 module 的形式, 所以不要加 '.py' ):</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># python</span>
+<span class="token operator">>></span><span class="token operator">></span> <span class="token keyword">import</span> test
+a <span class="token operator">=</span> <span class="token number">1</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<p><br> 补充说明在 python 交互环境中查看当前环境中的变量的方法 (ipython
+/ jupyter 使用 <code>%who</code>, <code>%whos</code> 即可):</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token builtin">dir</span><span class="token punctuation">(</span><span class="token punctuation">)</span>  <span class="token comment"># without an argument, return the names in the current scope</span>
+<span class="token builtin">globals</span><span class="token punctuation">(</span><span class="token punctuation">)</span>  <span class="token comment"># a dictionary containing the current scope's global variables</span>
+<span class="token builtin">locals</span><span class="token punctuation">(</span><span class="token punctuation">)</span>  <span class="token comment"># a dictionary containing the current scope's local variables</span>
+<span class="token builtin">vars</span><span class="token punctuation">(</span><span class="token punctuation">)</span>  <span class="token comment"># without arguments, equivalent to locals();</span>
+        <span class="token comment"># with an argument, equivalent to object.__dict__.</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+]]></content>
+      <categories>
+        <category>Solar Physics</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>使用 pickle 模块存取 dict</title>
     <url>/2018-10-20-pickle.html</url>
     <content><![CDATA[<p>Python 自带一个存取 dict 到二进制文件的工具 <a
@@ -6492,82 +6568,6 @@ csv</a></li>
       </tags>
   </entry>
   <entry>
-    <title>Python 的脚本与交互式环境</title>
-    <url>/2018-10-15-scripts-and-interactive-mode.html</url>
-    <content><![CDATA[<p>目的是从交互环境调用脚本产生的变量, 可用于调试脚本和测试数据等等.</p>
-<p>比如当前目录下有一个包含如下内容的脚本:</p>
-<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment">#!/usr/bin/env python</span>
-a<span class="token operator">=</span><span class="token number">1</span>
-<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'a ='</span><span class="token punctuation">,</span> a<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-<span id="more"></span>
-<h3 id="方法-1.-shell---interactive-mode-推荐">方法 1. shell -&gt;
-interactive mode (推荐)</h3>
-<p>使用 <code>-i</code> 选项:</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># shell</span>
-$ python -i test.py<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-<p>执行结束随即进入 python 交互环境, 并且保留了脚本中定义的变量:</p>
-<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># python</span>
-a <span class="token operator">=</span> <span class="token number">1</span>
-<span class="token operator">>></span><span class="token operator">></span> a
-<span class="token number">1</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-<h3 id="方法-2.-in-ipython-jupyter-第二推荐">方法 2. In ipython /
-jupyter (第二推荐)</h3>
-<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># ipython</span>
-In <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">:</span> <span class="token operator">%</span>run test<span class="token punctuation">.</span>py
-a <span class="token operator">=</span> <span class="token number">1</span>
-
-In <span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">:</span> a
-Out<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">:</span> <span class="token number">1</span>
-
-In <span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">:</span> <span class="token operator">%</span>who
-a
-
-In <span class="token punctuation">[</span><span class="token number">4</span><span class="token punctuation">]</span><span class="token punctuation">:</span> <span class="token operator">%</span>whos
-Variable   Type    Data<span class="token operator">/</span>Info
-<span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span>
-a          <span class="token builtin">int</span>     <span class="token number">1</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h3 id="方法-3.-in-interactive-mode">方法 3. In interactive mode</h3>
-<blockquote>
-<p><strong>NOTE</strong>: Python 3 取消了 <code>execfile()</code>
-这个函数! 如今使用 <code>exec()</code>.</p>
-</blockquote>
-<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># python</span>
-<span class="token operator">>></span><span class="token operator">></span> <span class="token keyword">exec</span><span class="token punctuation">(</span><span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">'test.py'</span><span class="token punctuation">)</span><span class="token punctuation">.</span>read<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
-a <span class="token operator">=</span> <span class="token number">1</span>
-<span class="token operator">>></span><span class="token operator">></span> a
-<span class="token number">1</span>
-<span class="token operator">>></span><span class="token operator">></span> <span class="token string">'a'</span> <span class="token keyword">in</span> <span class="token builtin">dir</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-<span class="token boolean">True</span>
-<span class="token operator">>></span><span class="token operator">></span> <span class="token builtin">globals</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token string">'a'</span><span class="token punctuation">]</span>  <span class="token comment"># same as vars()['a']</span>
-<span class="token number">1</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>但这之后文件并没有关闭, 虽然多数时候没有影响, 但如果实在要关闭,
-建议使用 <code>with</code> :</p>
-<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># python</span>
-<span class="token keyword">with</span> <span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">'test.py'</span><span class="token punctuation">)</span> <span class="token keyword">as</span> f<span class="token punctuation">:</span>
-    <span class="token keyword">exec</span><span class="token punctuation">(</span>f<span class="token punctuation">.</span>read<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>  <span class="token comment"># ctrl+D to exit the block</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-<p>总之十分不方便, 因此不推荐. <br><br> 对于没有使用
-<code>if __name__ == "__main__"</code> 的脚本, 当脚本处在当前目录或
-<code>$PYTHONPATH</code> 中时, 也可以有比较方便的办法<br>(
-注意这里因为是调用 module 的形式, 所以不要加 '.py' ):</p>
-<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># python</span>
-<span class="token operator">>></span><span class="token operator">></span> <span class="token keyword">import</span> test
-a <span class="token operator">=</span> <span class="token number">1</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-<p><br> 补充说明在 python 交互环境中查看当前环境中的变量的方法 (ipython
-/ jupyter 使用 <code>%who</code>, <code>%whos</code> 即可):</p>
-<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token builtin">dir</span><span class="token punctuation">(</span><span class="token punctuation">)</span>  <span class="token comment"># without an argument, return the names in the current scope</span>
-<span class="token builtin">globals</span><span class="token punctuation">(</span><span class="token punctuation">)</span>  <span class="token comment"># a dictionary containing the current scope's global variables</span>
-<span class="token builtin">locals</span><span class="token punctuation">(</span><span class="token punctuation">)</span>  <span class="token comment"># a dictionary containing the current scope's local variables</span>
-<span class="token builtin">vars</span><span class="token punctuation">(</span><span class="token punctuation">)</span>  <span class="token comment"># without arguments, equivalent to locals();</span>
-        <span class="token comment"># with an argument, equivalent to object.__dict__.</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-]]></content>
-      <categories>
-        <category>Solar Physics</category>
-      </categories>
-      <tags>
-        <tag>python</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Pandas sep=&#39;\s+&#39; 的问题</title>
     <url>/2018-12-04-pandas-sep.html</url>
     <content><![CDATA[<p>Pandas 的 <code>read_table</code> (<a
@@ -6606,11 +6606,12 @@ href="advance.html#91-用-pandas-读-csv">用 pandas 读 csv</a></p>
       </tags>
   </entry>
   <entry>
-    <title>Coming back soon ...</title>
+    <title>Coming back</title>
     <url>/2022-07-12-Coming-back-soon.html</url>
-    <content><![CDATA[<p>I'm keep on restoring my old posts, as the original site has not been
-accessable for quit a long time.</p>
-<p>See you later~</p>
+    <content><![CDATA[<p>Welcome!</p>
+<p>The posts in my old blog have been transferred here (the original
+site has not been accessible for quit a long time).</p>
+<p>I'm working on something new. See you later ~</p>
 ]]></content>
   </entry>
 </search>
