@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 5.4.2">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+  <link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha256-DfWjNxDkM94fVBWx1H5BMMp0Zq7luBlV8QRcSES7s+0=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"lydiazly.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.12.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":"mac"},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"manual","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="Jupyter Notebook  Example Data (pswd: s5re)  User Module (help) from __future__ import division, print_function  # Reload user modules automatically # %load_ext autoreload # %autoreload 2  # notebook">
+<meta property="og:type" content="blog">
+<meta property="og:title" content="Example: plot HMI">
+<meta property="og:url" content="https://lydiazly.github.io/example_plothmi">
+<meta property="og:site_name" content="Lydia&#39;s notes">
+<meta property="og:description" content="Jupyter Notebook  Example Data (pswd: s5re)  User Module (help) from __future__ import division, print_function  # Reload user modules automatically # %load_ext autoreload # %autoreload 2  # notebook">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://lydiazly.github.io/example_plothmi/plothmi1.png">
+<meta property="og:image" content="https://lydiazly.github.io/example_plothmi/plothmi2.png">
+<meta property="og:image" content="https://lydiazly.github.io/example_plothmi/plothmi3.png">
+<meta property="og:image" content="https://lydiazly.github.io/example_plothmi/plothmi4.png">
+<meta property="og:image" content="https://lydiazly.github.io/example_plothmi/plothmi5.png">
+<meta property="article:published_time" content="2018-10-14T08:06:23.000Z">
+<meta property="article:modified_time" content="2018-10-14T08:06:23.000Z">
+<meta property="article:author" content="Lydia Zhang">
+<meta property="article:tag" content="python">
+<meta property="article:tag" content="sunpy">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://lydiazly.github.io/example_plothmi/plothmi1.png">
+
+
+<link rel="canonical" href="https://lydiazly.github.io/example_plothmi.html">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"https://lydiazly.github.io/example_plothmi","path":"/example_plothmi.html","title":"Example: plot HMI"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>Example: plot HMI | Lydia's notes</title>
+  
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">Lydia's notes</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">Uploading...</p>
+      <img class="custom-logo-image" src="/images/logo2.png" alt="Lydia's notes">
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags<span class="badge">7</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories<span class="badge">3</span></a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="Searching..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#read-data"><span class="nav-number">1.</span> <span class="nav-text">Read data</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#plot"><span class="nav-number">2.</span> <span class="nav-text">Plot</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#submap"><span class="nav-number">3.</span> <span class="nav-text">Submap</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#without-disambiguation"><span class="nav-number">3.1.</span> <span class="nav-text">Without disambiguation:</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Lydia Zhang</p>
+  <div class="site-description" itemprop="description">Tips of Python, etc.</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">13</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="mailto:lydiazly2@nju.edu.cn" title="E-Mail → mailto:lydiazly2@nju.edu.cn" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+  <div class="cc-license site-overview-item animated" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.en" class="cc-opacity" rel="noopener" target="_blank"><img src="https://cdnjs.cloudflare.com/ajax/libs/creativecommons-vocabulary/2020.11.3/assets/license_badges/small/by_sa.svg" alt="Creative Commons"></a>
+  </div>
+
+
+
+        </div>
+      </div>
+        <div class="back-to-top animated" role="button" aria-label="Back to top">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="reading-progress-bar"></div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://lydiazly.github.io/example_plothmi">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Lydia Zhang">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Lydia's notes">
+      <meta itemprop="description" content="Tips of Python, etc.">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="Example: plot HMI | Lydia's notes">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Example: plot HMI
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2018-10-14 16:06:23" itemprop="dateCreated datePublished" datetime="2018-10-14T16:06:23+08:00">2018-10-14</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Sohighlight-lar-Physics/" itemprop="url" rel="index"><span itemprop="name">Sohighlight lar Physics</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p><a
+href="/downloads/notebooks/example_hmi.zip"><i class="fas fa-download"></i>
+Jupyter Notebook</a></p>
+<p><a
+target="_blank" rel="noopener" href="https://pan.baidu.com/s/1nwsIcDr"><i class="fas fa-download"></i>
+Example Data</a> <span style="color:gray">(pswd: s5re)</span></p>
+<p><a
+target="_blank" rel="noopener" href="https://github.com/lydiazly/lydiazly.github.io/raw/main/source/downloads/scripts/sunpy-modules.zip"><i class="fas fa-download"></i>
+User Module</a> (<a
+href="https://lydiazly.github.io/usr_sunpy.html">help</a>)</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">from</span> __future__ <span class="token keyword">import</span> division<span class="token punctuation">,</span> print_function
+
+<span class="token comment"># Reload user modules automatically</span>
+<span class="token comment"># %load_ext autoreload</span>
+<span class="token comment"># %autoreload 2</span>
+
+<span class="token comment"># notebook, inline, ...</span>
+<span class="token operator">%</span>matplotlib notebook
+
+<span class="token keyword">from</span> astropy<span class="token punctuation">.</span>coordinates <span class="token keyword">import</span> SkyCoord
+<span class="token keyword">import</span> astropy<span class="token punctuation">.</span>units <span class="token keyword">as</span> u
+<span class="token keyword">import</span> matplotlib<span class="token punctuation">.</span>pyplot <span class="token keyword">as</span> plt
+<span class="token keyword">import</span> numpy <span class="token keyword">as</span> np
+<span class="token keyword">import</span> sunpy<span class="token punctuation">.</span><span class="token builtin">map</span>
+<span class="token keyword">from</span> copy <span class="token keyword">import</span> deepcopy
+
+<span class="token comment"># To use user modules</span>
+<span class="token keyword">import</span> sys
+sys<span class="token punctuation">.</span>path<span class="token punctuation">.</span>append<span class="token punctuation">(</span><span class="token string">'../modules'</span><span class="token punctuation">)</span>
+
+<span class="token comment"># print('Python version: %s' % sys.version.split('(')[0])  # Python version: 3.6.6 |Anaconda, Inc.| </span>
+<span class="token comment"># print('SunPy version: %s' % sunpy.__version__)  # SunPy version: 0.9.3</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span id="more"></span>
+<h2 id="read-data">Read data</h2>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">fnames <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token string">'data/hmi.B_720s.20150827_052400_TAI.field.fits'</span><span class="token punctuation">,</span>
+          <span class="token string">'data/hmi.B_720s.20150827_052400_TAI.inclination.fits'</span><span class="token punctuation">,</span>
+          <span class="token string">'data/hmi.B_720s.20150827_052400_TAI.azimuth.fits'</span><span class="token punctuation">,</span>
+          <span class="token string">'data/hmi.B_720s.20150827_052400_TAI.disambig.fits'</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">from</span> usr_sunpy <span class="token keyword">import</span> read_sdo
+mapb<span class="token punctuation">,</span> mapi<span class="token punctuation">,</span> mapa<span class="token punctuation">,</span> mapd <span class="token operator">=</span> <span class="token builtin">list</span><span class="token punctuation">(</span><span class="token builtin">map</span><span class="token punctuation">(</span>read_sdo<span class="token punctuation">,</span> fnames<span class="token punctuation">)</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<pre><code>hmi.B_720s.20150827_052400_TAI.field.fits   [4096, 4096]
+hmi.B_720s.20150827_052400_TAI.inclination.fits [4096, 4096]
+hmi.B_720s.20150827_052400_TAI.azimuth.fits [4096, 4096]
+hmi.B_720s.20150827_052400_TAI.disambig.fits    [4096, 4096]</code></pre>
+<ul>
+<li>Disambiguate:</li>
+</ul>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">mapa<span class="token punctuation">.</span>data<span class="token punctuation">[</span>mapd<span class="token punctuation">.</span>data <span class="token operator">></span> <span class="token number">3</span><span class="token punctuation">]</span> <span class="token operator">+=</span> <span class="token number">180.</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<ul>
+<li>Transform to vector components:</li>
+</ul>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">mapbx <span class="token operator">=</span> deepcopy<span class="token punctuation">(</span>mapb<span class="token punctuation">)</span>
+mapby <span class="token operator">=</span> deepcopy<span class="token punctuation">(</span>mapb<span class="token punctuation">)</span>
+mapbz <span class="token operator">=</span> deepcopy<span class="token punctuation">(</span>mapb<span class="token punctuation">)</span>
+mapbx<span class="token punctuation">.</span>data<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">]</span> <span class="token operator">=</span> mapb<span class="token punctuation">.</span>data <span class="token operator">*</span> np<span class="token punctuation">.</span>sin<span class="token punctuation">(</span>np<span class="token punctuation">.</span>deg2rad<span class="token punctuation">(</span>mapi<span class="token punctuation">.</span>data<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">*</span> np<span class="token punctuation">.</span>cos<span class="token punctuation">(</span>np<span class="token punctuation">.</span>deg2rad<span class="token punctuation">(</span>mapa<span class="token punctuation">.</span>data <span class="token operator">+</span> <span class="token number">270.</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+mapby<span class="token punctuation">.</span>data<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">]</span> <span class="token operator">=</span> mapb<span class="token punctuation">.</span>data <span class="token operator">*</span> np<span class="token punctuation">.</span>sin<span class="token punctuation">(</span>np<span class="token punctuation">.</span>deg2rad<span class="token punctuation">(</span>mapi<span class="token punctuation">.</span>data<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">*</span> np<span class="token punctuation">.</span>sin<span class="token punctuation">(</span>np<span class="token punctuation">.</span>deg2rad<span class="token punctuation">(</span>mapa<span class="token punctuation">.</span>data <span class="token operator">+</span> <span class="token number">270.</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+mapbz<span class="token punctuation">.</span>data<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">]</span> <span class="token operator">=</span> mapb<span class="token punctuation">.</span>data <span class="token operator">*</span> np<span class="token punctuation">.</span>cos<span class="token punctuation">(</span>np<span class="token punctuation">.</span>deg2rad<span class="token punctuation">(</span>mapi<span class="token punctuation">.</span>data<span class="token punctuation">)</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># Suppress metadata warnings</span>
+<span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token punctuation">&#123;</span>mapbx<span class="token punctuation">,</span> mapby<span class="token punctuation">,</span> mapbz<span class="token punctuation">&#125;</span><span class="token punctuation">:</span>
+    i<span class="token punctuation">.</span>meta<span class="token punctuation">[</span><span class="token string">'hgln_obs'</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">0.</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">mapbz<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre><code>SunPy Map
+---------
+Observatory:         SDO
+Instrument:      HMI SIDE1
+Detector:        HMI
+Measurement:         hmi
+Wavelength:      6173.0
+Observation Date:    2015-08-27 05:22:21
+Exposure Time:       0.000000 s
+Dimension:       [4096. 4096.] pix
+Coordinate System:   helioprojective
+Scale:           [0.504376 0.504376] arcsec / pix
+Reference Pixel:     [2033.825928 2053.603271] pix
+Reference Coord:     [0. 0.] arcsec
+array([[nan, nan, nan, ..., nan, nan, nan],
+       [nan, nan, nan, ..., nan, nan, nan],
+       [nan, nan, nan, ..., nan, nan, nan],
+       ...,
+       [nan, nan, nan, ..., nan, nan, nan],
+       [nan, nan, nan, ..., nan, nan, nan],
+       [nan, nan, nan, ..., nan, nan, nan]])</code></pre>
+<ul>
+<li>Use <code>sunpy.instr.aia.aiaprep()</code> Processes a level 1
+AIAMap into a level 1.5 AIAMap.<br> <a
+target="_blank" rel="noopener" href="https://docs.sunpy.org/en/stable/api/sunpy.instr.aia.aiaprep.html"
+class="uri">https://docs.sunpy.org/en/stable/api/sunpy.instr.aia.aiaprep.html</a></li>
+</ul>
+<blockquote>
+<p>From <strong>sunpy 0.9.3</strong>,
+<code>sunpy.instr.aia.aiaprep()</code> supports both <code>AIAMap</code>
+&amp; <code>HMIMap</code> objects.</p>
+</blockquote>
+<p><strong>Note</strong>: Improve <code>aiaprep</code> in
+<code>&lt;python_path&gt;/site-packages/sunpy/instr/aia.py</code>:<br>
+   at line: <code>tempmap = aiamap.rotate(...)</code><br>    add
+<code>order=3</code> (recommend, this will keep NaNs) and set
+<code>missing=np.nan</code> in <code>rotate()</code></p>
+<p>There is a modified function <code>aiaprep_usr()</code> in
+<code>usr_sunpy</code></p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># After `aiaprep`:</span>
+<span class="token comment"># - North is aligned with the y axis.</span>
+<span class="token comment"># - Each pixel is 0.6 arcsec across.</span>
+<span class="token comment"># - The center of the sun is at the center of the image.</span>
+<span class="token comment"># This may be a bit slow.</span>
+
+<span class="token comment"># from sunpy.instr.aia import aiaprep</span>
+<span class="token keyword">from</span> usr_sunpy <span class="token keyword">import</span> aiaprep_usr <span class="token keyword">as</span> aiaprep
+<span class="token keyword">import</span> warnings
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'level 1 -> level 1.5 ...'</span><span class="token punctuation">)</span>
+<span class="token keyword">with</span> warnings<span class="token punctuation">.</span>catch_warnings<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    warnings<span class="token punctuation">.</span>simplefilter<span class="token punctuation">(</span><span class="token string">"ignore"</span><span class="token punctuation">)</span>
+    mapbx <span class="token operator">=</span> aiaprep<span class="token punctuation">(</span>mapbx<span class="token punctuation">)</span>
+    mapby <span class="token operator">=</span> aiaprep<span class="token punctuation">(</span>mapby<span class="token punctuation">)</span>
+    mapbz <span class="token operator">=</span> aiaprep<span class="token punctuation">(</span>mapbz<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'level    ='</span><span class="token punctuation">,</span> mapbz<span class="token punctuation">.</span>meta<span class="token punctuation">[</span><span class="token string">'lvl_num'</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'rsun_obs ='</span><span class="token punctuation">,</span> mapbz<span class="token punctuation">.</span>meta<span class="token punctuation">[</span><span class="token string">'rsun_obs'</span><span class="token punctuation">]</span> <span class="token operator">*</span> u<span class="token punctuation">.</span>arcsec<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'r_sun    ='</span><span class="token punctuation">,</span> mapbz<span class="token punctuation">.</span>meta<span class="token punctuation">[</span><span class="token string">'r_sun'</span><span class="token punctuation">]</span> <span class="token operator">*</span> u<span class="token punctuation">.</span>pix<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre><code>level 1 -&gt; level 1.5 ...
+level    = 1.5
+rsun_obs = 949.495178 arcsec
+r_sun    = 1582.4919633333334 pix</code></pre>
+<ul>
+<li><strong>Or</strong>, use <code>rotate()</code> manually:</li>
+</ul>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># DO NOT execute this cell if `sunpy.instr.aia.aiaprep()` has been called.</span>
+<span class="token comment"># `rotate` function will remove old CROTA keywords.</span>
+<span class="token comment"># This may be a bit slow if order = 3.</span>
+<span class="token keyword">if</span> <span class="token string">'lvl_num'</span> <span class="token keyword">not</span> <span class="token keyword">in</span> mapbz<span class="token punctuation">.</span>meta <span class="token keyword">or</span> mapbz<span class="token punctuation">.</span>meta<span class="token punctuation">[</span><span class="token string">'lvl_num'</span><span class="token punctuation">]</span> <span class="token operator">&lt;</span> <span class="token number">1.5</span><span class="token punctuation">:</span>
+    order <span class="token operator">=</span> <span class="token number">3</span>
+    scale_factor <span class="token operator">=</span> <span class="token punctuation">(</span>mapbz<span class="token punctuation">.</span>scale<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">/</span> <span class="token number">0.6</span><span class="token punctuation">)</span><span class="token punctuation">.</span>value
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'rotate(CCW) &amp; recenter &amp; rescale ...'</span><span class="token punctuation">)</span>
+    <span class="token comment"># Suppress warnings of NaNs:</span>
+    <span class="token keyword">with</span> np<span class="token punctuation">.</span>errstate<span class="token punctuation">(</span>invalid<span class="token operator">=</span><span class="token string">'ignore'</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        mapbx <span class="token operator">=</span> mapbx<span class="token punctuation">.</span>rotate<span class="token punctuation">(</span>order<span class="token operator">=</span>order<span class="token punctuation">,</span> recenter<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">,</span> scale<span class="token operator">=</span>scale_factor<span class="token punctuation">,</span> missing<span class="token operator">=</span>np<span class="token punctuation">.</span>nan<span class="token punctuation">)</span>
+        mapby <span class="token operator">=</span> mapby<span class="token punctuation">.</span>rotate<span class="token punctuation">(</span>order<span class="token operator">=</span>order<span class="token punctuation">,</span> recenter<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">,</span> scale<span class="token operator">=</span>scale_factor<span class="token punctuation">,</span> missing<span class="token operator">=</span>np<span class="token punctuation">.</span>nan<span class="token punctuation">)</span>
+        mapbz <span class="token operator">=</span> mapbz<span class="token punctuation">.</span>rotate<span class="token punctuation">(</span>order<span class="token operator">=</span>order<span class="token punctuation">,</span> recenter<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">,</span> scale<span class="token operator">=</span>scale_factor<span class="token punctuation">,</span> missing<span class="token operator">=</span>np<span class="token punctuation">.</span>nan<span class="token punctuation">)</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'Rotation angle = %f deg (CCW)'</span> <span class="token operator">%</span> <span class="token operator">-</span>mapb<span class="token punctuation">.</span>meta<span class="token punctuation">[</span><span class="token string">'crota2'</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>Level 1.5:</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">mapbz<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre><code>SunPy Map
+---------
+Observatory:         SDO
+Instrument:      HMI SIDE1
+Detector:        HMI
+Measurement:         hmi
+Wavelength:      6173.0
+Observation Date:    2015-08-27 05:22:21
+Exposure Time:       0.000000 s
+Dimension:       [4096. 4096.] pix
+Coordinate System:   helioprojective
+Scale:           [0.6 0.6] arcsec / pix
+Reference Pixel:     [2048.5 2048.5] pix
+Reference Coord:     [0. 0.] arcsec
+array([[nan, nan, nan, ..., nan, nan, nan],
+       [nan, nan, nan, ..., nan, nan, nan],
+       [nan, nan, nan, ..., nan, nan, nan],
+       ...,
+       [nan, nan, nan, ..., nan, nan, nan],
+       [nan, nan, nan, ..., nan, nan, nan],
+       [nan, nan, nan, ..., nan, nan, nan]])</code></pre>
+<p>Check the disk center ('crpix1', 'crpix2'):</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># pixel number start from 1</span>
+pcenter <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">(</span>mapbz<span class="token punctuation">.</span>meta<span class="token punctuation">[</span><span class="token string">'crpix1'</span><span class="token punctuation">]</span> <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token operator">*</span> u<span class="token punctuation">.</span>pix<span class="token punctuation">,</span> <span class="token punctuation">(</span>mapbz<span class="token punctuation">.</span>meta<span class="token punctuation">[</span><span class="token string">'crpix2'</span><span class="token punctuation">]</span> <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token operator">*</span> u<span class="token punctuation">.</span>pix<span class="token punctuation">)</span>
+center <span class="token operator">=</span> mapbz<span class="token punctuation">.</span>pixel_to_world<span class="token punctuation">(</span><span class="token operator">*</span>pcenter<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'[Image_center] (%.3f, %.3f) pixel = (%7.4f, %7.4f) arcsec  (lon, lat) = (%8.5f, %8.5f) deg'</span> <span class="token operator">%</span>
+      <span class="token punctuation">(</span><span class="token punctuation">(</span>mapbz<span class="token punctuation">.</span>dimensions<span class="token punctuation">.</span>x<span class="token punctuation">.</span>value<span class="token operator">-</span><span class="token number">1.</span><span class="token punctuation">)</span><span class="token operator">/</span><span class="token number">2.</span><span class="token punctuation">,</span> <span class="token punctuation">(</span>mapbz<span class="token punctuation">.</span>dimensions<span class="token punctuation">.</span>y<span class="token punctuation">.</span>value<span class="token operator">-</span><span class="token number">1.</span><span class="token punctuation">)</span><span class="token operator">/</span><span class="token number">2.</span><span class="token punctuation">,</span>
+        mapbz<span class="token punctuation">.</span>center<span class="token punctuation">.</span>Tx<span class="token punctuation">.</span>value<span class="token punctuation">,</span> mapbz<span class="token punctuation">.</span>center<span class="token punctuation">.</span>Ty<span class="token punctuation">.</span>value<span class="token punctuation">,</span>
+        mapbz<span class="token punctuation">.</span>center<span class="token punctuation">.</span>heliographic_stonyhurst<span class="token punctuation">.</span>lon<span class="token punctuation">.</span>value<span class="token punctuation">,</span> mapbz<span class="token punctuation">.</span>center<span class="token punctuation">.</span>heliographic_stonyhurst<span class="token punctuation">.</span>lat<span class="token punctuation">.</span>value<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'[ Disk_center] (%.3f, %.3f) pixel = (%7.4f, %7.4f) arcsec  (lon, lat) = (%8.5f, %8.5f) deg'</span> <span class="token operator">%</span>
+      <span class="token punctuation">(</span>pcenter<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span>value<span class="token punctuation">,</span> pcenter<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">.</span>value<span class="token punctuation">,</span> center<span class="token punctuation">.</span>Tx<span class="token punctuation">.</span>value<span class="token punctuation">,</span> center<span class="token punctuation">.</span>Ty<span class="token punctuation">.</span>value<span class="token punctuation">,</span>
+       center<span class="token punctuation">.</span>heliographic_stonyhurst<span class="token punctuation">.</span>lon<span class="token punctuation">.</span>value<span class="token punctuation">,</span> center<span class="token punctuation">.</span>heliographic_stonyhurst<span class="token punctuation">.</span>lat<span class="token punctuation">.</span>value<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'[ Observation] (lon, lat, radius) = (%g deg, %g deg, %g m)'</span> <span class="token operator">%</span>
+      <span class="token punctuation">(</span>mapbz<span class="token punctuation">.</span>heliographic_longitude<span class="token punctuation">.</span>value<span class="token punctuation">,</span> mapbz<span class="token punctuation">.</span>heliographic_latitude<span class="token punctuation">.</span>value<span class="token punctuation">,</span> mapbz<span class="token punctuation">.</span>observer_coordinate<span class="token punctuation">.</span>radius<span class="token punctuation">.</span>value<span class="token punctuation">)</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre><code>[Image_center] (2047.500, 2047.500) pixel = ( 0.3000,  0.3000) arcsec  (lon, lat) = ( 0.01816,  7.10702) deg
+[ Disk_center] (2047.500, 2047.500) pixel = ( 0.0000,  0.0000) arcsec  (lon, lat) = ( 0.00000,  7.08900) deg
+[ Observation] (lon, lat, radius) = (0 deg, 7.089 deg, 1.51197e+11 m)</code></pre>
+<p>A quick look:</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">mapbz<span class="token punctuation">.</span>peek<span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre><code>&lt;IPython.core.display.Javascript object&gt;</code></pre>
+<p><img src="/example_plothmi/plothmi1.png" width="640"></p>
+<h2 id="plot">Plot</h2>
+<p><a
+target="_blank" rel="noopener" href="https://docs.sunpy.org/en/stable/guide/plotting.html?highlight=peek#plotting-maps-with-wcsaxes"
+class="uri">https://docs.sunpy.org/en/stable/guide/plotting.html?highlight=peek#plotting-maps-with-wcsaxes</a></p>
+<p>User function <code>plot_map()</code> will invoke <code>plot()</code>
+of sunpy.</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">from</span> usr_sunpy <span class="token keyword">import</span> plot_map
+
+fig1 <span class="token operator">=</span> plt<span class="token punctuation">.</span>figure<span class="token punctuation">(</span>figsize<span class="token operator">=</span><span class="token punctuation">(</span><span class="token number">8</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">)</span><span class="token punctuation">,</span> dpi<span class="token operator">=</span><span class="token number">100</span><span class="token punctuation">)</span>
+ax1 <span class="token operator">=</span> fig1<span class="token punctuation">.</span>add_subplot<span class="token punctuation">(</span><span class="token number">111</span><span class="token punctuation">,</span> projection<span class="token operator">=</span>mapbz<span class="token punctuation">)</span>
+<span class="token comment"># This plot function will simply invoke mapbz.plot(), if keyword `coords` is not specified.</span>
+plot_map<span class="token punctuation">(</span>mapbz<span class="token punctuation">,</span> ax<span class="token operator">=</span>ax1<span class="token punctuation">,</span> vmin<span class="token operator">=</span><span class="token operator">-</span><span class="token number">2000.</span><span class="token punctuation">,</span> vmax<span class="token operator">=</span><span class="token number">2000.</span><span class="token punctuation">)</span>
+
+<span class="token comment"># Properties</span>
+mapbz<span class="token punctuation">.</span>draw_limb<span class="token punctuation">(</span>axes<span class="token operator">=</span>ax1<span class="token punctuation">,</span> color<span class="token operator">=</span><span class="token string">'b'</span><span class="token punctuation">,</span> linewidth<span class="token operator">=</span><span class="token number">1.5</span><span class="token punctuation">)</span>  <span class="token comment"># default zorder=100 in `draw_limb()`</span>
+ax1<span class="token punctuation">.</span>plot_coord<span class="token punctuation">(</span>mapbz<span class="token punctuation">.</span>center<span class="token punctuation">,</span> <span class="token string">'rx'</span><span class="token punctuation">,</span> markersize<span class="token operator">=</span><span class="token number">10</span><span class="token punctuation">,</span> linewidth<span class="token operator">=</span><span class="token number">1.5</span><span class="token punctuation">,</span> label<span class="token operator">=</span><span class="token string">'Image center'</span><span class="token punctuation">)</span>
+<span class="token keyword">try</span><span class="token punctuation">:</span>
+    ax1<span class="token punctuation">.</span>plot_coord<span class="token punctuation">(</span>center<span class="token punctuation">,</span> <span class="token string">'bx'</span><span class="token punctuation">,</span> markersize<span class="token operator">=</span><span class="token number">10</span><span class="token punctuation">,</span> linewidth<span class="token operator">=</span><span class="token number">1.5</span><span class="token punctuation">,</span> label<span class="token operator">=</span><span class="token string">'Disk center'</span><span class="token punctuation">)</span>
+<span class="token keyword">except</span><span class="token punctuation">:</span>
+    <span class="token keyword">pass</span>
+ax1<span class="token punctuation">.</span>legend<span class="token punctuation">(</span>loc<span class="token operator">=</span><span class="token string">'upper right'</span><span class="token punctuation">,</span> fontsize<span class="token operator">=</span><span class="token number">8</span><span class="token punctuation">,</span> markerscale<span class="token operator">=</span><span class="token number">0.6</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment"># fig1.savefig('example_plothmi_disk.png', dpi=200, bbox_inches='tight')</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre><code>&lt;IPython.core.display.Javascript object&gt;</code></pre>
+<p><img src="/example_plothmi/plothmi2.png" width="800"></p>
+<h2 id="submap">Submap</h2>
+<p><a
+target="_blank" rel="noopener" href="http://docs.sunpy.org/en/v0.9.3/code_ref/map.html?highlight=peek#sunpy.map.mapbase.GenericMap.submap"
+class="uri">http://docs.sunpy.org/en/v0.9.3/code_ref/map.html?highlight=peek#sunpy.map.mapbase.GenericMap.submap</a><br>
+<a
+target="_blank" rel="noopener" href="http://docs.astropy.org/en/stable/api/astropy.coordinates.SkyCoord.html"
+class="uri">http://docs.astropy.org/en/stable/api/astropy.coordinates.SkyCoord.html</a></p>
+<p><strong><code>submap(bottom_left, top_right=None)</code><br></strong>
+* <strong>bottom_left</strong> (astropy.units.Quantity or SkyCoord) –
+The bottom_left coordinate of the rectangle.<br> If a SkyCoord it can
+have shape (2,) and also define top_right.<br> If specifying pixel
+coordinates it must be given as an Quantity object with units of pixel.
+* <strong>top_right</strong> (astropy.units.Quantity or SkyCoord) – The
+top_right coordinate of the rectangle.<br> Can only be omitted if
+bottom_left has shape (2,).</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token builtin">xrange</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token number">300.</span><span class="token punctuation">,</span> <span class="token number">800.</span><span class="token punctuation">)</span> <span class="token operator">*</span> u<span class="token punctuation">.</span>arcsec
+yrange <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">500.</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">100.</span><span class="token punctuation">)</span> <span class="token operator">*</span> u<span class="token punctuation">.</span>arcsec
+
+subcoord <span class="token operator">=</span> SkyCoord<span class="token punctuation">(</span><span class="token builtin">xrange</span><span class="token punctuation">,</span> yrange<span class="token punctuation">,</span> frame<span class="token operator">=</span>mapbz<span class="token punctuation">.</span>coordinate_frame<span class="token punctuation">)</span>
+smapbx <span class="token operator">=</span> mapbx<span class="token punctuation">.</span>submap<span class="token punctuation">(</span>subcoord<span class="token punctuation">)</span>
+smapby <span class="token operator">=</span> mapby<span class="token punctuation">.</span>submap<span class="token punctuation">(</span>subcoord<span class="token punctuation">)</span>
+smapbz <span class="token operator">=</span> mapbz<span class="token punctuation">.</span>submap<span class="token punctuation">(</span>subcoord<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'Submap: (%s, %s) arcsec  (%d x %d)'</span>
+      <span class="token operator">%</span> <span class="token punctuation">(</span><span class="token builtin">xrange</span><span class="token punctuation">.</span>value<span class="token punctuation">,</span> yrange<span class="token punctuation">.</span>value<span class="token punctuation">,</span> <span class="token operator">*</span>smapbz<span class="token punctuation">.</span>data<span class="token punctuation">.</span>shape<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre><code>Submap: ([300. 800.], [-500. -100.]) arcsec  (833 x 666)</code></pre>
+<p><strong><code>draw_rectangle(bottom_left, width, height, axes=None, **kwargs)</code></strong></p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">from</span> usr_sunpy <span class="token keyword">import</span> plot_map
+
+fig1 <span class="token operator">=</span> plt<span class="token punctuation">.</span>figure<span class="token punctuation">(</span>figsize<span class="token operator">=</span><span class="token punctuation">(</span><span class="token number">8</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">)</span><span class="token punctuation">,</span> dpi<span class="token operator">=</span><span class="token number">100</span><span class="token punctuation">)</span>
+ax1 <span class="token operator">=</span> fig1<span class="token punctuation">.</span>add_subplot<span class="token punctuation">(</span><span class="token number">111</span><span class="token punctuation">,</span> projection<span class="token operator">=</span>mapbz<span class="token punctuation">)</span>
+plot_map<span class="token punctuation">(</span>mapbz<span class="token punctuation">,</span> ax<span class="token operator">=</span>ax1<span class="token punctuation">,</span> vmin<span class="token operator">=</span><span class="token operator">-</span><span class="token number">2000.</span><span class="token punctuation">,</span> vmax<span class="token operator">=</span><span class="token number">2000.</span><span class="token punctuation">,</span> grid_color<span class="token operator">=</span><span class="token string">'w'</span><span class="token punctuation">)</span>
+
+<span class="token comment"># mapbz.draw_limb(axes=ax1, color='b', linewidth=1.5)</span>
+mapbz<span class="token punctuation">.</span>draw_rectangle<span class="token punctuation">(</span>subcoord<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token builtin">xrange</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token operator">-</span><span class="token builtin">xrange</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span> yrange<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token operator">-</span>yrange<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span> axes<span class="token operator">=</span>ax1<span class="token punctuation">,</span> color<span class="token operator">=</span><span class="token string">'yellow'</span><span class="token punctuation">,</span> linewidth<span class="token operator">=</span><span class="token number">1.5</span><span class="token punctuation">)</span>
+
+<span class="token comment"># Specify xlim, ylim by pixels</span>
+<span class="token comment"># lim_arcsec = ((-1000.1, 1000.1) * u.arcsec, (-1000.1, 1000.1) * u.arcsec)</span>
+<span class="token comment"># lim_pix = mapbz.world_to_pixel(SkyCoord(*lim_arcsec, frame=mapbz.coordinate_frame))  # pix</span>
+<span class="token comment"># ax1.set_xlim(lim_pix[0].value)  # pix</span>
+<span class="token comment"># ax1.set_ylim(lim_pix[1].value);  # pix</span>
+
+<span class="token comment"># Clip NaNs</span>
+valid_index <span class="token operator">=</span> np<span class="token punctuation">.</span>where<span class="token punctuation">(</span>np<span class="token punctuation">.</span>isfinite<span class="token punctuation">(</span>mapbz<span class="token punctuation">.</span>data<span class="token punctuation">)</span><span class="token punctuation">)</span>
+ax1<span class="token punctuation">.</span>set_xlim<span class="token punctuation">(</span><span class="token punctuation">(</span>valid_index<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token builtin">min</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">-</span><span class="token number">100</span><span class="token punctuation">,</span> valid_index<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token builtin">max</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">+</span><span class="token number">100</span><span class="token punctuation">)</span><span class="token punctuation">)</span>  <span class="token comment"># pix</span>
+ax1<span class="token punctuation">.</span>set_ylim<span class="token punctuation">(</span><span class="token punctuation">(</span>valid_index<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token builtin">min</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">-</span><span class="token number">100</span><span class="token punctuation">,</span> valid_index<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token builtin">max</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">+</span><span class="token number">100</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment"># pix</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre><code>&lt;IPython.core.display.Javascript object&gt;</code></pre>
+<p><img src="/example_plothmi/plothmi3.png" width="800"></p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">from</span> usr_sunpy <span class="token keyword">import</span> plot_map<span class="token punctuation">,</span> plot_vmap
+
+fig2 <span class="token operator">=</span> plt<span class="token punctuation">.</span>figure<span class="token punctuation">(</span>figsize<span class="token operator">=</span><span class="token punctuation">(</span><span class="token number">9</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">)</span><span class="token punctuation">,</span> dpi<span class="token operator">=</span><span class="token number">100</span><span class="token punctuation">)</span>
+ax2 <span class="token operator">=</span> fig2<span class="token punctuation">.</span>add_subplot<span class="token punctuation">(</span><span class="token number">111</span><span class="token punctuation">,</span> projection<span class="token operator">=</span>smapbz<span class="token punctuation">)</span>
+im2 <span class="token operator">=</span> plot_map<span class="token punctuation">(</span>smapbz<span class="token punctuation">,</span> ax<span class="token operator">=</span>ax2<span class="token punctuation">,</span> vmin<span class="token operator">=</span><span class="token operator">-</span><span class="token number">2000.</span><span class="token punctuation">,</span> vmax<span class="token operator">=</span><span class="token number">2000.</span><span class="token punctuation">,</span> grid<span class="token operator">=</span><span class="token number">10</span><span class="token operator">*</span>u<span class="token punctuation">.</span>deg<span class="token punctuation">,</span> title<span class="token operator">=</span>mapbz<span class="token punctuation">.</span>latex_name<span class="token operator">+</span><span class="token string">' (submap)'</span><span class="token punctuation">)</span>
+plot_vmap<span class="token punctuation">(</span>smapbx<span class="token punctuation">,</span> smapby<span class="token punctuation">,</span> smapbz<span class="token punctuation">,</span> ax2<span class="token punctuation">,</span> cmin<span class="token operator">=</span><span class="token number">20.</span><span class="token punctuation">,</span> vmax<span class="token operator">=</span><span class="token number">500.</span><span class="token punctuation">,</span> cmap<span class="token operator">=</span><span class="token string">'binary'</span><span class="token punctuation">,</span>
+          scale_units<span class="token operator">=</span><span class="token string">'xy'</span><span class="token punctuation">,</span> scale<span class="token operator">=</span><span class="token number">1</span><span class="token operator">/</span><span class="token number">0.05</span><span class="token punctuation">,</span> minlength<span class="token operator">=</span><span class="token number">0.02</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre><code>&lt;IPython.core.display.Javascript object&gt;</code></pre>
+<p><img src="/example_plothmi/plothmi4.png" width="900"></p>
+<h3 id="without-disambiguation">Without disambiguation:</h3>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">from</span> usr_sunpy <span class="token keyword">import</span> plot_map<span class="token punctuation">,</span> plot_vmap
+
+fig2 <span class="token operator">=</span> plt<span class="token punctuation">.</span>figure<span class="token punctuation">(</span>figsize<span class="token operator">=</span><span class="token punctuation">(</span><span class="token number">9</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">)</span><span class="token punctuation">,</span> dpi<span class="token operator">=</span><span class="token number">100</span><span class="token punctuation">)</span>
+ax2 <span class="token operator">=</span> fig2<span class="token punctuation">.</span>add_subplot<span class="token punctuation">(</span><span class="token number">111</span><span class="token punctuation">,</span> projection<span class="token operator">=</span>smapbz<span class="token punctuation">)</span>
+im2 <span class="token operator">=</span> plot_map<span class="token punctuation">(</span>smapbz<span class="token punctuation">,</span> ax<span class="token operator">=</span>ax2<span class="token punctuation">,</span> vmin<span class="token operator">=</span><span class="token operator">-</span><span class="token number">2000.</span><span class="token punctuation">,</span> vmax<span class="token operator">=</span><span class="token number">2000.</span><span class="token punctuation">,</span> grid<span class="token operator">=</span><span class="token number">10</span><span class="token operator">*</span>u<span class="token punctuation">.</span>deg<span class="token punctuation">,</span> title<span class="token operator">=</span>mapbz<span class="token punctuation">.</span>latex_name<span class="token operator">+</span><span class="token string">' (submap)'</span><span class="token punctuation">)</span>
+plot_vmap<span class="token punctuation">(</span>smapbx<span class="token punctuation">,</span> smapby<span class="token punctuation">,</span> smapbz<span class="token punctuation">,</span> ax2<span class="token punctuation">,</span> cmin<span class="token operator">=</span><span class="token number">20.</span><span class="token punctuation">,</span> vmax<span class="token operator">=</span><span class="token number">500.</span><span class="token punctuation">,</span> cmap<span class="token operator">=</span><span class="token string">'binary'</span><span class="token punctuation">,</span>
+          scale_units<span class="token operator">=</span><span class="token string">'xy'</span><span class="token punctuation">,</span> scale<span class="token operator">=</span><span class="token number">1</span><span class="token operator">/</span><span class="token number">0.05</span><span class="token punctuation">,</span> minlength<span class="token operator">=</span><span class="token number">0.02</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre><code>&lt;IPython.core.display.Javascript object&gt;</code></pre>
+<p><img src="/example_plothmi/plothmi5.png" width="900"></p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/python/" rel="tag"># python</a>
+              <a href="/tags/sunpy/" rel="tag"># sunpy</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/jsoc-download-example" rel="prev" title="JSOC Download Example">
+                  <i class="fa fa-chevron-left"></i> JSOC Download Example
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/example_projection" rel="next" title="Example: projection">
+                  Example: projection <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 2018 – 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Lydia Zhang</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/next-boot.js"></script>
+
+  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.0/search.js" integrity="sha256-vXZMYLEqsROAXkEw93GGIvaB2ab+QW6w3+1ahD9nXXA=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+
+
+
+  
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"ams","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
+<script src="/js/third-party/math/mathjax.js"></script>
+
+
+
+</body>
+</html>

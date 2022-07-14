@@ -1,0 +1,1949 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 5.4.2">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+  <link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha256-DfWjNxDkM94fVBWx1H5BMMp0Zq7luBlV8QRcSES7s+0=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"lydiazly.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.12.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":"mac"},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"manual","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="Jupyter Notebook Reference http:&#x2F;&#x2F;docs.sunpy.org&#x2F;en&#x2F;stable&#x2F;guide&#x2F;acquiring_data&#x2F;jsoc.html %load_ext autoreload %autoreload 2  import astropy.units as u  from sunpy.net import Fido, attrs  # Suppress">
+<meta property="og:type" content="blog">
+<meta property="og:title" content="Example: downloading data from JSOC">
+<meta property="og:url" content="https://lydiazly.github.io/jsoc">
+<meta property="og:site_name" content="Lydia&#39;s notes">
+<meta property="og:description" content="Jupyter Notebook Reference http:&#x2F;&#x2F;docs.sunpy.org&#x2F;en&#x2F;stable&#x2F;guide&#x2F;acquiring_data&#x2F;jsoc.html %load_ext autoreload %autoreload 2  import astropy.units as u  from sunpy.net import Fido, attrs  # Suppress">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://lydiazly.github.io/jsoc/hmi01.png">
+<meta property="og:image" content="https://lydiazly.github.io/jsoc/hmi03-1.png">
+<meta property="og:image" content="https://lydiazly.github.io/jsoc/hmi02.png">
+<meta property="og:image" content="https://lydiazly.github.io/jsoc/hmi03-2.png">
+<meta property="article:published_time" content="2018-07-12T09:09:47.000Z">
+<meta property="article:modified_time" content="2018-07-12T09:09:47.000Z">
+<meta property="article:author" content="Lydia Zhang">
+<meta property="article:tag" content="python">
+<meta property="article:tag" content="sunpy">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://lydiazly.github.io/jsoc/hmi01.png">
+
+
+<link rel="canonical" href="https://lydiazly.github.io/jsoc.html">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"https://lydiazly.github.io/jsoc","path":"/jsoc.html","title":"Example: downloading data from JSOC"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>Example: downloading data from JSOC | Lydia's notes</title>
+  
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">Lydia's notes</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">Uploading...</p>
+      <img class="custom-logo-image" src="/images/logo2.png" alt="Lydia's notes">
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags<span class="badge">7</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories<span class="badge">3</span></a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="Searching..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#getting-information"><span class="nav-number">1.</span> <span class="nav-text">Getting information</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#series"><span class="nav-number">1.1.</span> <span class="nav-text">Series</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#primekeys"><span class="nav-number">1.2.</span> <span class="nav-text">PrimeKeys</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#segments"><span class="nav-number">1.3.</span> <span class="nav-text">Segments</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#basic-usage"><span class="nav-number">2.</span> <span class="nav-text">Basic usage</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#fido"><span class="nav-number">2.1.</span> <span class="nav-text">Fido</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#searching-for-data"><span class="nav-number">2.1.1.</span> <span class="nav-text">Searching for data</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#indexing"><span class="nav-number">2.1.2.</span> <span class="nav-text">Indexing</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#downloading-data"><span class="nav-number">2.1.3.</span> <span class="nav-text">Downloading data</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#jsocclient"><span class="nav-number">2.2.</span> <span class="nav-text">JSOCClient</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#searching-for-data-1"><span class="nav-number">2.2.1.</span> <span class="nav-text">Searching for data</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#indexing-1"><span class="nav-number">2.2.2.</span> <span class="nav-text">Indexing</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#downloading-data-1"><span class="nav-number">2.2.3.</span> <span class="nav-text">Downloading data</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#constructing-complex-queries"><span class="nav-number">3.</span> <span class="nav-text">Constructing complex queries</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#time"><span class="nav-number">3.1.</span> <span class="nav-text">Time</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#searching-for-data-2"><span class="nav-number">3.2.</span> <span class="nav-text">Searching for data</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Lydia Zhang</p>
+  <div class="site-description" itemprop="description">Tips of Python, etc.</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">13</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="mailto:lydiazly2@nju.edu.cn" title="E-Mail → mailto:lydiazly2@nju.edu.cn" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+  <div class="cc-license site-overview-item animated" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.en" class="cc-opacity" rel="noopener" target="_blank"><img src="https://cdnjs.cloudflare.com/ajax/libs/creativecommons-vocabulary/2020.11.3/assets/license_badges/small/by_sa.svg" alt="Creative Commons"></a>
+  </div>
+
+
+
+        </div>
+      </div>
+        <div class="back-to-top animated" role="button" aria-label="Back to top">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="reading-progress-bar"></div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://lydiazly.github.io/jsoc">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Lydia Zhang">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Lydia's notes">
+      <meta itemprop="description" content="Tips of Python, etc.">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="Example: downloading data from JSOC | Lydia's notes">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Example: downloading data from JSOC
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2018-07-12 17:09:47" itemprop="dateCreated datePublished" datetime="2018-07-12T17:09:47+08:00">2018-07-12</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Solar-Physics/" itemprop="url" rel="index"><span itemprop="name">Solar Physics</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p><a
+href="/downloads/notebooks/fido.zip"><i class="fas fa-download"></i>
+Jupyter Notebook</a></p>
+<p>Reference <a
+target="_blank" rel="noopener" href="http://docs.sunpy.org/en/stable/guide/acquiring_data/jsoc.html"
+class="uri">http://docs.sunpy.org/en/stable/guide/acquiring_data/jsoc.html</a></p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token operator">%</span>load_ext autoreload
+<span class="token operator">%</span>autoreload <span class="token number">2</span>
+
+<span class="token keyword">import</span> astropy<span class="token punctuation">.</span>units <span class="token keyword">as</span> u
+
+<span class="token keyword">from</span> sunpy<span class="token punctuation">.</span>net <span class="token keyword">import</span> Fido<span class="token punctuation">,</span> attrs
+
+<span class="token comment"># Suppress warnings of pandas, astropy</span>
+<span class="token keyword">import</span> warnings
+warnings<span class="token punctuation">.</span>simplefilter<span class="token punctuation">(</span><span class="token string">"ignore"</span><span class="token punctuation">,</span> category<span class="token operator">=</span>FutureWarning<span class="token punctuation">)</span>
+<span class="token keyword">from</span> astropy<span class="token punctuation">.</span>utils<span class="token punctuation">.</span>exceptions <span class="token keyword">import</span> AstropyDeprecationWarning
+warnings<span class="token punctuation">.</span>simplefilter<span class="token punctuation">(</span><span class="token string">"ignore"</span><span class="token punctuation">,</span> category<span class="token operator">=</span>AstropyDeprecationWarning<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>To be clear, here we use <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">from</span> sunpy<span class="token punctuation">.</span>net <span class="token keyword">import</span> Fido<span class="token punctuation">,</span> attrs<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre> instead of examples in <a
+target="_blank" rel="noopener" href="http://docs.sunpy.org/en/stable/guide/acquiring_data/jsoc.html"
+class="uri">http://docs.sunpy.org/en/stable/guide/acquiring_data/jsoc.html</a>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">from</span> sunpy<span class="token punctuation">.</span>net <span class="token keyword">import</span> Fido<span class="token punctuation">,</span> attrs <span class="token keyword">as</span> a<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre> <span id="more"></span></p>
+<h2 id="getting-information">Getting information</h2>
+<p><code>drms</code> - Python module for accessing HMI, AIA and MDI
+data<br> - <a target="_blank" rel="noopener" href="https://github.com/kbg/drms"
+class="uri">https://github.com/kbg/drms</a> - <a
+target="_blank" rel="noopener" href="http://drms.readthedocs.io/en/stable/tutorial.html"
+class="uri">http://drms.readthedocs.io/en/stable/tutorial.html</a></p>
+<h3 id="series">Series</h3>
+<p><img src='/jsoc/hmi01.png'/></p>
+<p>Import the <code>drms</code> module and create an instance of the
+<code>drms.Client</code> class:</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> drms
+c <span class="token operator">=</span> drms<span class="token punctuation">.</span>Client<span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<p>List available <code>Series</code>:</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">c<span class="token punctuation">.</span>series<span class="token punctuation">(</span><span class="token string">r'aia\..*'</span><span class="token punctuation">)</span>  <span class="token comment"># regex, case-insensitive</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre><code>[&#39;aia.flatfield&#39;,
+ &#39;aia.lev1&#39;,
+ &#39;aia.lev1_euv_12s&#39;,
+ &#39;aia.lev1_uv_24s&#39;,
+ &#39;aia.lev1_vis_1h&#39;,
+ &#39;aia.master_pointing3h&#39;,
+ &#39;aia.response&#39;,
+ &#39;aia.temperature_summary_300s&#39;]</code></pre>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">c<span class="token punctuation">.</span>series<span class="token punctuation">(</span><span class="token string">r'hmi\.b.*'</span><span class="token punctuation">)</span>  <span class="token comment"># regex, case-insensitive</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre><code>[&#39;hmi.B_720s&#39;,
+ &#39;hmi.B_720s_dcon&#39;,
+ &#39;hmi.B_720s_dconS&#39;,
+ &#39;hmi.Bharp_720s&#39;,
+ &#39;hmi.Bharp_720s_nrt&#39;,
+ &#39;hmi.b_135s&#39;,
+ &#39;hmi.b_720s_e15w1332_cea&#39;,
+ &#39;hmi.b_720s_e15w1332_cutout&#39;,
+ &#39;hmi.b_synoptic&#39;,
+ &#39;hmi.b_synoptic_small&#39;,
+ &#39;hmi.bmap_lowres_latlon_720s&#39;]</code></pre>
+<h3 id="primekeys">PrimeKeys</h3>
+<p>Find out the <code>PrimeKeys</code> supported in any
+<code>Series</code>:</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">c<span class="token punctuation">.</span>pkeys<span class="token punctuation">(</span><span class="token string">'aia.lev1_euv_12s'</span><span class="token punctuation">)</span>  <span class="token comment"># case-insensitive</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre><code>[&#39;T_REC&#39;, &#39;WAVELNTH&#39;]</code></pre>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">c<span class="token punctuation">.</span>pkeys<span class="token punctuation">(</span><span class="token string">'hmi.B_720s'</span><span class="token punctuation">)</span>  <span class="token comment"># case-insensitive</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre><code>[&#39;T_REC&#39;]</code></pre>
+<h3 id="segments">Segments</h3>
+<p>Find out the <code>Segments</code> supported in any
+<code>Series</code>:</p>
+<ul>
+<li>'aia.lev1_euv_12s'</li>
+</ul>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">si <span class="token operator">=</span> c<span class="token punctuation">.</span>info<span class="token punctuation">(</span><span class="token string">'aia.lev1_euv_12s'</span><span class="token punctuation">)</span>
+si<span class="token punctuation">.</span>segments<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+<thead>
+<tr style="text-align: right;">
+<th>
+</th>
+<th>
+type
+</th>
+<th>
+units
+</th>
+<th>
+protocol
+</th>
+<th>
+dims
+</th>
+<th>
+note
+</th>
+</tr>
+<tr>
+<th>
+name
+</th>
+<th>
+</th>
+<th>
+</th>
+<th>
+</th>
+<th>
+</th>
+<th>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>
+image
+</th>
+<td>
+int
+</td>
+<td>
+None
+</td>
+<td>
+link via lev1
+</td>
+<td>
+None
+</td>
+<td>
+AIA level 1 image
+</td>
+</tr>
+<tr>
+<th>
+spikes
+</th>
+<td>
+int
+</td>
+<td>
+None
+</td>
+<td>
+link via lev1
+</td>
+<td>
+None
+</td>
+<td>
+Cosmic ray information
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">si<span class="token punctuation">.</span>segments<span class="token punctuation">.</span>index<span class="token punctuation">.</span>values  <span class="token comment"># To a `ndarray`</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre><code>array([&#39;image&#39;, &#39;spikes&#39;], dtype=object)</code></pre>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">si<span class="token punctuation">.</span>segments<span class="token punctuation">.</span>index<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>  <span class="token comment"># Use slice to pick a value</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre><code>&#39;image&#39;</code></pre>
+<ul>
+<li>'hmi.b_720s'</li>
+</ul>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">si <span class="token operator">=</span> c<span class="token punctuation">.</span>info<span class="token punctuation">(</span><span class="token string">'hmi.b_720s'</span><span class="token punctuation">)</span>
+si<span class="token punctuation">.</span>segments<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token number">4</span><span class="token punctuation">]</span>  <span class="token comment"># Use slice to pick rows</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+<thead>
+<tr style="text-align: right;">
+<th>
+</th>
+<th>
+type
+</th>
+<th>
+units
+</th>
+<th>
+protocol
+</th>
+<th>
+dims
+</th>
+<th>
+note
+</th>
+</tr>
+<tr>
+<th>
+name
+</th>
+<th>
+</th>
+<th>
+</th>
+<th>
+</th>
+<th>
+</th>
+<th>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>
+inclination
+</th>
+<td>
+int
+</td>
+<td>
+None
+</td>
+<td>
+link via MDATA
+</td>
+<td>
+None
+</td>
+<td>
+Inclination
+</td>
+</tr>
+<tr>
+<th>
+azimuth
+</th>
+<td>
+int
+</td>
+<td>
+None
+</td>
+<td>
+link via MDATA
+</td>
+<td>
+None
+</td>
+<td>
+Azimuth before disambiguation
+</td>
+</tr>
+<tr>
+<th>
+disambig
+</th>
+<td>
+char
+</td>
+<td>
+</td>
+<td>
+fits
+</td>
+<td>
+4096x4096
+</td>
+<td>
+Flag for 180 degree change in azimuth
+</td>
+</tr>
+<tr>
+<th>
+field
+</th>
+<td>
+int
+</td>
+<td>
+None
+</td>
+<td>
+link via MDATA
+</td>
+<td>
+None
+</td>
+<td>
+Field Strength
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="basic-usage">Basic usage</h2>
+<p>See <a
+target="_blank" rel="noopener" href="http://docs.sunpy.org/en/stable/guide/acquiring_data/jsoc.html"
+class="uri">http://docs.sunpy.org/en/stable/guide/acquiring_data/jsoc.html</a></p>
+<blockquote>
+<p>There are two ways of downloading JSOC data. - One way is using
+Sunpy’s unified search interface, known as<code>Fido</code>.<br>
+<code>Fido</code> supplies a single, easy and consistent way to to
+obtain most forms of solar physics data. - An alternative way to fetch
+data from JSOC is by using the underlying <code>JSOCClient</code>.<br>
+This option can be preferred when the complex searches are to be made,
+or when you need to separate the staging and downloading steps, which is
+not supported by <code>Fido</code>.</p>
+</blockquote>
+<h3 id="fido">Fido</h3>
+<h4 id="searching-for-data">Searching for data</h4>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">response <span class="token operator">=</span> Fido<span class="token punctuation">.</span>search<span class="token punctuation">(</span>
+    attrs<span class="token punctuation">.</span>jsoc<span class="token punctuation">.</span>Time<span class="token punctuation">(</span><span class="token string">'2014-01-01T00:00:00'</span><span class="token punctuation">,</span> <span class="token string">'2014-01-01T00:00:30'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    attrs<span class="token punctuation">.</span>jsoc<span class="token punctuation">.</span>Notify<span class="token punctuation">(</span><span class="token string">'lydiazly@nju.edu.cn'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    attrs<span class="token punctuation">.</span>jsoc<span class="token punctuation">.</span>Series<span class="token punctuation">(</span><span class="token string">'aia.lev1_euv_12s'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    attrs<span class="token punctuation">.</span>jsoc<span class="token punctuation">.</span>Wavelength<span class="token punctuation">(</span><span class="token number">304</span> <span class="token operator">*</span> u<span class="token punctuation">.</span>AA<span class="token punctuation">)</span> <span class="token operator">|</span> attrs<span class="token punctuation">.</span>jsoc<span class="token punctuation">.</span>Wavelength<span class="token punctuation">(</span><span class="token number">171</span> <span class="token operator">*</span> u<span class="token punctuation">.</span>AA<span class="token punctuation">)</span>
+<span class="token punctuation">)</span>
+response<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+Results from 2 Providers:<br><br>3 Results from the
+JSOCClient:<br><i>Table length=3</i>
+<table id="table23285989288984" class="table-striped table-bordered table-condensed">
+<thead>
+<tr>
+<th>
+T_REC
+</th>
+<th>
+TELESCOP
+</th>
+<th>
+INSTRUME
+</th>
+<th>
+WAVELNTH
+</th>
+<th>
+CAR_ROT
+</th>
+</tr>
+</thead>
+<thead>
+<tr>
+<th>
+str20
+</th>
+<th>
+str7
+</th>
+<th>
+str5
+</th>
+<th>
+int64
+</th>
+<th>
+int64
+</th>
+</tr>
+</thead>
+<tr>
+<td>
+2014-01-01T00:00:01Z
+</td>
+<td>
+SDO/AIA
+</td>
+<td>
+AIA_4
+</td>
+<td>
+304
+</td>
+<td>
+2145
+</td>
+</tr>
+<tr>
+<td>
+2014-01-01T00:00:13Z
+</td>
+<td>
+SDO/AIA
+</td>
+<td>
+AIA_4
+</td>
+<td>
+304
+</td>
+<td>
+2145
+</td>
+</tr>
+<tr>
+<td>
+2014-01-01T00:00:25Z
+</td>
+<td>
+SDO/AIA
+</td>
+<td>
+AIA_4
+</td>
+<td>
+304
+</td>
+<td>
+2145
+</td>
+</tr>
+</table>
+<br>3 Results from the JSOCClient:<br><i>Table length=3</i>
+<table id="table23285988917200" class="table-striped table-bordered table-condensed">
+<thead>
+<tr>
+<th>
+T_REC
+</th>
+<th>
+TELESCOP
+</th>
+<th>
+INSTRUME
+</th>
+<th>
+WAVELNTH
+</th>
+<th>
+CAR_ROT
+</th>
+</tr>
+</thead>
+<thead>
+<tr>
+<th>
+str20
+</th>
+<th>
+str7
+</th>
+<th>
+str5
+</th>
+<th>
+int64
+</th>
+<th>
+int64
+</th>
+</tr>
+</thead>
+<tr>
+<td>
+2014-01-01T00:00:01Z
+</td>
+<td>
+SDO/AIA
+</td>
+<td>
+AIA_3
+</td>
+<td>
+171
+</td>
+<td>
+2145
+</td>
+</tr>
+<tr>
+<td>
+2014-01-01T00:00:13Z
+</td>
+<td>
+SDO/AIA
+</td>
+<td>
+AIA_3
+</td>
+<td>
+171
+</td>
+<td>
+2145
+</td>
+</tr>
+<tr>
+<td>
+2014-01-01T00:00:25Z
+</td>
+<td>
+SDO/AIA
+</td>
+<td>
+AIA_3
+</td>
+<td>
+171
+</td>
+<td>
+2145
+</td>
+</tr>
+</table>
+<p><br></p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token builtin">type</span><span class="token punctuation">(</span>response<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre><code>sunpy.net.fido_factory.UnifiedResponse</code></pre>
+<h4 id="indexing">Indexing</h4>
+<ul>
+<li><p>First index: client (still necessary even if results are only
+found for a single client)</p></li>
+<li><p>Second index: rows (must be <strong>iterable</strong>, different
+from [<a href="fido.html">Example: downloading data using
+Fido</a>])</p></li>
+</ul>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">response<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+Results from 1 Provider:<br><br>3 Results from the
+JSOCClient:<br><i>Table length=3</i>
+<table id="table22680339934904" class="table-striped table-bordered table-condensed">
+<thead>
+<tr>
+<th>
+T_REC
+</th>
+<th>
+TELESCOP
+</th>
+<th>
+INSTRUME
+</th>
+<th>
+WAVELNTH
+</th>
+<th>
+CAR_ROT
+</th>
+</tr>
+</thead>
+<thead>
+<tr>
+<th>
+str20
+</th>
+<th>
+str7
+</th>
+<th>
+str5
+</th>
+<th>
+int64
+</th>
+<th>
+int64
+</th>
+</tr>
+</thead>
+<tr>
+<td>
+2014-01-01T00:00:01Z
+</td>
+<td>
+SDO/AIA
+</td>
+<td>
+AIA_3
+</td>
+<td>
+171
+</td>
+<td>
+2145
+</td>
+</tr>
+<tr>
+<td>
+2014-01-01T00:00:13Z
+</td>
+<td>
+SDO/AIA
+</td>
+<td>
+AIA_3
+</td>
+<td>
+171
+</td>
+<td>
+2145
+</td>
+</tr>
+<tr>
+<td>
+2014-01-01T00:00:25Z
+</td>
+<td>
+SDO/AIA
+</td>
+<td>
+AIA_3
+</td>
+<td>
+171
+</td>
+<td>
+2145
+</td>
+</tr>
+</table>
+<p><br></p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">response<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token number">2</span><span class="token punctuation">]</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+Results from 1 Provider:<br><br>2 Results from the
+JSOCClient:<br><i>Table length=2</i>
+<table id="table22680349474264" class="table-striped table-bordered table-condensed">
+<thead>
+<tr>
+<th>
+T_REC
+</th>
+<th>
+TELESCOP
+</th>
+<th>
+INSTRUME
+</th>
+<th>
+WAVELNTH
+</th>
+<th>
+CAR_ROT
+</th>
+</tr>
+</thead>
+<thead>
+<tr>
+<th>
+str20
+</th>
+<th>
+str7
+</th>
+<th>
+str5
+</th>
+<th>
+int64
+</th>
+<th>
+int64
+</th>
+</tr>
+</thead>
+<tr>
+<td>
+2014-01-01T00:00:01Z
+</td>
+<td>
+SDO/AIA
+</td>
+<td>
+AIA_3
+</td>
+<td>
+171
+</td>
+<td>
+2145
+</td>
+</tr>
+<tr>
+<td>
+2014-01-01T00:00:25Z
+</td>
+<td>
+SDO/AIA
+</td>
+<td>
+AIA_3
+</td>
+<td>
+171
+</td>
+<td>
+2145
+</td>
+</tr>
+</table>
+<p><br></p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">response<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">]</span>  <span class="token comment"># Not `response[0, 2]` !</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+Results from 1 Provider:<br><br>1 Results from the
+JSOCClient:<br><i>Table length=1</i>
+<table id="table22680349474768" class="table-striped table-bordered table-condensed">
+<thead>
+<tr>
+<th>
+T_REC
+</th>
+<th>
+TELESCOP
+</th>
+<th>
+INSTRUME
+</th>
+<th>
+WAVELNTH
+</th>
+<th>
+CAR_ROT
+</th>
+</tr>
+</thead>
+<thead>
+<tr>
+<th>
+str20
+</th>
+<th>
+str7
+</th>
+<th>
+str5
+</th>
+<th>
+int64
+</th>
+<th>
+int64
+</th>
+</tr>
+</thead>
+<tr>
+<td>
+2014-01-01T00:00:25Z
+</td>
+<td>
+SDO/AIA
+</td>
+<td>
+AIA_4
+</td>
+<td>
+304
+</td>
+<td>
+2145
+</td>
+</tr>
+</table>
+<p><br></p>
+<h4 id="downloading-data">Downloading data</h4>
+<p>Download the entire results:</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">res <span class="token operator">=</span> Fido<span class="token punctuation">.</span>fetch<span class="token punctuation">(</span>response<span class="token punctuation">,</span> path<span class="token operator">=</span><span class="token string">'./data'</span><span class="token punctuation">)</span>  <span class="token comment"># Will output a progress bar by default</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h3 id="jsocclient">JSOCClient</h3>
+<blockquote>
+<p>The JSOC stages data before you can download it, so a JSOC query is a
+<strong>three</strong> stage process. 1.
+<strong><code>search</code></strong>: query the JSOC for records and a
+table of these records is returned.<br> The result is
+<code>UnifiedResponse</code> for <code>Fido</code> while
+<code>JSOCResponse</code> for <code>JSOCClient</code> -
+<strong><code>request_data</code></strong>: request these records to be
+staged for download. - <strong><code>get_request</code></strong>:
+download.</p>
+<p>(<code>Fido</code> combines the stages into 2, <code>search</code>
+and <code>fetch</code>.)</p>
+</blockquote>
+<h4 id="searching-for-data-1">Searching for data</h4>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">from</span> sunpy<span class="token punctuation">.</span>net <span class="token keyword">import</span> jsoc
+client <span class="token operator">=</span> jsoc<span class="token punctuation">.</span>JSOCClient<span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">response <span class="token operator">=</span> client<span class="token punctuation">.</span>search<span class="token punctuation">(</span>
+    attrs<span class="token punctuation">.</span>jsoc<span class="token punctuation">.</span>Time<span class="token punctuation">(</span><span class="token string">'2014-01-01T00:00:00'</span><span class="token punctuation">,</span> <span class="token string">'2014-01-01T00:00:20'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    attrs<span class="token punctuation">.</span>jsoc<span class="token punctuation">.</span>Notify<span class="token punctuation">(</span><span class="token string">'lydiazly@nju.edu.cn'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    attrs<span class="token punctuation">.</span>jsoc<span class="token punctuation">.</span>Series<span class="token punctuation">(</span><span class="token string">'aia.lev1_euv_12s'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    attrs<span class="token punctuation">.</span>jsoc<span class="token punctuation">.</span>Wavelength<span class="token punctuation">(</span><span class="token number">304</span> <span class="token operator">*</span> u<span class="token punctuation">.</span>AA<span class="token punctuation">)</span> <span class="token operator">|</span> attrs<span class="token punctuation">.</span>jsoc<span class="token punctuation">.</span>Wavelength<span class="token punctuation">(</span><span class="token number">171</span> <span class="token operator">*</span> u<span class="token punctuation">.</span>AA<span class="token punctuation">)</span>
+<span class="token punctuation">)</span>
+response<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<i>Table length=4</i>
+<table id="table23453611657088" class="table-striped table-bordered table-condensed">
+<thead>
+<tr>
+<th>
+T_REC
+</th>
+<th>
+TELESCOP
+</th>
+<th>
+INSTRUME
+</th>
+<th>
+WAVELNTH
+</th>
+<th>
+CAR_ROT
+</th>
+</tr>
+</thead>
+<thead>
+<tr>
+<th>
+str20
+</th>
+<th>
+str7
+</th>
+<th>
+str5
+</th>
+<th>
+int64
+</th>
+<th>
+int64
+</th>
+</tr>
+</thead>
+<tr>
+<td>
+2014-01-01T00:00:01Z
+</td>
+<td>
+SDO/AIA
+</td>
+<td>
+AIA_4
+</td>
+<td>
+304
+</td>
+<td>
+2145
+</td>
+</tr>
+<tr>
+<td>
+2014-01-01T00:00:13Z
+</td>
+<td>
+SDO/AIA
+</td>
+<td>
+AIA_4
+</td>
+<td>
+304
+</td>
+<td>
+2145
+</td>
+</tr>
+<tr>
+<td>
+2014-01-01T00:00:01Z
+</td>
+<td>
+SDO/AIA
+</td>
+<td>
+AIA_3
+</td>
+<td>
+171
+</td>
+<td>
+2145
+</td>
+</tr>
+<tr>
+<td>
+2014-01-01T00:00:13Z
+</td>
+<td>
+SDO/AIA
+</td>
+<td>
+AIA_3
+</td>
+<td>
+171
+</td>
+<td>
+2145
+</td>
+</tr>
+</table>
+<p>Note here we get a single table.</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token builtin">type</span><span class="token punctuation">(</span>response<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre><code>sunpy.net.jsoc.jsoc.JSOCResponse</code></pre>
+<h4 id="indexing-1">Indexing</h4>
+<p>An integer get a <code>Row</code>:</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">response<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<i>Row index=2</i>
+<table id="table23453611657088">
+<thead>
+<tr>
+<th>
+T_REC
+</th>
+<th>
+TELESCOP
+</th>
+<th>
+INSTRUME
+</th>
+<th>
+WAVELNTH
+</th>
+<th>
+CAR_ROT
+</th>
+</tr>
+</thead>
+<thead>
+<tr>
+<th>
+str20
+</th>
+<th>
+str7
+</th>
+<th>
+str5
+</th>
+<th>
+int64
+</th>
+<th>
+int64
+</th>
+</tr>
+</thead>
+<tr>
+<td>
+2014-01-01T00:00:01Z
+</td>
+<td>
+SDO/AIA
+</td>
+<td>
+AIA_3
+</td>
+<td>
+171
+</td>
+<td>
+2145
+</td>
+</tr>
+</table>
+<p>A <strong>iterable</strong> get a <code>Table</code>:</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">response<span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<i>Table length=1</i>
+<table id="table23453620502480" class="table-striped table-bordered table-condensed">
+<thead>
+<tr>
+<th>
+T_REC
+</th>
+<th>
+TELESCOP
+</th>
+<th>
+INSTRUME
+</th>
+<th>
+WAVELNTH
+</th>
+<th>
+CAR_ROT
+</th>
+</tr>
+</thead>
+<thead>
+<tr>
+<th>
+str20
+</th>
+<th>
+str7
+</th>
+<th>
+str5
+</th>
+<th>
+int64
+</th>
+<th>
+int64
+</th>
+</tr>
+</thead>
+<tr>
+<td>
+2014-01-01T00:00:01Z
+</td>
+<td>
+SDO/AIA
+</td>
+<td>
+AIA_3
+</td>
+<td>
+171
+</td>
+<td>
+2145
+</td>
+</tr>
+</table>
+<p>Convert a <code>Row</code> to a <code>Table</code>:</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">from</span> astropy<span class="token punctuation">.</span>table<span class="token punctuation">.</span>table <span class="token keyword">import</span> Table
+Table<span class="token punctuation">(</span>response<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">.</span>table<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<i>Table length=1</i>
+<table id="table23453611454080" class="table-striped table-bordered table-condensed">
+<thead>
+<tr>
+<th>
+T_REC
+</th>
+<th>
+TELESCOP
+</th>
+<th>
+INSTRUME
+</th>
+<th>
+WAVELNTH
+</th>
+<th>
+CAR_ROT
+</th>
+</tr>
+</thead>
+<thead>
+<tr>
+<th>
+str20
+</th>
+<th>
+str7
+</th>
+<th>
+str5
+</th>
+<th>
+int64
+</th>
+<th>
+int64
+</th>
+</tr>
+</thead>
+<tr>
+<td>
+2014-01-01T00:00:01Z
+</td>
+<td>
+SDO/AIA
+</td>
+<td>
+AIA_3
+</td>
+<td>
+171
+</td>
+<td>
+2145
+</td>
+</tr>
+</table>
+<p>Other examples:</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">response<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token number">2</span><span class="token punctuation">]</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<i>Table length=2</i>
+<table id="table23453620500632" class="table-striped table-bordered table-condensed">
+<thead>
+<tr>
+<th>
+T_REC
+</th>
+<th>
+TELESCOP
+</th>
+<th>
+INSTRUME
+</th>
+<th>
+WAVELNTH
+</th>
+<th>
+CAR_ROT
+</th>
+</tr>
+</thead>
+<thead>
+<tr>
+<th>
+str20
+</th>
+<th>
+str7
+</th>
+<th>
+str5
+</th>
+<th>
+int64
+</th>
+<th>
+int64
+</th>
+</tr>
+</thead>
+<tr>
+<td>
+2014-01-01T00:00:01Z
+</td>
+<td>
+SDO/AIA
+</td>
+<td>
+AIA_4
+</td>
+<td>
+304
+</td>
+<td>
+2145
+</td>
+</tr>
+<tr>
+<td>
+2014-01-01T00:00:01Z
+</td>
+<td>
+SDO/AIA
+</td>
+<td>
+AIA_3
+</td>
+<td>
+171
+</td>
+<td>
+2145
+</td>
+</tr>
+</table>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">response<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token number">2</span><span class="token punctuation">]</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<i>Table length=2</i>
+<table id="table23453611657032" class="table-striped table-bordered table-condensed">
+<thead>
+<tr>
+<th>
+T_REC
+</th>
+<th>
+TELESCOP
+</th>
+<th>
+INSTRUME
+</th>
+<th>
+WAVELNTH
+</th>
+<th>
+CAR_ROT
+</th>
+</tr>
+</thead>
+<thead>
+<tr>
+<th>
+str20
+</th>
+<th>
+str7
+</th>
+<th>
+str5
+</th>
+<th>
+int64
+</th>
+<th>
+int64
+</th>
+</tr>
+</thead>
+<tr>
+<td>
+2014-01-01T00:00:01Z
+</td>
+<td>
+SDO/AIA
+</td>
+<td>
+AIA_4
+</td>
+<td>
+304
+</td>
+<td>
+2145
+</td>
+</tr>
+<tr>
+<td>
+2014-01-01T00:00:13Z
+</td>
+<td>
+SDO/AIA
+</td>
+<td>
+AIA_4
+</td>
+<td>
+304
+</td>
+<td>
+2145
+</td>
+</tr>
+</table>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">response<span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<i>Table length=2</i>
+<table id="table23453611658600" class="table-striped table-bordered table-condensed">
+<thead>
+<tr>
+<th>
+T_REC
+</th>
+<th>
+TELESCOP
+</th>
+<th>
+INSTRUME
+</th>
+<th>
+WAVELNTH
+</th>
+<th>
+CAR_ROT
+</th>
+</tr>
+</thead>
+<thead>
+<tr>
+<th>
+str20
+</th>
+<th>
+str7
+</th>
+<th>
+str5
+</th>
+<th>
+int64
+</th>
+<th>
+int64
+</th>
+</tr>
+</thead>
+<tr>
+<td>
+2014-01-01T00:00:01Z
+</td>
+<td>
+SDO/AIA
+</td>
+<td>
+AIA_4
+</td>
+<td>
+304
+</td>
+<td>
+2145
+</td>
+</tr>
+<tr>
+<td>
+2014-01-01T00:00:01Z
+</td>
+<td>
+SDO/AIA
+</td>
+<td>
+AIA_3
+</td>
+<td>
+171
+</td>
+<td>
+2145
+</td>
+</tr>
+</table>
+<h4 id="downloading-data-1">Downloading data</h4>
+<p>Download the entire results:</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">res <span class="token operator">=</span> client<span class="token punctuation">.</span>fetch<span class="token punctuation">(</span>response<span class="token punctuation">,</span> path<span class="token operator">=</span><span class="token string">'./data'</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre><code>Export request pending. [id=&quot;JSOC_20180710_1151&quot;, status=2]
+Waiting for 0 seconds...
+Export request pending. [id=&quot;JSOC_20180710_1151&quot;, status=1]
+Waiting for 5 seconds...
+4 URLs found for download. Full request totalling 17MB
+Export request pending. [id=&quot;JSOC_20180710_1152&quot;, status=2]
+Waiting for 0 seconds...
+4 URLs found for download. Full request totalling 24MB</code></pre>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">res<span class="token punctuation">.</span>wait<span class="token punctuation">(</span><span class="token punctuation">)</span>  <span class="token comment"># Show the progress bar &amp; wait to finish downloading.</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>Or separate out the staging to <code>request_data</code> &amp;
+<code>get_request</code>:</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">requests <span class="token operator">=</span> client<span class="token punctuation">.</span>request_data<span class="token punctuation">(</span>response<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">requests<span class="token punctuation">.</span><span class="token builtin">id</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre><code>&#39;JSOC_20180708_435&#39;</code></pre>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">requests<span class="token punctuation">.</span>status<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre><code>0</code></pre>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">res <span class="token operator">=</span> client<span class="token punctuation">.</span>get_request<span class="token punctuation">(</span>requests<span class="token punctuation">,</span> path<span class="token operator">=</span><span class="token string">'./data'</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">res<span class="token punctuation">.</span>wait<span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>So far, the best way to download a subset of the results is to
+<strong>make a query again</strong>.</p>
+<p>Or use <strong><code>JSOCClient</code></strong> (and a custom
+function) instead of <strong><code>Fido</code></strong> to search for
+data.</p>
+<p>See details below:</p>
+<p>If slice the result as <code>response[2]</code>, everything is OK
+except <code>query_args</code> is lost.</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">response<span class="token punctuation">.</span>query_args<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre><code>[&#123;&#39;wavelength&#39;: &lt;Quantity 304. Angstrom&gt;,
+  &#39;start_time&#39;: datetime.datetime(2014, 1, 1, 0, 0, 35),
+  &#39;end_time&#39;: datetime.datetime(2014, 1, 1, 0, 0, 55),
+  &#39;notify&#39;: &#39;lydiazly@nju.edu.cn&#39;,
+  &#39;series&#39;: &#39;aia.lev1_euv_12s&#39;&#125;,
+ &#123;&#39;wavelength&#39;: &lt;Quantity 171. Angstrom&gt;,
+  &#39;start_time&#39;: datetime.datetime(2014, 1, 1, 0, 0, 35),
+  &#39;end_time&#39;: datetime.datetime(2014, 1, 1, 0, 0, 55),
+  &#39;notify&#39;: &#39;lydiazly@nju.edu.cn&#39;,
+  &#39;series&#39;: &#39;aia.lev1_euv_12s&#39;&#125;]</code></pre>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">response<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">.</span>query_args<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>This will cause an error in <code>fetch</code>.</p>
+<h2 id="constructing-complex-queries">Constructing complex queries</h2>
+<h3 id="time">Time</h3>
+<p><a
+target="_blank" rel="noopener" href="http://docs.sunpy.org/en/stable/guide/acquiring_data/jsoc.html"
+class="uri">http://docs.sunpy.org/en/stable/guide/acquiring_data/jsoc.html</a>
+&gt; Start and end times for the query (any date/time format understood
+by SunPy’s <code>parse_time</code> function can be used to specify dates
+and time). <strong>The Time attribute takes UTC time, as
+default.</strong><br> If you need to pass a Time in some other time
+scale, such as TAI, pass an Astropy Time object</p>
+<p>See <a
+target="_blank" rel="noopener" href="http://docs.sunpy.org/en/stable/guide/time.html#parse-time"
+class="uri">http://docs.sunpy.org/en/stable/guide/time.html#parse-time</a></p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">from</span> sunpy<span class="token punctuation">.</span>time <span class="token keyword">import</span> parse_time<span class="token punctuation">,</span> is_time<span class="token punctuation">,</span> is_time_in_given_format<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">is_time<span class="token punctuation">(</span><span class="token string">'2014-01-01T00:00:00'</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre><code>True</code></pre>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">is_time_in_given_format<span class="token punctuation">(</span><span class="token string">'2014-01-01T00:00:00Z'</span><span class="token punctuation">,</span> <span class="token string">"%Y-%m-%dT%H:%M:%SZ"</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre><code>True</code></pre>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">parse_time<span class="token punctuation">(</span><span class="token string">'2015.08.27_06:00:00_TAI'</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre><code>datetime.datetime(2015, 8, 27, 6, 0)</code></pre>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">parse_time<span class="token punctuation">(</span><span class="token string">'2014-01-01T00:00:00Z'</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre><code>datetime.datetime(2014, 1, 1, 0, 0)</code></pre>
+<p>If <code>sunpy.time</code> doesn't inlude this format:
+"%Y-%m-%dT%H:%M:%SZ", use <a href="/scripts/sunpy-add-time-fmt.sh">a
+bash script</a> to add it:</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">!sunpy<span class="token operator">-</span>add<span class="token operator">-</span>time<span class="token operator">-</span>fmt<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre><code>Added this format to
+/home/lydia/miniconda3/lib/python3.6/site-packages/sunpy/time/time.py:
+
+    [01;31m[K&quot;%Y-%m-%dT%H:%M:%SZ&quot;[m[K,      # Example 2007-05-04T21:08:12Z
+
+=== Done!(sunpy-add-time-fmt) ===</code></pre>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">parse_time<span class="token punctuation">(</span><span class="token string">'2014-01-01T00:00:00Z'</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre><code>datetime.datetime(2014, 1, 1, 0, 0)</code></pre>
+<p>For convenience, use a custom function to pass a time string in 'TAI'
+scale:</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">from</span> usr_sunpy <span class="token keyword">import</span> tai<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">tai<span class="token punctuation">(</span><span class="token string">'2014-01-01T00:00:00'</span><span class="token punctuation">)</span>  <span class="token comment"># Returns a single object</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre><code>&lt;Time object: scale=&#39;tai&#39; format=&#39;datetime&#39; value=2014-01-01 00:00:00&gt;</code></pre>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">tai<span class="token punctuation">(</span><span class="token string">'2015.08.27_06:00:00_TAI'</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre><code>&lt;Time object: scale=&#39;tai&#39; format=&#39;datetime&#39; value=2015-08-27 06:00:00&gt;</code></pre>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">tai<span class="token punctuation">(</span><span class="token string">'2015.08.27_06:00:00_TAI'</span><span class="token punctuation">,</span> <span class="token string">'2015.08.27_06:01:00_TAI'</span><span class="token punctuation">)</span>  <span class="token comment"># Returns a list</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre><code>[&lt;Time object: scale=&#39;tai&#39; format=&#39;datetime&#39; value=2015-08-27 06:00:00&gt;,
+ &lt;Time object: scale=&#39;tai&#39; format=&#39;datetime&#39; value=2015-08-27 06:01:00&gt;]</code></pre>
+<h3 id="searching-for-data-2">Searching for data</h3>
+<p>JSOC <a target="_blank" rel="noopener" href="http://jsoc.stanford.edu/ajax/lookdata.html"
+class="uri">http://jsoc.stanford.edu/ajax/lookdata.html</a></p>
+<ul>
+<li>To make a request, <a
+target="_blank" rel="noopener" href="http://jsoc.stanford.edu/ajax/register_email.html">register your
+email first</a> :</li>
+</ul>
+<p><img src='/jsoc/hmi03-1.png' width='800' /></p>
+<p>Example of <a
+target="_blank" rel="noopener" href="http://jsoc.stanford.edu/ajax/lookdata.html">online JSOC
+interface</a> :</p>
+<p><img src='/jsoc/hmi02.png' width='900' /></p>
+<p><img src='/jsoc/hmi03-2.png' width='900' /></p>
+<p>Use <pre class="line-numbers language-python" data-language="python"><code class="language-python">attrs<span class="token punctuation">.</span>jsoc<span class="token punctuation">.</span>Segment<span class="token punctuation">(</span><span class="token string">'...'</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>  attrs<span class="token punctuation">.</span>jsoc<span class="token punctuation">.</span><span class="token operator">&lt;</span>attr<span class="token operator">></span><span class="token punctuation">(</span><span class="token string">'...'</span><span class="token punctuation">)</span> <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre> <pre class="line-numbers language-python" data-language="python"><code class="language-python">attrs<span class="token punctuation">.</span>jsoc<span class="token punctuation">.</span>Segment<span class="token punctuation">(</span><span class="token string">'...'</span><span class="token punctuation">)</span> <span class="token operator">|</span>  attrs<span class="token punctuation">.</span>jsoc<span class="token punctuation">.</span><span class="token operator">&lt;</span>attr<span class="token operator">></span><span class="token punctuation">(</span><span class="token string">'...'</span><span class="token punctuation">)</span> <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre> or <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">from</span> sunpy<span class="token punctuation">.</span>net<span class="token punctuation">.</span>attr <span class="token keyword">import</span> AttrAnd<span class="token punctuation">,</span> AttrOr<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre> <pre class="line-numbers language-python" data-language="python"><code class="language-python">AttrAnd<span class="token punctuation">(</span><span class="token builtin">list</span><span class="token punctuation">(</span><span class="token builtin">map</span><span class="token punctuation">(</span>attrs<span class="token punctuation">.</span>jsoc<span class="token punctuation">.</span><span class="token operator">&lt;</span>attr<span class="token operator">></span><span class="token punctuation">,</span> <span class="token operator">&lt;</span><span class="token builtin">list</span><span class="token operator">></span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">AttrOr<span class="token punctuation">(</span><span class="token builtin">list</span><span class="token punctuation">(</span><span class="token builtin">map</span><span class="token punctuation">(</span>attrs<span class="token punctuation">.</span>jsoc<span class="token punctuation">.</span><span class="token operator">&lt;</span>attr<span class="token operator">></span><span class="token punctuation">,</span> <span class="token operator">&lt;</span><span class="token builtin">list</span><span class="token operator">></span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre> to pass multiple attributes.</p>
+<p>Note: &gt; The attributes which support
+<strong><code>&amp;</code></strong> are
+<strong><code>PrimeKey</code></strong> and
+<strong><code>Segment</code></strong>. Using
+<strong><code>&amp;</code></strong> with any other attributes will throw
+an error.</p>
+<ul>
+<li>Specify attributes:</li>
+</ul>
+<p>e.g.</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">trange <span class="token operator">=</span> tai<span class="token punctuation">(</span><span class="token string">'2015-08-27T05:00:00'</span><span class="token punctuation">,</span> <span class="token string">'2015-08-27T06:00:00'</span><span class="token punctuation">)</span>
+
+segments <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'inclination'</span><span class="token punctuation">,</span> <span class="token string">'azimuth'</span><span class="token punctuation">,</span> <span class="token string">'disambig'</span><span class="token punctuation">,</span> <span class="token string">'field'</span><span class="token punctuation">]</span>
+
+series <span class="token operator">=</span> <span class="token string">'hmi.B_720s'</span>  <span class="token comment"># 'hmi.b_720s' is OK</span>
+
+interval <span class="token operator">=</span> <span class="token number">10</span> <span class="token operator">*</span> u<span class="token punctuation">.</span><span class="token builtin">min</span>  <span class="token comment"># every 10 min.</span>
+
+email <span class="token operator">=</span> <span class="token string">'lydiazly@nju.edu.cn'</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<ul>
+<li>Making a query:</li>
+</ul>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">from</span> sunpy<span class="token punctuation">.</span>net<span class="token punctuation">.</span>attr <span class="token keyword">import</span> AttrAnd<span class="token punctuation">,</span> AttrOr<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">response <span class="token operator">=</span> Fido<span class="token punctuation">.</span>search<span class="token punctuation">(</span>
+    attrs<span class="token punctuation">.</span>jsoc<span class="token punctuation">.</span>Time<span class="token punctuation">(</span><span class="token operator">*</span>trange<span class="token punctuation">)</span><span class="token punctuation">,</span>
+    attrs<span class="token punctuation">.</span>jsoc<span class="token punctuation">.</span>Series<span class="token punctuation">(</span>series<span class="token punctuation">)</span><span class="token punctuation">,</span>
+    attrs<span class="token punctuation">.</span>jsoc<span class="token punctuation">.</span>Notify<span class="token punctuation">(</span>email<span class="token punctuation">)</span><span class="token punctuation">,</span>
+    attrs<span class="token punctuation">.</span>Sample<span class="token punctuation">(</span>interval<span class="token punctuation">)</span><span class="token punctuation">,</span>
+    AttrAnd<span class="token punctuation">(</span><span class="token builtin">list</span><span class="token punctuation">(</span><span class="token builtin">map</span><span class="token punctuation">(</span>attrs<span class="token punctuation">.</span>jsoc<span class="token punctuation">.</span>Segment<span class="token punctuation">,</span> segments<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token comment"># i.e. attrs.jsoc.Segment('...') &amp;  attrs.jsoc.Segment('...') ...</span>
+<span class="token punctuation">)</span>
+response<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+Results from 1 Provider:<br><br>6 Results from the
+JSOCClient:<br><i>Table length=6</i>
+<table id="table23187962870808" class="table-striped table-bordered table-condensed">
+<thead>
+<tr>
+<th>
+T_REC
+</th>
+<th>
+TELESCOP
+</th>
+<th>
+INSTRUME
+</th>
+<th>
+WAVELNTH
+</th>
+<th>
+CAR_ROT
+</th>
+</tr>
+</thead>
+<thead>
+<tr>
+<th>
+str23
+</th>
+<th>
+str7
+</th>
+<th>
+str9
+</th>
+<th>
+float64
+</th>
+<th>
+int64
+</th>
+</tr>
+</thead>
+<tr>
+<td>
+2015.08.27_05:00:00_TAI
+</td>
+<td>
+SDO/HMI
+</td>
+<td>
+HMI_SIDE1
+</td>
+<td>
+6173.0
+</td>
+<td>
+2167
+</td>
+</tr>
+<tr>
+<td>
+2015.08.27_05:12:00_TAI
+</td>
+<td>
+SDO/HMI
+</td>
+<td>
+HMI_SIDE1
+</td>
+<td>
+6173.0
+</td>
+<td>
+2167
+</td>
+</tr>
+<tr>
+<td>
+2015.08.27_05:24:00_TAI
+</td>
+<td>
+SDO/HMI
+</td>
+<td>
+HMI_SIDE1
+</td>
+<td>
+6173.0
+</td>
+<td>
+2167
+</td>
+</tr>
+<tr>
+<td>
+2015.08.27_05:36:00_TAI
+</td>
+<td>
+SDO/HMI
+</td>
+<td>
+HMI_SIDE1
+</td>
+<td>
+6173.0
+</td>
+<td>
+2167
+</td>
+</tr>
+<tr>
+<td>
+2015.08.27_05:48:00_TAI
+</td>
+<td>
+SDO/HMI
+</td>
+<td>
+HMI_SIDE1
+</td>
+<td>
+6173.0
+</td>
+<td>
+2167
+</td>
+</tr>
+<tr>
+<td>
+2015.08.27_06:00:00_TAI
+</td>
+<td>
+SDO/HMI
+</td>
+<td>
+HMI_SIDE1
+</td>
+<td>
+6173.0
+</td>
+<td>
+2167
+</td>
+</tr>
+</table>
+<p><br></p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/python/" rel="tag"># python</a>
+              <a href="/tags/sunpy/" rel="tag"># sunpy</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/fido" rel="prev" title="Example: downloading data using Fido">
+                  <i class="fa fa-chevron-left"></i> Example: downloading data using Fido
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2018-07-25-IDL-8.7" rel="next" title="IDL 8.7 Python Bridge 试用">
+                  IDL 8.7 Python Bridge 试用 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 2018 – 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Lydia Zhang</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/next-boot.js"></script>
+
+  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.0/search.js" integrity="sha256-vXZMYLEqsROAXkEw93GGIvaB2ab+QW6w3+1ahD9nXXA=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+
+
+
+  
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"ams","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
+<script src="/js/third-party/math/mathjax.js"></script>
+
+
+
+</body>
+</html>

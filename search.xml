@@ -2343,9 +2343,9 @@ scipy: 1.8.1
 sqlalchemy: 1.4.39
 tqdm: 4.64.0
 zeep: 4.1.0</code></pre>
-<p>设置下载位置:<br> (参考 <a
-href="http://docs.sunpy.org/en/stable/guide/customization.html?highlight=sunpy.config.set)"
-class="uri">http://docs.sunpy.org/en/stable/guide/customization.html?highlight=sunpy.config.set)</a></p>
+<p>设置下载位置:<br> (参考
+&lt;http://docs.sunpy.org/en/stable/guide/customization.html?highlight
+=sunpy.config.set)&gt;</p>
 <p>e.g. &gt; [downloads]<br>  download_dir = ...</p>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token operator">>></span><span class="token operator">></span> <span class="token keyword">import</span> sunpy
 <span class="token operator">>></span><span class="token operator">></span> sunpy<span class="token punctuation">.</span>config<span class="token punctuation">.</span><span class="token builtin">set</span><span class="token punctuation">(</span><span class="token string">'downloads'</span><span class="token punctuation">,</span> <span class="token string">'download_dir'</span><span class="token punctuation">,</span>
@@ -3169,11 +3169,3244 @@ class="uri">http://jupyterlab.readthedocs.io/en/stable/</a>
 </ul>
 ]]></content>
       <categories>
-        <category>Solar Physics</category>
+        <category>highlight highlight highlight</category>
       </categories>
       <tags>
         <tag>python</tag>
         <tag>jupyter</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Example: downloading data using Fido</title>
+    <url>//fido.html</url>
+    <content><![CDATA[<p><a
+href="/downloads/notebooks/fido.zip"><i class="fas fa-download"></i>
+Jupyter Notebook</a></p>
+<p>Reference <a
+href="http://docs.sunpy.org/en/stable/guide/acquiring_data/fido.html"
+class="uri">http://docs.sunpy.org/en/stable/guide/acquiring_data/fido.html</a></p>
+<p>See also: <a href="jsoc.html">Example: downloading data from
+JSOC</a></p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> astropy<span class="token punctuation">.</span>units <span class="token keyword">as</span> u
+
+<span class="token keyword">from</span> sunpy<span class="token punctuation">.</span>net <span class="token keyword">import</span> Fido<span class="token punctuation">,</span> attrs<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<p>To be clear, here we use <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">from</span> sunpy<span class="token punctuation">.</span>net <span class="token keyword">import</span> Fido<span class="token punctuation">,</span> attrs<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre> instead of examples in <a
+href="http://docs.sunpy.org/en/stable/guide/acquiring_data/jsoc.html"
+class="uri">http://docs.sunpy.org/en/stable/guide/acquiring_data/jsoc.html</a>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">from</span> sunpy<span class="token punctuation">.</span>net <span class="token keyword">import</span> Fido<span class="token punctuation">,</span> attrs <span class="token keyword">as</span> a<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre> <span id="more"></span></p>
+<h2 id="searching-for-data">Searching for data</h2>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">response <span class="token operator">=</span> Fido<span class="token punctuation">.</span>search<span class="token punctuation">(</span>
+    attrs<span class="token punctuation">.</span>Time<span class="token punctuation">(</span><span class="token string">'2014-01-01T00:00:00'</span><span class="token punctuation">,</span> <span class="token string">'2014-01-01T00:01:00'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token comment"># UTC time as default</span>
+    attrs<span class="token punctuation">.</span>Instrument<span class="token punctuation">(</span><span class="token string">'aia'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    attrs<span class="token punctuation">.</span>Wavelength<span class="token punctuation">(</span><span class="token number">304</span> <span class="token operator">*</span> u<span class="token punctuation">.</span>AA<span class="token punctuation">)</span> <span class="token operator">|</span> attrs<span class="token punctuation">.</span>Wavelength<span class="token punctuation">(</span><span class="token number">171</span> <span class="token operator">*</span> u<span class="token punctuation">.</span>AA<span class="token punctuation">)</span>
+<span class="token punctuation">)</span>
+response<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+Results from 2 Providers:<br><br>5 Results from the
+VSOClient:<br><i>QTable length=5</i>
+<table id="table23199520252144" class="table-striped table-bordered table-condensed">
+<thead>
+<tr>
+<th>
+Start Time [1]
+</th>
+<th>
+End Time [1]
+</th>
+<th>
+Source
+</th>
+<th>
+Instrument
+</th>
+<th>
+Type
+</th>
+<th>
+Wavelength [2]
+</th>
+</tr>
+</thead>
+<thead>
+<tr>
+<th>
+</th>
+<th>
+</th>
+<th>
+</th>
+<th>
+</th>
+<th>
+</th>
+<th>
+Angstrom
+</th>
+</tr>
+</thead>
+<thead>
+<tr>
+<th>
+str19
+</th>
+<th>
+str19
+</th>
+<th>
+str3
+</th>
+<th>
+str3
+</th>
+<th>
+str8
+</th>
+<th>
+float64
+</th>
+</tr>
+</thead>
+<tr>
+<td>
+2014-01-01 00:00:07
+</td>
+<td>
+2014-01-01 00:00:08
+</td>
+<td>
+SDO
+</td>
+<td>
+AIA
+</td>
+<td>
+FULLDISK
+</td>
+<td>
+304.0 .. 304.0
+</td>
+</tr>
+<tr>
+<td>
+2014-01-01 00:00:19
+</td>
+<td>
+2014-01-01 00:00:20
+</td>
+<td>
+SDO
+</td>
+<td>
+AIA
+</td>
+<td>
+FULLDISK
+</td>
+<td>
+304.0 .. 304.0
+</td>
+</tr>
+<tr>
+<td>
+2014-01-01 00:00:31
+</td>
+<td>
+2014-01-01 00:00:32
+</td>
+<td>
+SDO
+</td>
+<td>
+AIA
+</td>
+<td>
+FULLDISK
+</td>
+<td>
+304.0 .. 304.0
+</td>
+</tr>
+<tr>
+<td>
+2014-01-01 00:00:43
+</td>
+<td>
+2014-01-01 00:00:44
+</td>
+<td>
+SDO
+</td>
+<td>
+AIA
+</td>
+<td>
+FULLDISK
+</td>
+<td>
+304.0 .. 304.0
+</td>
+</tr>
+<tr>
+<td>
+2014-01-01 00:00:55
+</td>
+<td>
+2014-01-01 00:00:56
+</td>
+<td>
+SDO
+</td>
+<td>
+AIA
+</td>
+<td>
+FULLDISK
+</td>
+<td>
+304.0 .. 304.0
+</td>
+</tr>
+</table>
+<br>5 Results from the VSOClient:<br><i>QTable length=5</i>
+<table id="table23199530661536" class="table-striped table-bordered table-condensed">
+<thead>
+<tr>
+<th>
+Start Time [1]
+</th>
+<th>
+End Time [1]
+</th>
+<th>
+Source
+</th>
+<th>
+Instrument
+</th>
+<th>
+Type
+</th>
+<th>
+Wavelength [2]
+</th>
+</tr>
+</thead>
+<thead>
+<tr>
+<th>
+</th>
+<th>
+</th>
+<th>
+</th>
+<th>
+</th>
+<th>
+</th>
+<th>
+Angstrom
+</th>
+</tr>
+</thead>
+<thead>
+<tr>
+<th>
+str19
+</th>
+<th>
+str19
+</th>
+<th>
+str3
+</th>
+<th>
+str3
+</th>
+<th>
+str8
+</th>
+<th>
+float64
+</th>
+</tr>
+</thead>
+<tr>
+<td>
+2014-01-01 00:00:11
+</td>
+<td>
+2014-01-01 00:00:12
+</td>
+<td>
+SDO
+</td>
+<td>
+AIA
+</td>
+<td>
+FULLDISK
+</td>
+<td>
+171.0 .. 171.0
+</td>
+</tr>
+<tr>
+<td>
+2014-01-01 00:00:23
+</td>
+<td>
+2014-01-01 00:00:24
+</td>
+<td>
+SDO
+</td>
+<td>
+AIA
+</td>
+<td>
+FULLDISK
+</td>
+<td>
+171.0 .. 171.0
+</td>
+</tr>
+<tr>
+<td>
+2014-01-01 00:00:35
+</td>
+<td>
+2014-01-01 00:00:36
+</td>
+<td>
+SDO
+</td>
+<td>
+AIA
+</td>
+<td>
+FULLDISK
+</td>
+<td>
+171.0 .. 171.0
+</td>
+</tr>
+<tr>
+<td>
+2014-01-01 00:00:47
+</td>
+<td>
+2014-01-01 00:00:48
+</td>
+<td>
+SDO
+</td>
+<td>
+AIA
+</td>
+<td>
+FULLDISK
+</td>
+<td>
+171.0 .. 171.0
+</td>
+</tr>
+<tr>
+<td>
+2014-01-01 00:00:59
+</td>
+<td>
+2014-01-01 00:01:00
+</td>
+<td>
+SDO
+</td>
+<td>
+AIA
+</td>
+<td>
+FULLDISK
+</td>
+<td>
+171.0 .. 171.0
+</td>
+</tr>
+</table>
+<p><br></p>
+<h2 id="indexing">Indexing</h2>
+<ul>
+<li><p>First index: client (still necessary even if results are only
+found for a single client)</p></li>
+<li><p>Second index: rows (must be integers or slices, <strong>not
+list</strong>)</p></li>
+</ul>
+<p>See also <a
+href="http://docs.sunpy.org/en/stable/guide/acquiring_data/fido.html#indexing-search-results"
+class="uri">http://docs.sunpy.org/en/stable/guide/acquiring_data/fido.html#indexing-search-results</a></p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">response<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+Results from 1 Provider:<br><br>5 Results from the
+VSOClient:<br><i>QTable length=5</i>
+<table id="table23199520359032" class="table-striped table-bordered table-condensed">
+<thead>
+<tr>
+<th>
+Start Time [1]
+</th>
+<th>
+End Time [1]
+</th>
+<th>
+Source
+</th>
+<th>
+Instrument
+</th>
+<th>
+Type
+</th>
+<th>
+Wavelength [2]
+</th>
+</tr>
+</thead>
+<thead>
+<tr>
+<th>
+</th>
+<th>
+</th>
+<th>
+</th>
+<th>
+</th>
+<th>
+</th>
+<th>
+Angstrom
+</th>
+</tr>
+</thead>
+<thead>
+<tr>
+<th>
+str19
+</th>
+<th>
+str19
+</th>
+<th>
+str3
+</th>
+<th>
+str3
+</th>
+<th>
+str8
+</th>
+<th>
+float64
+</th>
+</tr>
+</thead>
+<tr>
+<td>
+2014-01-01 00:00:11
+</td>
+<td>
+2014-01-01 00:00:12
+</td>
+<td>
+SDO
+</td>
+<td>
+AIA
+</td>
+<td>
+FULLDISK
+</td>
+<td>
+171.0 .. 171.0
+</td>
+</tr>
+<tr>
+<td>
+2014-01-01 00:00:23
+</td>
+<td>
+2014-01-01 00:00:24
+</td>
+<td>
+SDO
+</td>
+<td>
+AIA
+</td>
+<td>
+FULLDISK
+</td>
+<td>
+171.0 .. 171.0
+</td>
+</tr>
+<tr>
+<td>
+2014-01-01 00:00:35
+</td>
+<td>
+2014-01-01 00:00:36
+</td>
+<td>
+SDO
+</td>
+<td>
+AIA
+</td>
+<td>
+FULLDISK
+</td>
+<td>
+171.0 .. 171.0
+</td>
+</tr>
+<tr>
+<td>
+2014-01-01 00:00:47
+</td>
+<td>
+2014-01-01 00:00:48
+</td>
+<td>
+SDO
+</td>
+<td>
+AIA
+</td>
+<td>
+FULLDISK
+</td>
+<td>
+171.0 .. 171.0
+</td>
+</tr>
+<tr>
+<td>
+2014-01-01 00:00:59
+</td>
+<td>
+2014-01-01 00:01:00
+</td>
+<td>
+SDO
+</td>
+<td>
+AIA
+</td>
+<td>
+FULLDISK
+</td>
+<td>
+171.0 .. 171.0
+</td>
+</tr>
+</table>
+<p><br></p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">response<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token number">2</span><span class="token punctuation">]</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+Results from 1 Provider:<br><br>3 Results from the
+VSOClient:<br><i>QTable length=3</i>
+<table id="table23199520361608" class="table-striped table-bordered table-condensed">
+<thead>
+<tr>
+<th>
+Start Time [1]
+</th>
+<th>
+End Time [1]
+</th>
+<th>
+Source
+</th>
+<th>
+Instrument
+</th>
+<th>
+Type
+</th>
+<th>
+Wavelength [2]
+</th>
+</tr>
+</thead>
+<thead>
+<tr>
+<th>
+</th>
+<th>
+</th>
+<th>
+</th>
+<th>
+</th>
+<th>
+</th>
+<th>
+Angstrom
+</th>
+</tr>
+</thead>
+<thead>
+<tr>
+<th>
+str19
+</th>
+<th>
+str19
+</th>
+<th>
+str3
+</th>
+<th>
+str3
+</th>
+<th>
+str8
+</th>
+<th>
+float64
+</th>
+</tr>
+</thead>
+<tr>
+<td>
+2014-01-01 00:00:11
+</td>
+<td>
+2014-01-01 00:00:12
+</td>
+<td>
+SDO
+</td>
+<td>
+AIA
+</td>
+<td>
+FULLDISK
+</td>
+<td>
+171.0 .. 171.0
+</td>
+</tr>
+<tr>
+<td>
+2014-01-01 00:00:35
+</td>
+<td>
+2014-01-01 00:00:36
+</td>
+<td>
+SDO
+</td>
+<td>
+AIA
+</td>
+<td>
+FULLDISK
+</td>
+<td>
+171.0 .. 171.0
+</td>
+</tr>
+<tr>
+<td>
+2014-01-01 00:00:59
+</td>
+<td>
+2014-01-01 00:01:00
+</td>
+<td>
+SDO
+</td>
+<td>
+AIA
+</td>
+<td>
+FULLDISK
+</td>
+<td>
+171.0 .. 171.0
+</td>
+</tr>
+</table>
+<p><br></p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">response<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">]</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+Results from 1 Provider:<br><br>1 Results from the
+VSOClient:<br><i>QTable length=1</i>
+<table id="table23199531124496" class="table-striped table-bordered table-condensed">
+<thead>
+<tr>
+<th>
+Start Time [1]
+</th>
+<th>
+End Time [1]
+</th>
+<th>
+Source
+</th>
+<th>
+Instrument
+</th>
+<th>
+Type
+</th>
+<th>
+Wavelength [2]
+</th>
+</tr>
+</thead>
+<thead>
+<tr>
+<th>
+</th>
+<th>
+</th>
+<th>
+</th>
+<th>
+</th>
+<th>
+</th>
+<th>
+Angstrom
+</th>
+</tr>
+</thead>
+<thead>
+<tr>
+<th>
+str19
+</th>
+<th>
+str19
+</th>
+<th>
+str3
+</th>
+<th>
+str3
+</th>
+<th>
+str8
+</th>
+<th>
+float64
+</th>
+</tr>
+</thead>
+<tr>
+<td>
+2014-01-01 00:00:19
+</td>
+<td>
+2014-01-01 00:00:20
+</td>
+<td>
+SDO
+</td>
+<td>
+AIA
+</td>
+<td>
+FULLDISK
+</td>
+<td>
+304.0 .. 304.0
+</td>
+</tr>
+</table>
+<p><br></p>
+<h2 id="downloading-data">Downloading data</h2>
+<p>Download the entire results:</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">res <span class="token operator">=</span> Fido<span class="token punctuation">.</span>fetch<span class="token punctuation">(</span>response<span class="token punctuation">,</span> path<span class="token operator">=</span><span class="token string">'./data'</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>Download a subset:</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">res <span class="token operator">=</span> Fido<span class="token punctuation">.</span>fetch<span class="token punctuation">(</span>response<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span> path<span class="token operator">=</span><span class="token string">'./data'</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p><code>Fido.fetch</code> will output a progress bar by default.</p>
+]]></content>
+      <categories>
+        <category>Solar Physics</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+        <tag>sunpy</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Example: downloading data from JSOC</title>
+    <url>//jsoc.html</url>
+    <content><![CDATA[<p><a
+href="/downloads/notebooks/fido.zip"><i class="fas fa-download"></i>
+Jupyter Notebook</a></p>
+<p>Reference <a
+href="http://docs.sunpy.org/en/stable/guide/acquiring_data/jsoc.html"
+class="uri">http://docs.sunpy.org/en/stable/guide/acquiring_data/jsoc.html</a></p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token operator">%</span>load_ext autoreload
+<span class="token operator">%</span>autoreload <span class="token number">2</span>
+
+<span class="token keyword">import</span> astropy<span class="token punctuation">.</span>units <span class="token keyword">as</span> u
+
+<span class="token keyword">from</span> sunpy<span class="token punctuation">.</span>net <span class="token keyword">import</span> Fido<span class="token punctuation">,</span> attrs
+
+<span class="token comment"># Suppress warnings of pandas, astropy</span>
+<span class="token keyword">import</span> warnings
+warnings<span class="token punctuation">.</span>simplefilter<span class="token punctuation">(</span><span class="token string">"ignore"</span><span class="token punctuation">,</span> category<span class="token operator">=</span>FutureWarning<span class="token punctuation">)</span>
+<span class="token keyword">from</span> astropy<span class="token punctuation">.</span>utils<span class="token punctuation">.</span>exceptions <span class="token keyword">import</span> AstropyDeprecationWarning
+warnings<span class="token punctuation">.</span>simplefilter<span class="token punctuation">(</span><span class="token string">"ignore"</span><span class="token punctuation">,</span> category<span class="token operator">=</span>AstropyDeprecationWarning<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>To be clear, here we use <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">from</span> sunpy<span class="token punctuation">.</span>net <span class="token keyword">import</span> Fido<span class="token punctuation">,</span> attrs<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre> instead of examples in <a
+href="http://docs.sunpy.org/en/stable/guide/acquiring_data/jsoc.html"
+class="uri">http://docs.sunpy.org/en/stable/guide/acquiring_data/jsoc.html</a>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">from</span> sunpy<span class="token punctuation">.</span>net <span class="token keyword">import</span> Fido<span class="token punctuation">,</span> attrs <span class="token keyword">as</span> a<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre> <span id="more"></span></p>
+<h2 id="getting-information">Getting information</h2>
+<p><code>drms</code> - Python module for accessing HMI, AIA and MDI
+data<br> - <a href="https://github.com/kbg/drms"
+class="uri">https://github.com/kbg/drms</a> - <a
+href="http://drms.readthedocs.io/en/stable/tutorial.html"
+class="uri">http://drms.readthedocs.io/en/stable/tutorial.html</a></p>
+<h3 id="series">Series</h3>
+<p><img src='/jsoc/hmi01.png'/></p>
+<p>Import the <code>drms</code> module and create an instance of the
+<code>drms.Client</code> class:</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> drms
+c <span class="token operator">=</span> drms<span class="token punctuation">.</span>Client<span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<p>List available <code>Series</code>:</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">c<span class="token punctuation">.</span>series<span class="token punctuation">(</span><span class="token string">r'aia\..*'</span><span class="token punctuation">)</span>  <span class="token comment"># regex, case-insensitive</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre><code>[&#39;aia.flatfield&#39;,
+ &#39;aia.lev1&#39;,
+ &#39;aia.lev1_euv_12s&#39;,
+ &#39;aia.lev1_uv_24s&#39;,
+ &#39;aia.lev1_vis_1h&#39;,
+ &#39;aia.master_pointing3h&#39;,
+ &#39;aia.response&#39;,
+ &#39;aia.temperature_summary_300s&#39;]</code></pre>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">c<span class="token punctuation">.</span>series<span class="token punctuation">(</span><span class="token string">r'hmi\.b.*'</span><span class="token punctuation">)</span>  <span class="token comment"># regex, case-insensitive</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre><code>[&#39;hmi.B_720s&#39;,
+ &#39;hmi.B_720s_dcon&#39;,
+ &#39;hmi.B_720s_dconS&#39;,
+ &#39;hmi.Bharp_720s&#39;,
+ &#39;hmi.Bharp_720s_nrt&#39;,
+ &#39;hmi.b_135s&#39;,
+ &#39;hmi.b_720s_e15w1332_cea&#39;,
+ &#39;hmi.b_720s_e15w1332_cutout&#39;,
+ &#39;hmi.b_synoptic&#39;,
+ &#39;hmi.b_synoptic_small&#39;,
+ &#39;hmi.bmap_lowres_latlon_720s&#39;]</code></pre>
+<h3 id="primekeys">PrimeKeys</h3>
+<p>Find out the <code>PrimeKeys</code> supported in any
+<code>Series</code>:</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">c<span class="token punctuation">.</span>pkeys<span class="token punctuation">(</span><span class="token string">'aia.lev1_euv_12s'</span><span class="token punctuation">)</span>  <span class="token comment"># case-insensitive</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre><code>[&#39;T_REC&#39;, &#39;WAVELNTH&#39;]</code></pre>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">c<span class="token punctuation">.</span>pkeys<span class="token punctuation">(</span><span class="token string">'hmi.B_720s'</span><span class="token punctuation">)</span>  <span class="token comment"># case-insensitive</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre><code>[&#39;T_REC&#39;]</code></pre>
+<h3 id="segments">Segments</h3>
+<p>Find out the <code>Segments</code> supported in any
+<code>Series</code>:</p>
+<ul>
+<li>'aia.lev1_euv_12s'</li>
+</ul>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">si <span class="token operator">=</span> c<span class="token punctuation">.</span>info<span class="token punctuation">(</span><span class="token string">'aia.lev1_euv_12s'</span><span class="token punctuation">)</span>
+si<span class="token punctuation">.</span>segments<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+<thead>
+<tr style="text-align: right;">
+<th>
+</th>
+<th>
+type
+</th>
+<th>
+units
+</th>
+<th>
+protocol
+</th>
+<th>
+dims
+</th>
+<th>
+note
+</th>
+</tr>
+<tr>
+<th>
+name
+</th>
+<th>
+</th>
+<th>
+</th>
+<th>
+</th>
+<th>
+</th>
+<th>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>
+image
+</th>
+<td>
+int
+</td>
+<td>
+None
+</td>
+<td>
+link via lev1
+</td>
+<td>
+None
+</td>
+<td>
+AIA level 1 image
+</td>
+</tr>
+<tr>
+<th>
+spikes
+</th>
+<td>
+int
+</td>
+<td>
+None
+</td>
+<td>
+link via lev1
+</td>
+<td>
+None
+</td>
+<td>
+Cosmic ray information
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">si<span class="token punctuation">.</span>segments<span class="token punctuation">.</span>index<span class="token punctuation">.</span>values  <span class="token comment"># To a `ndarray`</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre><code>array([&#39;image&#39;, &#39;spikes&#39;], dtype=object)</code></pre>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">si<span class="token punctuation">.</span>segments<span class="token punctuation">.</span>index<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>  <span class="token comment"># Use slice to pick a value</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre><code>&#39;image&#39;</code></pre>
+<ul>
+<li>'hmi.b_720s'</li>
+</ul>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">si <span class="token operator">=</span> c<span class="token punctuation">.</span>info<span class="token punctuation">(</span><span class="token string">'hmi.b_720s'</span><span class="token punctuation">)</span>
+si<span class="token punctuation">.</span>segments<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token number">4</span><span class="token punctuation">]</span>  <span class="token comment"># Use slice to pick rows</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+<thead>
+<tr style="text-align: right;">
+<th>
+</th>
+<th>
+type
+</th>
+<th>
+units
+</th>
+<th>
+protocol
+</th>
+<th>
+dims
+</th>
+<th>
+note
+</th>
+</tr>
+<tr>
+<th>
+name
+</th>
+<th>
+</th>
+<th>
+</th>
+<th>
+</th>
+<th>
+</th>
+<th>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>
+inclination
+</th>
+<td>
+int
+</td>
+<td>
+None
+</td>
+<td>
+link via MDATA
+</td>
+<td>
+None
+</td>
+<td>
+Inclination
+</td>
+</tr>
+<tr>
+<th>
+azimuth
+</th>
+<td>
+int
+</td>
+<td>
+None
+</td>
+<td>
+link via MDATA
+</td>
+<td>
+None
+</td>
+<td>
+Azimuth before disambiguation
+</td>
+</tr>
+<tr>
+<th>
+disambig
+</th>
+<td>
+char
+</td>
+<td>
+</td>
+<td>
+fits
+</td>
+<td>
+4096x4096
+</td>
+<td>
+Flag for 180 degree change in azimuth
+</td>
+</tr>
+<tr>
+<th>
+field
+</th>
+<td>
+int
+</td>
+<td>
+None
+</td>
+<td>
+link via MDATA
+</td>
+<td>
+None
+</td>
+<td>
+Field Strength
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="basic-usage">Basic usage</h2>
+<p>See <a
+href="http://docs.sunpy.org/en/stable/guide/acquiring_data/jsoc.html"
+class="uri">http://docs.sunpy.org/en/stable/guide/acquiring_data/jsoc.html</a></p>
+<blockquote>
+<p>There are two ways of downloading JSOC data. - One way is using
+Sunpy’s unified search interface, known as<code>Fido</code>.<br>
+<code>Fido</code> supplies a single, easy and consistent way to to
+obtain most forms of solar physics data. - An alternative way to fetch
+data from JSOC is by using the underlying <code>JSOCClient</code>.<br>
+This option can be preferred when the complex searches are to be made,
+or when you need to separate the staging and downloading steps, which is
+not supported by <code>Fido</code>.</p>
+</blockquote>
+<h3 id="fido">Fido</h3>
+<h4 id="searching-for-data">Searching for data</h4>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">response <span class="token operator">=</span> Fido<span class="token punctuation">.</span>search<span class="token punctuation">(</span>
+    attrs<span class="token punctuation">.</span>jsoc<span class="token punctuation">.</span>Time<span class="token punctuation">(</span><span class="token string">'2014-01-01T00:00:00'</span><span class="token punctuation">,</span> <span class="token string">'2014-01-01T00:00:30'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    attrs<span class="token punctuation">.</span>jsoc<span class="token punctuation">.</span>Notify<span class="token punctuation">(</span><span class="token string">'lydiazly@nju.edu.cn'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    attrs<span class="token punctuation">.</span>jsoc<span class="token punctuation">.</span>Series<span class="token punctuation">(</span><span class="token string">'aia.lev1_euv_12s'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    attrs<span class="token punctuation">.</span>jsoc<span class="token punctuation">.</span>Wavelength<span class="token punctuation">(</span><span class="token number">304</span> <span class="token operator">*</span> u<span class="token punctuation">.</span>AA<span class="token punctuation">)</span> <span class="token operator">|</span> attrs<span class="token punctuation">.</span>jsoc<span class="token punctuation">.</span>Wavelength<span class="token punctuation">(</span><span class="token number">171</span> <span class="token operator">*</span> u<span class="token punctuation">.</span>AA<span class="token punctuation">)</span>
+<span class="token punctuation">)</span>
+response<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+Results from 2 Providers:<br><br>3 Results from the
+JSOCClient:<br><i>Table length=3</i>
+<table id="table23285989288984" class="table-striped table-bordered table-condensed">
+<thead>
+<tr>
+<th>
+T_REC
+</th>
+<th>
+TELESCOP
+</th>
+<th>
+INSTRUME
+</th>
+<th>
+WAVELNTH
+</th>
+<th>
+CAR_ROT
+</th>
+</tr>
+</thead>
+<thead>
+<tr>
+<th>
+str20
+</th>
+<th>
+str7
+</th>
+<th>
+str5
+</th>
+<th>
+int64
+</th>
+<th>
+int64
+</th>
+</tr>
+</thead>
+<tr>
+<td>
+2014-01-01T00:00:01Z
+</td>
+<td>
+SDO/AIA
+</td>
+<td>
+AIA_4
+</td>
+<td>
+304
+</td>
+<td>
+2145
+</td>
+</tr>
+<tr>
+<td>
+2014-01-01T00:00:13Z
+</td>
+<td>
+SDO/AIA
+</td>
+<td>
+AIA_4
+</td>
+<td>
+304
+</td>
+<td>
+2145
+</td>
+</tr>
+<tr>
+<td>
+2014-01-01T00:00:25Z
+</td>
+<td>
+SDO/AIA
+</td>
+<td>
+AIA_4
+</td>
+<td>
+304
+</td>
+<td>
+2145
+</td>
+</tr>
+</table>
+<br>3 Results from the JSOCClient:<br><i>Table length=3</i>
+<table id="table23285988917200" class="table-striped table-bordered table-condensed">
+<thead>
+<tr>
+<th>
+T_REC
+</th>
+<th>
+TELESCOP
+</th>
+<th>
+INSTRUME
+</th>
+<th>
+WAVELNTH
+</th>
+<th>
+CAR_ROT
+</th>
+</tr>
+</thead>
+<thead>
+<tr>
+<th>
+str20
+</th>
+<th>
+str7
+</th>
+<th>
+str5
+</th>
+<th>
+int64
+</th>
+<th>
+int64
+</th>
+</tr>
+</thead>
+<tr>
+<td>
+2014-01-01T00:00:01Z
+</td>
+<td>
+SDO/AIA
+</td>
+<td>
+AIA_3
+</td>
+<td>
+171
+</td>
+<td>
+2145
+</td>
+</tr>
+<tr>
+<td>
+2014-01-01T00:00:13Z
+</td>
+<td>
+SDO/AIA
+</td>
+<td>
+AIA_3
+</td>
+<td>
+171
+</td>
+<td>
+2145
+</td>
+</tr>
+<tr>
+<td>
+2014-01-01T00:00:25Z
+</td>
+<td>
+SDO/AIA
+</td>
+<td>
+AIA_3
+</td>
+<td>
+171
+</td>
+<td>
+2145
+</td>
+</tr>
+</table>
+<p><br></p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token builtin">type</span><span class="token punctuation">(</span>response<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre><code>sunpy.net.fido_factory.UnifiedResponse</code></pre>
+<h4 id="indexing">Indexing</h4>
+<ul>
+<li><p>First index: client (still necessary even if results are only
+found for a single client)</p></li>
+<li><p>Second index: rows (must be <strong>iterable</strong>, different
+from [<a href="fido.html">Example: downloading data using
+Fido</a>])</p></li>
+</ul>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">response<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+Results from 1 Provider:<br><br>3 Results from the
+JSOCClient:<br><i>Table length=3</i>
+<table id="table22680339934904" class="table-striped table-bordered table-condensed">
+<thead>
+<tr>
+<th>
+T_REC
+</th>
+<th>
+TELESCOP
+</th>
+<th>
+INSTRUME
+</th>
+<th>
+WAVELNTH
+</th>
+<th>
+CAR_ROT
+</th>
+</tr>
+</thead>
+<thead>
+<tr>
+<th>
+str20
+</th>
+<th>
+str7
+</th>
+<th>
+str5
+</th>
+<th>
+int64
+</th>
+<th>
+int64
+</th>
+</tr>
+</thead>
+<tr>
+<td>
+2014-01-01T00:00:01Z
+</td>
+<td>
+SDO/AIA
+</td>
+<td>
+AIA_3
+</td>
+<td>
+171
+</td>
+<td>
+2145
+</td>
+</tr>
+<tr>
+<td>
+2014-01-01T00:00:13Z
+</td>
+<td>
+SDO/AIA
+</td>
+<td>
+AIA_3
+</td>
+<td>
+171
+</td>
+<td>
+2145
+</td>
+</tr>
+<tr>
+<td>
+2014-01-01T00:00:25Z
+</td>
+<td>
+SDO/AIA
+</td>
+<td>
+AIA_3
+</td>
+<td>
+171
+</td>
+<td>
+2145
+</td>
+</tr>
+</table>
+<p><br></p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">response<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token number">2</span><span class="token punctuation">]</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+Results from 1 Provider:<br><br>2 Results from the
+JSOCClient:<br><i>Table length=2</i>
+<table id="table22680349474264" class="table-striped table-bordered table-condensed">
+<thead>
+<tr>
+<th>
+T_REC
+</th>
+<th>
+TELESCOP
+</th>
+<th>
+INSTRUME
+</th>
+<th>
+WAVELNTH
+</th>
+<th>
+CAR_ROT
+</th>
+</tr>
+</thead>
+<thead>
+<tr>
+<th>
+str20
+</th>
+<th>
+str7
+</th>
+<th>
+str5
+</th>
+<th>
+int64
+</th>
+<th>
+int64
+</th>
+</tr>
+</thead>
+<tr>
+<td>
+2014-01-01T00:00:01Z
+</td>
+<td>
+SDO/AIA
+</td>
+<td>
+AIA_3
+</td>
+<td>
+171
+</td>
+<td>
+2145
+</td>
+</tr>
+<tr>
+<td>
+2014-01-01T00:00:25Z
+</td>
+<td>
+SDO/AIA
+</td>
+<td>
+AIA_3
+</td>
+<td>
+171
+</td>
+<td>
+2145
+</td>
+</tr>
+</table>
+<p><br></p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">response<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">]</span>  <span class="token comment"># Not `response[0, 2]` !</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+Results from 1 Provider:<br><br>1 Results from the
+JSOCClient:<br><i>Table length=1</i>
+<table id="table22680349474768" class="table-striped table-bordered table-condensed">
+<thead>
+<tr>
+<th>
+T_REC
+</th>
+<th>
+TELESCOP
+</th>
+<th>
+INSTRUME
+</th>
+<th>
+WAVELNTH
+</th>
+<th>
+CAR_ROT
+</th>
+</tr>
+</thead>
+<thead>
+<tr>
+<th>
+str20
+</th>
+<th>
+str7
+</th>
+<th>
+str5
+</th>
+<th>
+int64
+</th>
+<th>
+int64
+</th>
+</tr>
+</thead>
+<tr>
+<td>
+2014-01-01T00:00:25Z
+</td>
+<td>
+SDO/AIA
+</td>
+<td>
+AIA_4
+</td>
+<td>
+304
+</td>
+<td>
+2145
+</td>
+</tr>
+</table>
+<p><br></p>
+<h4 id="downloading-data">Downloading data</h4>
+<p>Download the entire results:</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">res <span class="token operator">=</span> Fido<span class="token punctuation">.</span>fetch<span class="token punctuation">(</span>response<span class="token punctuation">,</span> path<span class="token operator">=</span><span class="token string">'./data'</span><span class="token punctuation">)</span>  <span class="token comment"># Will output a progress bar by default</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h3 id="jsocclient">JSOCClient</h3>
+<blockquote>
+<p>The JSOC stages data before you can download it, so a JSOC query is a
+<strong>three</strong> stage process. 1.
+<strong><code>search</code></strong>: query the JSOC for records and a
+table of these records is returned.<br> The result is
+<code>UnifiedResponse</code> for <code>Fido</code> while
+<code>JSOCResponse</code> for <code>JSOCClient</code> -
+<strong><code>request_data</code></strong>: request these records to be
+staged for download. - <strong><code>get_request</code></strong>:
+download.</p>
+<p>(<code>Fido</code> combines the stages into 2, <code>search</code>
+and <code>fetch</code>.)</p>
+</blockquote>
+<h4 id="searching-for-data-1">Searching for data</h4>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">from</span> sunpy<span class="token punctuation">.</span>net <span class="token keyword">import</span> jsoc
+client <span class="token operator">=</span> jsoc<span class="token punctuation">.</span>JSOCClient<span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">response <span class="token operator">=</span> client<span class="token punctuation">.</span>search<span class="token punctuation">(</span>
+    attrs<span class="token punctuation">.</span>jsoc<span class="token punctuation">.</span>Time<span class="token punctuation">(</span><span class="token string">'2014-01-01T00:00:00'</span><span class="token punctuation">,</span> <span class="token string">'2014-01-01T00:00:20'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    attrs<span class="token punctuation">.</span>jsoc<span class="token punctuation">.</span>Notify<span class="token punctuation">(</span><span class="token string">'lydiazly@nju.edu.cn'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    attrs<span class="token punctuation">.</span>jsoc<span class="token punctuation">.</span>Series<span class="token punctuation">(</span><span class="token string">'aia.lev1_euv_12s'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    attrs<span class="token punctuation">.</span>jsoc<span class="token punctuation">.</span>Wavelength<span class="token punctuation">(</span><span class="token number">304</span> <span class="token operator">*</span> u<span class="token punctuation">.</span>AA<span class="token punctuation">)</span> <span class="token operator">|</span> attrs<span class="token punctuation">.</span>jsoc<span class="token punctuation">.</span>Wavelength<span class="token punctuation">(</span><span class="token number">171</span> <span class="token operator">*</span> u<span class="token punctuation">.</span>AA<span class="token punctuation">)</span>
+<span class="token punctuation">)</span>
+response<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<i>Table length=4</i>
+<table id="table23453611657088" class="table-striped table-bordered table-condensed">
+<thead>
+<tr>
+<th>
+T_REC
+</th>
+<th>
+TELESCOP
+</th>
+<th>
+INSTRUME
+</th>
+<th>
+WAVELNTH
+</th>
+<th>
+CAR_ROT
+</th>
+</tr>
+</thead>
+<thead>
+<tr>
+<th>
+str20
+</th>
+<th>
+str7
+</th>
+<th>
+str5
+</th>
+<th>
+int64
+</th>
+<th>
+int64
+</th>
+</tr>
+</thead>
+<tr>
+<td>
+2014-01-01T00:00:01Z
+</td>
+<td>
+SDO/AIA
+</td>
+<td>
+AIA_4
+</td>
+<td>
+304
+</td>
+<td>
+2145
+</td>
+</tr>
+<tr>
+<td>
+2014-01-01T00:00:13Z
+</td>
+<td>
+SDO/AIA
+</td>
+<td>
+AIA_4
+</td>
+<td>
+304
+</td>
+<td>
+2145
+</td>
+</tr>
+<tr>
+<td>
+2014-01-01T00:00:01Z
+</td>
+<td>
+SDO/AIA
+</td>
+<td>
+AIA_3
+</td>
+<td>
+171
+</td>
+<td>
+2145
+</td>
+</tr>
+<tr>
+<td>
+2014-01-01T00:00:13Z
+</td>
+<td>
+SDO/AIA
+</td>
+<td>
+AIA_3
+</td>
+<td>
+171
+</td>
+<td>
+2145
+</td>
+</tr>
+</table>
+<p>Note here we get a single table.</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token builtin">type</span><span class="token punctuation">(</span>response<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre><code>sunpy.net.jsoc.jsoc.JSOCResponse</code></pre>
+<h4 id="indexing-1">Indexing</h4>
+<p>An integer get a <code>Row</code>:</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">response<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<i>Row index=2</i>
+<table id="table23453611657088">
+<thead>
+<tr>
+<th>
+T_REC
+</th>
+<th>
+TELESCOP
+</th>
+<th>
+INSTRUME
+</th>
+<th>
+WAVELNTH
+</th>
+<th>
+CAR_ROT
+</th>
+</tr>
+</thead>
+<thead>
+<tr>
+<th>
+str20
+</th>
+<th>
+str7
+</th>
+<th>
+str5
+</th>
+<th>
+int64
+</th>
+<th>
+int64
+</th>
+</tr>
+</thead>
+<tr>
+<td>
+2014-01-01T00:00:01Z
+</td>
+<td>
+SDO/AIA
+</td>
+<td>
+AIA_3
+</td>
+<td>
+171
+</td>
+<td>
+2145
+</td>
+</tr>
+</table>
+<p>A <strong>iterable</strong> get a <code>Table</code>:</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">response<span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<i>Table length=1</i>
+<table id="table23453620502480" class="table-striped table-bordered table-condensed">
+<thead>
+<tr>
+<th>
+T_REC
+</th>
+<th>
+TELESCOP
+</th>
+<th>
+INSTRUME
+</th>
+<th>
+WAVELNTH
+</th>
+<th>
+CAR_ROT
+</th>
+</tr>
+</thead>
+<thead>
+<tr>
+<th>
+str20
+</th>
+<th>
+str7
+</th>
+<th>
+str5
+</th>
+<th>
+int64
+</th>
+<th>
+int64
+</th>
+</tr>
+</thead>
+<tr>
+<td>
+2014-01-01T00:00:01Z
+</td>
+<td>
+SDO/AIA
+</td>
+<td>
+AIA_3
+</td>
+<td>
+171
+</td>
+<td>
+2145
+</td>
+</tr>
+</table>
+<p>Convert a <code>Row</code> to a <code>Table</code>:</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">from</span> astropy<span class="token punctuation">.</span>table<span class="token punctuation">.</span>table <span class="token keyword">import</span> Table
+Table<span class="token punctuation">(</span>response<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">.</span>table<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<i>Table length=1</i>
+<table id="table23453611454080" class="table-striped table-bordered table-condensed">
+<thead>
+<tr>
+<th>
+T_REC
+</th>
+<th>
+TELESCOP
+</th>
+<th>
+INSTRUME
+</th>
+<th>
+WAVELNTH
+</th>
+<th>
+CAR_ROT
+</th>
+</tr>
+</thead>
+<thead>
+<tr>
+<th>
+str20
+</th>
+<th>
+str7
+</th>
+<th>
+str5
+</th>
+<th>
+int64
+</th>
+<th>
+int64
+</th>
+</tr>
+</thead>
+<tr>
+<td>
+2014-01-01T00:00:01Z
+</td>
+<td>
+SDO/AIA
+</td>
+<td>
+AIA_3
+</td>
+<td>
+171
+</td>
+<td>
+2145
+</td>
+</tr>
+</table>
+<p>Other examples:</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">response<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token number">2</span><span class="token punctuation">]</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<i>Table length=2</i>
+<table id="table23453620500632" class="table-striped table-bordered table-condensed">
+<thead>
+<tr>
+<th>
+T_REC
+</th>
+<th>
+TELESCOP
+</th>
+<th>
+INSTRUME
+</th>
+<th>
+WAVELNTH
+</th>
+<th>
+CAR_ROT
+</th>
+</tr>
+</thead>
+<thead>
+<tr>
+<th>
+str20
+</th>
+<th>
+str7
+</th>
+<th>
+str5
+</th>
+<th>
+int64
+</th>
+<th>
+int64
+</th>
+</tr>
+</thead>
+<tr>
+<td>
+2014-01-01T00:00:01Z
+</td>
+<td>
+SDO/AIA
+</td>
+<td>
+AIA_4
+</td>
+<td>
+304
+</td>
+<td>
+2145
+</td>
+</tr>
+<tr>
+<td>
+2014-01-01T00:00:01Z
+</td>
+<td>
+SDO/AIA
+</td>
+<td>
+AIA_3
+</td>
+<td>
+171
+</td>
+<td>
+2145
+</td>
+</tr>
+</table>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">response<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token number">2</span><span class="token punctuation">]</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<i>Table length=2</i>
+<table id="table23453611657032" class="table-striped table-bordered table-condensed">
+<thead>
+<tr>
+<th>
+T_REC
+</th>
+<th>
+TELESCOP
+</th>
+<th>
+INSTRUME
+</th>
+<th>
+WAVELNTH
+</th>
+<th>
+CAR_ROT
+</th>
+</tr>
+</thead>
+<thead>
+<tr>
+<th>
+str20
+</th>
+<th>
+str7
+</th>
+<th>
+str5
+</th>
+<th>
+int64
+</th>
+<th>
+int64
+</th>
+</tr>
+</thead>
+<tr>
+<td>
+2014-01-01T00:00:01Z
+</td>
+<td>
+SDO/AIA
+</td>
+<td>
+AIA_4
+</td>
+<td>
+304
+</td>
+<td>
+2145
+</td>
+</tr>
+<tr>
+<td>
+2014-01-01T00:00:13Z
+</td>
+<td>
+SDO/AIA
+</td>
+<td>
+AIA_4
+</td>
+<td>
+304
+</td>
+<td>
+2145
+</td>
+</tr>
+</table>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">response<span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<i>Table length=2</i>
+<table id="table23453611658600" class="table-striped table-bordered table-condensed">
+<thead>
+<tr>
+<th>
+T_REC
+</th>
+<th>
+TELESCOP
+</th>
+<th>
+INSTRUME
+</th>
+<th>
+WAVELNTH
+</th>
+<th>
+CAR_ROT
+</th>
+</tr>
+</thead>
+<thead>
+<tr>
+<th>
+str20
+</th>
+<th>
+str7
+</th>
+<th>
+str5
+</th>
+<th>
+int64
+</th>
+<th>
+int64
+</th>
+</tr>
+</thead>
+<tr>
+<td>
+2014-01-01T00:00:01Z
+</td>
+<td>
+SDO/AIA
+</td>
+<td>
+AIA_4
+</td>
+<td>
+304
+</td>
+<td>
+2145
+</td>
+</tr>
+<tr>
+<td>
+2014-01-01T00:00:01Z
+</td>
+<td>
+SDO/AIA
+</td>
+<td>
+AIA_3
+</td>
+<td>
+171
+</td>
+<td>
+2145
+</td>
+</tr>
+</table>
+<h4 id="downloading-data-1">Downloading data</h4>
+<p>Download the entire results:</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">res <span class="token operator">=</span> client<span class="token punctuation">.</span>fetch<span class="token punctuation">(</span>response<span class="token punctuation">,</span> path<span class="token operator">=</span><span class="token string">'./data'</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre><code>Export request pending. [id=&quot;JSOC_20180710_1151&quot;, status=2]
+Waiting for 0 seconds...
+Export request pending. [id=&quot;JSOC_20180710_1151&quot;, status=1]
+Waiting for 5 seconds...
+4 URLs found for download. Full request totalling 17MB
+Export request pending. [id=&quot;JSOC_20180710_1152&quot;, status=2]
+Waiting for 0 seconds...
+4 URLs found for download. Full request totalling 24MB</code></pre>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">res<span class="token punctuation">.</span>wait<span class="token punctuation">(</span><span class="token punctuation">)</span>  <span class="token comment"># Show the progress bar &amp; wait to finish downloading.</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>Or separate out the staging to <code>request_data</code> &amp;
+<code>get_request</code>:</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">requests <span class="token operator">=</span> client<span class="token punctuation">.</span>request_data<span class="token punctuation">(</span>response<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">requests<span class="token punctuation">.</span><span class="token builtin">id</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre><code>&#39;JSOC_20180708_435&#39;</code></pre>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">requests<span class="token punctuation">.</span>status<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre><code>0</code></pre>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">res <span class="token operator">=</span> client<span class="token punctuation">.</span>get_request<span class="token punctuation">(</span>requests<span class="token punctuation">,</span> path<span class="token operator">=</span><span class="token string">'./data'</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">res<span class="token punctuation">.</span>wait<span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>So far, the best way to download a subset of the results is to
+<strong>make a query again</strong>.</p>
+<p>Or use <strong><code>JSOCClient</code></strong> (and a custom
+function) instead of <strong><code>Fido</code></strong> to search for
+data.</p>
+<p>See details below:</p>
+<p>If slice the result as <code>response[2]</code>, everything is OK
+except <code>query_args</code> is lost.</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">response<span class="token punctuation">.</span>query_args<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre><code>[&#123;&#39;wavelength&#39;: &lt;Quantity 304. Angstrom&gt;,
+  &#39;start_time&#39;: datetime.datetime(2014, 1, 1, 0, 0, 35),
+  &#39;end_time&#39;: datetime.datetime(2014, 1, 1, 0, 0, 55),
+  &#39;notify&#39;: &#39;lydiazly@nju.edu.cn&#39;,
+  &#39;series&#39;: &#39;aia.lev1_euv_12s&#39;&#125;,
+ &#123;&#39;wavelength&#39;: &lt;Quantity 171. Angstrom&gt;,
+  &#39;start_time&#39;: datetime.datetime(2014, 1, 1, 0, 0, 35),
+  &#39;end_time&#39;: datetime.datetime(2014, 1, 1, 0, 0, 55),
+  &#39;notify&#39;: &#39;lydiazly@nju.edu.cn&#39;,
+  &#39;series&#39;: &#39;aia.lev1_euv_12s&#39;&#125;]</code></pre>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">response<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">.</span>query_args<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>This will cause an error in <code>fetch</code>.</p>
+<h2 id="constructing-complex-queries">Constructing complex queries</h2>
+<h3 id="time">Time</h3>
+<p><a
+href="http://docs.sunpy.org/en/stable/guide/acquiring_data/jsoc.html"
+class="uri">http://docs.sunpy.org/en/stable/guide/acquiring_data/jsoc.html</a>
+&gt; Start and end times for the query (any date/time format understood
+by SunPy’s <code>parse_time</code> function can be used to specify dates
+and time). <strong>The Time attribute takes UTC time, as
+default.</strong><br> If you need to pass a Time in some other time
+scale, such as TAI, pass an Astropy Time object</p>
+<p>See <a
+href="http://docs.sunpy.org/en/stable/guide/time.html#parse-time"
+class="uri">http://docs.sunpy.org/en/stable/guide/time.html#parse-time</a></p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">from</span> sunpy<span class="token punctuation">.</span>time <span class="token keyword">import</span> parse_time<span class="token punctuation">,</span> is_time<span class="token punctuation">,</span> is_time_in_given_format<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">is_time<span class="token punctuation">(</span><span class="token string">'2014-01-01T00:00:00'</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre><code>True</code></pre>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">is_time_in_given_format<span class="token punctuation">(</span><span class="token string">'2014-01-01T00:00:00Z'</span><span class="token punctuation">,</span> <span class="token string">"%Y-%m-%dT%H:%M:%SZ"</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre><code>True</code></pre>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">parse_time<span class="token punctuation">(</span><span class="token string">'2015.08.27_06:00:00_TAI'</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre><code>datetime.datetime(2015, 8, 27, 6, 0)</code></pre>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">parse_time<span class="token punctuation">(</span><span class="token string">'2014-01-01T00:00:00Z'</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre><code>datetime.datetime(2014, 1, 1, 0, 0)</code></pre>
+<p>If <code>sunpy.time</code> doesn't inlude this format:
+"%Y-%m-%dT%H:%M:%SZ", use <a href="/scripts/sunpy-add-time-fmt.sh">a
+bash script</a> to add it:</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">!sunpy<span class="token operator">-</span>add<span class="token operator">-</span>time<span class="token operator">-</span>fmt<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre><code>Added this format to
+/home/lydia/miniconda3/lib/python3.6/site-packages/sunpy/time/time.py:
+
+    [01;31m[K&quot;%Y-%m-%dT%H:%M:%SZ&quot;[m[K,      # Example 2007-05-04T21:08:12Z
+
+=== Done!(sunpy-add-time-fmt) ===</code></pre>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">parse_time<span class="token punctuation">(</span><span class="token string">'2014-01-01T00:00:00Z'</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre><code>datetime.datetime(2014, 1, 1, 0, 0)</code></pre>
+<p>For convenience, use a custom function to pass a time string in 'TAI'
+scale:</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">from</span> usr_sunpy <span class="token keyword">import</span> tai<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">tai<span class="token punctuation">(</span><span class="token string">'2014-01-01T00:00:00'</span><span class="token punctuation">)</span>  <span class="token comment"># Returns a single object</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre><code>&lt;Time object: scale=&#39;tai&#39; format=&#39;datetime&#39; value=2014-01-01 00:00:00&gt;</code></pre>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">tai<span class="token punctuation">(</span><span class="token string">'2015.08.27_06:00:00_TAI'</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre><code>&lt;Time object: scale=&#39;tai&#39; format=&#39;datetime&#39; value=2015-08-27 06:00:00&gt;</code></pre>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">tai<span class="token punctuation">(</span><span class="token string">'2015.08.27_06:00:00_TAI'</span><span class="token punctuation">,</span> <span class="token string">'2015.08.27_06:01:00_TAI'</span><span class="token punctuation">)</span>  <span class="token comment"># Returns a list</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre><code>[&lt;Time object: scale=&#39;tai&#39; format=&#39;datetime&#39; value=2015-08-27 06:00:00&gt;,
+ &lt;Time object: scale=&#39;tai&#39; format=&#39;datetime&#39; value=2015-08-27 06:01:00&gt;]</code></pre>
+<h3 id="searching-for-data-2">Searching for data</h3>
+<p>JSOC <a href="http://jsoc.stanford.edu/ajax/lookdata.html"
+class="uri">http://jsoc.stanford.edu/ajax/lookdata.html</a></p>
+<ul>
+<li>To make a request, <a
+href="http://jsoc.stanford.edu/ajax/register_email.html">register your
+email first</a> :</li>
+</ul>
+<p><img src='/jsoc/hmi03-1.png' width='800' /></p>
+<p>Example of <a
+href="http://jsoc.stanford.edu/ajax/lookdata.html">online JSOC
+interface</a> :</p>
+<p><img src='/jsoc/hmi02.png' width='900' /></p>
+<p><img src='/jsoc/hmi03-2.png' width='900' /></p>
+<p>Use <pre class="line-numbers language-python" data-language="python"><code class="language-python">attrs<span class="token punctuation">.</span>jsoc<span class="token punctuation">.</span>Segment<span class="token punctuation">(</span><span class="token string">'...'</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>  attrs<span class="token punctuation">.</span>jsoc<span class="token punctuation">.</span><span class="token operator">&lt;</span>attr<span class="token operator">></span><span class="token punctuation">(</span><span class="token string">'...'</span><span class="token punctuation">)</span> <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre> <pre class="line-numbers language-python" data-language="python"><code class="language-python">attrs<span class="token punctuation">.</span>jsoc<span class="token punctuation">.</span>Segment<span class="token punctuation">(</span><span class="token string">'...'</span><span class="token punctuation">)</span> <span class="token operator">|</span>  attrs<span class="token punctuation">.</span>jsoc<span class="token punctuation">.</span><span class="token operator">&lt;</span>attr<span class="token operator">></span><span class="token punctuation">(</span><span class="token string">'...'</span><span class="token punctuation">)</span> <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre> or <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">from</span> sunpy<span class="token punctuation">.</span>net<span class="token punctuation">.</span>attr <span class="token keyword">import</span> AttrAnd<span class="token punctuation">,</span> AttrOr<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre> <pre class="line-numbers language-python" data-language="python"><code class="language-python">AttrAnd<span class="token punctuation">(</span><span class="token builtin">list</span><span class="token punctuation">(</span><span class="token builtin">map</span><span class="token punctuation">(</span>attrs<span class="token punctuation">.</span>jsoc<span class="token punctuation">.</span><span class="token operator">&lt;</span>attr<span class="token operator">></span><span class="token punctuation">,</span> <span class="token operator">&lt;</span><span class="token builtin">list</span><span class="token operator">></span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">AttrOr<span class="token punctuation">(</span><span class="token builtin">list</span><span class="token punctuation">(</span><span class="token builtin">map</span><span class="token punctuation">(</span>attrs<span class="token punctuation">.</span>jsoc<span class="token punctuation">.</span><span class="token operator">&lt;</span>attr<span class="token operator">></span><span class="token punctuation">,</span> <span class="token operator">&lt;</span><span class="token builtin">list</span><span class="token operator">></span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre> to pass multiple attributes.</p>
+<p>Note: &gt; The attributes which support
+<strong><code>&amp;</code></strong> are
+<strong><code>PrimeKey</code></strong> and
+<strong><code>Segment</code></strong>. Using
+<strong><code>&amp;</code></strong> with any other attributes will throw
+an error.</p>
+<ul>
+<li>Specify attributes:</li>
+</ul>
+<p>e.g.</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">trange <span class="token operator">=</span> tai<span class="token punctuation">(</span><span class="token string">'2015-08-27T05:00:00'</span><span class="token punctuation">,</span> <span class="token string">'2015-08-27T06:00:00'</span><span class="token punctuation">)</span>
+
+segments <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'inclination'</span><span class="token punctuation">,</span> <span class="token string">'azimuth'</span><span class="token punctuation">,</span> <span class="token string">'disambig'</span><span class="token punctuation">,</span> <span class="token string">'field'</span><span class="token punctuation">]</span>
+
+series <span class="token operator">=</span> <span class="token string">'hmi.B_720s'</span>  <span class="token comment"># 'hmi.b_720s' is OK</span>
+
+interval <span class="token operator">=</span> <span class="token number">10</span> <span class="token operator">*</span> u<span class="token punctuation">.</span><span class="token builtin">min</span>  <span class="token comment"># every 10 min.</span>
+
+email <span class="token operator">=</span> <span class="token string">'lydiazly@nju.edu.cn'</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<ul>
+<li>Making a query:</li>
+</ul>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">from</span> sunpy<span class="token punctuation">.</span>net<span class="token punctuation">.</span>attr <span class="token keyword">import</span> AttrAnd<span class="token punctuation">,</span> AttrOr<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">response <span class="token operator">=</span> Fido<span class="token punctuation">.</span>search<span class="token punctuation">(</span>
+    attrs<span class="token punctuation">.</span>jsoc<span class="token punctuation">.</span>Time<span class="token punctuation">(</span><span class="token operator">*</span>trange<span class="token punctuation">)</span><span class="token punctuation">,</span>
+    attrs<span class="token punctuation">.</span>jsoc<span class="token punctuation">.</span>Series<span class="token punctuation">(</span>series<span class="token punctuation">)</span><span class="token punctuation">,</span>
+    attrs<span class="token punctuation">.</span>jsoc<span class="token punctuation">.</span>Notify<span class="token punctuation">(</span>email<span class="token punctuation">)</span><span class="token punctuation">,</span>
+    attrs<span class="token punctuation">.</span>Sample<span class="token punctuation">(</span>interval<span class="token punctuation">)</span><span class="token punctuation">,</span>
+    AttrAnd<span class="token punctuation">(</span><span class="token builtin">list</span><span class="token punctuation">(</span><span class="token builtin">map</span><span class="token punctuation">(</span>attrs<span class="token punctuation">.</span>jsoc<span class="token punctuation">.</span>Segment<span class="token punctuation">,</span> segments<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token comment"># i.e. attrs.jsoc.Segment('...') &amp;  attrs.jsoc.Segment('...') ...</span>
+<span class="token punctuation">)</span>
+response<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+Results from 1 Provider:<br><br>6 Results from the
+JSOCClient:<br><i>Table length=6</i>
+<table id="table23187962870808" class="table-striped table-bordered table-condensed">
+<thead>
+<tr>
+<th>
+T_REC
+</th>
+<th>
+TELESCOP
+</th>
+<th>
+INSTRUME
+</th>
+<th>
+WAVELNTH
+</th>
+<th>
+CAR_ROT
+</th>
+</tr>
+</thead>
+<thead>
+<tr>
+<th>
+str23
+</th>
+<th>
+str7
+</th>
+<th>
+str9
+</th>
+<th>
+float64
+</th>
+<th>
+int64
+</th>
+</tr>
+</thead>
+<tr>
+<td>
+2015.08.27_05:00:00_TAI
+</td>
+<td>
+SDO/HMI
+</td>
+<td>
+HMI_SIDE1
+</td>
+<td>
+6173.0
+</td>
+<td>
+2167
+</td>
+</tr>
+<tr>
+<td>
+2015.08.27_05:12:00_TAI
+</td>
+<td>
+SDO/HMI
+</td>
+<td>
+HMI_SIDE1
+</td>
+<td>
+6173.0
+</td>
+<td>
+2167
+</td>
+</tr>
+<tr>
+<td>
+2015.08.27_05:24:00_TAI
+</td>
+<td>
+SDO/HMI
+</td>
+<td>
+HMI_SIDE1
+</td>
+<td>
+6173.0
+</td>
+<td>
+2167
+</td>
+</tr>
+<tr>
+<td>
+2015.08.27_05:36:00_TAI
+</td>
+<td>
+SDO/HMI
+</td>
+<td>
+HMI_SIDE1
+</td>
+<td>
+6173.0
+</td>
+<td>
+2167
+</td>
+</tr>
+<tr>
+<td>
+2015.08.27_05:48:00_TAI
+</td>
+<td>
+SDO/HMI
+</td>
+<td>
+HMI_SIDE1
+</td>
+<td>
+6173.0
+</td>
+<td>
+2167
+</td>
+</tr>
+<tr>
+<td>
+2015.08.27_06:00:00_TAI
+</td>
+<td>
+SDO/HMI
+</td>
+<td>
+HMI_SIDE1
+</td>
+<td>
+6173.0
+</td>
+<td>
+2167
+</td>
+</tr>
+</table>
+<p><br></p>
+]]></content>
+      <categories>
+        <category>Solar Physics</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+        <tag>sunpy</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>IDL 8.7 Python Bridge 试用</title>
+    <url>/2018-07-25-IDL-8.7.html</url>
+    <content><![CDATA[<p>在 <a href="http://harrisgeospatial.com">HARRIS 官网</a> 申请了 <a
+href="http://harrisgeospatial.com/docs/WhatsNew.html">IDL 8.7</a> 的
+Linux 版本试用, 咨询客服之后终于收到了链接, 于是先测试一下 Python Bridge
+功能.</p>
+<ul>
+<li>Ubuntu 16.04 LTS</li>
+<li>Python 3.6 Anaconda</li>
+<li>需要使用收到的激活码 (试用期一个月.
+激活之后运行程序不会自动退出)</li>
+</ul>
+<p>参考 <a
+href="https://www.harrisgeospatial.com/docs/Python.html">Python Bridge
+官方文档</a></p>
+<span id="more"></span>
+<h2 id="安装">1. 安装</h2>
+<p>下载之后解压这两个文件:<br> <code>envi55-linux.tar.gz</code><br>
+<code>flexnetserver2017.08-linux.tar.gz</code></p>
+<p>以安装至 <code>~/software/harris</code> 为例. <br><br>
+执行安装脚本:</p>
+<pre class="line-numbers language-sh" data-language="sh"><code class="language-sh">$ .&#x2F;envi55-linux&#x2F;install.sh
+$ .&#x2F;flexnetserver2017.08-linux&#x2F;install.sh<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<p><br> 添加路径到 <code>~/.bashrc</code> (注意将
+<code>miniconda3/lib</code> 替换成你的 python lib 路径):</p>
+<pre class="line-numbers language-sh" data-language="sh"><code class="language-sh"># ~&#x2F;.bashrc
+export LD_LIBRARY_PATH&#x3D;$HOME&#x2F;miniconda3&#x2F;lib:$HOME&#x2F;software&#x2F;harris&#x2F;envi&#x2F;idl&#x2F;bin&#x2F;bin.linux.x86_64:$LD_LIBRARY_PATH
+source $HOME&#x2F;software&#x2F;harris&#x2F;envi55&#x2F;bin&#x2F;envi_setup.bash<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<p>(如果 <code>miniconda3/lib</code> 加入到 <code>LD_LIBRARY_PATH</code>
+之后影响了其他程序使用, 因此处理方法见 <a
+href="#5-troubleshooting">Troubleshooting</a>) <br><br> 随后</p>
+<pre class="line-numbers language-sh" data-language="sh"><code class="language-sh">$ source ~&#x2F;.bashrc<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h2 id="激活">2. 激活</h2>
+<p>经过上述步骤, 图形界面的激活程序 <code>harrislicense</code>
+已被加入系统路径.</p>
+<p>打开</p>
+<pre class="line-numbers language-sh" data-language="sh"><code class="language-sh">$ harrislicense<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>或使用命令行</p>
+<pre class="line-numbers language-sh" data-language="sh"><code class="language-sh">$ cd ~&#x2F;software&#x2F;harris&#x2F;envi&#x2F;idl&#x2F;license_utils&#x2F;bin.linux.x86_64
+
+# Activate
+$ .&#x2F;activate -a &lt;activation-code&gt; [-q &lt;quantity&gt;]
+# e.g.
+$ .&#x2F;activate -a &lt;activation-code&gt; -q 1
+
+# Deactivate
+$ .&#x2F;activate -a &lt;activation-code&gt; -q 0<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>必要时将会提示需要 root 权限.</p>
+<h2 id="安装-idl-python-bridge">3. 安装 IDL Python bridge</h2>
+<p>首先确认 python 命令在系统路径 <code>PATH</code> 中.</p>
+<p>安装</p>
+<pre class="line-numbers language-sh" data-language="sh"><code class="language-sh">$ cd ~&#x2F;software&#x2F;harris&#x2F;envi&#x2F;idl&#x2F;lib&#x2F;bridges
+$ python setup.py install<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<h2 id="使用">4. 使用</h2>
+<ul>
+<li><a
+href="https://www.harrisgeospatial.com/docs/PythonToIDL.html">Python To
+IDL</a></li>
+</ul>
+<p>能使用的功能比较有限.</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token operator">>></span><span class="token operator">></span> <span class="token keyword">from</span> idlpy <span class="token keyword">import</span> <span class="token operator">*</span>
+<span class="token operator">>></span><span class="token operator">></span> <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f"</span><span class="token interpolation"><span class="token punctuation">&#123;</span>IDL<span class="token punctuation">.</span>run<span class="token punctuation">(</span><span class="token string">'for i=0, 3 do begin &amp; print, i &amp; endfor'</span><span class="token punctuation">)</span><span class="token punctuation">&#125;</span></span><span class="token string">"</span></span><span class="token punctuation">)</span>
+<span class="token number">0</span>
+<span class="token number">1</span>
+<span class="token number">2</span>
+<span class="token number">3</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<ul>
+<li><a href="https://www.harrisgeospatial.com/docs/IDLToPython.html">IDL
+To Python</a></li>
+</ul>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">IDL<span class="token operator">></span> <span class="token operator">>></span><span class="token operator">></span><span class="token keyword">import</span> matplotlib<span class="token punctuation">.</span>pyplot <span class="token keyword">as</span> plt<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>注意用这种写法时, python 的 <code>&gt;&gt;&gt;</code>
+提示符之后没有空格. <br><br> 或使用语句块 (Enter 退出):</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">IDL<span class="token operator">></span> <span class="token operator">>></span><span class="token operator">></span>
+<span class="token operator">>></span><span class="token operator">></span> <span class="token keyword">import</span> matplotlib<span class="token punctuation">.</span>pyplot <span class="token keyword">as</span> plt
+<span class="token operator">>></span><span class="token operator">></span> <span class="token keyword">import</span> numpy<span class="token punctuation">.</span>random <span class="token keyword">as</span> ran
+<span class="token operator">>></span><span class="token operator">></span> arr <span class="token operator">=</span> ran<span class="token punctuation">.</span>rand<span class="token punctuation">(</span><span class="token number">100</span><span class="token punctuation">)</span>
+<span class="token operator">>></span><span class="token operator">></span> p <span class="token operator">=</span> plt<span class="token punctuation">.</span>plot<span class="token punctuation">(</span>arr<span class="token punctuation">)</span>
+<span class="token operator">>></span><span class="token operator">></span> plt<span class="token punctuation">.</span>show<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token operator">>></span><span class="token operator">></span>
+IDL<span class="token operator">></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><br> 或使用以下方式将 python 语句结果赋值:</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">IDL<span class="token operator">></span> np <span class="token operator">=</span> Python<span class="token punctuation">.</span>Import<span class="token punctuation">(</span><span class="token string">'numpy'</span><span class="token punctuation">)</span>
+IDL<span class="token operator">></span> arr <span class="token operator">=</span> np<span class="token punctuation">.</span>array<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">1.</span><span class="token punctuation">,</span> <span class="token number">2.</span><span class="token punctuation">,</span> <span class="token number">3.</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+IDL<span class="token operator">></span> <span class="token builtin">help</span><span class="token punctuation">,</span> arr
+ARR             FLOAT     <span class="token operator">=</span> Array<span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">]</span>
+IDL<span class="token operator">></span> arr <span class="token operator">=</span> np<span class="token punctuation">.</span>arange<span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span>          
+IDL<span class="token operator">></span> <span class="token builtin">help</span><span class="token punctuation">,</span> arr         
+ARR             LONG64    <span class="token operator">=</span> Array<span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">]</span>
+IDL<span class="token operator">></span> arr <span class="token operator">=</span> np<span class="token punctuation">.</span>arange<span class="token punctuation">(</span><span class="token number">3.</span><span class="token punctuation">)</span>
+IDL<span class="token operator">></span> <span class="token builtin">help</span><span class="token punctuation">,</span> arr          
+ARR             DOUBLE    <span class="token operator">=</span> Array<span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">]</span>
+IDL<span class="token operator">></span> arr <span class="token operator">=</span> np<span class="token punctuation">.</span>ones<span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span>   
+IDL<span class="token operator">></span> <span class="token builtin">help</span><span class="token punctuation">,</span> arr       
+ARR             DOUBLE    <span class="token operator">=</span> Array<span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">]</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><br></p>
+<p>其他用法参见官方文档: - <a
+href="https://www.harrisgeospatial.com/docs/pythondataconvert.html">Parameter
+Passing and Data Conversion</a> - <a
+href="https://www.harrisgeospatial.com/docs/idl_kernel.html">IDL IPython
+Notebook Kernel</a></p>
+<h2 id="troubleshooting">5. Troubleshooting</h2>
+<p>出现 &gt; .../lib/libuuid.so.1: no version information available
+...</p>
+<p>这是因为使用 anaconda 的 python, 默认调用的是 anaconda 的
+libuuid.so.1, 版本较低, 使用系统的 libuuid.so.1 即可解决.</p>
+<p>或者出现 <code>miniconda3/lib</code> 加入
+<code>LD_LIBRARY_PATH</code> 之后影响其他程序调用的情况.</p>
+<p>同时考虑可能出现的这两种问题的解决办法如下:<br><br></p>
+<p><strong>使用自定义脚本替代 <code>idl</code> 命令</strong></p>
+<p>由于 idl 使用了 <code>alias</code> 来调用程序, 优先级最高, 因此需要在
+<code>.bashrc</code> 中重新 <code>alias</code>.</p>
+<p>以 miniconda3 为例, 新建脚本(注意替换相应路径):</p>
+<pre class="line-numbers language-sh" data-language="sh"><code class="language-sh">#!&#x2F;bin&#x2F;bash
+
+# python lib
+export LD_LIBRARY_PATH&#x3D;$HOME&#x2F;miniconda3&#x2F;lib:$LD_LIBRARY_PATH:$HOME&#x2F;software&#x2F;harris&#x2F;envi&#x2F;idl&#x2F;bin&#x2F;bin.linux.x86_64:$LD_LIBRARY_PATH
+
+# libuuid issue
+export LD_LIBRARY_PATH&#x3D;&#x2F;lib&#x2F;x86_64-linux-gnu:$LD_LIBRARY_PATH
+
+echo &quot;&#x3D;&#x3D;&#x3D; $0 &#x3D;&#x3D;&#x3D;&quot;
+$HOME&#x2F;software&#x2F;harris&#x2F;envi55&#x2F;idl87&#x2F;bin&#x2F;idl $@<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>假设将脚本放在 <code>~/bin</code> , 保证该路径在 <code>PATH</code> 中
+( <code>export PATH=$HOME/bin:$PATH</code> ).</p>
+<p>在 <code>~/.bashrc</code> 中去掉 <a href="#1-安装">安装</a> 中添加的
+<code>LD_LIBRARY_PATH</code> 行, 并在 <code>envi_setup.bash</code>
+行之后添加:</p>
+<pre class="line-numbers language-sh" data-language="sh"><code class="language-sh">alias idl&#x3D;$HOME&#x2F;bin&#x2F;idl<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>执行</p>
+<pre class="line-numbers language-sh" data-language="sh"><code class="language-sh">$ source ~&#x2F;.bashrc<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>之后再用 <code>idl</code> 命令即调用的是自定义的脚本.</p>
+]]></content>
+      <categories>
+        <category>Solar Physics</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+        <tag>idl</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>JSOC Download Example</title>
+    <url>//jsoc-download-example.html</url>
+    <content><![CDATA[<p><a
+href="/downloads/notebooks/fido.zip"><i class="fas fa-download"></i>
+Jupyter Notebook</a></p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> astropy<span class="token punctuation">.</span>units <span class="token keyword">as</span> u
+<span class="token keyword">from</span> sunpy<span class="token punctuation">.</span>net <span class="token keyword">import</span> attrs<span class="token punctuation">,</span> jsoc
+
+<span class="token comment"># Suppress some warnings</span>
+<span class="token keyword">import</span> warnings
+<span class="token keyword">from</span> astropy<span class="token punctuation">.</span>utils<span class="token punctuation">.</span>exceptions <span class="token keyword">import</span> AstropyDeprecationWarning
+warnings<span class="token punctuation">.</span>simplefilter<span class="token punctuation">(</span><span class="token string">"ignore"</span><span class="token punctuation">,</span> category<span class="token operator">=</span>FutureWarning<span class="token punctuation">)</span>
+warnings<span class="token punctuation">.</span>simplefilter<span class="token punctuation">(</span><span class="token string">"ignore"</span><span class="token punctuation">,</span> category<span class="token operator">=</span>AstropyDeprecationWarning<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># JSOC string: "aia.lev1_euv_12s[2014-10-26T10:00:00Z-2014-10-26T11:00:00Z@1m][193,304]&#123;image&#125;"</span>
+client <span class="token operator">=</span> jsoc<span class="token punctuation">.</span>JSOCClient<span class="token punctuation">(</span><span class="token punctuation">)</span>
+response <span class="token operator">=</span> client<span class="token punctuation">.</span>search<span class="token punctuation">(</span>
+    attrs<span class="token punctuation">.</span>jsoc<span class="token punctuation">.</span>Time<span class="token punctuation">(</span><span class="token string">'2014-10-26T10:00:00'</span><span class="token punctuation">,</span> <span class="token string">'2014-10-26T10:30:00'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    attrs<span class="token punctuation">.</span>jsoc<span class="token punctuation">.</span>Notify<span class="token punctuation">(</span><span class="token string">'xxx@xxx'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>  <span class="token comment"># email</span>
+    attrs<span class="token punctuation">.</span>jsoc<span class="token punctuation">.</span>Series<span class="token punctuation">(</span><span class="token string">'aia.lev1_euv_12s'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    attrs<span class="token punctuation">.</span>jsoc<span class="token punctuation">.</span>Segment<span class="token punctuation">(</span><span class="token string">'image'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    attrs<span class="token punctuation">.</span>Sample<span class="token punctuation">(</span><span class="token number">10.</span> <span class="token operator">*</span> u<span class="token punctuation">.</span><span class="token builtin">min</span><span class="token punctuation">)</span><span class="token punctuation">,</span>  <span class="token comment"># interval</span>
+    attrs<span class="token punctuation">.</span>jsoc<span class="token punctuation">.</span>Wavelength<span class="token punctuation">(</span><span class="token number">193</span> <span class="token operator">*</span> u<span class="token punctuation">.</span>AA<span class="token punctuation">)</span> <span class="token operator">|</span> attrs<span class="token punctuation">.</span>jsoc<span class="token punctuation">.</span>Wavelength<span class="token punctuation">(</span><span class="token number">304</span> <span class="token operator">*</span> u<span class="token punctuation">.</span>AA<span class="token punctuation">)</span>
+<span class="token punctuation">)</span>
+
+response<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span id="more"></span>
+<i>Table length=8</i>
+<table id="table23026665135352" class="table-striped table-bordered table-condensed">
+<thead>
+<tr>
+<th>
+T_REC
+</th>
+<th>
+TELESCOP
+</th>
+<th>
+INSTRUME
+</th>
+<th>
+WAVELNTH
+</th>
+<th>
+CAR_ROT
+</th>
+</tr>
+</thead>
+<thead>
+<tr>
+<th>
+str20
+</th>
+<th>
+str7
+</th>
+<th>
+str5
+</th>
+<th>
+int64
+</th>
+<th>
+int64
+</th>
+</tr>
+</thead>
+<tr>
+<td>
+2014-10-26T10:00:01Z
+</td>
+<td>
+SDO/AIA
+</td>
+<td>
+AIA_2
+</td>
+<td>
+193
+</td>
+<td>
+2156
+</td>
+</tr>
+<tr>
+<td>
+2014-10-26T10:10:01Z
+</td>
+<td>
+SDO/AIA
+</td>
+<td>
+AIA_2
+</td>
+<td>
+193
+</td>
+<td>
+2156
+</td>
+</tr>
+<tr>
+<td>
+2014-10-26T10:20:01Z
+</td>
+<td>
+SDO/AIA
+</td>
+<td>
+AIA_2
+</td>
+<td>
+193
+</td>
+<td>
+2156
+</td>
+</tr>
+<tr>
+<td>
+2014-10-26T10:30:01Z
+</td>
+<td>
+SDO/AIA
+</td>
+<td>
+AIA_2
+</td>
+<td>
+193
+</td>
+<td>
+2156
+</td>
+</tr>
+<tr>
+<td>
+2014-10-26T10:00:01Z
+</td>
+<td>
+SDO/AIA
+</td>
+<td>
+AIA_4
+</td>
+<td>
+304
+</td>
+<td>
+2156
+</td>
+</tr>
+<tr>
+<td>
+2014-10-26T10:10:01Z
+</td>
+<td>
+SDO/AIA
+</td>
+<td>
+AIA_4
+</td>
+<td>
+304
+</td>
+<td>
+2156
+</td>
+</tr>
+<tr>
+<td>
+2014-10-26T10:20:01Z
+</td>
+<td>
+SDO/AIA
+</td>
+<td>
+AIA_4
+</td>
+<td>
+304
+</td>
+<td>
+2156
+</td>
+</tr>
+<tr>
+<td>
+2014-10-26T10:30:01Z
+</td>
+<td>
+SDO/AIA
+</td>
+<td>
+AIA_4
+</td>
+<td>
+304
+</td>
+<td>
+2156
+</td>
+</tr>
+</table>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">requests <span class="token operator">=</span> client<span class="token punctuation">.</span>request_data<span class="token punctuation">(</span>response<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">requests<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token builtin">id</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">requests<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span>status<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>如官网所述, 只有为'1'时才可以下载, 但有时还是'2'时也可以下
+(可能是状态有延迟?).</p>
+<p>总之如果发现下面的语句不能执行, 请再等一会再试.</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">res <span class="token operator">=</span> client<span class="token punctuation">.</span>get_request<span class="token punctuation">(</span>requests<span class="token punctuation">,</span> path<span class="token operator">=</span><span class="token string">'./data'</span><span class="token punctuation">,</span> overwrite<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p><code>overwrite</code> 默认为 False,
+即跳过已存在的文件(即使该文件数据不全, 因此建议设为 True)</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">res<span class="token punctuation">.</span>wait<span class="token punctuation">(</span><span class="token punctuation">)</span> <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p><code>.wait()</code> 将显示进度条, 结束后显示已下载的文件名.
+如中途显示网络出错或中断这个语句, 再次执行该语句即可
+(下载过程不受影响).</p>
+<p>如果发现该 <code>.wait()</code> 卡死不动, 可以先结束该语句.<br>
+(Jupyter 中的操作: 按 <code>Esc</code> 或点击页面空白处保证该 Cell
+为命令模式而非编辑模式, 即左侧的竖条为蓝色, 然后按两次 <code>I</code>
+即中断该 Cell).<br> 随后执行下面语句, 然后再回去执行
+<code>.wait()</code> 看是否恢复.</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">res<span class="token punctuation">.</span>poke<span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+]]></content>
+      <categories>
+        <category>Solar Physics</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+        <tag>sunpy</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Example: plot HMI</title>
+    <url>//example_plothmi.html</url>
+    <content><![CDATA[<p><a
+href="/downloads/notebooks/example_hmi.zip"><i class="fas fa-download"></i>
+Jupyter Notebook</a></p>
+<p><a
+href="https://pan.baidu.com/s/1nwsIcDr"><i class="fas fa-download"></i>
+Example Data</a> <span style="color:gray">(pswd: s5re)</span></p>
+<p><a
+href="https://github.com/lydiazly/lydiazly.github.io/raw/main/source/downloads/scripts/sunpy-modules.zip"><i class="fas fa-download"></i>
+User Module</a> (<a
+href="https://lydiazly.github.io/usr_sunpy.html">help</a>)</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">from</span> __future__ <span class="token keyword">import</span> division<span class="token punctuation">,</span> print_function
+
+<span class="token comment"># Reload user modules automatically</span>
+<span class="token comment"># %load_ext autoreload</span>
+<span class="token comment"># %autoreload 2</span>
+
+<span class="token comment"># notebook, inline, ...</span>
+<span class="token operator">%</span>matplotlib notebook
+
+<span class="token keyword">from</span> astropy<span class="token punctuation">.</span>coordinates <span class="token keyword">import</span> SkyCoord
+<span class="token keyword">import</span> astropy<span class="token punctuation">.</span>units <span class="token keyword">as</span> u
+<span class="token keyword">import</span> matplotlib<span class="token punctuation">.</span>pyplot <span class="token keyword">as</span> plt
+<span class="token keyword">import</span> numpy <span class="token keyword">as</span> np
+<span class="token keyword">import</span> sunpy<span class="token punctuation">.</span><span class="token builtin">map</span>
+<span class="token keyword">from</span> copy <span class="token keyword">import</span> deepcopy
+
+<span class="token comment"># To use user modules</span>
+<span class="token keyword">import</span> sys
+sys<span class="token punctuation">.</span>path<span class="token punctuation">.</span>append<span class="token punctuation">(</span><span class="token string">'../modules'</span><span class="token punctuation">)</span>
+
+<span class="token comment"># print('Python version: %s' % sys.version.split('(')[0])  # Python version: 3.6.6 |Anaconda, Inc.| </span>
+<span class="token comment"># print('SunPy version: %s' % sunpy.__version__)  # SunPy version: 0.9.3</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span id="more"></span>
+<h2 id="read-data">Read data</h2>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">fnames <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token string">'data/hmi.B_720s.20150827_052400_TAI.field.fits'</span><span class="token punctuation">,</span>
+          <span class="token string">'data/hmi.B_720s.20150827_052400_TAI.inclination.fits'</span><span class="token punctuation">,</span>
+          <span class="token string">'data/hmi.B_720s.20150827_052400_TAI.azimuth.fits'</span><span class="token punctuation">,</span>
+          <span class="token string">'data/hmi.B_720s.20150827_052400_TAI.disambig.fits'</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">from</span> usr_sunpy <span class="token keyword">import</span> read_sdo
+mapb<span class="token punctuation">,</span> mapi<span class="token punctuation">,</span> mapa<span class="token punctuation">,</span> mapd <span class="token operator">=</span> <span class="token builtin">list</span><span class="token punctuation">(</span><span class="token builtin">map</span><span class="token punctuation">(</span>read_sdo<span class="token punctuation">,</span> fnames<span class="token punctuation">)</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<pre><code>hmi.B_720s.20150827_052400_TAI.field.fits   [4096, 4096]
+hmi.B_720s.20150827_052400_TAI.inclination.fits [4096, 4096]
+hmi.B_720s.20150827_052400_TAI.azimuth.fits [4096, 4096]
+hmi.B_720s.20150827_052400_TAI.disambig.fits    [4096, 4096]</code></pre>
+<ul>
+<li>Disambiguate:</li>
+</ul>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">mapa<span class="token punctuation">.</span>data<span class="token punctuation">[</span>mapd<span class="token punctuation">.</span>data <span class="token operator">></span> <span class="token number">3</span><span class="token punctuation">]</span> <span class="token operator">+=</span> <span class="token number">180.</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<ul>
+<li>Transform to vector components:</li>
+</ul>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">mapbx <span class="token operator">=</span> deepcopy<span class="token punctuation">(</span>mapb<span class="token punctuation">)</span>
+mapby <span class="token operator">=</span> deepcopy<span class="token punctuation">(</span>mapb<span class="token punctuation">)</span>
+mapbz <span class="token operator">=</span> deepcopy<span class="token punctuation">(</span>mapb<span class="token punctuation">)</span>
+mapbx<span class="token punctuation">.</span>data<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">]</span> <span class="token operator">=</span> mapb<span class="token punctuation">.</span>data <span class="token operator">*</span> np<span class="token punctuation">.</span>sin<span class="token punctuation">(</span>np<span class="token punctuation">.</span>deg2rad<span class="token punctuation">(</span>mapi<span class="token punctuation">.</span>data<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">*</span> np<span class="token punctuation">.</span>cos<span class="token punctuation">(</span>np<span class="token punctuation">.</span>deg2rad<span class="token punctuation">(</span>mapa<span class="token punctuation">.</span>data <span class="token operator">+</span> <span class="token number">270.</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+mapby<span class="token punctuation">.</span>data<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">]</span> <span class="token operator">=</span> mapb<span class="token punctuation">.</span>data <span class="token operator">*</span> np<span class="token punctuation">.</span>sin<span class="token punctuation">(</span>np<span class="token punctuation">.</span>deg2rad<span class="token punctuation">(</span>mapi<span class="token punctuation">.</span>data<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">*</span> np<span class="token punctuation">.</span>sin<span class="token punctuation">(</span>np<span class="token punctuation">.</span>deg2rad<span class="token punctuation">(</span>mapa<span class="token punctuation">.</span>data <span class="token operator">+</span> <span class="token number">270.</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+mapbz<span class="token punctuation">.</span>data<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">]</span> <span class="token operator">=</span> mapb<span class="token punctuation">.</span>data <span class="token operator">*</span> np<span class="token punctuation">.</span>cos<span class="token punctuation">(</span>np<span class="token punctuation">.</span>deg2rad<span class="token punctuation">(</span>mapi<span class="token punctuation">.</span>data<span class="token punctuation">)</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># Suppress metadata warnings</span>
+<span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token punctuation">&#123;</span>mapbx<span class="token punctuation">,</span> mapby<span class="token punctuation">,</span> mapbz<span class="token punctuation">&#125;</span><span class="token punctuation">:</span>
+    i<span class="token punctuation">.</span>meta<span class="token punctuation">[</span><span class="token string">'hgln_obs'</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">0.</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">mapbz<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre><code>SunPy Map
+---------
+Observatory:         SDO
+Instrument:      HMI SIDE1
+Detector:        HMI
+Measurement:         hmi
+Wavelength:      6173.0
+Observation Date:    2015-08-27 05:22:21
+Exposure Time:       0.000000 s
+Dimension:       [4096. 4096.] pix
+Coordinate System:   helioprojective
+Scale:           [0.504376 0.504376] arcsec / pix
+Reference Pixel:     [2033.825928 2053.603271] pix
+Reference Coord:     [0. 0.] arcsec
+array([[nan, nan, nan, ..., nan, nan, nan],
+       [nan, nan, nan, ..., nan, nan, nan],
+       [nan, nan, nan, ..., nan, nan, nan],
+       ...,
+       [nan, nan, nan, ..., nan, nan, nan],
+       [nan, nan, nan, ..., nan, nan, nan],
+       [nan, nan, nan, ..., nan, nan, nan]])</code></pre>
+<ul>
+<li>Use <code>sunpy.instr.aia.aiaprep()</code> Processes a level 1
+AIAMap into a level 1.5 AIAMap.<br> <a
+href="https://docs.sunpy.org/en/stable/api/sunpy.instr.aia.aiaprep.html"
+class="uri">https://docs.sunpy.org/en/stable/api/sunpy.instr.aia.aiaprep.html</a></li>
+</ul>
+<blockquote>
+<p>From <strong>sunpy 0.9.3</strong>,
+<code>sunpy.instr.aia.aiaprep()</code> supports both <code>AIAMap</code>
+&amp; <code>HMIMap</code> objects.</p>
+</blockquote>
+<p><strong>Note</strong>: Improve <code>aiaprep</code> in
+<code>&lt;python_path&gt;/site-packages/sunpy/instr/aia.py</code>:<br>
+   at line: <code>tempmap = aiamap.rotate(...)</code><br>    add
+<code>order=3</code> (recommend, this will keep NaNs) and set
+<code>missing=np.nan</code> in <code>rotate()</code></p>
+<p>There is a modified function <code>aiaprep_usr()</code> in
+<code>usr_sunpy</code></p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># After `aiaprep`:</span>
+<span class="token comment"># - North is aligned with the y axis.</span>
+<span class="token comment"># - Each pixel is 0.6 arcsec across.</span>
+<span class="token comment"># - The center of the sun is at the center of the image.</span>
+<span class="token comment"># This may be a bit slow.</span>
+
+<span class="token comment"># from sunpy.instr.aia import aiaprep</span>
+<span class="token keyword">from</span> usr_sunpy <span class="token keyword">import</span> aiaprep_usr <span class="token keyword">as</span> aiaprep
+<span class="token keyword">import</span> warnings
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'level 1 -> level 1.5 ...'</span><span class="token punctuation">)</span>
+<span class="token keyword">with</span> warnings<span class="token punctuation">.</span>catch_warnings<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    warnings<span class="token punctuation">.</span>simplefilter<span class="token punctuation">(</span><span class="token string">"ignore"</span><span class="token punctuation">)</span>
+    mapbx <span class="token operator">=</span> aiaprep<span class="token punctuation">(</span>mapbx<span class="token punctuation">)</span>
+    mapby <span class="token operator">=</span> aiaprep<span class="token punctuation">(</span>mapby<span class="token punctuation">)</span>
+    mapbz <span class="token operator">=</span> aiaprep<span class="token punctuation">(</span>mapbz<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'level    ='</span><span class="token punctuation">,</span> mapbz<span class="token punctuation">.</span>meta<span class="token punctuation">[</span><span class="token string">'lvl_num'</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'rsun_obs ='</span><span class="token punctuation">,</span> mapbz<span class="token punctuation">.</span>meta<span class="token punctuation">[</span><span class="token string">'rsun_obs'</span><span class="token punctuation">]</span> <span class="token operator">*</span> u<span class="token punctuation">.</span>arcsec<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'r_sun    ='</span><span class="token punctuation">,</span> mapbz<span class="token punctuation">.</span>meta<span class="token punctuation">[</span><span class="token string">'r_sun'</span><span class="token punctuation">]</span> <span class="token operator">*</span> u<span class="token punctuation">.</span>pix<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre><code>level 1 -&gt; level 1.5 ...
+level    = 1.5
+rsun_obs = 949.495178 arcsec
+r_sun    = 1582.4919633333334 pix</code></pre>
+<ul>
+<li><strong>Or</strong>, use <code>rotate()</code> manually:</li>
+</ul>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># DO NOT execute this cell if `sunpy.instr.aia.aiaprep()` has been called.</span>
+<span class="token comment"># `rotate` function will remove old CROTA keywords.</span>
+<span class="token comment"># This may be a bit slow if order = 3.</span>
+<span class="token keyword">if</span> <span class="token string">'lvl_num'</span> <span class="token keyword">not</span> <span class="token keyword">in</span> mapbz<span class="token punctuation">.</span>meta <span class="token keyword">or</span> mapbz<span class="token punctuation">.</span>meta<span class="token punctuation">[</span><span class="token string">'lvl_num'</span><span class="token punctuation">]</span> <span class="token operator">&lt;</span> <span class="token number">1.5</span><span class="token punctuation">:</span>
+    order <span class="token operator">=</span> <span class="token number">3</span>
+    scale_factor <span class="token operator">=</span> <span class="token punctuation">(</span>mapbz<span class="token punctuation">.</span>scale<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">/</span> <span class="token number">0.6</span><span class="token punctuation">)</span><span class="token punctuation">.</span>value
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'rotate(CCW) &amp; recenter &amp; rescale ...'</span><span class="token punctuation">)</span>
+    <span class="token comment"># Suppress warnings of NaNs:</span>
+    <span class="token keyword">with</span> np<span class="token punctuation">.</span>errstate<span class="token punctuation">(</span>invalid<span class="token operator">=</span><span class="token string">'ignore'</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        mapbx <span class="token operator">=</span> mapbx<span class="token punctuation">.</span>rotate<span class="token punctuation">(</span>order<span class="token operator">=</span>order<span class="token punctuation">,</span> recenter<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">,</span> scale<span class="token operator">=</span>scale_factor<span class="token punctuation">,</span> missing<span class="token operator">=</span>np<span class="token punctuation">.</span>nan<span class="token punctuation">)</span>
+        mapby <span class="token operator">=</span> mapby<span class="token punctuation">.</span>rotate<span class="token punctuation">(</span>order<span class="token operator">=</span>order<span class="token punctuation">,</span> recenter<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">,</span> scale<span class="token operator">=</span>scale_factor<span class="token punctuation">,</span> missing<span class="token operator">=</span>np<span class="token punctuation">.</span>nan<span class="token punctuation">)</span>
+        mapbz <span class="token operator">=</span> mapbz<span class="token punctuation">.</span>rotate<span class="token punctuation">(</span>order<span class="token operator">=</span>order<span class="token punctuation">,</span> recenter<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">,</span> scale<span class="token operator">=</span>scale_factor<span class="token punctuation">,</span> missing<span class="token operator">=</span>np<span class="token punctuation">.</span>nan<span class="token punctuation">)</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'Rotation angle = %f deg (CCW)'</span> <span class="token operator">%</span> <span class="token operator">-</span>mapb<span class="token punctuation">.</span>meta<span class="token punctuation">[</span><span class="token string">'crota2'</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>Level 1.5:</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">mapbz<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre><code>SunPy Map
+---------
+Observatory:         SDO
+Instrument:      HMI SIDE1
+Detector:        HMI
+Measurement:         hmi
+Wavelength:      6173.0
+Observation Date:    2015-08-27 05:22:21
+Exposure Time:       0.000000 s
+Dimension:       [4096. 4096.] pix
+Coordinate System:   helioprojective
+Scale:           [0.6 0.6] arcsec / pix
+Reference Pixel:     [2048.5 2048.5] pix
+Reference Coord:     [0. 0.] arcsec
+array([[nan, nan, nan, ..., nan, nan, nan],
+       [nan, nan, nan, ..., nan, nan, nan],
+       [nan, nan, nan, ..., nan, nan, nan],
+       ...,
+       [nan, nan, nan, ..., nan, nan, nan],
+       [nan, nan, nan, ..., nan, nan, nan],
+       [nan, nan, nan, ..., nan, nan, nan]])</code></pre>
+<p>Check the disk center ('crpix1', 'crpix2'):</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># pixel number start from 1</span>
+pcenter <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">(</span>mapbz<span class="token punctuation">.</span>meta<span class="token punctuation">[</span><span class="token string">'crpix1'</span><span class="token punctuation">]</span> <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token operator">*</span> u<span class="token punctuation">.</span>pix<span class="token punctuation">,</span> <span class="token punctuation">(</span>mapbz<span class="token punctuation">.</span>meta<span class="token punctuation">[</span><span class="token string">'crpix2'</span><span class="token punctuation">]</span> <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token operator">*</span> u<span class="token punctuation">.</span>pix<span class="token punctuation">)</span>
+center <span class="token operator">=</span> mapbz<span class="token punctuation">.</span>pixel_to_world<span class="token punctuation">(</span><span class="token operator">*</span>pcenter<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'[Image_center] (%.3f, %.3f) pixel = (%7.4f, %7.4f) arcsec  (lon, lat) = (%8.5f, %8.5f) deg'</span> <span class="token operator">%</span>
+      <span class="token punctuation">(</span><span class="token punctuation">(</span>mapbz<span class="token punctuation">.</span>dimensions<span class="token punctuation">.</span>x<span class="token punctuation">.</span>value<span class="token operator">-</span><span class="token number">1.</span><span class="token punctuation">)</span><span class="token operator">/</span><span class="token number">2.</span><span class="token punctuation">,</span> <span class="token punctuation">(</span>mapbz<span class="token punctuation">.</span>dimensions<span class="token punctuation">.</span>y<span class="token punctuation">.</span>value<span class="token operator">-</span><span class="token number">1.</span><span class="token punctuation">)</span><span class="token operator">/</span><span class="token number">2.</span><span class="token punctuation">,</span>
+        mapbz<span class="token punctuation">.</span>center<span class="token punctuation">.</span>Tx<span class="token punctuation">.</span>value<span class="token punctuation">,</span> mapbz<span class="token punctuation">.</span>center<span class="token punctuation">.</span>Ty<span class="token punctuation">.</span>value<span class="token punctuation">,</span>
+        mapbz<span class="token punctuation">.</span>center<span class="token punctuation">.</span>heliographic_stonyhurst<span class="token punctuation">.</span>lon<span class="token punctuation">.</span>value<span class="token punctuation">,</span> mapbz<span class="token punctuation">.</span>center<span class="token punctuation">.</span>heliographic_stonyhurst<span class="token punctuation">.</span>lat<span class="token punctuation">.</span>value<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'[ Disk_center] (%.3f, %.3f) pixel = (%7.4f, %7.4f) arcsec  (lon, lat) = (%8.5f, %8.5f) deg'</span> <span class="token operator">%</span>
+      <span class="token punctuation">(</span>pcenter<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span>value<span class="token punctuation">,</span> pcenter<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">.</span>value<span class="token punctuation">,</span> center<span class="token punctuation">.</span>Tx<span class="token punctuation">.</span>value<span class="token punctuation">,</span> center<span class="token punctuation">.</span>Ty<span class="token punctuation">.</span>value<span class="token punctuation">,</span>
+       center<span class="token punctuation">.</span>heliographic_stonyhurst<span class="token punctuation">.</span>lon<span class="token punctuation">.</span>value<span class="token punctuation">,</span> center<span class="token punctuation">.</span>heliographic_stonyhurst<span class="token punctuation">.</span>lat<span class="token punctuation">.</span>value<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'[ Observation] (lon, lat, radius) = (%g deg, %g deg, %g m)'</span> <span class="token operator">%</span>
+      <span class="token punctuation">(</span>mapbz<span class="token punctuation">.</span>heliographic_longitude<span class="token punctuation">.</span>value<span class="token punctuation">,</span> mapbz<span class="token punctuation">.</span>heliographic_latitude<span class="token punctuation">.</span>value<span class="token punctuation">,</span> mapbz<span class="token punctuation">.</span>observer_coordinate<span class="token punctuation">.</span>radius<span class="token punctuation">.</span>value<span class="token punctuation">)</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre><code>[Image_center] (2047.500, 2047.500) pixel = ( 0.3000,  0.3000) arcsec  (lon, lat) = ( 0.01816,  7.10702) deg
+[ Disk_center] (2047.500, 2047.500) pixel = ( 0.0000,  0.0000) arcsec  (lon, lat) = ( 0.00000,  7.08900) deg
+[ Observation] (lon, lat, radius) = (0 deg, 7.089 deg, 1.51197e+11 m)</code></pre>
+<p>A quick look:</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">mapbz<span class="token punctuation">.</span>peek<span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre><code>&lt;IPython.core.display.Javascript object&gt;</code></pre>
+<p><img src="/example_plothmi/plothmi1.png" width="640"></p>
+<h2 id="plot">Plot</h2>
+<p><a
+href="https://docs.sunpy.org/en/stable/guide/plotting.html?highlight=peek#plotting-maps-with-wcsaxes"
+class="uri">https://docs.sunpy.org/en/stable/guide/plotting.html?highlight=peek#plotting-maps-with-wcsaxes</a></p>
+<p>User function <code>plot_map()</code> will invoke <code>plot()</code>
+of sunpy.</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">from</span> usr_sunpy <span class="token keyword">import</span> plot_map
+
+fig1 <span class="token operator">=</span> plt<span class="token punctuation">.</span>figure<span class="token punctuation">(</span>figsize<span class="token operator">=</span><span class="token punctuation">(</span><span class="token number">8</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">)</span><span class="token punctuation">,</span> dpi<span class="token operator">=</span><span class="token number">100</span><span class="token punctuation">)</span>
+ax1 <span class="token operator">=</span> fig1<span class="token punctuation">.</span>add_subplot<span class="token punctuation">(</span><span class="token number">111</span><span class="token punctuation">,</span> projection<span class="token operator">=</span>mapbz<span class="token punctuation">)</span>
+<span class="token comment"># This plot function will simply invoke mapbz.plot(), if keyword `coords` is not specified.</span>
+plot_map<span class="token punctuation">(</span>mapbz<span class="token punctuation">,</span> ax<span class="token operator">=</span>ax1<span class="token punctuation">,</span> vmin<span class="token operator">=</span><span class="token operator">-</span><span class="token number">2000.</span><span class="token punctuation">,</span> vmax<span class="token operator">=</span><span class="token number">2000.</span><span class="token punctuation">)</span>
+
+<span class="token comment"># Properties</span>
+mapbz<span class="token punctuation">.</span>draw_limb<span class="token punctuation">(</span>axes<span class="token operator">=</span>ax1<span class="token punctuation">,</span> color<span class="token operator">=</span><span class="token string">'b'</span><span class="token punctuation">,</span> linewidth<span class="token operator">=</span><span class="token number">1.5</span><span class="token punctuation">)</span>  <span class="token comment"># default zorder=100 in `draw_limb()`</span>
+ax1<span class="token punctuation">.</span>plot_coord<span class="token punctuation">(</span>mapbz<span class="token punctuation">.</span>center<span class="token punctuation">,</span> <span class="token string">'rx'</span><span class="token punctuation">,</span> markersize<span class="token operator">=</span><span class="token number">10</span><span class="token punctuation">,</span> linewidth<span class="token operator">=</span><span class="token number">1.5</span><span class="token punctuation">,</span> label<span class="token operator">=</span><span class="token string">'Image center'</span><span class="token punctuation">)</span>
+<span class="token keyword">try</span><span class="token punctuation">:</span>
+    ax1<span class="token punctuation">.</span>plot_coord<span class="token punctuation">(</span>center<span class="token punctuation">,</span> <span class="token string">'bx'</span><span class="token punctuation">,</span> markersize<span class="token operator">=</span><span class="token number">10</span><span class="token punctuation">,</span> linewidth<span class="token operator">=</span><span class="token number">1.5</span><span class="token punctuation">,</span> label<span class="token operator">=</span><span class="token string">'Disk center'</span><span class="token punctuation">)</span>
+<span class="token keyword">except</span><span class="token punctuation">:</span>
+    <span class="token keyword">pass</span>
+ax1<span class="token punctuation">.</span>legend<span class="token punctuation">(</span>loc<span class="token operator">=</span><span class="token string">'upper right'</span><span class="token punctuation">,</span> fontsize<span class="token operator">=</span><span class="token number">8</span><span class="token punctuation">,</span> markerscale<span class="token operator">=</span><span class="token number">0.6</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment"># fig1.savefig('example_plothmi_disk.png', dpi=200, bbox_inches='tight')</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre><code>&lt;IPython.core.display.Javascript object&gt;</code></pre>
+<p><img src="/example_plothmi/plothmi2.png" width="800"></p>
+<h2 id="submap">Submap</h2>
+<p><a
+href="http://docs.sunpy.org/en/v0.9.3/code_ref/map.html?highlight=peek#sunpy.map.mapbase.GenericMap.submap"
+class="uri">http://docs.sunpy.org/en/v0.9.3/code_ref/map.html?highlight=peek#sunpy.map.mapbase.GenericMap.submap</a><br>
+<a
+href="http://docs.astropy.org/en/stable/api/astropy.coordinates.SkyCoord.html"
+class="uri">http://docs.astropy.org/en/stable/api/astropy.coordinates.SkyCoord.html</a></p>
+<p><strong><code>submap(bottom_left, top_right=None)</code><br></strong>
+* <strong>bottom_left</strong> (astropy.units.Quantity or SkyCoord) –
+The bottom_left coordinate of the rectangle.<br> If a SkyCoord it can
+have shape (2,) and also define top_right.<br> If specifying pixel
+coordinates it must be given as an Quantity object with units of pixel.
+* <strong>top_right</strong> (astropy.units.Quantity or SkyCoord) – The
+top_right coordinate of the rectangle.<br> Can only be omitted if
+bottom_left has shape (2,).</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token builtin">xrange</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token number">300.</span><span class="token punctuation">,</span> <span class="token number">800.</span><span class="token punctuation">)</span> <span class="token operator">*</span> u<span class="token punctuation">.</span>arcsec
+yrange <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">500.</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">100.</span><span class="token punctuation">)</span> <span class="token operator">*</span> u<span class="token punctuation">.</span>arcsec
+
+subcoord <span class="token operator">=</span> SkyCoord<span class="token punctuation">(</span><span class="token builtin">xrange</span><span class="token punctuation">,</span> yrange<span class="token punctuation">,</span> frame<span class="token operator">=</span>mapbz<span class="token punctuation">.</span>coordinate_frame<span class="token punctuation">)</span>
+smapbx <span class="token operator">=</span> mapbx<span class="token punctuation">.</span>submap<span class="token punctuation">(</span>subcoord<span class="token punctuation">)</span>
+smapby <span class="token operator">=</span> mapby<span class="token punctuation">.</span>submap<span class="token punctuation">(</span>subcoord<span class="token punctuation">)</span>
+smapbz <span class="token operator">=</span> mapbz<span class="token punctuation">.</span>submap<span class="token punctuation">(</span>subcoord<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'Submap: (%s, %s) arcsec  (%d x %d)'</span>
+      <span class="token operator">%</span> <span class="token punctuation">(</span><span class="token builtin">xrange</span><span class="token punctuation">.</span>value<span class="token punctuation">,</span> yrange<span class="token punctuation">.</span>value<span class="token punctuation">,</span> <span class="token operator">*</span>smapbz<span class="token punctuation">.</span>data<span class="token punctuation">.</span>shape<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre><code>Submap: ([300. 800.], [-500. -100.]) arcsec  (833 x 666)</code></pre>
+<p><strong><code>draw_rectangle(bottom_left, width, height, axes=None, **kwargs)</code></strong></p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">from</span> usr_sunpy <span class="token keyword">import</span> plot_map
+
+fig1 <span class="token operator">=</span> plt<span class="token punctuation">.</span>figure<span class="token punctuation">(</span>figsize<span class="token operator">=</span><span class="token punctuation">(</span><span class="token number">8</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">)</span><span class="token punctuation">,</span> dpi<span class="token operator">=</span><span class="token number">100</span><span class="token punctuation">)</span>
+ax1 <span class="token operator">=</span> fig1<span class="token punctuation">.</span>add_subplot<span class="token punctuation">(</span><span class="token number">111</span><span class="token punctuation">,</span> projection<span class="token operator">=</span>mapbz<span class="token punctuation">)</span>
+plot_map<span class="token punctuation">(</span>mapbz<span class="token punctuation">,</span> ax<span class="token operator">=</span>ax1<span class="token punctuation">,</span> vmin<span class="token operator">=</span><span class="token operator">-</span><span class="token number">2000.</span><span class="token punctuation">,</span> vmax<span class="token operator">=</span><span class="token number">2000.</span><span class="token punctuation">,</span> grid_color<span class="token operator">=</span><span class="token string">'w'</span><span class="token punctuation">)</span>
+
+<span class="token comment"># mapbz.draw_limb(axes=ax1, color='b', linewidth=1.5)</span>
+mapbz<span class="token punctuation">.</span>draw_rectangle<span class="token punctuation">(</span>subcoord<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token builtin">xrange</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token operator">-</span><span class="token builtin">xrange</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span> yrange<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token operator">-</span>yrange<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span> axes<span class="token operator">=</span>ax1<span class="token punctuation">,</span> color<span class="token operator">=</span><span class="token string">'yellow'</span><span class="token punctuation">,</span> linewidth<span class="token operator">=</span><span class="token number">1.5</span><span class="token punctuation">)</span>
+
+<span class="token comment"># Specify xlim, ylim by pixels</span>
+<span class="token comment"># lim_arcsec = ((-1000.1, 1000.1) * u.arcsec, (-1000.1, 1000.1) * u.arcsec)</span>
+<span class="token comment"># lim_pix = mapbz.world_to_pixel(SkyCoord(*lim_arcsec, frame=mapbz.coordinate_frame))  # pix</span>
+<span class="token comment"># ax1.set_xlim(lim_pix[0].value)  # pix</span>
+<span class="token comment"># ax1.set_ylim(lim_pix[1].value);  # pix</span>
+
+<span class="token comment"># Clip NaNs</span>
+valid_index <span class="token operator">=</span> np<span class="token punctuation">.</span>where<span class="token punctuation">(</span>np<span class="token punctuation">.</span>isfinite<span class="token punctuation">(</span>mapbz<span class="token punctuation">.</span>data<span class="token punctuation">)</span><span class="token punctuation">)</span>
+ax1<span class="token punctuation">.</span>set_xlim<span class="token punctuation">(</span><span class="token punctuation">(</span>valid_index<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token builtin">min</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">-</span><span class="token number">100</span><span class="token punctuation">,</span> valid_index<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token builtin">max</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">+</span><span class="token number">100</span><span class="token punctuation">)</span><span class="token punctuation">)</span>  <span class="token comment"># pix</span>
+ax1<span class="token punctuation">.</span>set_ylim<span class="token punctuation">(</span><span class="token punctuation">(</span>valid_index<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token builtin">min</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">-</span><span class="token number">100</span><span class="token punctuation">,</span> valid_index<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token builtin">max</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">+</span><span class="token number">100</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment"># pix</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre><code>&lt;IPython.core.display.Javascript object&gt;</code></pre>
+<p><img src="/example_plothmi/plothmi3.png" width="800"></p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">from</span> usr_sunpy <span class="token keyword">import</span> plot_map<span class="token punctuation">,</span> plot_vmap
+
+fig2 <span class="token operator">=</span> plt<span class="token punctuation">.</span>figure<span class="token punctuation">(</span>figsize<span class="token operator">=</span><span class="token punctuation">(</span><span class="token number">9</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">)</span><span class="token punctuation">,</span> dpi<span class="token operator">=</span><span class="token number">100</span><span class="token punctuation">)</span>
+ax2 <span class="token operator">=</span> fig2<span class="token punctuation">.</span>add_subplot<span class="token punctuation">(</span><span class="token number">111</span><span class="token punctuation">,</span> projection<span class="token operator">=</span>smapbz<span class="token punctuation">)</span>
+im2 <span class="token operator">=</span> plot_map<span class="token punctuation">(</span>smapbz<span class="token punctuation">,</span> ax<span class="token operator">=</span>ax2<span class="token punctuation">,</span> vmin<span class="token operator">=</span><span class="token operator">-</span><span class="token number">2000.</span><span class="token punctuation">,</span> vmax<span class="token operator">=</span><span class="token number">2000.</span><span class="token punctuation">,</span> grid<span class="token operator">=</span><span class="token number">10</span><span class="token operator">*</span>u<span class="token punctuation">.</span>deg<span class="token punctuation">,</span> title<span class="token operator">=</span>mapbz<span class="token punctuation">.</span>latex_name<span class="token operator">+</span><span class="token string">' (submap)'</span><span class="token punctuation">)</span>
+plot_vmap<span class="token punctuation">(</span>smapbx<span class="token punctuation">,</span> smapby<span class="token punctuation">,</span> smapbz<span class="token punctuation">,</span> ax2<span class="token punctuation">,</span> cmin<span class="token operator">=</span><span class="token number">20.</span><span class="token punctuation">,</span> vmax<span class="token operator">=</span><span class="token number">500.</span><span class="token punctuation">,</span> cmap<span class="token operator">=</span><span class="token string">'binary'</span><span class="token punctuation">,</span>
+          scale_units<span class="token operator">=</span><span class="token string">'xy'</span><span class="token punctuation">,</span> scale<span class="token operator">=</span><span class="token number">1</span><span class="token operator">/</span><span class="token number">0.05</span><span class="token punctuation">,</span> minlength<span class="token operator">=</span><span class="token number">0.02</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre><code>&lt;IPython.core.display.Javascript object&gt;</code></pre>
+<p><img src="/example_plothmi/plothmi4.png" width="900"></p>
+<h3 id="without-disambiguation">Without disambiguation:</h3>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">from</span> usr_sunpy <span class="token keyword">import</span> plot_map<span class="token punctuation">,</span> plot_vmap
+
+fig2 <span class="token operator">=</span> plt<span class="token punctuation">.</span>figure<span class="token punctuation">(</span>figsize<span class="token operator">=</span><span class="token punctuation">(</span><span class="token number">9</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">)</span><span class="token punctuation">,</span> dpi<span class="token operator">=</span><span class="token number">100</span><span class="token punctuation">)</span>
+ax2 <span class="token operator">=</span> fig2<span class="token punctuation">.</span>add_subplot<span class="token punctuation">(</span><span class="token number">111</span><span class="token punctuation">,</span> projection<span class="token operator">=</span>smapbz<span class="token punctuation">)</span>
+im2 <span class="token operator">=</span> plot_map<span class="token punctuation">(</span>smapbz<span class="token punctuation">,</span> ax<span class="token operator">=</span>ax2<span class="token punctuation">,</span> vmin<span class="token operator">=</span><span class="token operator">-</span><span class="token number">2000.</span><span class="token punctuation">,</span> vmax<span class="token operator">=</span><span class="token number">2000.</span><span class="token punctuation">,</span> grid<span class="token operator">=</span><span class="token number">10</span><span class="token operator">*</span>u<span class="token punctuation">.</span>deg<span class="token punctuation">,</span> title<span class="token operator">=</span>mapbz<span class="token punctuation">.</span>latex_name<span class="token operator">+</span><span class="token string">' (submap)'</span><span class="token punctuation">)</span>
+plot_vmap<span class="token punctuation">(</span>smapbx<span class="token punctuation">,</span> smapby<span class="token punctuation">,</span> smapbz<span class="token punctuation">,</span> ax2<span class="token punctuation">,</span> cmin<span class="token operator">=</span><span class="token number">20.</span><span class="token punctuation">,</span> vmax<span class="token operator">=</span><span class="token number">500.</span><span class="token punctuation">,</span> cmap<span class="token operator">=</span><span class="token string">'binary'</span><span class="token punctuation">,</span>
+          scale_units<span class="token operator">=</span><span class="token string">'xy'</span><span class="token punctuation">,</span> scale<span class="token operator">=</span><span class="token number">1</span><span class="token operator">/</span><span class="token number">0.05</span><span class="token punctuation">,</span> minlength<span class="token operator">=</span><span class="token number">0.02</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre><code>&lt;IPython.core.display.Javascript object&gt;</code></pre>
+<p><img src="/example_plothmi/plothmi5.png" width="900"></p>
+]]></content>
+      <categories>
+        <category>Sohighlight lar Physics</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+        <tag>sunpy</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Example: projection</title>
+    <url>//example_projection.html</url>
+    <content><![CDATA[<p><a
+href="/downloads/notebooks/example_hmi.zip"><i class="fas fa-download"></i>
+Jupyter Notebook</a></p>
+<p><a
+href="https://pan.baidu.com/s/1nwsIcDr"><i class="fas fa-download"></i>
+Example Data</a> <span style="color:gray">(pswd: s5re)</span></p>
+<p><a
+href="https://github.com/lydiazly/lydiazly.github.io/raw/main/source/downloads/scripts/sunpy-modules.zip"><i class="fas fa-download"></i>
+User Module</a> (<a
+href="https://lydiazly.github.io/usr_sunpy.html">help</a>)</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">from</span> __future__ <span class="token keyword">import</span> division<span class="token punctuation">,</span> print_function
+
+<span class="token comment"># Reload user modules automatically</span>
+<span class="token comment"># %load_ext autoreload</span>
+<span class="token comment"># %autoreload 2</span>
+
+<span class="token comment"># notebook, inline, ...</span>
+<span class="token operator">%</span>matplotlib notebook
+
+<span class="token keyword">from</span> astropy<span class="token punctuation">.</span>coordinates <span class="token keyword">import</span> SkyCoord
+<span class="token keyword">import</span> astropy<span class="token punctuation">.</span>units <span class="token keyword">as</span> u
+<span class="token keyword">import</span> matplotlib<span class="token punctuation">.</span>pyplot <span class="token keyword">as</span> plt
+<span class="token keyword">import</span> numpy <span class="token keyword">as</span> np
+<span class="token keyword">import</span> sunpy<span class="token punctuation">.</span><span class="token builtin">map</span>
+<span class="token keyword">from</span> copy <span class="token keyword">import</span> deepcopy
+
+<span class="token comment"># To use user modules</span>
+<span class="token keyword">import</span> sys
+sys<span class="token punctuation">.</span>path<span class="token punctuation">.</span>append<span class="token punctuation">(</span><span class="token string">'../modules'</span><span class="token punctuation">)</span>
+
+<span class="token comment"># print('Python version: %s' % sys.version.split('(')[0])  # Python version: 3.6.6 |Anaconda, Inc.|</span>
+<span class="token comment"># print('SunPy version: %s' % sunpy.__version__)  # SunPy version: 0.9.3</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span id="more"></span>
+<h2 id="read-data">Read data</h2>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">fnames <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token string">'data/hmi.B_720s.20150827_052400_TAI.field.fits'</span><span class="token punctuation">,</span>
+          <span class="token string">'data/hmi.B_720s.20150827_052400_TAI.inclination.fits'</span><span class="token punctuation">,</span>
+          <span class="token string">'data/hmi.B_720s.20150827_052400_TAI.azimuth.fits'</span><span class="token punctuation">,</span>
+          <span class="token string">'data/hmi.B_720s.20150827_052400_TAI.disambig.fits'</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">from</span> usr_sunpy <span class="token keyword">import</span> read_sdo
+mapb<span class="token punctuation">,</span> mapi<span class="token punctuation">,</span> mapa<span class="token punctuation">,</span> mapd <span class="token operator">=</span> <span class="token builtin">list</span><span class="token punctuation">(</span><span class="token builtin">map</span><span class="token punctuation">(</span>read_sdo<span class="token punctuation">,</span> fnames<span class="token punctuation">)</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<pre><code>hmi.B_720s.20150827_052400_TAI.field.fits   [4096, 4096]
+hmi.B_720s.20150827_052400_TAI.inclination.fits [4096, 4096]
+hmi.B_720s.20150827_052400_TAI.azimuth.fits [4096, 4096]
+hmi.B_720s.20150827_052400_TAI.disambig.fits    [4096, 4096]</code></pre>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># Disambiguate</span>
+mapa<span class="token punctuation">.</span>data<span class="token punctuation">[</span>mapd<span class="token punctuation">.</span>data <span class="token operator">></span> <span class="token number">3</span><span class="token punctuation">]</span> <span class="token operator">+=</span> <span class="token number">180.</span>
+
+mapbx <span class="token operator">=</span> deepcopy<span class="token punctuation">(</span>mapb<span class="token punctuation">)</span>
+mapby <span class="token operator">=</span> deepcopy<span class="token punctuation">(</span>mapb<span class="token punctuation">)</span>
+mapbz <span class="token operator">=</span> deepcopy<span class="token punctuation">(</span>mapb<span class="token punctuation">)</span>
+mapbx<span class="token punctuation">.</span>data<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">]</span> <span class="token operator">=</span> mapb<span class="token punctuation">.</span>data <span class="token operator">*</span> np<span class="token punctuation">.</span>sin<span class="token punctuation">(</span>np<span class="token punctuation">.</span>deg2rad<span class="token punctuation">(</span>mapi<span class="token punctuation">.</span>data<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">*</span> np<span class="token punctuation">.</span>cos<span class="token punctuation">(</span>np<span class="token punctuation">.</span>deg2rad<span class="token punctuation">(</span>mapa<span class="token punctuation">.</span>data <span class="token operator">+</span> <span class="token number">270.</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+mapby<span class="token punctuation">.</span>data<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">]</span> <span class="token operator">=</span> mapb<span class="token punctuation">.</span>data <span class="token operator">*</span> np<span class="token punctuation">.</span>sin<span class="token punctuation">(</span>np<span class="token punctuation">.</span>deg2rad<span class="token punctuation">(</span>mapi<span class="token punctuation">.</span>data<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">*</span> np<span class="token punctuation">.</span>sin<span class="token punctuation">(</span>np<span class="token punctuation">.</span>deg2rad<span class="token punctuation">(</span>mapa<span class="token punctuation">.</span>data <span class="token operator">+</span> <span class="token number">270.</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+mapbz<span class="token punctuation">.</span>data<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">]</span> <span class="token operator">=</span> mapb<span class="token punctuation">.</span>data <span class="token operator">*</span> np<span class="token punctuation">.</span>cos<span class="token punctuation">(</span>np<span class="token punctuation">.</span>deg2rad<span class="token punctuation">(</span>mapi<span class="token punctuation">.</span>data<span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+<span class="token comment"># Suppress metadata warnings</span>
+<span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token punctuation">&#123;</span>mapbx<span class="token punctuation">,</span> mapby<span class="token punctuation">,</span> mapbz<span class="token punctuation">&#125;</span><span class="token punctuation">:</span>
+    i<span class="token punctuation">.</span>meta<span class="token punctuation">[</span><span class="token string">'hgln_obs'</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">0.</span>
+
+<span class="token keyword">from</span> usr_sunpy <span class="token keyword">import</span> aiaprep_usr <span class="token keyword">as</span> aiaprep
+<span class="token keyword">import</span> warnings
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'level 1 -> level 1.5 ...'</span><span class="token punctuation">)</span>
+<span class="token keyword">with</span> warnings<span class="token punctuation">.</span>catch_warnings<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    warnings<span class="token punctuation">.</span>simplefilter<span class="token punctuation">(</span><span class="token string">"ignore"</span><span class="token punctuation">)</span>
+    mapbx <span class="token operator">=</span> aiaprep<span class="token punctuation">(</span>mapbx<span class="token punctuation">)</span>
+    mapby <span class="token operator">=</span> aiaprep<span class="token punctuation">(</span>mapby<span class="token punctuation">)</span>
+    mapbz <span class="token operator">=</span> aiaprep<span class="token punctuation">(</span>mapbz<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'level    ='</span><span class="token punctuation">,</span> mapbz<span class="token punctuation">.</span>meta<span class="token punctuation">[</span><span class="token string">'lvl_num'</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'rsun_obs ='</span><span class="token punctuation">,</span> mapbz<span class="token punctuation">.</span>meta<span class="token punctuation">[</span><span class="token string">'rsun_obs'</span><span class="token punctuation">]</span> <span class="token operator">*</span> u<span class="token punctuation">.</span>arcsec<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'r_sun    ='</span><span class="token punctuation">,</span> mapbz<span class="token punctuation">.</span>meta<span class="token punctuation">[</span><span class="token string">'r_sun'</span><span class="token punctuation">]</span> <span class="token operator">*</span> u<span class="token punctuation">.</span>pix<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre><code>level 1 -&gt; level 1.5 ...
+level    = 1.5
+rsun_obs = 949.495178 arcsec
+r_sun    = 1582.4919633333334 pix</code></pre>
+<h2 id="submap">Submap</h2>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token builtin">xrange</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token number">500.</span><span class="token punctuation">,</span><span class="token number">800.</span><span class="token punctuation">)</span> <span class="token operator">*</span> u<span class="token punctuation">.</span>arcsec
+yrange <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">450.</span><span class="token punctuation">,</span><span class="token operator">-</span><span class="token number">200.</span><span class="token punctuation">)</span> <span class="token operator">*</span> u<span class="token punctuation">.</span>arcsec
+
+subcoord <span class="token operator">=</span> SkyCoord<span class="token punctuation">(</span><span class="token builtin">xrange</span><span class="token punctuation">,</span> yrange<span class="token punctuation">,</span> frame<span class="token operator">=</span>mapbz<span class="token punctuation">.</span>coordinate_frame<span class="token punctuation">)</span>
+smapbx <span class="token operator">=</span> mapbx<span class="token punctuation">.</span>submap<span class="token punctuation">(</span>subcoord<span class="token punctuation">)</span>
+smapby <span class="token operator">=</span> mapby<span class="token punctuation">.</span>submap<span class="token punctuation">(</span>subcoord<span class="token punctuation">)</span>
+smapbz <span class="token operator">=</span> mapbz<span class="token punctuation">.</span>submap<span class="token punctuation">(</span>subcoord<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'Submap: (%s, %s) arcsec  (%d x %d)'</span>
+      <span class="token operator">%</span> <span class="token punctuation">(</span><span class="token builtin">xrange</span><span class="token punctuation">.</span>value<span class="token punctuation">,</span> yrange<span class="token punctuation">.</span>value<span class="token punctuation">,</span> <span class="token operator">*</span>smapbz<span class="token punctuation">.</span>data<span class="token punctuation">.</span>shape<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+<span class="token keyword">from</span> usr_sunpy <span class="token keyword">import</span> plot_map
+fig1 <span class="token operator">=</span> plt<span class="token punctuation">.</span>figure<span class="token punctuation">(</span>figsize<span class="token operator">=</span><span class="token punctuation">(</span><span class="token number">8</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">)</span><span class="token punctuation">,</span> dpi<span class="token operator">=</span><span class="token number">100</span><span class="token punctuation">)</span>
+ax1 <span class="token operator">=</span> fig1<span class="token punctuation">.</span>add_subplot<span class="token punctuation">(</span><span class="token number">111</span><span class="token punctuation">,</span> projection<span class="token operator">=</span>mapbz<span class="token punctuation">)</span>
+plot_map<span class="token punctuation">(</span>mapbz<span class="token punctuation">,</span> ax<span class="token operator">=</span>ax1<span class="token punctuation">,</span> vmin<span class="token operator">=</span><span class="token operator">-</span><span class="token number">2000.</span><span class="token punctuation">,</span> vmax<span class="token operator">=</span><span class="token number">2000.</span><span class="token punctuation">,</span> grid_color<span class="token operator">=</span><span class="token string">'w'</span><span class="token punctuation">)</span>
+mapbz<span class="token punctuation">.</span>draw_rectangle<span class="token punctuation">(</span>subcoord<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token builtin">xrange</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token operator">-</span><span class="token builtin">xrange</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span> yrange<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token operator">-</span>yrange<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span> axes<span class="token operator">=</span>ax1<span class="token punctuation">,</span> color<span class="token operator">=</span><span class="token string">'yellow'</span><span class="token punctuation">,</span> linewidth<span class="token operator">=</span><span class="token number">1.5</span><span class="token punctuation">)</span>
+
+<span class="token comment"># Specify xlim, ylim by pixels</span>
+<span class="token comment"># lim_arcsec = ((-1000.1, 1000.1) * u.arcsec, (-1000.1, 1000.1) * u.arcsec)</span>
+<span class="token comment"># lim_pix = mapbz.world_to_pixel(SkyCoord(*lim_arcsec, frame=mapbz.coordinate_frame))  # pix</span>
+<span class="token comment"># ax1.set_xlim(lim_pix[0].value)  # pix</span>
+<span class="token comment"># ax1.set_ylim(lim_pix[1].value);  # pix</span>
+
+<span class="token comment"># Clip NaNs</span>
+valid_index <span class="token operator">=</span> np<span class="token punctuation">.</span>where<span class="token punctuation">(</span>np<span class="token punctuation">.</span>isfinite<span class="token punctuation">(</span>mapbz<span class="token punctuation">.</span>data<span class="token punctuation">)</span><span class="token punctuation">)</span>
+ax1<span class="token punctuation">.</span>set_xlim<span class="token punctuation">(</span><span class="token punctuation">(</span>valid_index<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token builtin">min</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">-</span><span class="token number">100</span><span class="token punctuation">,</span> valid_index<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token builtin">max</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">+</span><span class="token number">100</span><span class="token punctuation">)</span><span class="token punctuation">)</span>  <span class="token comment"># pix</span>
+ax1<span class="token punctuation">.</span>set_ylim<span class="token punctuation">(</span><span class="token punctuation">(</span>valid_index<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token builtin">min</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">-</span><span class="token number">100</span><span class="token punctuation">,</span> valid_index<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token builtin">max</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">+</span><span class="token number">100</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment"># pix</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre><code>Submap: ([500. 800.], [-450. -200.]) arcsec  (500 x 417)
+
+
+
+&lt;IPython.core.display.Javascript object&gt;</code></pre>
+<p><img src="/example_projection/projection1.png" width="800"></p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">from</span> usr_sunpy <span class="token keyword">import</span> plot_map<span class="token punctuation">,</span> plot_vmap
+
+iskip<span class="token punctuation">,</span> jskip <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token number">12</span><span class="token punctuation">,</span> <span class="token number">12</span><span class="token punctuation">)</span>
+
+fig2 <span class="token operator">=</span> plt<span class="token punctuation">.</span>figure<span class="token punctuation">(</span>figsize<span class="token operator">=</span><span class="token punctuation">(</span><span class="token number">9</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">)</span><span class="token punctuation">,</span> dpi<span class="token operator">=</span><span class="token number">100</span><span class="token punctuation">)</span>
+ax2 <span class="token operator">=</span> fig2<span class="token punctuation">.</span>add_subplot<span class="token punctuation">(</span><span class="token number">111</span><span class="token punctuation">,</span> projection<span class="token operator">=</span>smapbz<span class="token punctuation">)</span>
+im2 <span class="token operator">=</span> plot_map<span class="token punctuation">(</span>smapbz<span class="token punctuation">,</span> ax<span class="token operator">=</span>ax2<span class="token punctuation">,</span> vmin<span class="token operator">=</span><span class="token operator">-</span><span class="token number">2000.</span><span class="token punctuation">,</span> vmax<span class="token operator">=</span><span class="token number">2000.</span><span class="token punctuation">,</span> grid<span class="token operator">=</span><span class="token number">10</span><span class="token operator">*</span>u<span class="token punctuation">.</span>deg<span class="token punctuation">,</span> title<span class="token operator">=</span>mapbz<span class="token punctuation">.</span>latex_name<span class="token operator">+</span><span class="token string">' (submap)'</span><span class="token punctuation">)</span>
+plot_vmap<span class="token punctuation">(</span>smapbx<span class="token punctuation">,</span> smapby<span class="token punctuation">,</span> smapbz<span class="token punctuation">,</span> ax2<span class="token punctuation">,</span> iskip<span class="token operator">=</span>iskip<span class="token punctuation">,</span> jskip<span class="token operator">=</span>jskip<span class="token punctuation">,</span> cmin<span class="token operator">=</span><span class="token number">50.</span><span class="token punctuation">,</span> vmax<span class="token operator">=</span><span class="token number">500.</span><span class="token punctuation">,</span> cmap<span class="token operator">=</span><span class="token string">'binary'</span><span class="token punctuation">,</span>
+          scale_units<span class="token operator">=</span><span class="token string">'xy'</span><span class="token punctuation">,</span> scale<span class="token operator">=</span><span class="token number">1</span><span class="token operator">/</span><span class="token number">0.05</span><span class="token punctuation">,</span> minlength<span class="token operator">=</span><span class="token number">0.02</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre><code>&lt;IPython.core.display.Javascript object&gt;</code></pre>
+<p><img src="/example_projection/projection2.png" width="900"></p>
+<h2 id="projection">Projection</h2>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">from</span> usr_sunpy <span class="token keyword">import</span> image_to_helio
+
+hx<span class="token punctuation">,</span> hy <span class="token operator">=</span> image_to_helio<span class="token punctuation">(</span>smapbz<span class="token punctuation">)</span>
+smapbx_h<span class="token punctuation">,</span> smapby_h<span class="token punctuation">,</span> smapbz_h <span class="token operator">=</span> image_to_helio<span class="token punctuation">(</span>smapbx<span class="token punctuation">,</span> smapby<span class="token punctuation">,</span> smapbz<span class="token punctuation">)</span>
+
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'(xmin, xmax) = (%9.3f, %9.3f) arcsec\n(ymin, ymax) = (%9.3f, %9.3f) arcsec'</span> <span class="token operator">%</span>
+      <span class="token punctuation">(</span>hx<span class="token punctuation">.</span><span class="token builtin">min</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> hx<span class="token punctuation">.</span><span class="token builtin">max</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> hy<span class="token punctuation">.</span><span class="token builtin">min</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> hy<span class="token punctuation">.</span><span class="token builtin">min</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre><code>(xmin, xmax) = ( -251.988,   251.988) arcsec
+(ymin, ymax) = ( -156.811,  -156.811) arcsec</code></pre>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">iskip<span class="token punctuation">,</span> jskip <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">)</span>
+
+fig3 <span class="token operator">=</span> plt<span class="token punctuation">.</span>figure<span class="token punctuation">(</span>figsize<span class="token operator">=</span><span class="token punctuation">(</span><span class="token number">9</span><span class="token punctuation">,</span> <span class="token number">4.5</span><span class="token punctuation">)</span><span class="token punctuation">,</span> dpi<span class="token operator">=</span><span class="token number">100</span><span class="token punctuation">)</span>
+ax3 <span class="token operator">=</span> fig3<span class="token punctuation">.</span>add_subplot<span class="token punctuation">(</span><span class="token number">111</span><span class="token punctuation">)</span>
+im3 <span class="token operator">=</span> plot_map<span class="token punctuation">(</span>smapbz_h<span class="token punctuation">,</span> ax<span class="token operator">=</span>ax3<span class="token punctuation">,</span> coords<span class="token operator">=</span><span class="token punctuation">(</span>hx<span class="token punctuation">,</span> hy<span class="token punctuation">)</span><span class="token punctuation">,</span> cmap<span class="token operator">=</span><span class="token string">'gray'</span><span class="token punctuation">,</span>
+               vmin<span class="token operator">=</span><span class="token operator">-</span><span class="token number">2000.</span><span class="token punctuation">,</span> vmax<span class="token operator">=</span><span class="token number">2000.</span><span class="token punctuation">,</span> title<span class="token operator">=</span>mapbz<span class="token punctuation">.</span>latex_name<span class="token operator">+</span><span class="token string">' (projected)'</span><span class="token punctuation">)</span>
+plot_vmap<span class="token punctuation">(</span>smapbx_h<span class="token punctuation">,</span> smapby_h<span class="token punctuation">,</span> smapbz_h<span class="token punctuation">,</span> ax3<span class="token punctuation">,</span> coords<span class="token operator">=</span><span class="token punctuation">(</span>hx<span class="token punctuation">,</span> hy<span class="token punctuation">)</span><span class="token punctuation">,</span>
+          iskip<span class="token operator">=</span>iskip<span class="token punctuation">,</span> jskip<span class="token operator">=</span>jskip<span class="token punctuation">,</span> cmin<span class="token operator">=</span><span class="token number">100.</span><span class="token punctuation">,</span> vmax<span class="token operator">=</span><span class="token number">300.</span><span class="token punctuation">,</span> cmap<span class="token operator">=</span><span class="token string">'binary'</span><span class="token punctuation">,</span>
+          scale_units<span class="token operator">=</span><span class="token string">'xy'</span><span class="token punctuation">,</span> scale<span class="token operator">=</span><span class="token number">1</span><span class="token operator">/</span><span class="token number">0.04</span><span class="token punctuation">,</span> minlength<span class="token operator">=</span><span class="token number">0.02</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment"># Properties</span>
+ax3<span class="token punctuation">.</span>grid<span class="token punctuation">(</span><span class="token boolean">True</span><span class="token punctuation">,</span> ls<span class="token operator">=</span><span class="token string">':'</span><span class="token punctuation">,</span> alpha<span class="token operator">=</span><span class="token number">0.8</span><span class="token punctuation">)</span>
+ax3<span class="token punctuation">.</span>set_xlim<span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">170</span><span class="token punctuation">,</span><span class="token number">170</span><span class="token punctuation">)</span><span class="token punctuation">)</span>  <span class="token comment"># arcsec</span>
+ax3<span class="token punctuation">.</span>set_ylim<span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">110</span><span class="token punctuation">,</span><span class="token number">100</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment"># arcsec</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre><code>&lt;IPython.core.display.Javascript object&gt;</code></pre>
+<p>&lt;img src="/example_projection/projection3.png"900"&gt;</p>
+]]></content>
+      <categories>
+        <category>Solar Physics</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+        <tag>sunpy</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>SunPy Scripts Updates</title>
+    <url>/2018-10-14-sunpy-scripts-updates.html</url>
+    <content><![CDATA[<p>Update:</p>
+<p><a href="example_plothmi.html">Example: plot HMI</a><br></p>
+<p><a href="example_projection.html">Example: Example:
+projection</a><br></p>
+<p><a
+href="https://coding.net/u/lydiazly/p/scripts-sunpy/git/tree/master/modules">User
+Module Download</a> (<a href="usr_sunpy.html">help</a>)</p>
+<p>[ Tested ]</p>
+<p>Ubuntu 16.04 LTS</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Date</th>
+<th style="text-align: center;">Python</th>
+<th style="text-align: center;">Sunpy</th>
+<th style="text-align: center;">NumPy</th>
+<th style="text-align: center;">SciPy</th>
+<th style="text-align: center;">Matplotlib</th>
+<th style="text-align: center;">Astropy</th>
+<th style="text-align: center;">Pandas</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">2018-10-13</td>
+<td style="text-align: center;">3.6.6</td>
+<td style="text-align: center;"><strong>0.9.3</strong></td>
+<td style="text-align: center;">1.15.2</td>
+<td style="text-align: center;">1.1.0</td>
+<td style="text-align: center;">3.0.0</td>
+<td style="text-align: center;">3.0.4</td>
+<td style="text-align: center;">0.23.4highlight</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Add <code>aiaprep_usr()</code>.</li>
+<li>Change parameter list of <code>plot_map()</code>,
+<code>plot_vmap()</code>, <code>proj_matrix()</code>.</li>
+<li>Change return value of <code>_get_image_params()</code> from a tuple
+to a dict.</li>
+<li>Adjust positions of colorbar &amp; title.</li>
+<li>Fix docs. <span id="more"></span></li>
+</ul>
+]]></content>
+      <categories>
+        <category>Solar Physics</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+        <tag>sunpy</tag>
       </tags>
   </entry>
   <entry>
@@ -3185,6 +6418,7 @@ class="uri">http://jupyterlab.readthedocs.io/en/stable/</a>
 a<span class="token operator">=</span><span class="token number">1</span>
 <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'a ='</span><span class="token punctuation">,</span> a<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 <span id="more"></span>
+<p>highlight</p>
 <h3 id="方法-1.-shell---interactive-mode-推荐">方法 1. shell -&gt;
 interactive mode (推荐)</h3>
 <p>使用 <code>-i</code> 选项:</p>
@@ -3314,8 +6548,9 @@ Solar Group)</a>
 csv</a></li>
 <li><a href="advance.html#92-fortran-二进制文件读写">9.2. Fortran
 二进制文件读写</a></li>
-<li><a href="advance.html#93-hdf5-文件读写-ncdf-cdf-文件读取">9.3. HDF5
-文件读写, NCDF, CDF 文件读取</a></li>
+<li><a
+href="advance.html#93-hdf5-文件读写highlight%20highlight%20-ncdf-cdf-文件读取">9.3.
+HDF5 文件读写, NCDF, CDF 文件读取</a></li>
 <li><a href="advance.html#94-numpy-to-vtk">9.4. NumPy to VTK</a></li>
 <li><a href="advance.html#95-matlab-mat-文件读写">9.5. Matlab mat
 文件读写</a></li>
@@ -3327,44 +6562,6 @@ csv</a></li>
       </categories>
       <tags>
         <tag>python</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Pandas sep=&#39;\s+&#39; 的问题</title>
-    <url>/2018-12-04-pandas-sep.html</url>
-    <content><![CDATA[<p>Pandas 的 <code>read_table</code> (<a
-href="https://pandas.pydata.org/pandas-docs/stable/generated/pandas.read_table.html">官方文档</a>)
-和 <code>read_csv</code> (<a
-href="https://pandas.pydata.org/pandas-docs/stable/generated/pandas.read_csv.html">官方文档</a>)
-(指定分隔符的情况下两者无区别), 有关键字 <code>sep=</code>
-(<code>read_table</code> 默认为 <code>sep='\t'</code>,
-<code>read_csv</code> 默认为 <code>sep=','</code>).</p>
-<p>但当需要指定多个空格的情况下, 指定 <code>sep='\s+'</code>
-可能无法被正确识别. <span id="more"></span></p>
-<p>请使用 <strong><code>' +'</code></strong> 代替.</p>
-<p>官方文档中关于 <code>sep</code> 关键字的说明有如下描述:</p>
-<blockquote>
-<p>In addition, separators longer than 1 character and <strong>different
-from <code>'\s+'</code></strong> will be interpreted as regular
-expressions and will also force the use of the Python parsing
-engine.</p>
-</blockquote>
-<p>指定 <code>sep='\s+'</code> 可能无法被正确识别,</p>
-<p>暂时的办法是:<br> 加上参数 <code>engine='python'</code>, 或使用
-<strong><code>' +'</code></strong> 代替 (此时
-<code>engine='python'</code>).<br> 如果设为 <code>engine='c'</code>,
-速度较快, 但不便识别正则表达, 追求效率的话可以配合使用:<br>
-<code>quoting=3</code> (即使用 <code>csv.QUOTE_NONE</code>)</p>
-<hr />
-<p>Pandas 的读取方法简单介绍参见: <a
-href="advance.html#91-用-pandas-读-csv">用 pandas 读 csv</a></p>
-]]></content>
-      <categories>
-        <category>Solar Physics</category>
-      </categories>
-      <tags>
-        <tag>python</tag>
-        <tag>pandas</tag>
       </tags>
   </entry>
   <entry>
