@@ -14,12 +14,12 @@ timezone: ''
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
 url: https://lydiazly.github.io
-permalink: :year/:title/
+permalink: :year-:month-:day-:title.html
 permalink_defaults:
   lang: en
 pretty_urls:
   trailing_index: true # Set to false to remove trailing 'index.html' from permalinks
-  trailing_html: true # Set to false to remove trailing '.html' from permalinks
+  trailing_html: false # Set to false to remove trailing '.html' from permalinks
 
 # Directory
 source_dir: source
@@ -41,7 +41,13 @@ external_link:
   exclude: ''
 filename_case: 0
 render_drafts: false
-post_asset_folder: false
+post_asset_folder: true
+marked: # hexo-renderer-marked
+  gfm: true
+  breaks: true
+  autolink: true
+  prependRoot: true
+  postAsset: true
 relative_link: false
 future: true
 highlight:
@@ -84,7 +90,7 @@ meta_generator: true
 date_format: YYYY-MM-DD
 time_format: HH:mm:ss
 ## updated_option supports 'mtime', 'date', 'empty'
-updated_option: 'mtime'
+updated_option: 'date'
 
 # Pagination
 ## Set per_page to 0 to disable pagination
@@ -101,19 +107,37 @@ ignore:
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
 theme: next
-theme_config:
-# theme: Nlvi
-# theme_config:
-#   scheme: balance
-#   theme-style: purple
-#   animate: false
-#   mathjax: true
-#   mathjax3: true
-#   sub:
-#   since: 2018
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: git
   repo: git@github.com:lydiazly/lydiazly.github.io.git
+
+# hexo-generator-tag
+tag_generator:
+  enable_index_page: false
+
+# hexo-renderer-markdown-it
+# markdown:
+#   preset: 'default'
+#   render:
+#     html: true
+#     xhtmlOut: false
+#     langPrefix: 'language-'
+#     breaks: true
+#     linkify: true
+#     typographer: true
+#     quotes: '“”‘’'
+#   enable_rules:
+#   disable_rules:
+#   plugins:
+#   anchors:
+#     level: 2
+#     collisionSuffix: ''
+#     permalink: false
+#     permalinkClass: 'header-anchor'
+#     permalinkSide: 'left'
+#     permalinkSymbol: '¶'
+#     case: 0
+#     separator: '-'

@@ -1,10 +1,10 @@
 ---
 title: "Python 安装和配置"
-categories: python
-tags: [python, conda, install]
+permalink: installpy.html
+categories: 'Solar Physics'
+tags: [python, conda, jupyter, astropy, sunpy, install]
 date: 2018-07-02 20:45:13
 ---
-
 [<i class="fas fa-download"></i> Jupyter Notebook](/downloads/notebooks/installpy.zip)
 
 <small><font color=gray>[Update 2022-07-12] Some outputs are updated with python 3.10.</font></small>
@@ -12,7 +12,6 @@ date: 2018-07-02 20:45:13
 <!-- more -->
 
 ## 安装 python
----
 
 ### 安装 python 3
 
@@ -89,14 +88,14 @@ sudo -H pip install <package>
 |:---|:---|
 | -U, --upgrade  | 升级, 配合 install 使用 |
 | --force-reinstall  | 强制重新安装依赖 |
-| -I, --ignore-installed | 强制安装(无论是否已安装) |
+| -I, --ignore-installed | 强制安装 (无论是否已安装) |
 | --no-cache-dir | 不生成cache |
-| -i <font color=blue>*url*</font> | 使用指定源(更改配置见 [pip 镜像源](#pip-镜像源)) |
-| <font color=blue>*package*</font>==x.x.x | 指定版本, 错误版本号(或为空)将返回可用版本号 |
+| -i <font color=blue>*url*</font> | 使用指定源 (更改配置见 [pip 镜像源](#pip-镜像源)) |
+| <font color=blue>*package*</font>==x.x.x | 指定版本, 错误版本号 (或为空) 将返回可用版本号 |
 | "<font color=blue>*package*</font><x.x.x" | 指定小于某版本的最新版本, 必须有引号 |
 
 
-检查包(尝试导入, 查看包版本):
+检查包 (尝试导入, 查看包版本):
 
 ```bash
 python -c "import <package>"
@@ -138,7 +137,7 @@ pip list --outdated --user
 
 * 安装 miniconda 64位 (默认安装到 <font color=blue>~/miniconda3/</font>)
 
-  下载 [https://conda.io/miniconda.html](https://conda.io/miniconda.html)
+  下载 <https://conda.io/miniconda.html>
 
 ```bash
 bash Miniconda3-latest-Linux-x86_64.sh
@@ -169,8 +168,8 @@ conda update conda pip
 conda [cmd] --help
 ```
 
-miniconda 下载 [https://conda.io/miniconda.html](https://conda.io/miniconda.html)<br>
-安装参考 [https://conda.io/docs/user-guide/install/index.html](https://conda.io/docs/user-guide/install/index.html)
+miniconda 下载 <https://conda.io/miniconda.html><br>
+安装参考 <https://conda.io/docs/user-guide/install/index.html>
 
 #### environment
 
@@ -217,7 +216,7 @@ conda update/upgrade <packages>
 conda remove/uninstall <packages>
 conda clean --all
 ```
-见 `conda --help` 或 `conda cmd --help`, `conda search` 语法见 [https://github.com/conda/conda/blob/master/conda/models/match_spec.py](https://github.com/conda/conda/blob/master/conda/models/match_spec.py)
+见 `conda --help` 或 `conda cmd --help`, `conda search` 语法见 <https://github.com/conda/conda/blob/master/conda/models/match_spec.py>
 
 配置:
 ```bash
@@ -230,7 +229,7 @@ conda config --set auto_update_conda False
 # 禁止源优先而使用版本优先, 默认True
 conda config --set channel_priority False
 
-# 增加设置, 例如增加源(可使用 url 或别名)
+# 增加设置, 例如增加源 (可使用 url 或别名)
 conda config --add channels <channel>
 
 # 删除某项设置的所有值, 例如删除所有自定义源
@@ -241,7 +240,7 @@ conda config --remove channels <channel>
 ```
 
 用户配置文件 `~/.condarc` (见 [conda 镜像源](#conda-镜像源))<br>
-参考链接 [https://conda.io/docs/user-guide/configuration/use-condarc.html](https://conda.io/docs/user-guide/configuration/use-condarc.html)
+参考链接 <https://conda.io/docs/user-guide/configuration/use-condarc.html>
 
 也可以在不同的环境用不同的配置文件: `~/miniconda3/envs/<env_name>/.condarc`
 
@@ -257,7 +256,7 @@ cat ~/.pip/pip.conf
 ```
 
     [global]
-    index-url = [https://pypi.douban.com/simple](https://pypi.douban.com/simple)
+    index-url = <https://pypi.douban.com/simple>
     trusted-host = pypi.doubanio.com
 
 #### conda 镜像源
@@ -268,9 +267,9 @@ conda config --append channels <new_channel>
 ```
 
 清华源:<br>
-[https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/](https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/)<br>
-[https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/](https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/)<br>
-[https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/conda-forge/](https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/conda-forge/)<br>
+<https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/><br>
+<https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/><br>
+<https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/conda-forge/><br>
 
 channels 的默认的优先级为: 前排优先<br>
 镜像源中 `pkgs/main` 通常比 `pkgs/free` 新, 因此将其放在最前.<br>
@@ -279,13 +278,13 @@ channels 的默认的优先级为: 前排优先<br>
 e.g.
 
 ```bash
-conda config --add channels [https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/conda-forge/](https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/conda-forge/)
+conda config --add channels <https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/conda-forge/>
 ```
 
 此时 `~/.condarc` 的内容:
 
 > channels:<br>
-&emsp;- [https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/conda-forge/](https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/conda-forge/)<br>
+&emsp;- <https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/conda-forge/><br>
 &emsp;- defaults
 
 ### Troubleshooting
@@ -303,7 +302,6 @@ pip install "astropy<3.0" # for python < 3.5
 ```
 
 ## 安装常用包
----
 
 ### numpy, scipy, matplotlib
 
@@ -319,7 +317,7 @@ pip install scipy
 pip install matplotlib
 ```
 
-配置启动文件(Ubuntu), 在 `~/.bashrc` 中添加:
+配置启动文件 (Ubuntu), 在 `~/.bashrc` 中添加:
 ```bash
 export PYTHONSTARTUP=$HOME/.pythonrc
 ```
@@ -432,7 +430,7 @@ conda search "sunpy 4.0.3 py310hde88566_0" --info
     size        : 5.7 MB
     license     : BSD-2-Clause
     subdir      : linux-64
-    url         : [https://conda.anaconda.org/conda-forge/linux-64/sunpy-4.0.3-py310hde88566_0.tar.bz2](https://conda.anaconda.org/conda-forge/linux-64/sunpy-4.0.3-py310hde88566_0.tar.bz2)
+    url         : <https://conda.anaconda.org/conda-forge/linux-64/sunpy-4.0.3-py310hde88566_0.tar.bz2>
     md5         : 5831b8fde0edd2aa0ff9f42b237b7ba2
     timestamp   : 2022-07-08 16:21:32 UTC
     dependencies: 
@@ -529,7 +527,7 @@ sunpy.util.system_info()
 
 
 设置下载位置:<br>
-(参考 [http://docs.sunpy.org/en/stable/guide/customization.html?highlight=sunpy.config.set)](http://docs.sunpy.org/en/stable/guide/customization.html?highlight=sunpy.config.set))
+(参考 <http://docs.sunpy.org/en/stable/guide/customization.html?highlight=sunpy.config.set)>
 
 e.g.
 > [downloads]<br>
@@ -665,7 +663,7 @@ CodeCell 中首行加入下面语句, 然后执行 Cell (numpy 等需要在 Cell
 
 
 ```bash
-git clone [https://bitbucket.org/lucashnegri/peakutils.git](https://bitbucket.org/lucashnegri/peakutils.git)
+git clone <https://bitbucket.org/lucashnegri/peakutils.git>
 cd peakutils
 python setup.py install
 ```
@@ -715,7 +713,7 @@ pip install h5py  # 需要 sudo apt-get install libhdf5-dev
 或
 
 ```bash
-pip install cdflib # [https://github.com/MAVENSDC/cdflib](https://github.com/MAVENSDC/cdflib)
+pip install cdflib # <https://github.com/MAVENSDC/cdflib>
 ```
 
 * EVTK (https://bitbucket.org/pauloh/pyevtk)
@@ -724,7 +722,7 @@ pip install cdflib # [https://github.com/MAVENSDC/cdflib](https://github.com/MAV
 ```bash
 sudo apt-get install mercurial  # 得到 hg 命令
 
-hg clone [https://bitbucket.org/pauloh/pyevtk](https://bitbucket.org/pauloh/pyevtk)
+hg clone <https://bitbucket.org/pauloh/pyevtk>
 cd pyevtk
 python setup.py build --debug install
 ```

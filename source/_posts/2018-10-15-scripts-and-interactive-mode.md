@@ -1,12 +1,11 @@
 ---
 title: "Python 的脚本与交互式环境"
-categories: python
+categories: 'Solar Physics'
 tags: python
 date: 2018-10-15 22:46:01
 ---
 
 目的是从交互环境调用脚本产生的变量, 可用于调试脚本和测试数据等等.
-<!-- more -->
 
 比如当前目录下有一个包含如下内容的脚本:
 
@@ -15,6 +14,7 @@ date: 2018-10-15 22:46:01
 a=1
 print('a =', a)
 ```
+<!-- more -->
 
 ### 方法 1. shell -> interactive mode (推荐)
 

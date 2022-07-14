@@ -14,7 +14,7 @@ cache:
   enable: true
 
 # Remove unnecessary files after hexo generate.
-minify: false
+minify: true
 
 # Define custom file paths.
 # Create your custom files in site directory `source/_data` and uncomment needed files below.
@@ -50,33 +50,34 @@ darkmode: false
 # ---------------------------------------------------------------
 
 favicon:
-  small: /assets/images/favicon-16x16.png
-  medium: /assets/images/favicon-32x32.png
-  apple_touch_icon: /assets/images/apple-touch-icon.png
-  safari_pinned_tab: /assets/images/safari-pinned-tab.svg
+  small: /images/favicon-16x16.png
+  medium: /images/favicon-32x32.png
+  apple_touch_icon: /images/apple-touch-icon.png
+  safari_pinned_tab: /images/safari-pinned-tab.svg
   #android_manifest: /manifest.json
 
 # Custom Logo (Warning: Do not support scheme Mist)
-custom_logo: /assets/images/logo2.png
+custom_logo: /images/logo2.png
 
 # Creative Commons 4.0 International License.
 # See: https://creativecommons.org/about/cclicenses/
 creative_commons:
   # Available values: by | by-nc | by-nc-nd | by-nc-sa | by-nd | by-sa | cc-zero
-  license: by-nc-sa
+  license: by-sa
   # Available values: big | small
   size: small
-  sidebar: false
+  sidebar: true
   post: false
   # You can set a language value if you prefer a translated version of CC license, e.g. deed.zh
   # CC licenses are available in 39 languages, you can find the specific and correct abbreviation you need on https://creativecommons.org
-  language: en
+  language: deed.en
 
 # Open graph settings
 # See: https://hexo.io/docs/helpers#open-graph
 open_graph:
   enable: true
   options:
+    type: blog
     #twitter_card: <twitter:card>
     #twitter_id: <twitter:creator>
     #twitter_site: <twitter:site>
@@ -107,7 +108,7 @@ menu:
 # Enable / Disable menu icons / item badges.
 menu_settings:
   icons: true
-  badges: false
+  badges: true
 
 
 # ---------------------------------------------------------------
@@ -185,13 +186,13 @@ links:
 toc:
   enable: true
   # Automatically add list number to toc.
-  number: false
+  number: true
   # If true, all words will placed on next lines if header width longer then sidebar width.
   wrap: true
   # If true, all level of TOC in a post will be displayed, rather than the activated part of it.
   expand_all: true
   # Maximum heading depth of generated toc.
-  max_depth: 4
+  max_depth: 5
 
 
 # ---------------------------------------------------------------
@@ -204,7 +205,7 @@ language_switcher: false
 
 footer:
   # Specify the year when the site was setup. If not defined, current year will be used.
-  #since: 2021
+  since: 2018
 
   # Icon between year and copyright info.
   icon:
@@ -313,8 +314,8 @@ post_navigation: left
 # TagCloud settings for tags page.
 tagcloud:
   min: 12 # Minimum font size in px
-  max: 30 # Maximum font size in px
-  amount: 200 # Total amount of tags
+  max: 26 # Maximum font size in px
+  amount: 100 # Total amount of tags
   orderby: name # Order of tags
   order: 1 # Sort order
 
@@ -344,11 +345,11 @@ preconnect: false
 # Set the text alignment in posts / pages.
 text_align:
   # Available values: start | end | left | right | center | justify | justify-all | match-parent
-  desktop: justify
+  desktop: left
   mobile: justify
 
 # Reduce padding / margin indents on devices with narrow width.
-mobile_layout_economy: false
+mobile_layout_economy: true
 
 # Browser header panel color.
 theme_color:
@@ -375,14 +376,14 @@ codeblock:
   copy_button:
     enable: true
     # Available values: default | flat | mac
-    style:
+    style: mac
 
 back2top:
   enable: true
   # Back to top in sidebar.
   sidebar: true
   # Scroll percent label in b2t button.
-  scrollpercent: false
+  scrollpercent: true
 
 # Reading progress bar
 reading_progress:
@@ -391,7 +392,7 @@ reading_progress:
   start_at: left
   # Available values: top | bottom
   position: top
-  reversed: false
+  reversed: true
   color: "#37c6c0"
   height: 3px
 
@@ -512,9 +513,9 @@ math:
   every_page: false
 
   mathjax:
-    enable: false
+    enable: true
     # Available values: none | ams | all
-    tags: none
+    tags: ams
 
   katex:
     enable: false

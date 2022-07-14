@@ -1,13 +1,12 @@
 ---
 title: "Pandas sep='\\s+' 的问题"
-categories: python
-tags: python
+categories: 'Solar Physics'
+tags: [python, pandas]
 date: 2018-12-04 17:00:03
 ---
 
-Pandas 的 `read_table`([官方文档](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.read_table.html))
-和 `read_csv`([官方文档](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.read_csv.html))
-(指定分隔符的情况下两者无区别),
+Pandas 的 `read_table` ([官方文档](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.read_table.html))
+和 `read_csv` ([官方文档](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.read_csv.html)) (指定分隔符的情况下两者无区别),
 有关键字 `sep=` (`read_table` 默认为 `sep='\t'`, `read_csv` 默认为 `sep=','`).
 
 但当需要指定多个空格的情况下, 指定 `sep='\s+'` 可能无法被正确识别.
@@ -30,5 +29,5 @@ Pandas 的 `read_table`([官方文档](https://pandas.pydata.org/pandas-docs/sta
 
 ---
 
-<!-- Pandas 的读取方法简单介绍参见:
-[用 pandas 读 csv]({{ site.baseurl }}/advance.html#91-用-pandas-读-csv) -->
+Pandas 的读取方法简单介绍参见:
+[用 pandas 读 csv](advance.html#91-用-pandas-读-csv)
