@@ -3,6 +3,8 @@
 
 # Deploy
 .deploy_git
+public
+db.json
 
 # Logs
 logs
