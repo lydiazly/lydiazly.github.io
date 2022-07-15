@@ -1,6 +1,6 @@
 ---
 title: "JSOC Download Example"
-permalink: jsoc-download-example.html
+permalink: /jsoc-download-example.html
 categories: 'Solar Physics'
 tags: [python, jupyter, sunpy]
 date: 2018-09-12 20:16:36

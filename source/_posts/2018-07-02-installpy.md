@@ -1,6 +1,6 @@
 ---
 title: "Python 安装和配置"
-permalink: installpy.html
+permalink: /installpy.html
 categories: 'Solar Physics'
 tags: [python, conda, jupyter, astropy, sunpy, install]
 date: 2018-07-02 20:45:13

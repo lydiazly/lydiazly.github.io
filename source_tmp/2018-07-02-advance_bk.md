@@ -1,7 +1,7 @@
 ---
 title: "Python 进阶 (lecture for Solar Group)"
 mathjax: true
-permalink: advance.html
+permalink: /advance.html
 categories: 'Solar Physics'
 tags: [python, conda, jupyter, astropy, sunpy]
 date: 2018-07-02 21:46:13

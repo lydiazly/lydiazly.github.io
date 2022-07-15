@@ -9,12 +9,13 @@ Update:
 <p align=left>
 {% btn [1], Jupyter Notebook, download fa-fw %}
 {% btn [2], Example Data, download fa-fw %}<br>
-{% btn [3], User Module, download fa-fw %} ([doc](usr_sunpy.html))
+{% btn [3], User Module, download fa-fw %} ([doc]([4]))
 </p>
 
 [1]: /downloads/notebooks/example_hmi.zip
 [2]: https://pan.baidu.com/s/1nwsIcDr?pwd=s5re
 [3]: /downloads/scripts/sunpy-modules.zip
+[4]: /usr_sunpy.html
 
 [ Tested ]
 

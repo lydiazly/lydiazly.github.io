@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "SunPy module documentation"
-permalink: usr_sunpy.html
+permalink: /usr_sunpy.html
 author: "Lydia Zhang"
 categories: 'Solar Physics'
 tags: [python, sunpy]
