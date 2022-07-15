@@ -6,15 +6,15 @@ tags: [python, jupyter, sunpy]
 date: 2018-10-14 16:06:23
 ---
 <p align=left>
-{% btn [1], Jupyter Notebook, download fa-fw %}
-{% btn [2], Example Data, download fa-fw %}<br>
-{% btn [3], User Module, download fa-fw %} ([doc]([4]))
+{% btn [nb], Jupyter Notebook, download fa-fw %}
+{% btn [eg], Example Data, download fa-fw %}<br>
+{% btn [mod], User Module, download fa-fw %} ([doc][doc])
 </p>
 
-[1]: /downloads/notebooks/example_hmi.zip
-[2]: https://pan.baidu.com/s/1nwsIcDr?pwd=s5re
-[3]: /downloads/scripts/sunpy-modules.zip
-[4]: https://lydiazly.github.io/usr_sunpy.html
+[nb]: /downloads/notebooks/example_hmi.zip
+[eg]: https://pan.baidu.com/s/1nwsIcDr?pwd=s5re
+[mod]: /downloads/scripts/sunpy-modules.zip
+[doc]: /usr_sunpy.html
 
 ```python
 from __future__ import division, print_function
