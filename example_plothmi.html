@@ -16,15 +16,16 @@
 
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha256-DfWjNxDkM94fVBWx1H5BMMp0Zq7luBlV8QRcSES7s+0=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"lydiazly.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.12.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"width":250},"copycode":{"enable":true,"style":"mac"},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":true,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+<script class="next-config" data-name="main" type="application/json">{"hostname":"lydiazly.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.12.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":"mac"},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":true,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":true,"transition":{"post_block":"none","post_header":"none","post_body":"none","coll_header":"fadeInLeft","sidebar":"none"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="Jupyter Notebook  Example Data (pswd: s5re)  User Module (help) from __future__ import division, print_function  # Reload user modules automatically # %load_ext autoreload # %autoreload 2  # notebook">
+    <meta name="description" content="Jupyter Notebook Example Data  User Module (doc)  from __future__ import division, print_function  # Reload user modules automatically # %load_ext autoreload # %autoreload 2  # notebook, inline, ...">
 <meta property="og:type" content="blog">
 <meta property="og:title" content="Example: plot HMI">
 <meta property="og:url" content="https://lydiazly.github.io/example_plothmi">
 <meta property="og:site_name" content="Lydia&#39;s notes">
-<meta property="og:description" content="Jupyter Notebook  Example Data (pswd: s5re)  User Module (help) from __future__ import division, print_function  # Reload user modules automatically # %load_ext autoreload # %autoreload 2  # notebook">
+<meta property="og:description" content="Jupyter Notebook Example Data  User Module (doc)  from __future__ import division, print_function  # Reload user modules automatically # %load_ext autoreload # %autoreload 2  # notebook, inline, ...">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://lydiazly.github.io/example_plothmi/plothmi1.png">
 <meta property="og:image" content="https://lydiazly.github.io/example_plothmi/plothmi2.png">
@@ -60,7 +61,7 @@
   </noscript>
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage">
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
   <div class="headband"></div>
 
   <main class="main">
@@ -183,14 +184,24 @@
 </div>
   <div class="links-of-author site-overview-item animated">
       <span class="links-of-author-item">
-        <a href="mailto:lydiazly2@nju.edu.cn" title="E-Mail → mailto:lydiazly2@nju.edu.cn" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+        <a href="mailto:lydiazly2@nju.edu.cn" title="E-Mail → mailto:lydiazly2@nju.edu.cn" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i></a>
       </span>
   </div>
   <div class="cc-license site-overview-item animated" itemprop="license">
-    <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.en" class="cc-opacity" rel="noopener" target="_blank"><img src="https://cdnjs.cloudflare.com/ajax/libs/creativecommons-vocabulary/2020.11.3/assets/license_badges/small/by_sa.svg" alt="Creative Commons"></a>
+    <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.en" class="cc-opacity" rel="noopener" target="_blank"><img src="https://cdnjs.cloudflare.com/ajax/libs/creativecommons-vocabulary/2020.11.3/assets/license_badges/big/by_sa.svg" alt="Creative Commons"></a>
   </div>
 
 
+  <div class="links-of-blogroll site-overview-item animated">
+    <div class="links-of-blogroll-title"><i class="fa fa-globe fa-fw"></i>
+      Links
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <a href="https://github.com/lydiazly/scripts-sunpy" title="https:&#x2F;&#x2F;github.com&#x2F;lydiazly&#x2F;scripts-sunpy" rel="noopener" target="_blank">my sunpy scripts</a>
+        </li>
+    </ul>
+  </div>
 
         </div>
       </div>
@@ -266,6 +277,13 @@
     </span>
 
   
+    <span class="post-meta-item" title="Views" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">Views: </span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
 </div>
 
         </div>
@@ -275,15 +293,11 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <p><a
-href="/downloads/notebooks/example_hmi.zip"><i class="fas fa-download"></i>
-Jupyter Notebook</a></p>
-<p><a
-target="_blank" rel="noopener" href="https://pan.baidu.com/s/1nwsIcDr"><i class="fas fa-download"></i>
-Example Data</a> <span style="color:gray">(pswd: s5re)</span></p>
-<p><a
-target="_blank" rel="noopener" href="https://github.com/lydiazly/lydiazly.github.io/raw/main/source/downloads/scripts/sunpy-modules.zip"><i class="fas fa-download"></i>
-User Module</a> (<a href="usr_sunpy.html">help</a>)</p>
+        <p align="left">
+<a class="btn" href="[1]"><i class="fa fa-download fa-fw"></i>Jupyter Notebook</a>
+<a class="btn" href="[2]"><i class="fa fa-download fa-fw"></i>Example Data</a>
+<br> <a class="btn" href="[3]"><i class="fa fa-download fa-fw"></i>User Module</a> (<a href="usr_sunpy.html">doc</a>)
+</p>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">from</span> __future__ <span class="token keyword">import</span> division<span class="token punctuation">,</span> print_function
 
 <span class="token comment"># Reload user modules automatically</span>
@@ -453,7 +467,6 @@ center <span class="token operator">=</span> mapbz<span class="token punctuation
 [ Observation] (lon, lat, radius) = (0 deg, 7.089 deg, 1.51197e+11 m)</code></pre>
 <p>A quick look:</p>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python">mapbz<span class="token punctuation">.</span>peek<span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<pre><code>&lt;IPython.core.display.Javascript object&gt;</code></pre>
 <p><img data-src="/example_plothmi/plothmi1.png" width="640"></p>
 <h2 id="plot">Plot</h2>
 <p><a
@@ -477,7 +490,6 @@ ax1<span class="token punctuation">.</span>plot_coord<span class="token punctuat
     <span class="token keyword">pass</span>
 ax1<span class="token punctuation">.</span>legend<span class="token punctuation">(</span>loc<span class="token operator">=</span><span class="token string">'upper right'</span><span class="token punctuation">,</span> fontsize<span class="token operator">=</span><span class="token number">8</span><span class="token punctuation">,</span> markerscale<span class="token operator">=</span><span class="token number">0.6</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token comment"># fig1.savefig('example_plothmi_disk.png', dpi=200, bbox_inches='tight')</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<pre><code>&lt;IPython.core.display.Javascript object&gt;</code></pre>
 <p><img data-src="/example_plothmi/plothmi2.png" width="800"></p>
 <h2 id="submap">Submap</h2>
 <p><a
@@ -524,7 +536,6 @@ mapbz<span class="token punctuation">.</span>draw_rectangle<span class="token pu
 valid_index <span class="token operator">=</span> np<span class="token punctuation">.</span>where<span class="token punctuation">(</span>np<span class="token punctuation">.</span>isfinite<span class="token punctuation">(</span>mapbz<span class="token punctuation">.</span>data<span class="token punctuation">)</span><span class="token punctuation">)</span>
 ax1<span class="token punctuation">.</span>set_xlim<span class="token punctuation">(</span><span class="token punctuation">(</span>valid_index<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token builtin">min</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">-</span><span class="token number">100</span><span class="token punctuation">,</span> valid_index<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token builtin">max</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">+</span><span class="token number">100</span><span class="token punctuation">)</span><span class="token punctuation">)</span>  <span class="token comment"># pix</span>
 ax1<span class="token punctuation">.</span>set_ylim<span class="token punctuation">(</span><span class="token punctuation">(</span>valid_index<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token builtin">min</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">-</span><span class="token number">100</span><span class="token punctuation">,</span> valid_index<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token builtin">max</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">+</span><span class="token number">100</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment"># pix</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<pre><code>&lt;IPython.core.display.Javascript object&gt;</code></pre>
 <p><img data-src="/example_plothmi/plothmi3.png" width="800"></p>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">from</span> usr_sunpy <span class="token keyword">import</span> plot_map<span class="token punctuation">,</span> plot_vmap
 
@@ -533,7 +544,6 @@ ax2 <span class="token operator">=</span> fig2<span class="token punctuation">.<
 im2 <span class="token operator">=</span> plot_map<span class="token punctuation">(</span>smapbz<span class="token punctuation">,</span> ax<span class="token operator">=</span>ax2<span class="token punctuation">,</span> vmin<span class="token operator">=</span><span class="token operator">-</span><span class="token number">2000.</span><span class="token punctuation">,</span> vmax<span class="token operator">=</span><span class="token number">2000.</span><span class="token punctuation">,</span> grid<span class="token operator">=</span><span class="token number">10</span><span class="token operator">*</span>u<span class="token punctuation">.</span>deg<span class="token punctuation">,</span> title<span class="token operator">=</span>mapbz<span class="token punctuation">.</span>latex_name<span class="token operator">+</span><span class="token string">' (submap)'</span><span class="token punctuation">)</span>
 plot_vmap<span class="token punctuation">(</span>smapbx<span class="token punctuation">,</span> smapby<span class="token punctuation">,</span> smapbz<span class="token punctuation">,</span> ax2<span class="token punctuation">,</span> cmin<span class="token operator">=</span><span class="token number">20.</span><span class="token punctuation">,</span> vmax<span class="token operator">=</span><span class="token number">500.</span><span class="token punctuation">,</span> cmap<span class="token operator">=</span><span class="token string">'binary'</span><span class="token punctuation">,</span>
           scale_units<span class="token operator">=</span><span class="token string">'xy'</span><span class="token punctuation">,</span> scale<span class="token operator">=</span><span class="token number">1</span><span class="token operator">/</span><span class="token number">0.05</span><span class="token punctuation">,</span> minlength<span class="token operator">=</span><span class="token number">0.02</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<pre><code>&lt;IPython.core.display.Javascript object&gt;</code></pre>
 <p><img data-src="/example_plothmi/plothmi4.png" width="900"></p>
 <h3 id="without-disambiguation">Without disambiguation:</h3>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">from</span> usr_sunpy <span class="token keyword">import</span> plot_map<span class="token punctuation">,</span> plot_vmap
@@ -543,7 +553,6 @@ ax2 <span class="token operator">=</span> fig2<span class="token punctuation">.<
 im2 <span class="token operator">=</span> plot_map<span class="token punctuation">(</span>smapbz<span class="token punctuation">,</span> ax<span class="token operator">=</span>ax2<span class="token punctuation">,</span> vmin<span class="token operator">=</span><span class="token operator">-</span><span class="token number">2000.</span><span class="token punctuation">,</span> vmax<span class="token operator">=</span><span class="token number">2000.</span><span class="token punctuation">,</span> grid<span class="token operator">=</span><span class="token number">10</span><span class="token operator">*</span>u<span class="token punctuation">.</span>deg<span class="token punctuation">,</span> title<span class="token operator">=</span>mapbz<span class="token punctuation">.</span>latex_name<span class="token operator">+</span><span class="token string">' (submap)'</span><span class="token punctuation">)</span>
 plot_vmap<span class="token punctuation">(</span>smapbx<span class="token punctuation">,</span> smapby<span class="token punctuation">,</span> smapbz<span class="token punctuation">,</span> ax2<span class="token punctuation">,</span> cmin<span class="token operator">=</span><span class="token number">20.</span><span class="token punctuation">,</span> vmax<span class="token operator">=</span><span class="token number">500.</span><span class="token punctuation">,</span> cmap<span class="token operator">=</span><span class="token string">'binary'</span><span class="token punctuation">,</span>
           scale_units<span class="token operator">=</span><span class="token string">'xy'</span><span class="token punctuation">,</span> scale<span class="token operator">=</span><span class="token number">1</span><span class="token operator">/</span><span class="token number">0.05</span><span class="token punctuation">,</span> minlength<span class="token operator">=</span><span class="token number">0.02</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<pre><code>&lt;IPython.core.display.Javascript object&gt;</code></pre>
 <p><img data-src="/example_plothmi/plothmi5.png" width="900"></p>
 
     </div>
@@ -554,9 +563,9 @@ plot_vmap<span class="token punctuation">(</span>smapbx<span class="token punctu
 
     <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/python/" rel="tag"># python</a>
-              <a href="/tags/jupyter/" rel="tag"># jupyter</a>
-              <a href="/tags/sunpy/" rel="tag"># sunpy</a>
+              <a href="/tags/python/" rel="tag"><i class="fa fa-tag"></i> python</a>
+              <a href="/tags/jupyter/" rel="tag"><i class="fa fa-tag"></i> jupyter</a>
+              <a href="/tags/sunpy/" rel="tag"><i class="fa fa-tag"></i> sunpy</a>
           </div>
 
         
@@ -593,9 +602,27 @@ plot_vmap<span class="token punctuation">(</span>smapbx<span class="token punctu
   &copy; 2018 – 
   <span itemprop="copyrightYear">2022</span>
   <span class="with-love">
-    <i class="fa fa-user"></i>
+    <i class="fa fa-heart"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">Lydia Zhang</span>
+</div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="Total Visitors">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="Total Views">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
 </div>
   <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a>
   </div>
@@ -607,7 +634,7 @@ plot_vmap<span class="token punctuation">(</span>smapbx<span class="token punctu
   <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/medium-zoom/1.0.6/medium-zoom.min.js" integrity="sha256-EdPgYcPk/IIrw7FYeuJQexva49pVRZNmt3LculEr7zM=" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lozad.js/1.16.0/lozad.min.js" integrity="sha256-mOFREFhqmHeQbXpK2lp4nA3qooVgACfh88fpJftLBbc=" crossorigin="anonymous"></script>
-<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/next-boot.js"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
 
   
 <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.0/search.js" integrity="sha256-vXZMYLEqsROAXkEw93GGIvaB2ab+QW6w3+1ahD9nXXA=" crossorigin="anonymous"></script>
@@ -618,6 +645,7 @@ plot_vmap<span class="token punctuation">(</span>smapbx<span class="token punctu
 
 
   
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
 
 

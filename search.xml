@@ -4,7 +4,7 @@
     <title>Python 进阶 (lecture for Solar Group)</title>
     <url>//advance.html</url>
     <content><![CDATA[<p><a
-href="/downloads/notebooks/python-intro.zip"><i class="fas fa-download"></i>
+href="/downloads/notebooks/python-intro.zip"><i class="fas fa-file-arrow-down"></i>
 Jupyter Notebook</a></p>
 <h2 id="anaconda">Anaconda</h2>
 <blockquote>
@@ -1934,7 +1934,7 @@ r <span class="token operator">=</span> requests<span class="token punctuation">
     <title>Python 安装和配置</title>
     <url>//installpy.html</url>
     <content><![CDATA[<p><a
-href="/downloads/notebooks/installpy.zip"><i class="fas fa-download"></i>
+href="/downloads/notebooks/installpy.zip"><i class="fas fa-file-arrow-down"></i>
 Jupyter Notebook</a></p>
 <p><small><font color=gray>[Update 2022-07-12] Some outputs are updated
 with python 3.10.</font></small></p>
@@ -2486,7 +2486,7 @@ mayavi2<span aria-hidden="true" class="line-numbers-rows"><span></span><span></s
     <title>Python 简易教程 (lecture for Solar Group)</title>
     <url>//main.html</url>
     <content><![CDATA[<p><a
-href="/downloads/notebooks/python-intro.zip"><i class="fas fa-download"></i>
+href="/downloads/notebooks/python-intro.zip"><i class="fas fa-file-arrow-down"></i>
 Jupyter Notebook</a></p>
 <h2 id="简介">简介</h2>
 <p>优势: 开源, 用户广, 用途广, 社区完善, 新手友好</p>
@@ -3179,13 +3179,11 @@ class="uri">http://jupyterlab.readthedocs.io/en/stable/</a>
   <entry>
     <title>Example: downloading data using Fido</title>
     <url>//fido.html</url>
-    <content><![CDATA[<p><a
-href="/downloads/notebooks/fido.zip"><i class="fas fa-download"></i>
-Jupyter Notebook</a></p>
+    <content><![CDATA[<a class="btn" href="[1]"><i class="fa fa-download fa-fw"></i>Jupyter Notebook</a>
 <p>Reference <a
 href="http://docs.sunpy.org/en/stable/guide/acquiring_data/fido.html"
 class="uri">http://docs.sunpy.org/en/stable/guide/acquiring_data/fido.html</a></p>
-<p>See also: <a href="jsoc.html"><i class="fas fa-download"></i>
+<p>See also: <a href="jsoc.html"><i class="fas fa-book-open"></i>
 Example: downloading data from JSOC</a></p>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> astropy<span class="token punctuation">.</span>units <span class="token keyword">as</span> u
 
@@ -3208,10 +3206,10 @@ VSOClient:<br><i>QTable length=5</i>
 <thead>
 <tr>
 <th>
-Start Time [1]
+Start Time <a href="/downloads/notebooks/fido.zip">1</a>
 </th>
 <th>
-End Time [1]
+End Time <a href="/downloads/notebooks/fido.zip">1</a>
 </th>
 <th>
 Source
@@ -3372,10 +3370,10 @@ FULLDISK
 <thead>
 <tr>
 <th>
-Start Time [1]
+Start Time <a href="/downloads/notebooks/fido.zip">1</a>
 </th>
 <th>
-End Time [1]
+End Time <a href="/downloads/notebooks/fido.zip">1</a>
 </th>
 <th>
 Source
@@ -3549,10 +3547,10 @@ VSOClient:<br><i>QTable length=5</i>
 <thead>
 <tr>
 <th>
-Start Time [1]
+Start Time <a href="/downloads/notebooks/fido.zip">1</a>
 </th>
 <th>
-End Time [1]
+End Time <a href="/downloads/notebooks/fido.zip">1</a>
 </th>
 <th>
 Source
@@ -3716,10 +3714,10 @@ VSOClient:<br><i>QTable length=3</i>
 <thead>
 <tr>
 <th>
-Start Time [1]
+Start Time <a href="/downloads/notebooks/fido.zip">1</a>
 </th>
 <th>
-End Time [1]
+End Time <a href="/downloads/notebooks/fido.zip">1</a>
 </th>
 <th>
 Source
@@ -3843,10 +3841,10 @@ VSOClient:<br><i>QTable length=1</i>
 <thead>
 <tr>
 <th>
-Start Time [1]
+Start Time <a href="/downloads/notebooks/fido.zip">1</a>
 </th>
 <th>
-End Time [1]
+End Time <a href="/downloads/notebooks/fido.zip">1</a>
 </th>
 <th>
 Source
@@ -3942,9 +3940,7 @@ FULLDISK
   <entry>
     <title>Example: downloading data from JSOC</title>
     <url>//jsoc.html</url>
-    <content><![CDATA[<p><a
-href="/downloads/notebooks/fido.zip"><i class="fas fa-download"></i>
-Jupyter Notebook</a></p>
+    <content><![CDATA[<a class="btn" href="[1]"><i class="fa fa-download fa-fw"></i>Jupyter Notebook</a>
 <p>Reference <a
 href="http://docs.sunpy.org/en/stable/guide/acquiring_data/jsoc.html"
 class="uri">http://docs.sunpy.org/en/stable/guide/acquiring_data/jsoc.html</a></p>
@@ -5689,9 +5685,7 @@ $HOME&#x2F;software&#x2F;harris&#x2F;envi55&#x2F;idl87&#x2F;bin&#x2F;idl $@<span
   <entry>
     <title>JSOC Download Example</title>
     <url>//jsoc-download-example.html</url>
-    <content><![CDATA[<p><a
-href="/downloads/notebooks/fido.zip"><i class="fas fa-download"></i>
-Jupyter Notebook</a></p>
+    <content><![CDATA[<a class="btn" href="[1]"><i class="fa fa-download fa-fw"></i>Jupyter Notebook</a>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> astropy<span class="token punctuation">.</span>units <span class="token keyword">as</span> u
 <span class="token keyword">from</span> sunpy<span class="token punctuation">.</span>net <span class="token keyword">import</span> attrs<span class="token punctuation">,</span> jsoc
 
@@ -5922,15 +5916,11 @@ AIA_4
   <entry>
     <title>Example: plot HMI</title>
     <url>//example_plothmi.html</url>
-    <content><![CDATA[<p><a
-href="/downloads/notebooks/example_hmi.zip"><i class="fas fa-download"></i>
-Jupyter Notebook</a></p>
-<p><a
-href="https://pan.baidu.com/s/1nwsIcDr"><i class="fas fa-download"></i>
-Example Data</a> <span style="color:gray">(pswd: s5re)</span></p>
-<p><a
-href="https://github.com/lydiazly/lydiazly.github.io/raw/main/source/downloads/scripts/sunpy-modules.zip"><i class="fas fa-download"></i>
-User Module</a> (<a href="usr_sunpy.html">help</a>)</p>
+    <content><![CDATA[<p align="left">
+<a class="btn" href="[1]"><i class="fa fa-download fa-fw"></i>Jupyter Notebook</a>
+<a class="btn" href="[2]"><i class="fa fa-download fa-fw"></i>Example Data</a>
+<br> <a class="btn" href="[3]"><i class="fa fa-download fa-fw"></i>User Module</a> (<a href="usr_sunpy.html">doc</a>)
+</p>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">from</span> __future__ <span class="token keyword">import</span> division<span class="token punctuation">,</span> print_function
 
 <span class="token comment"># Reload user modules automatically</span>
@@ -6100,7 +6090,6 @@ center <span class="token operator">=</span> mapbz<span class="token punctuation
 [ Observation] (lon, lat, radius) = (0 deg, 7.089 deg, 1.51197e+11 m)</code></pre>
 <p>A quick look:</p>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python">mapbz<span class="token punctuation">.</span>peek<span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<pre><code>&lt;IPython.core.display.Javascript object&gt;</code></pre>
 <p><img data-src="/example_plothmi/plothmi1.png" width="640"></p>
 <h2 id="plot">Plot</h2>
 <p><a
@@ -6124,7 +6113,6 @@ ax1<span class="token punctuation">.</span>plot_coord<span class="token punctuat
     <span class="token keyword">pass</span>
 ax1<span class="token punctuation">.</span>legend<span class="token punctuation">(</span>loc<span class="token operator">=</span><span class="token string">'upper right'</span><span class="token punctuation">,</span> fontsize<span class="token operator">=</span><span class="token number">8</span><span class="token punctuation">,</span> markerscale<span class="token operator">=</span><span class="token number">0.6</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token comment"># fig1.savefig('example_plothmi_disk.png', dpi=200, bbox_inches='tight')</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<pre><code>&lt;IPython.core.display.Javascript object&gt;</code></pre>
 <p><img data-src="/example_plothmi/plothmi2.png" width="800"></p>
 <h2 id="submap">Submap</h2>
 <p><a
@@ -6171,7 +6159,6 @@ mapbz<span class="token punctuation">.</span>draw_rectangle<span class="token pu
 valid_index <span class="token operator">=</span> np<span class="token punctuation">.</span>where<span class="token punctuation">(</span>np<span class="token punctuation">.</span>isfinite<span class="token punctuation">(</span>mapbz<span class="token punctuation">.</span>data<span class="token punctuation">)</span><span class="token punctuation">)</span>
 ax1<span class="token punctuation">.</span>set_xlim<span class="token punctuation">(</span><span class="token punctuation">(</span>valid_index<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token builtin">min</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">-</span><span class="token number">100</span><span class="token punctuation">,</span> valid_index<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token builtin">max</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">+</span><span class="token number">100</span><span class="token punctuation">)</span><span class="token punctuation">)</span>  <span class="token comment"># pix</span>
 ax1<span class="token punctuation">.</span>set_ylim<span class="token punctuation">(</span><span class="token punctuation">(</span>valid_index<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token builtin">min</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">-</span><span class="token number">100</span><span class="token punctuation">,</span> valid_index<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token builtin">max</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">+</span><span class="token number">100</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment"># pix</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<pre><code>&lt;IPython.core.display.Javascript object&gt;</code></pre>
 <p><img data-src="/example_plothmi/plothmi3.png" width="800"></p>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">from</span> usr_sunpy <span class="token keyword">import</span> plot_map<span class="token punctuation">,</span> plot_vmap
 
@@ -6180,7 +6167,6 @@ ax2 <span class="token operator">=</span> fig2<span class="token punctuation">.<
 im2 <span class="token operator">=</span> plot_map<span class="token punctuation">(</span>smapbz<span class="token punctuation">,</span> ax<span class="token operator">=</span>ax2<span class="token punctuation">,</span> vmin<span class="token operator">=</span><span class="token operator">-</span><span class="token number">2000.</span><span class="token punctuation">,</span> vmax<span class="token operator">=</span><span class="token number">2000.</span><span class="token punctuation">,</span> grid<span class="token operator">=</span><span class="token number">10</span><span class="token operator">*</span>u<span class="token punctuation">.</span>deg<span class="token punctuation">,</span> title<span class="token operator">=</span>mapbz<span class="token punctuation">.</span>latex_name<span class="token operator">+</span><span class="token string">' (submap)'</span><span class="token punctuation">)</span>
 plot_vmap<span class="token punctuation">(</span>smapbx<span class="token punctuation">,</span> smapby<span class="token punctuation">,</span> smapbz<span class="token punctuation">,</span> ax2<span class="token punctuation">,</span> cmin<span class="token operator">=</span><span class="token number">20.</span><span class="token punctuation">,</span> vmax<span class="token operator">=</span><span class="token number">500.</span><span class="token punctuation">,</span> cmap<span class="token operator">=</span><span class="token string">'binary'</span><span class="token punctuation">,</span>
           scale_units<span class="token operator">=</span><span class="token string">'xy'</span><span class="token punctuation">,</span> scale<span class="token operator">=</span><span class="token number">1</span><span class="token operator">/</span><span class="token number">0.05</span><span class="token punctuation">,</span> minlength<span class="token operator">=</span><span class="token number">0.02</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<pre><code>&lt;IPython.core.display.Javascript object&gt;</code></pre>
 <p><img data-src="/example_plothmi/plothmi4.png" width="900"></p>
 <h3 id="without-disambiguation">Without disambiguation:</h3>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">from</span> usr_sunpy <span class="token keyword">import</span> plot_map<span class="token punctuation">,</span> plot_vmap
@@ -6190,7 +6176,6 @@ ax2 <span class="token operator">=</span> fig2<span class="token punctuation">.<
 im2 <span class="token operator">=</span> plot_map<span class="token punctuation">(</span>smapbz<span class="token punctuation">,</span> ax<span class="token operator">=</span>ax2<span class="token punctuation">,</span> vmin<span class="token operator">=</span><span class="token operator">-</span><span class="token number">2000.</span><span class="token punctuation">,</span> vmax<span class="token operator">=</span><span class="token number">2000.</span><span class="token punctuation">,</span> grid<span class="token operator">=</span><span class="token number">10</span><span class="token operator">*</span>u<span class="token punctuation">.</span>deg<span class="token punctuation">,</span> title<span class="token operator">=</span>mapbz<span class="token punctuation">.</span>latex_name<span class="token operator">+</span><span class="token string">' (submap)'</span><span class="token punctuation">)</span>
 plot_vmap<span class="token punctuation">(</span>smapbx<span class="token punctuation">,</span> smapby<span class="token punctuation">,</span> smapbz<span class="token punctuation">,</span> ax2<span class="token punctuation">,</span> cmin<span class="token operator">=</span><span class="token number">20.</span><span class="token punctuation">,</span> vmax<span class="token operator">=</span><span class="token number">500.</span><span class="token punctuation">,</span> cmap<span class="token operator">=</span><span class="token string">'binary'</span><span class="token punctuation">,</span>
           scale_units<span class="token operator">=</span><span class="token string">'xy'</span><span class="token punctuation">,</span> scale<span class="token operator">=</span><span class="token number">1</span><span class="token operator">/</span><span class="token number">0.05</span><span class="token punctuation">,</span> minlength<span class="token operator">=</span><span class="token number">0.02</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<pre><code>&lt;IPython.core.display.Javascript object&gt;</code></pre>
 <p><img data-src="/example_plothmi/plothmi5.png" width="900"></p>
 ]]></content>
       <categories>
@@ -6205,15 +6190,11 @@ plot_vmap<span class="token punctuation">(</span>smapbx<span class="token punctu
   <entry>
     <title>Example: projection</title>
     <url>//example_projection.html</url>
-    <content><![CDATA[<p><a
-href="/downloads/notebooks/example_hmi.zip"><i class="fas fa-download"></i>
-Jupyter Notebook</a></p>
-<p><a
-href="https://pan.baidu.com/s/1nwsIcDr"><i class="fas fa-download"></i>
-Example Data</a> <span style="color:gray">(pswd:s5re)</span></p>
-<p><a
-href="https://github.com/lydiazly/lydiazly.github.io/raw/main/source/downloads/scripts/sunpy-modules.zip"><i class="fas fa-download"></i>
-User Module</a> (<a href="usr_sunpy.html">help</a>)</p>
+    <content><![CDATA[<p align="left">
+<a class="btn" href="[1]"><i class="fa fa-download fa-fw"></i>Jupyter Notebook</a>
+<a class="btn" href="[2]"><i class="fa fa-download fa-fw"></i>Example Data</a>
+<br> <a class="btn" href="[3]"><i class="fa fa-download fa-fw"></i>User Module</a> (<a href="usr_sunpy.html">doc</a>)
+</p>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">from</span> __future__ <span class="token keyword">import</span> division<span class="token punctuation">,</span> print_function
 
 <span class="token comment"># Reload user modules automatically</span>
@@ -6304,11 +6285,7 @@ mapbz<span class="token punctuation">.</span>draw_rectangle<span class="token pu
 valid_index <span class="token operator">=</span> np<span class="token punctuation">.</span>where<span class="token punctuation">(</span>np<span class="token punctuation">.</span>isfinite<span class="token punctuation">(</span>mapbz<span class="token punctuation">.</span>data<span class="token punctuation">)</span><span class="token punctuation">)</span>
 ax1<span class="token punctuation">.</span>set_xlim<span class="token punctuation">(</span><span class="token punctuation">(</span>valid_index<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token builtin">min</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">-</span><span class="token number">100</span><span class="token punctuation">,</span> valid_index<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token builtin">max</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">+</span><span class="token number">100</span><span class="token punctuation">)</span><span class="token punctuation">)</span>  <span class="token comment"># pix</span>
 ax1<span class="token punctuation">.</span>set_ylim<span class="token punctuation">(</span><span class="token punctuation">(</span>valid_index<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token builtin">min</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">-</span><span class="token number">100</span><span class="token punctuation">,</span> valid_index<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token builtin">max</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">+</span><span class="token number">100</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment"># pix</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<pre><code>Submap: ([500. 800.], [-450. -200.]) arcsec  (500 x 417)
-
-
-
-&lt;IPython.core.display.Javascript object&gt;</code></pre>
+<pre><code>Submap: ([500. 800.], [-450. -200.]) arcsec  (500 x 417)</code></pre>
 <p><img data-src="/example_projection/projection1.png" width="800"></p>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">from</span> usr_sunpy <span class="token keyword">import</span> plot_map<span class="token punctuation">,</span> plot_vmap
 
@@ -6319,7 +6296,6 @@ ax2 <span class="token operator">=</span> fig2<span class="token punctuation">.<
 im2 <span class="token operator">=</span> plot_map<span class="token punctuation">(</span>smapbz<span class="token punctuation">,</span> ax<span class="token operator">=</span>ax2<span class="token punctuation">,</span> vmin<span class="token operator">=</span><span class="token operator">-</span><span class="token number">2000.</span><span class="token punctuation">,</span> vmax<span class="token operator">=</span><span class="token number">2000.</span><span class="token punctuation">,</span> grid<span class="token operator">=</span><span class="token number">10</span><span class="token operator">*</span>u<span class="token punctuation">.</span>deg<span class="token punctuation">,</span> title<span class="token operator">=</span>mapbz<span class="token punctuation">.</span>latex_name<span class="token operator">+</span><span class="token string">' (submap)'</span><span class="token punctuation">)</span>
 plot_vmap<span class="token punctuation">(</span>smapbx<span class="token punctuation">,</span> smapby<span class="token punctuation">,</span> smapbz<span class="token punctuation">,</span> ax2<span class="token punctuation">,</span> iskip<span class="token operator">=</span>iskip<span class="token punctuation">,</span> jskip<span class="token operator">=</span>jskip<span class="token punctuation">,</span> cmin<span class="token operator">=</span><span class="token number">50.</span><span class="token punctuation">,</span> vmax<span class="token operator">=</span><span class="token number">500.</span><span class="token punctuation">,</span> cmap<span class="token operator">=</span><span class="token string">'binary'</span><span class="token punctuation">,</span>
           scale_units<span class="token operator">=</span><span class="token string">'xy'</span><span class="token punctuation">,</span> scale<span class="token operator">=</span><span class="token number">1</span><span class="token operator">/</span><span class="token number">0.05</span><span class="token punctuation">,</span> minlength<span class="token operator">=</span><span class="token number">0.02</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<pre><code>&lt;IPython.core.display.Javascript object&gt;</code></pre>
 <p><img data-src="/example_projection/projection2.png" width="900"></p>
 <h2 id="projection">Projection</h2>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">from</span> usr_sunpy <span class="token keyword">import</span> image_to_helio
@@ -6345,8 +6321,7 @@ plot_vmap<span class="token punctuation">(</span>smapbx_h<span class="token punc
 ax3<span class="token punctuation">.</span>grid<span class="token punctuation">(</span><span class="token boolean">True</span><span class="token punctuation">,</span> ls<span class="token operator">=</span><span class="token string">':'</span><span class="token punctuation">,</span> alpha<span class="token operator">=</span><span class="token number">0.8</span><span class="token punctuation">)</span>
 ax3<span class="token punctuation">.</span>set_xlim<span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">170</span><span class="token punctuation">,</span><span class="token number">170</span><span class="token punctuation">)</span><span class="token punctuation">)</span>  <span class="token comment"># arcsec</span>
 ax3<span class="token punctuation">.</span>set_ylim<span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">110</span><span class="token punctuation">,</span><span class="token number">100</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment"># arcsec</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<pre><code>&lt;IPython.core.display.Javascript object&gt;</code></pre>
-<p>&lt;img src="/example_projection/projection3.png"900"&gt;</p>
+<p><img data-src="/example_projection/projection3.png" width="900"></p>
 ]]></content>
       <categories>
         <category>Solar Physics</category>
@@ -6361,13 +6336,11 @@ ax3<span class="token punctuation">.</span>set_ylim<span class="token punctuatio
     <title>SunPy Scripts Updates</title>
     <url>/2018-10-14-sunpy-scripts-updates.html</url>
     <content><![CDATA[<p>Update:</p>
-<p><a href="example_plothmi.html"><i class="fas fa-link"></i> Example:
-plot HMI</a><br></p>
-<p><a href="example_projection.html"><i class="fas fa-link"></i>
-Example: projection</a><br></p>
-<p><a
-href="https://github.com/lydiazly/lydiazly.github.io/raw/main/source/downloads/scripts/sunpy-modules.zip"><i class="fas fa-download"></i>
-User Module</a> (<a href="usr_sunpy.html">help</a>)</p>
+<p align="left">
+<a class="btn" href="[1]"><i class="fa fa-download fa-fw"></i>Jupyter Notebook</a>
+<a class="btn" href="[2]"><i class="fa fa-download fa-fw"></i>Example Data</a>
+<br> <a class="btn" href="[3]"><i class="fa fa-download fa-fw"></i>User Module</a> (<a href="usr_sunpy.html">doc</a>)
+</p>
 <p>[ Tested ]</p>
 <p>Ubuntu 16.04 LTS</p>
 <table>

@@ -190,13 +190,6 @@ body {
   min-height: 100%;
   position: relative;
   transition: padding 0.2s ease-in-out;
-  overflow-x: hidden;
-  width: 100vw;
-}
-@supports (overflow-x: clip) {
-  body {
-    overflow-x: clip;
-  }
 }
 h1,
 h2,
@@ -1482,12 +1475,6 @@ header.header {
 .links-of-author a {
   font-size: 0.8125em;
 }
-.links-of-author .fa,
-.links-of-author .fab,
-.links-of-author .far,
-.links-of-author .fas {
-  margin-right: 2px;
-}
 .sidebar .sidebar-button:not(:first-child) {
   margin-top: 15px;
 }
@@ -1759,9 +1746,15 @@ header.header {
   width: 100%;
 }
 .with-love {
-  color: #808080;
+  color: #f00;
   display: inline-block;
   margin: 0 5px;
+}
+.busuanzi-count #busuanzi_container_site_uv {
+  display: none;
+}
+.busuanzi-count #busuanzi_container_site_pv {
+  display: none;
 }
 @-moz-keyframes icon-animate {
   0%, 100% {
@@ -1837,6 +1830,9 @@ header.header {
   margin: 8px -10px -20px;
   opacity: 0;
   transition: opacity 0.2s ease-in-out;
+}
+.back-to-top span {
+  display: none;
 }
 .back-to-top.back-to-top-on {
   cursor: pointer;
@@ -2211,6 +2207,9 @@ header.header {
 .post-meta-break {
   flex-basis: 100%;
   height: 0;
+}
+#busuanzi_container_page_pv {
+  display: none;
 }
 .post-nav {
   border-top: 1px solid #eee;
@@ -2699,7 +2698,7 @@ mjx-container[display='true'] + br {
   background: var(--content-bg-color);
   border-radius: initial;
   box-shadow: 0 2px 2px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.06), 0 1px 5px 0 rgba(0,0,0,0.12);
-  width: 250px;
+  width: 240px;
 }
 @media (max-width: 991px) {
   .header-inner {
@@ -2733,7 +2732,7 @@ mjx-container[display='true'] + br {
 .main-inner {
   border-radius: initial;
   box-sizing: border-box;
-  width: calc(100% - 262px);
+  width: calc(100% - 252px);
 }
 @media (max-width: 991px) {
   .main-inner {
@@ -2742,7 +2741,7 @@ mjx-container[display='true'] + br {
   }
 }
 .footer-inner {
-  padding-left: 262px;
+  padding-left: 252px;
 }
 @media (max-width: 991px) {
   .footer-inner {
@@ -2849,7 +2848,8 @@ mjx-container[display='true'] + br {
   position: -webkit-sticky;
   position: sticky;
   top: 12px;
-  width: 250px;
+  width: 240px;
+  visibility: hidden;
 }
 @media (max-width: 991px) {
   .sidebar {
@@ -2891,7 +2891,6 @@ mjx-container[display='true'] + br {
 }
 .links-of-author-item {
   margin: 5px 0 0;
-  width: 50%;
 }
 .links-of-author-item a {
   box-sizing: border-box;
