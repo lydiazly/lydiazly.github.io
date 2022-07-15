@@ -5,12 +5,15 @@ categories: 'Solar Physics'
 tags: [python, jupyter, sunpy]
 date: 2018-10-14 16:06:23
 ---
-[<i class="fas fa-download"></i> Jupyter Notebook](/downloads/notebooks/example_hmi.zip)
+<p align=left>
+{% btn [1], Jupyter Notebook, download fa-fw %}
+{% btn [2], Example Data, download fa-fw %}<br>
+{% btn [3], User Module, download fa-fw %} ([doc](usr_sunpy.html))
+</p>
 
-[<i class="fas fa-download"></i> Example Data](https://pan.baidu.com/s/1nwsIcDr) <span style="color:gray">(pswd:
-s5re)</span>
-
-[<i class="fas fa-download"></i> User Module](https://github.com/lydiazly/lydiazly.github.io/raw/main/source/downloads/scripts/sunpy-modules.zip) ([help](usr_sunpy.html))
+[1]: /downloads/notebooks/example_hmi.zip
+[2]: https://pan.baidu.com/s/1nwsIcDr?pwd=s5re
+[3]: /downloads/scripts/sunpy-modules.zip
 
 ```python
 from __future__ import division, print_function
@@ -230,7 +233,6 @@ mapbz.peek()
 ```
 
 
-    <IPython.core.display.Javascript object>
 
 
 
@@ -263,7 +265,6 @@ ax1.legend(loc='upper right', fontsize=8, markerscale=0.6);
 ```
 
 
-    <IPython.core.display.Javascript object>
 
 
 
@@ -322,7 +323,6 @@ ax1.set_ylim((valid_index[1].min()-100, valid_index[1].max()+100));  # pix
 ```
 
 
-    <IPython.core.display.Javascript object>
 
 
 
@@ -340,7 +340,6 @@ plot_vmap(smapbx, smapby, smapbz, ax2, cmin=20., vmax=500., cmap='binary',
 ```
 
 
-    <IPython.core.display.Javascript object>
 
 
 
@@ -360,7 +359,6 @@ plot_vmap(smapbx, smapby, smapbz, ax2, cmin=20., vmax=500., cmap='binary',
 ```
 
 
-    <IPython.core.display.Javascript object>
 
 
 

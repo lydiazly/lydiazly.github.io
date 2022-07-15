@@ -65,7 +65,7 @@ creative_commons:
   # Available values: by | by-nc | by-nc-nd | by-nc-sa | by-nd | by-sa | cc-zero
   license: by-sa
   # Available values: big | small
-  size: small
+  size: big
   sidebar: true
   post: false
   # You can set a language value if you prefer a translated version of CC license, e.g. deed.zh
@@ -124,7 +124,7 @@ sidebar:
   # Manual define the sidebar width. If commented, will be default for:
   # Muse | Mist: 320
   # Pisces | Gemini: 240
-  width: 250
+  #width: 250
 
   # Sidebar Display (only for Muse | Mist), available values:
   #  - post    expand on posts automatically. Default.
@@ -168,7 +168,7 @@ social:
 
 social_icons:
   enable: true
-  icons_only: false
+  icons_only: true
   transition: false
 
 # Blog rolls
@@ -179,7 +179,7 @@ links_settings:
   layout: block
 
 links:
-  #Title: https://example.com
+  my sunpy scripts: https://github.com/lydiazly/scripts-sunpy
 
 # Table of Contents in the Sidebar
 # Front-matter variable (nonsupport wrap expand_all).
@@ -210,11 +210,11 @@ footer:
   # Icon between year and copyright info.
   icon:
     # Icon name in Font Awesome. See: https://fontawesome.com/icons
-    name: fa fa-user
+    name: fa fa-heart
     # If you want to animate the icon, set it to true.
     animated: false
     # Change the color of icon, using Hex Code.
-    color: "#808080"
+    color: "#ff0000"
 
 
   # If not defined, `author` from Hexo `_config.yml` will be used.
@@ -263,7 +263,7 @@ symbols_count_time:
   item_text_total: false
 
 # Use icon instead of the symbol # to indicate the tag at the bottom of the post
-tag_icon: false
+tag_icon: true
 
 # Donate (Sponsor) settings
 # Front-matter variable (nonsupport animation).
@@ -359,7 +359,7 @@ theme_color:
 # Override browsers' default behavior.
 body_scrollbar:
   # Place the scrollbar over the content.
-  overlay: true
+  overlay: false
   # Present the scrollbar even if the content is not overflowing.
   stable: false
 
@@ -383,7 +383,7 @@ back2top:
   # Back to top in sidebar.
   sidebar: true
   # Scroll percent label in b2t button.
-  scrollpercent: true
+  scrollpercent: false
 
 # Reading progress bar
 reading_progress:
@@ -720,7 +720,7 @@ firestore:
 # Show Views / Visitors of the website / page with busuanzi.
 # For more information: http://ibruce.info/2015/04/04/busuanzi/
 busuanzi_count:
-  enable: false
+  enable: true
   total_visitors: true
   total_visitors_icon: fa fa-user
   total_views: true
@@ -842,16 +842,16 @@ mermaid:
 # Use Animate.css to animate everything.
 # For more information: https://animate.style
 motion:
-  enable: false
-  async: false
+  enable: true
+  async: true
   transition:
     # All available transition variants: https://theme-next.js.org/animate/
-    post_block: fadeIn
-    post_header: fadeInDown
-    post_body: fadeInDown
+    post_block: none
+    post_header: none
+    post_body: none
     coll_header: fadeInLeft
     # Only for Pisces | Gemini.
-    sidebar: fadeInUp
+    sidebar: none
 
 # Progress bar in the top during page loading.
 # For more information: https://github.com/CodeByZach/pace

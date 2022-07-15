@@ -5,7 +5,9 @@ categories: 'Solar Physics'
 tags: [python, jupyter, sunpy]
 date: 2018-09-12 20:16:36
 ---
-[<i class="fas fa-download"></i> Jupyter Notebook](/downloads/notebooks/fido.zip)
+{% btn [1], Jupyter Notebook, download fa-fw %}
+
+[1]: /downloads/notebooks/fido.zip
 
 ```python
 import astropy.units as u

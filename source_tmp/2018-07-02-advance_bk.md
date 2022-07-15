@@ -6,7 +6,7 @@ categories: 'Solar Physics'
 tags: [python, conda, jupyter, astropy, sunpy]
 date: 2018-07-02 21:46:13
 ---
-[<i class="fas fa-download"></i> Jupyter Notebook](/downloads/notebooks/python-intro.zip)
+[<i class="fas fa-file-arrow-down"></i> Jupyter Notebook](/downloads/notebooks/python-intro.zip)
 
 ## Anaconda
 

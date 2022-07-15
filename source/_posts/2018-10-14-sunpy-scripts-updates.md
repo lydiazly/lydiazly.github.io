@@ -6,11 +6,15 @@ date: "2018-10-14 16:07:46 +0800"
 ---
 Update:
 
-[<i class="fas fa-link"></i> Example: plot HMI](example_plothmi.html)<br>
+<p align=left>
+{% btn [1], Jupyter Notebook, download fa-fw %}
+{% btn [2], Example Data, download fa-fw %}<br>
+{% btn [3], User Module, download fa-fw %} ([doc](usr_sunpy.html))
+</p>
 
-[<i class="fas fa-link"></i> Example: projection](example_projection.html)<br>
-
-[<i class="fas fa-download"></i> User Module](https://github.com/lydiazly/lydiazly.github.io/raw/main/source/downloads/scripts/sunpy-modules.zip) ([help](usr_sunpy.html))
+[1]: /downloads/notebooks/example_hmi.zip
+[2]: https://pan.baidu.com/s/1nwsIcDr?pwd=s5re
+[3]: /downloads/scripts/sunpy-modules.zip
 
 [ Tested ]
 

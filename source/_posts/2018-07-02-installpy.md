@@ -5,7 +5,7 @@ categories: 'Solar Physics'
 tags: [python, conda, jupyter, astropy, sunpy, install]
 date: 2018-07-02 20:45:13
 ---
-[<i class="fas fa-download"></i> Jupyter Notebook](/downloads/notebooks/installpy.zip)
+[<i class="fas fa-file-arrow-down"></i> Jupyter Notebook](/downloads/notebooks/installpy.zip)
 
 <small><font color=gray>[Update 2022-07-12] Some outputs are updated with python 3.10.</font></small>
 

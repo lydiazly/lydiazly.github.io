@@ -5,11 +5,15 @@ categories: 'Solar Physics'
 tags: [python, jupyter, sunpy]
 date: 2018-10-14 16:06:31
 ---
-[<i class="fas fa-download"></i> Jupyter Notebook](/downloads/notebooks/example_hmi.zip)
+<p align=left>
+{% btn [1], Jupyter Notebook, download fa-fw %}
+{% btn [2], Example Data, download fa-fw %}<br>
+{% btn [3], User Module, download fa-fw %} ([doc](usr_sunpy.html))
+</p>
 
-[<i class="fas fa-download"></i> Example Data](https://pan.baidu.com/s/1nwsIcDr) <span style="color:gray">(pswd:s5re)</span>
-
-[<i class="fas fa-download"></i> User Module](https://github.com/lydiazly/lydiazly.github.io/raw/main/source/downloads/scripts/sunpy-modules.zip) ([help](usr_sunpy.html))
+[1]: /downloads/notebooks/example_hmi.zip
+[2]: https://pan.baidu.com/s/1nwsIcDr?pwd=s5re
+[3]: /downloads/scripts/sunpy-modules.zip
 
 ```python
 from __future__ import division, print_function
@@ -126,7 +130,6 @@ ax1.set_ylim((valid_index[1].min()-100, valid_index[1].max()+100));  # pix
 
 
 
-    <IPython.core.display.Javascript object>
 
 
 
@@ -146,7 +149,6 @@ plot_vmap(smapbx, smapby, smapbz, ax2, iskip=iskip, jskip=jskip, cmin=50., vmax=
 ```
 
 
-    <IPython.core.display.Javascript object>
 
 
 
@@ -187,9 +189,8 @@ ax3.set_ylim((-110,100));  # arcsec
 ```
 
 
-    <IPython.core.display.Javascript object>
 
 
 
-<img src="/example_projection/projection3.png"900">
+<img src="/example_projection/projection3.png" width="900">
 

@@ -1,1 +1,1 @@
-[<i class="fas fa-download"></i> Jupyter Notebook](/downloads/notebooks/installpy.zip)
+[<i class="fas fa-file-arrow-down"></i> Jupyter Notebook](/downloads/notebooks/installpy.zip)
