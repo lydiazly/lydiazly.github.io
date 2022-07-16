@@ -1,5 +1,5 @@
 ---
-title: "Python 的脚本与交互式环境"
+title: "Python notes: invoke variables from scripts in interactive mode"
 categories: 'Solar Physics'
 tags: python
 date: 2018-10-15 22:46:01
