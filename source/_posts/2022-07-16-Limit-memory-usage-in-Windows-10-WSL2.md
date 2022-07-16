@@ -1,7 +1,7 @@
 ---
 title: Limit the memory usage in Windows 10 WSL2
 date: 2022-07-16 14:56:11
-categories: 'Other'
+categories: 'Miscellaneous'
 tags: [wsl2, powershell]
 ---
 ## Limit the memory usage
