@@ -6,7 +6,7 @@
   <link href="https://lydiazly.github.io/atom.xml" rel="self"/>
   
   <link href="https://lydiazly.github.io/"/>
-  <updated>2022-07-12T15:39:03.000Z</updated>
+  <updated>2022-07-16T06:56:11.000Z</updated>
   <id>https://lydiazly.github.io/</id>
   
   <author>
@@ -15,6 +15,44 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Limit the memory usage in Windows 10 WSL2</title>
+    <link href="https://lydiazly.github.io/2022-07-16-Limit-memory-usage-in-Windows-10-WSL2"/>
+    <id>https://lydiazly.github.io/2022-07-16-Limit-memory-usage-in-Windows-10-WSL2</id>
+    <published>2022-07-16T06:56:11.000Z</published>
+    <updated>2022-07-16T06:56:11.000Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;limit-the-memory-usage&quot;&gt;Limit the memory usage&lt;/h2&gt;
+&lt;p&gt;It&#39;s very annoying that WSL2 was always eating up my poor RAM. There
+is a solution. It&#39;s working, except that the memory usage can&#39;t be
+exactly &#39;limited&#39; but &#39;fixed&#39;.&lt;/p&gt;
+&lt;p&gt;My distribution is:&lt;/p&gt;
+&lt;pre class=&quot;line-numbers language-powershell&quot; data-language=&quot;powershell&quot;&gt;&lt;code class=&quot;language-powershell&quot;&gt;&gt; wsl &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;l &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;v
+  NAME            STATE           VERSION
+&lt;span class=&quot;token operator&quot;&gt;*&lt;/span&gt; Ubuntu-18&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;04    Running         2&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Create a configure file named &lt;code&gt;.wslconfig&lt;/code&gt; in your user
+directory in Windows.&lt;/p&gt;
+&lt;p&gt;Open PowerShell as Administrator, shutdown your WSL2 and edit the
+file:&lt;/p&gt;
+&lt;pre class=&quot;line-numbers language-powershell&quot; data-language=&quot;powershell&quot;&gt;&lt;code class=&quot;language-powershell&quot;&gt;&gt; wsl &lt;span class=&quot;token operator&quot;&gt;--&lt;/span&gt;shutdown
+&gt; notepad &lt;span class=&quot;token string&quot;&gt;&quot;&lt;span class=&quot;token variable&quot;&gt;$env&lt;/span&gt;:USERPROFILE\.wslconfig&quot;&lt;/span&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;For me the content is:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;[wsl2]
+memory=2GB
+swap=0&lt;/code&gt;&lt;/pre&gt;</summary>
+    
+    
+    
+    <category term="Miscellaneous" scheme="https://lydiazly.github.io/categories/Miscellaneous/"/>
+    
+    
+    <category term="wsl2" scheme="https://lydiazly.github.io/tags/wsl2/"/>
+    
+    <category term="powershell" scheme="https://lydiazly.github.io/tags/powershell/"/>
+    
+  </entry>
   
   <entry>
     <title>Coming back</title>
@@ -100,7 +138,7 @@ data &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; pickle&lt;span 
   </entry>
   
   <entry>
-    <title>Python 的脚本与交互式环境</title>
+    <title>Python notes: invoke variables from scripts in interactive mode</title>
     <link href="https://lydiazly.github.io/2018-10-15-scripts-and-interactive-mode"/>
     <id>https://lydiazly.github.io/2018-10-15-scripts-and-interactive-mode</id>
     <published>2018-10-15T14:46:01.000Z</published>
@@ -123,7 +161,7 @@ a&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot
   </entry>
   
   <entry>
-    <title>SunPy Scripts Updates</title>
+    <title>SunPy scripts updates</title>
     <link href="https://lydiazly.github.io/2018-10-14-sunpy-scripts-updates"/>
     <id>https://lydiazly.github.io/2018-10-14-sunpy-scripts-updates</id>
     <published>2018-10-14T08:07:46.000Z</published>
@@ -251,7 +289,7 @@ sys&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;path&lt;span cl
   </entry>
   
   <entry>
-    <title>JSOC Download Example</title>
+    <title>JSOC download example</title>
     <link href="https://lydiazly.github.io/jsoc-download-example"/>
     <id>https://lydiazly.github.io/jsoc-download-example</id>
     <published>2018-09-12T12:16:36.000Z</published>

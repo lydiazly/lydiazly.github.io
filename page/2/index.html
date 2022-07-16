@@ -87,7 +87,7 @@
 
 
 <nav class="site-nav">
-  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags<span class="badge">8</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories<span class="badge">1</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">14</span></a></li><li class="menu-item menu-item-rss"><a href="/atom.xml" rel="section"><i class="fa fa-rss fa-fw"></i>RSS</a></li>
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags<span class="badge">10</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories<span class="badge">2</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">15</span></a></li><li class="menu-item menu-item-rss"><a href="/atom.xml" rel="section"><i class="fa fa-rss fa-fw"></i>RSS</a></li>
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
         </a>
@@ -156,18 +156,18 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">14</span>
+          <span class="site-state-item-count">15</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
           <a href="/categories/">
-        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-count">2</span>
         <span class="site-state-item-name">categories</span></a>
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-count">10</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -215,6 +215,126 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://lydiazly.github.io/2018-10-14-sunpy-scripts-updates">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Lydia Zhang">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Lydia's notes">
+      <meta itemprop="description" content="Tips of Python, etc.">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Lydia's notes">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2018-10-14-sunpy-scripts-updates" class="post-title-link" itemprop="url">SunPy scripts updates</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2018-10-14 16:07:46" itemprop="dateCreated datePublished" datetime="2018-10-14T16:07:46+08:00">2018-10-14</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Solar-Physics/" itemprop="url" rel="index"><span itemprop="name">Solar Physics</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>Update:</p>
+<p align="left">
+<a class="btn" href="[nb]"><i class="fa fa-download fa-fw"></i>Jupyter Notebook</a>
+<a class="btn" href="[eg]"><i class="fa fa-download fa-fw"></i>Example Data</a>
+<br> <a class="btn" href="[mod]"><i class="fa fa-download fa-fw"></i>User Module</a> (<a href="/usr_sunpy.html">doc</a>)
+</p>
+<p>[ Tested ]</p>
+<p>Ubuntu 16.04 LTS</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Date</th>
+<th style="text-align: center;">Python</th>
+<th style="text-align: center;">Sunpy</th>
+<th style="text-align: center;">NumPy</th>
+<th style="text-align: center;">SciPy</th>
+<th style="text-align: center;">Matplotlib</th>
+<th style="text-align: center;">Astropy</th>
+<th style="text-align: center;">Pandas</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">2018-10-13</td>
+<td style="text-align: center;">3.6.6</td>
+<td style="text-align: center;"><strong>0.9.3</strong></td>
+<td style="text-align: center;">1.15.2</td>
+<td style="text-align: center;">1.1.0</td>
+<td style="text-align: center;">3.0.0</td>
+<td style="text-align: center;">3.0.4</td>
+<td style="text-align: center;">0.23.4</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Add <code>aiaprep_usr()</code>.</li>
+<li>Change parameter list of <code>plot_map()</code>,
+<code>plot_vmap()</code>, <code>proj_matrix()</code>.</li>
+<li>Change return value of <code>_get_image_params()</code> from a tuple
+to a dict.</li>
+<li>Adjust positions of colorbar &amp; title.</li>
+<li>Fix docs.</li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -464,7 +584,7 @@ sys<span class="token punctuation">.</span>path<span class="token punctuation">.
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/jsoc-download-example" class="post-title-link" itemprop="url">JSOC Download Example</a>
+          <a href="/jsoc-download-example" class="post-title-link" itemprop="url">JSOC download example</a>
         </h2>
 
         <div class="post-meta-container">
@@ -618,110 +738,6 @@ target="_blank" rel="noopener" href="https://www.harrisgeospatial.com/docs/Pytho
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2018-07-25-IDL-8.7#more" rel="contents">
-                Read more &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://lydiazly.github.io/jsoc">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Lydia Zhang">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Lydia's notes">
-      <meta itemprop="description" content="Tips of Python, etc.">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | Lydia's notes">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/jsoc" class="post-title-link" itemprop="url">Example: downloading data from JSOC</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2018-07-12 17:09:47" itemprop="dateCreated datePublished" datetime="2018-07-12T17:09:47+08:00">2018-07-12</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/Solar-Physics/" itemprop="url" rel="index"><span itemprop="name">Solar Physics</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <a class="btn" href="[1]"><i class="fa fa-download fa-fw"></i>Jupyter Notebook</a>
-<p>Reference <a
-target="_blank" rel="noopener" href="http://docs.sunpy.org/en/stable/guide/acquiring_data/jsoc.html"
-class="uri">http://docs.sunpy.org/en/stable/guide/acquiring_data/jsoc.html</a></p>
-<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token operator">%</span>load_ext autoreload
-<span class="token operator">%</span>autoreload <span class="token number">2</span>
-
-<span class="token keyword">import</span> astropy<span class="token punctuation">.</span>units <span class="token keyword">as</span> u
-
-<span class="token keyword">from</span> sunpy<span class="token punctuation">.</span>net <span class="token keyword">import</span> Fido<span class="token punctuation">,</span> attrs
-
-<span class="token comment"># Suppress warnings of pandas, astropy</span>
-<span class="token keyword">import</span> warnings
-warnings<span class="token punctuation">.</span>simplefilter<span class="token punctuation">(</span><span class="token string">"ignore"</span><span class="token punctuation">,</span> category<span class="token operator">=</span>FutureWarning<span class="token punctuation">)</span>
-<span class="token keyword">from</span> astropy<span class="token punctuation">.</span>utils<span class="token punctuation">.</span>exceptions <span class="token keyword">import</span> AstropyDeprecationWarning
-warnings<span class="token punctuation">.</span>simplefilter<span class="token punctuation">(</span><span class="token string">"ignore"</span><span class="token punctuation">,</span> category<span class="token operator">=</span>AstropyDeprecationWarning<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>To be clear, here we use <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">from</span> sunpy<span class="token punctuation">.</span>net <span class="token keyword">import</span> Fido<span class="token punctuation">,</span> attrs<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre> instead of examples in <a
-target="_blank" rel="noopener" href="http://docs.sunpy.org/en/stable/guide/acquiring_data/jsoc.html"
-class="uri">http://docs.sunpy.org/en/stable/guide/acquiring_data/jsoc.html</a>
-<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">from</span> sunpy<span class="token punctuation">.</span>net <span class="token keyword">import</span> Fido<span class="token punctuation">,</span> attrs <span class="token keyword">as</span> a<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/jsoc#more" rel="contents">
                 Read more &raquo;
               </a>
             </div>
