@@ -169,7 +169,7 @@ conda [cmd] --help
 ```
 
 miniconda 下载 <https://conda.io/miniconda.html><br>
-安装参考 <https://conda.io/docs/user-guide/install/index.html>
+安装参考 <https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html>
 
 #### environment
 

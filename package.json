@@ -30,5 +30,8 @@
     "hexo-theme-next": "^8.12.2",
     "lozad": "^1.16.0",
     "medium-zoom": "^1.0.6"
+  },
+  "devDependencies": {
+    "hexo-broken-links-checker": "^2.1.0"
   }
 }
