@@ -475,8 +475,8 @@ dependencies between packages and platforms.&lt;br&gt;
 &lt;em&gt;hard link&lt;/em&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;(更多讨论参考 &lt;a
-href=&quot;http://jakevdp.github.io/blog/2016/08/25/conda-myths-and-misconceptions/)&quot;
-class=&quot;uri&quot;&gt;http://jakevdp.github.io/blog/2016/08/25/conda-myths-and-misconceptions/)&lt;/a&gt;</summary>
+href=&quot;https://jakevdp.github.io/blog/2016/08/25/conda-myths-and-misconceptions/)&quot;
+class=&quot;uri&quot;&gt;https://jakevdp.github.io/blog/2016/08/25/conda-myths-and-misconceptions/)&lt;/a&gt;</summary>
     
     
     
@@ -503,40 +503,22 @@ class=&quot;uri&quot;&gt;http://jakevdp.github.io/blog/2016/08/25/conda-myths-an
     <updated>2018-07-02T12:56:13.000Z</updated>
     
     
-    <summary type="html">&lt;p&gt;&lt;a
-href=&quot;/downloads/notebooks/python-intro.zip&quot;&gt;&lt;i class=&quot;fas fa-file-arrow-down&quot;&gt;&lt;/i&gt;
-Jupyter Notebook&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id=&quot;简介&quot;&gt;简介&lt;/h2&gt;
-&lt;p&gt;优势: 开源, 用户广, 用途广, 社区完善, 新手友好&lt;/p&gt;
-&lt;p&gt;&lt;a
-href=&quot;https://www.jetbrains.com/research/python-developers-survey-2017/&quot;
-class=&quot;uri&quot;&gt;https://www.jetbrains.com/research/python-developers-survey-2017/&lt;/a&gt;
-&lt;br&gt;&lt;br&gt; 2017年的 python 使用调查报告 &lt;a
-href=&quot;https://www.jetbrains.com/research/python-developers-survey-2017/&quot;
-class=&quot;uri&quot;&gt;https://www.jetbrains.com/research/python-developers-survey-2017/&lt;/a&gt;
-&lt;img data-src=&#39;/main/Python Developers Survey 2017 - Results-018.png&#39; &gt;
-&lt;img data-src=&#39;/main/Python Developers Survey 2017 - Results-019.png&#39; &gt;
-&lt;img data-src=&#39;/main/Python Developers Survey 2017 - Results-020.png&#39; &gt;&lt;/p&gt;
+    <summary type="html">&lt;p&gt;&lt;a href=&quot;/downloads/notebooks/python-intro.zip&quot;&gt;&lt;i class=&quot;fas fa-file-arrow-down&quot;&gt;&lt;/i&gt; Jupyter Notebook&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;简介&quot;&gt;&lt;a href=&quot;#简介&quot; class=&quot;headerlink&quot; title=&quot;简介&quot;&gt;&lt;/a&gt;简介&lt;/h2&gt;&lt;p&gt;优势: 开源, 用户广, 用途广, 社区完善, 新手友好&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.jetbrains.com/research/python-developers-survey-2017/&quot;&gt;https://www.jetbrains.com/research/python-developers-survey-2017/&lt;/a&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;2017年的 python 使用调查报告 &lt;a href=&quot;https://www.jetbrains.com/research/python-developers-survey-2017/&quot;&gt;https://www.jetbrains.com/research/python-developers-survey-2017/&lt;/a&gt;&lt;br&gt;&lt;img data-src=&#39;/main/Python Developers Survey 2017 - Results-018.png&#39; &gt;&lt;br&gt;&lt;img data-src=&#39;/main/Python Developers Survey 2017 - Results-019.png&#39; &gt;&lt;br&gt;&lt;img data-src=&#39;/main/Python Developers Survey 2017 - Results-020.png&#39; &gt;&lt;/p&gt;
 &lt;p&gt;参考网站:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;官方网站: &lt;a href=&quot;https://www.python.org/&quot;
-class=&quot;uri&quot;&gt;https://www.python.org/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;stackoverflow &lt;a
-href=&quot;https://stackoverflow.com/questions/tagged/python&quot;
-class=&quot;uri&quot;&gt;https://stackoverflow.com/questions/tagged/python&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;官方文档 &lt;a href=&quot;https://docs.python.org&quot;
-class=&quot;uri&quot;&gt;https://docs.python.org&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;廖雪峰的网站 (包含 python2.7 和 python3 的教程) &lt;a
-href=&quot;https://www.liaoxuefeng.com&quot;
-class=&quot;uri&quot;&gt;https://www.liaoxuefeng.com&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;wikibooks &lt;a href=&quot;https://en.wikibooks.org/wiki/Python_Programming&quot;
-class=&quot;uri&quot;&gt;https://en.wikibooks.org/wiki/Python_Programming&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;演示代码执行过程的工具 &lt;a href=&quot;http://pythontutor.com/&quot;
-class=&quot;uri&quot;&gt;http://pythontutor.com/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;天文相关教程 (较新) &lt;a href=&quot;https://python4astronomers.github.io&quot;
-class=&quot;uri&quot;&gt;https://python4astronomers.github.io&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;官方网站: &lt;a href=&quot;https://www.python.org/&quot;&gt;https://www.python.org/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;stackoverflow &lt;a href=&quot;https://stackoverflow.com/questions/tagged/python&quot;&gt;https://stackoverflow.com/questions/tagged/python&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;官方文档 &lt;a href=&quot;https://docs.python.org/&quot;&gt;https://docs.python.org&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;廖雪峰的网站 (包含 python2.7 和 python3 的教程) &lt;a href=&quot;https://www.liaoxuefeng.com/&quot;&gt;https://www.liaoxuefeng.com&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;wikibooks &lt;a href=&quot;https://en.wikibooks.org/wiki/Python_Programming&quot;&gt;https://en.wikibooks.org/wiki/Python_Programming&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;演示代码执行过程的工具 &lt;a href=&quot;http://pythontutor.com/&quot;&gt;http://pythontutor.com/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;天文相关教程 (较新) &lt;a href=&quot;https://python4astronomers.github.io/&quot;&gt;https://python4astronomers.github.io&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;br&gt; 获取 python 包/模块/函数的帮助:&lt;/p&gt;
+&lt;br&gt;
+获取 python 包/模块/函数的帮助:
+
 &lt;pre class=&quot;line-numbers language-python&quot; data-language=&quot;python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;# python&lt;/span&gt;
 &lt;span class=&quot;token operator&quot;&gt;&gt;&gt;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;help&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;name&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;pre class=&quot;line-numbers language-sh&quot; data-language=&quot;sh&quot;&gt;&lt;code class=&quot;language-sh&quot;&gt;# shell

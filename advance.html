@@ -331,8 +331,8 @@ dependencies between packages and platforms.<br>
 <em>hard link</em>.</li>
 </ul>
 <p>(更多讨论参考 <a
-target="_blank" rel="noopener" href="http://jakevdp.github.io/blog/2016/08/25/conda-myths-and-misconceptions/)"
-class="uri">http://jakevdp.github.io/blog/2016/08/25/conda-myths-and-misconceptions/)</a>
+target="_blank" rel="noopener" href="https://jakevdp.github.io/blog/2016/08/25/conda-myths-and-misconceptions/)"
+class="uri">https://jakevdp.github.io/blog/2016/08/25/conda-myths-and-misconceptions/)</a>
 <span id="more"></span></p>
 <p><img data-src='/advance/Screenshot_20180617-181206.png' width='650'/></p>
 <ul>
@@ -450,9 +450,10 @@ ipython 环境的变量:</p>
 <pre><code>/home/lydia/codes/zly/python/python-intro</code></pre>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python">cd $current<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <pre><code>/home/lydia/codes/zly/python/python-intro</code></pre>
-<p>见 <a
+<p>见 <del><a
 target="_blank" rel="noopener" href="http://mmcdan.github.io/posts/interacting-with-the-shell-via-jupyter-notebook/"
-class="uri">http://mmcdan.github.io/posts/interacting-with-the-shell-via-jupyter-notebook/</a></p>
+class="uri">http://mmcdan.github.io/posts/interacting-with-the-shell-via-jupyter-notebook/</a></del>
+(broken)</p>
 <ul>
 <li>列出当前的变量信息</li>
 </ul>
@@ -1275,8 +1276,8 @@ x2 &#x3D; np.linspace(...)
 y2 &#x3D; f(x2)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre> 见 <a
 href="examples/test_plot.py">examples/test_plot.py</a></p></li>
 <li><p>scipy <a
-target="_blank" rel="noopener" href="https://docs.scipy.org/doc/scipy/reference/tutorial/interpolate.html"
-class="uri">https://docs.scipy.org/doc/scipy/reference/tutorial/interpolate.html</a></p></li>
+target="_blank" rel="noopener" href="https://docs.scipy.org/doc/scipy/tutorial/interpolate.html"
+class="uri">https://docs.scipy.org/doc/scipy/tutorial/interpolate.html</a></p></li>
 </ul>
 <h3 id="求极值">求极值</h3>
 <ul>
@@ -2201,12 +2202,12 @@ warnings<span class="token punctuation">.</span>simplefilter<span class="token p
 <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
 <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h2 id="urllib-requests">urllib, requests</h2>
-<p>示例和文件来自 <a target="_blank" rel="noopener" href="http://python4astronomers.github.com"
-class="uri">http://python4astronomers.github.com</a></p>
+<p>示例和文件来自 <a target="_blank" rel="noopener" href="http://python4astronomers.github.io"
+class="uri">http://python4astronomers.github.io</a></p>
 <p>注意 python3 不再使用 <code>urllib2</code></p>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># 方法1</span>
 <span class="token keyword">import</span> urllib
-url <span class="token operator">=</span> <span class="token string">'http://python4astronomers.github.com/_downloads/myidlfile.sav'</span>
+url <span class="token operator">=</span> <span class="token string">'http://python4astronomers.github.io/_downloads/myidlfile.sav'</span>
 urllib<span class="token punctuation">.</span>request<span class="token punctuation">.</span>urlretrieve<span class="token punctuation">(</span>url<span class="token punctuation">,</span> <span class="token string">'myidlfile.sav'</span><span class="token punctuation">)</span>
 <span class="token comment"># 方法2</span>
 <span class="token keyword">with</span> <span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">'myidlfile.sav'</span><span class="token punctuation">,</span> <span class="token string">'wb'</span><span class="token punctuation">)</span> <span class="token keyword">as</span> f<span class="token punctuation">:</span>
