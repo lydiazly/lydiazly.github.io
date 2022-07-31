@@ -5,7 +5,9 @@ categories: 'Solar Physics'
 tags: [python, jupyter, sunpy]
 date: 2018-09-12 20:16:36
 ---
+<p align=left>
 {% btn [1], Jupyter Notebook, download fa-fw %}
+</p>
 
 [1]: /downloads/notebooks/fido.zip
 
