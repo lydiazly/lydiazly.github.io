@@ -296,7 +296,9 @@ sys&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;path&lt;span cl
     <updated>2018-09-12T12:16:36.000Z</updated>
     
     
-    <summary type="html">&lt;a class=&quot;btn&quot; href=&quot;[1]&quot;&gt;&lt;i class=&quot;fa fa-download fa-fw&quot;&gt;&lt;/i&gt;Jupyter Notebook&lt;/a&gt;
+    <summary type="html">&lt;p align=&quot;left&quot;&gt;
+&lt;a class=&quot;btn&quot; href=&quot;[1]&quot;&gt;&lt;i class=&quot;fa fa-download fa-fw&quot;&gt;&lt;/i&gt;Jupyter Notebook&lt;/a&gt;
+&lt;/p&gt;
 &lt;pre class=&quot;line-numbers language-python&quot; data-language=&quot;python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; astropy&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;units &lt;span class=&quot;token keyword&quot;&gt;as&lt;/span&gt; u
 &lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt; sunpy&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;net &lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; attrs&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; jsoc
 
@@ -374,7 +376,9 @@ href=&quot;https://www.harrisgeospatial.com/docs/Python.html&quot;&gt;Python Bri
     <updated>2018-07-12T09:09:47.000Z</updated>
     
     
-    <summary type="html">&lt;a class=&quot;btn&quot; href=&quot;[1]&quot;&gt;&lt;i class=&quot;fa fa-download fa-fw&quot;&gt;&lt;/i&gt;Jupyter Notebook&lt;/a&gt;
+    <summary type="html">&lt;p align=&quot;left&quot;&gt;
+&lt;a class=&quot;btn&quot; href=&quot;[1]&quot;&gt;&lt;i class=&quot;fa fa-download fa-fw&quot;&gt;&lt;/i&gt;Jupyter Notebook&lt;/a&gt;
+&lt;/p&gt;
 &lt;p&gt;Reference &lt;a
 href=&quot;http://docs.sunpy.org/en/stable/guide/acquiring_data/jsoc.html&quot;
 class=&quot;uri&quot;&gt;http://docs.sunpy.org/en/stable/guide/acquiring_data/jsoc.html&lt;/a&gt;&lt;/p&gt;
@@ -416,7 +420,9 @@ class=&quot;uri&quot;&gt;http://docs.sunpy.org/en/stable/guide/acquiring_data/js
     <updated>2018-07-11T14:10:47.000Z</updated>
     
     
-    <summary type="html">&lt;a class=&quot;btn&quot; href=&quot;[1]&quot;&gt;&lt;i class=&quot;fa fa-download fa-fw&quot;&gt;&lt;/i&gt;Jupyter Notebook&lt;/a&gt;
+    <summary type="html">&lt;p align=&quot;left&quot;&gt;
+&lt;a class=&quot;btn&quot; href=&quot;[1]&quot;&gt;&lt;i class=&quot;fa fa-download fa-fw&quot;&gt;&lt;/i&gt;Jupyter Notebook&lt;/a&gt;
+&lt;/p&gt;
 &lt;p&gt;Reference &lt;a
 href=&quot;http://docs.sunpy.org/en/stable/guide/acquiring_data/fido.html&quot;
 class=&quot;uri&quot;&gt;http://docs.sunpy.org/en/stable/guide/acquiring_data/fido.html&lt;/a&gt;&lt;/p&gt;
@@ -451,9 +457,9 @@ class=&quot;uri&quot;&gt;http://docs.sunpy.org/en/stable/guide/acquiring_data/js
     <updated>2018-07-02T13:46:13.000Z</updated>
     
     
-    <summary type="html">&lt;p&gt;&lt;a
-href=&quot;/downloads/notebooks/python-intro.zip&quot;&gt;&lt;i class=&quot;fas fa-file-arrow-down&quot;&gt;&lt;/i&gt;
-Jupyter Notebook&lt;/a&gt;&lt;/p&gt;
+    <summary type="html">&lt;p align=&quot;left&quot;&gt;
+&lt;a class=&quot;btn&quot; href=&quot;[1]&quot;&gt;&lt;i class=&quot;fa fa-download fa-fw&quot;&gt;&lt;/i&gt;Jupyter Notebook&lt;/a&gt;
+&lt;/p&gt;
 &lt;h2 id=&quot;anaconda&quot;&gt;Anaconda&lt;/h2&gt;
 &lt;blockquote&gt;
 &lt;p&gt;A &lt;strong&gt;conda package&lt;/strong&gt; is a compressed tarball file that
@@ -503,22 +509,40 @@ class=&quot;uri&quot;&gt;https://jakevdp.github.io/blog/2016/08/25/conda-myths-a
     <updated>2018-07-02T12:56:13.000Z</updated>
     
     
-    <summary type="html">&lt;p&gt;&lt;a href=&quot;/downloads/notebooks/python-intro.zip&quot;&gt;&lt;i class=&quot;fas fa-file-arrow-down&quot;&gt;&lt;/i&gt; Jupyter Notebook&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id=&quot;简介&quot;&gt;&lt;a href=&quot;#简介&quot; class=&quot;headerlink&quot; title=&quot;简介&quot;&gt;&lt;/a&gt;简介&lt;/h2&gt;&lt;p&gt;优势: 开源, 用户广, 用途广, 社区完善, 新手友好&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://www.jetbrains.com/research/python-developers-survey-2017/&quot;&gt;https://www.jetbrains.com/research/python-developers-survey-2017/&lt;/a&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;2017年的 python 使用调查报告 &lt;a href=&quot;https://www.jetbrains.com/research/python-developers-survey-2017/&quot;&gt;https://www.jetbrains.com/research/python-developers-survey-2017/&lt;/a&gt;&lt;br&gt;&lt;img data-src=&#39;/main/Python Developers Survey 2017 - Results-018.png&#39; &gt;&lt;br&gt;&lt;img data-src=&#39;/main/Python Developers Survey 2017 - Results-019.png&#39; &gt;&lt;br&gt;&lt;img data-src=&#39;/main/Python Developers Survey 2017 - Results-020.png&#39; &gt;&lt;/p&gt;
+    <summary type="html">&lt;p align=&quot;left&quot;&gt;
+&lt;a class=&quot;btn&quot; href=&quot;[1]&quot;&gt;&lt;i class=&quot;fa fa-download fa-fw&quot;&gt;&lt;/i&gt;Jupyter Notebook&lt;/a&gt;
+&lt;/p&gt;
+&lt;h2 id=&quot;简介&quot;&gt;简介&lt;/h2&gt;
+&lt;p&gt;优势: 开源, 用户广, 用途广, 社区完善, 新手友好&lt;/p&gt;
+&lt;p&gt;&lt;a
+href=&quot;https://www.jetbrains.com/research/python-developers-survey-2017/&quot;
+class=&quot;uri&quot;&gt;https://www.jetbrains.com/research/python-developers-survey-2017/&lt;/a&gt;
+&lt;br&gt;&lt;br&gt; 2017年的 python 使用调查报告 &lt;a
+href=&quot;https://www.jetbrains.com/research/python-developers-survey-2017/&quot;
+class=&quot;uri&quot;&gt;https://www.jetbrains.com/research/python-developers-survey-2017/&lt;/a&gt;
+&lt;img data-src=&#39;/main/Python Developers Survey 2017 - Results-018.png&#39; &gt;
+&lt;img data-src=&#39;/main/Python Developers Survey 2017 - Results-019.png&#39; &gt;
+&lt;img data-src=&#39;/main/Python Developers Survey 2017 - Results-020.png&#39; &gt;&lt;/p&gt;
 &lt;p&gt;参考网站:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;官方网站: &lt;a href=&quot;https://www.python.org/&quot;&gt;https://www.python.org/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;stackoverflow &lt;a href=&quot;https://stackoverflow.com/questions/tagged/python&quot;&gt;https://stackoverflow.com/questions/tagged/python&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;官方文档 &lt;a href=&quot;https://docs.python.org/&quot;&gt;https://docs.python.org&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;廖雪峰的网站 (包含 python2.7 和 python3 的教程) &lt;a href=&quot;https://www.liaoxuefeng.com/&quot;&gt;https://www.liaoxuefeng.com&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;wikibooks &lt;a href=&quot;https://en.wikibooks.org/wiki/Python_Programming&quot;&gt;https://en.wikibooks.org/wiki/Python_Programming&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;演示代码执行过程的工具 &lt;a href=&quot;http://pythontutor.com/&quot;&gt;http://pythontutor.com/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;天文相关教程 (较新) &lt;a href=&quot;https://python4astronomers.github.io/&quot;&gt;https://python4astronomers.github.io&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;官方网站: &lt;a href=&quot;https://www.python.org/&quot;
+class=&quot;uri&quot;&gt;https://www.python.org/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;stackoverflow &lt;a
+href=&quot;https://stackoverflow.com/questions/tagged/python&quot;
+class=&quot;uri&quot;&gt;https://stackoverflow.com/questions/tagged/python&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;官方文档 &lt;a href=&quot;https://docs.python.org&quot;
+class=&quot;uri&quot;&gt;https://docs.python.org&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;廖雪峰的网站 (包含 python2.7 和 python3 的教程) &lt;a
+href=&quot;https://www.liaoxuefeng.com&quot;
+class=&quot;uri&quot;&gt;https://www.liaoxuefeng.com&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;wikibooks &lt;a href=&quot;https://en.wikibooks.org/wiki/Python_Programming&quot;
+class=&quot;uri&quot;&gt;https://en.wikibooks.org/wiki/Python_Programming&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;演示代码执行过程的工具 &lt;a href=&quot;http://pythontutor.com/&quot;
+class=&quot;uri&quot;&gt;http://pythontutor.com/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;天文相关教程 (较新) &lt;a href=&quot;https://python4astronomers.github.io&quot;
+class=&quot;uri&quot;&gt;https://python4astronomers.github.io&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;br&gt;
-获取 python 包/模块/函数的帮助:
-
+&lt;p&gt;&lt;br&gt; 获取 python 包/模块/函数的帮助:&lt;/p&gt;
 &lt;pre class=&quot;line-numbers language-python&quot; data-language=&quot;python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;# python&lt;/span&gt;
 &lt;span class=&quot;token operator&quot;&gt;&gt;&gt;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;help&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;name&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;pre class=&quot;line-numbers language-sh&quot; data-language=&quot;sh&quot;&gt;&lt;code class=&quot;language-sh&quot;&gt;# shell
@@ -546,8 +570,11 @@ name?  &lt;span class=&quot;token comment&quot;&gt;# 弹出帮助文档, `Esc` �
     <updated>2018-07-02T12:45:13.000Z</updated>
     
     
-    <summary type="html">&lt;p&gt;&lt;a href=&quot;/downloads/notebooks/installpy.zip&quot;&gt;&lt;i class=&quot;fas fa-file-arrow-down&quot;&gt;&lt;/i&gt; Jupyter Notebook&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;small&gt;&lt;font color=gray&gt;[Update 2022-07-12] Some outputs are updated with python 3.10.&lt;/font&gt;&lt;/small&gt;&lt;/p&gt;</summary>
+    <summary type="html">&lt;p align=&quot;left&quot;&gt;
+&lt;a class=&quot;btn&quot; href=&quot;[1]&quot;&gt;&lt;i class=&quot;fa fa-download fa-fw&quot;&gt;&lt;/i&gt;Jupyter Notebook&lt;/a&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;small&gt;&lt;font color=gray&gt;[Update 2022-07-12] Some outputs are updated
+with python 3.10.&lt;/font&gt;&lt;/small&gt;&lt;/p&gt;</summary>
     
     
     
