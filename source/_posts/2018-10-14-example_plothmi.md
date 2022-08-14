@@ -5,16 +5,11 @@ categories: 'Solar Physics'
 tags: [python, jupyter, sunpy]
 date: 2018-10-14 16:06:23
 ---
-<p align=left>
-{% btn [nb], Jupyter Notebook, download fa-fw %}
-{% btn [eg], Example Data, download fa-fw %}<br>
-{% btn [mod], User Module, download fa-fw %} ([doc][doc])
+<p>
+{% btn https://github.com/lydiazly/python-intro/raw/master/notebooks/example_hmi.zip, Jupyter Notebook, download fa-fw %} <wbr>
+{% btn https://pan.baidu.com/s/1nwsIcDr?pwd=s5re, Example Data, download fa-fw %} <wbr>
+{% btn https://github.com/lydiazly/python-intro/raw/master/sunpy-modules.zip, User Module, download fa-fw %}<nobr> (<a href="https://github.com/lydiazly/scripts-sunpy/tree/master/modules">source</a> / <a href="/usr_sunpy.html">doc</a>)
 </p>
-
-[nb]: /downloads/notebooks/example_hmi.zip
-[eg]: https://pan.baidu.com/s/1nwsIcDr?pwd=s5re
-[mod]: /downloads/scripts/sunpy-modules.zip
-[doc]: /usr_sunpy.html
 
 ```python
 from __future__ import division, print_function

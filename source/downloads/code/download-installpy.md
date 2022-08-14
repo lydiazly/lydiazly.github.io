@@ -1,1 +1,0 @@
-[<i class="fas fa-file-arrow-down"></i> Jupyter Notebook](/downloads/notebooks/installpy.zip)

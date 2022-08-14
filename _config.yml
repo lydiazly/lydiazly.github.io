@@ -43,11 +43,13 @@ filename_case: 0
 render_drafts: false
 post_asset_folder: true
 marked: # hexo-renderer-marked
-  gfm: true
-  breaks: true
+  gfm: true # Enables GitHub flavored markdown
+  breaks: true # Enable GFM line breaks. This option requires the gfm option to be true.
   autolink: true
   prependRoot: true
   postAsset: true
+  # external_link:
+  #   enable: true # Open external links in a new tab.
 relative_link: false
 future: true
 highlight:
@@ -120,18 +122,37 @@ tag_generator:
 
 # hexo-renderer-markdown-it
 # markdown:
-#   preset: 'default'
+#   # preset: 'default'
 #   render:
 #     html: true
 #     xhtmlOut: false
 #     langPrefix: 'language-'
 #     breaks: true
 #     linkify: true
-#     typographer: true
-#     quotes: '“”‘’'
+#     typographer: false
 #   plugins:
+#     - markdown-it-abbr
+#     - markdown-it-cjk-breaks
+#     - markdown-it-deflist
+#     # - markdown-it-emoji
+#     - markdown-it-footnote
+#     - markdown-it-ins
+#     - markdown-it-mark
+#     - markdown-it-sub
+#     - markdown-it-sup
+#     # - markdown-it-checkbox
+#     # - markdown-it-imsize
+#     # - markdown-it-expandable
+#     # - name: markdown-it-container
+#     #   options: success
+#     # - name: markdown-it-container
+#     #   options: tips
+#     # - name: markdown-it-container
+#     #   options: warning
+#     # - name: markdown-it-container
+#     #   options: danger
 #   anchors:
-#     level: 6
+#     level: 2
 #     collisionSuffix: ''
 #     permalink: false
 #     permalinkClass: 'header-anchor'
@@ -176,3 +197,5 @@ feed:
 #         enable: true
 #         lifetime: 1440
 #         path: 'link-checker.json'
+
+# hexo-renderer-pandoc

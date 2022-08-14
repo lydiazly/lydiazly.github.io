@@ -347,7 +347,7 @@ preconnect: false
 text_align:
   # Available values: start | end | left | right | center | justify | justify-all | match-parent
   desktop: left
-  mobile: justify
+  mobile: left
 
 # Reduce padding / margin indents on devices with narrow width.
 mobile_layout_economy: false
@@ -382,9 +382,9 @@ codeblock:
 back2top:
   enable: true
   # Back to top in sidebar.
-  sidebar: true
+  sidebar: false
   # Scroll percent label in b2t button.
-  scrollpercent: false
+  scrollpercent: true
 
 # Reading progress bar
 reading_progress:
@@ -843,7 +843,7 @@ mermaid:
 # Use Animate.css to animate everything.
 # For more information: https://animate.style
 motion:
-  enable: true
+  enable: false
   async: true
   transition:
     # All available transition variants: https://theme-next.js.org/animate/

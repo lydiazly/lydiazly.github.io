@@ -30,4 +30,4 @@ Pandas 的 `read_table` ([官方文档](https://pandas.pydata.org/pandas-docs/st
 ---
 
 Pandas 的读取方法简单介绍参见:
-[用 pandas 读 csv](advance.html#91-用-pandas-读-csv)
+[用 pandas 读 csv](/advance.html#用-pandas-读-csv)
