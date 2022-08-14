@@ -15,17 +15,16 @@
 
 
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha256-DfWjNxDkM94fVBWx1H5BMMp0Zq7luBlV8QRcSES7s+0=" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha256-xejo6yLi6vGtAjcMIsY8BHdKsLg7QynVlFMzdQgUuy8=" crossorigin="anonymous">
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"lydiazly.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.12.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"width":250},"copycode":{"enable":true,"style":"mac"},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":true,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":true,"transition":{"post_block":"none","post_header":"none","post_body":"none","coll_header":"fadeInLeft","sidebar":"none"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js"></script>
+<script class="next-config" data-name="main" type="application/json">{"hostname":"lydiazly.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.12.3","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"width":250},"copycode":{"enable":true,"style":"mac"},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":true,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":false,"async":true,"transition":{"post_block":"none","post_header":"none","post_body":"none","coll_header":"fadeInLeft","sidebar":"none"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="Jupyter Notebook  Anaconda  A conda package is a compressed tarball file that contains system-level libraries, Python or other modules, executable programs and other components. Conda keeps track of">
+    <meta name="description" content="Jupyter Notebook  FITS Data  Anaconda  A conda package is a compressed tarball file that contains system-level libraries, Python or other modules, executable programs and other components. Conda keep">
 <meta property="og:type" content="blog">
 <meta property="og:title" content="Python 进阶 (lecture for Solar Group)">
 <meta property="og:url" content="https://lydiazly.github.io/advance">
 <meta property="og:site_name" content="Lydia&#39;s notes">
-<meta property="og:description" content="Jupyter Notebook  Anaconda  A conda package is a compressed tarball file that contains system-level libraries, Python or other modules, executable programs and other components. Conda keeps track of">
+<meta property="og:description" content="Jupyter Notebook  FITS Data  Anaconda  A conda package is a compressed tarball file that contains system-level libraries, Python or other modules, executable programs and other components. Conda keep">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://lydiazly.github.io/advance/Screenshot_20180617-181206.png">
 <meta property="og:image" content="https://lydiazly.github.io/advance/nbtutor1.png">
@@ -73,7 +72,7 @@
 <link rel="alternate" href="/atom.xml" title="Lydia's notes" type="application/atom+xml">
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+<body itemscope itemtype="http://schema.org/WebPage">
   <div class="headband"></div>
 
   <main class="main">
@@ -219,10 +218,6 @@
 
         </div>
       </div>
-        <div class="back-to-top animated" role="button" aria-label="Back to top">
-          <i class="fa fa-arrow-up"></i>
-          <span>0%</span>
-        </div>
     </div>
   </aside>
   <div class="sidebar-dimmer"></div>
@@ -231,6 +226,10 @@
     </header>
 
     
+  <div class="back-to-top" role="button" aria-label="Back to top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
   <div class="reading-progress-bar"></div>
 
 <noscript>
@@ -307,8 +306,9 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <p align="left">
-<a class="btn" href="[1]"><i class="fa fa-download fa-fw"></i>Jupyter Notebook</a>
+        <p>
+<a class="btn" target="_blank" rel="noopener" href="https://github.com/lydiazly/python-intro/raw/master/notebooks/python-intro.zip"><i class="fa fa-download fa-fw"></i>Jupyter Notebook</a>
+<wbr> <a class="btn" target="_blank" rel="noopener" href="https://pan.baidu.com/s/1nwsIcDr?pwd=s5re"><i class="fa fa-download fa-fw"></i>FITS Data</a>
 </p>
 <h2 id="anaconda">Anaconda</h2>
 <blockquote>
@@ -477,8 +477,7 @@ b          str     x</code></pre>
 <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token number">1</span> <span class="token operator">//</span> <span class="token number">2</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 <pre><code>0.5
 0</code></pre>
-<p>详见 <a href="#python-2--%3E-3-的转换">Python 2 -&gt; 3
-的转换</a></p>
+<p>详见 <a href="#python-2---3-的转换">Python 2 -&gt; 3 的转换</a></p>
 <h3 id="list-tuple">list, tuple</h3>
 <ul>
 <li>对 list 或 tuple, 当只有一个元素时, 注意加逗号:</li>
@@ -882,8 +881,8 @@ array<span class="token punctuation">(</span><span class="token punctuation">[</
        <span class="token punctuation">[</span><span class="token number">5.</span><span class="token punctuation">,</span> <span class="token number">5.</span><span class="token punctuation">,</span> <span class="token number">5.</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
        <span class="token punctuation">[</span><span class="token number">6.</span><span class="token punctuation">,</span> <span class="token number">6.</span><span class="token punctuation">,</span> <span class="token number">6.</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>可用来计算坐标的函数 (例如磁场的表达式等等, 见 <a
-href="examples/streamplot.py">examples/streamplot.py</a> )
-<pre class="line-numbers language-python" data-language="python"><code class="language-python">U <span class="token operator">=</span>   <span class="token punctuation">(</span>np<span class="token punctuation">.</span>cos<span class="token punctuation">(</span>k1 <span class="token operator">*</span> X<span class="token punctuation">)</span> <span class="token operator">*</span> np<span class="token punctuation">.</span>exp<span class="token punctuation">(</span><span class="token operator">-</span>k1 <span class="token operator">*</span> Y<span class="token punctuation">)</span>
+target="_blank" rel="noopener" href="https://github.com/lydiazly/python-intro/blob/master/examples/streamplot.py">examples/streamplot.py</a>
+) <pre class="line-numbers language-python" data-language="python"><code class="language-python">U <span class="token operator">=</span>   <span class="token punctuation">(</span>np<span class="token punctuation">.</span>cos<span class="token punctuation">(</span>k1 <span class="token operator">*</span> X<span class="token punctuation">)</span> <span class="token operator">*</span> np<span class="token punctuation">.</span>exp<span class="token punctuation">(</span><span class="token operator">-</span>k1 <span class="token operator">*</span> Y<span class="token punctuation">)</span>
      <span class="token operator">-</span> np<span class="token punctuation">.</span>cos<span class="token punctuation">(</span>k2 <span class="token operator">*</span> X<span class="token punctuation">)</span> <span class="token operator">*</span> np<span class="token punctuation">.</span>exp<span class="token punctuation">(</span><span class="token operator">-</span>k2 <span class="token operator">*</span> Y<span class="token punctuation">)</span><span class="token punctuation">)</span>
 V <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token operator">-</span> np<span class="token punctuation">.</span>sin<span class="token punctuation">(</span>k1 <span class="token operator">*</span> X<span class="token punctuation">)</span> <span class="token operator">*</span> np<span class="token punctuation">.</span>exp<span class="token punctuation">(</span><span class="token operator">-</span>k1 <span class="token operator">*</span> Y<span class="token punctuation">)</span>
      <span class="token operator">+</span> np<span class="token punctuation">.</span>sin<span class="token punctuation">(</span>k2 <span class="token operator">*</span> X<span class="token punctuation">)</span> <span class="token operator">*</span> np<span class="token punctuation">.</span>exp<span class="token punctuation">(</span><span class="token operator">-</span>k2 <span class="token operator">*</span> Y<span class="token punctuation">)</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre></p>
@@ -978,7 +977,7 @@ target="_blank" rel="noopener" href="https://github.com/joferkington/mpldatacurs
 <li>点击图像后在命令行显示光标处信息的例子</li>
 </ul>
 <p>命令行脚本: <a
-href="examples/test_imshow_click.py">examples/test_imshow_click.py</a>
+target="_blank" rel="noopener" href="https://github.com/lydiazly/python-intro/blob/master/examples/test_imshow_click.py">examples/test_imshow_click.py</a>
 (jupyter 中无法使用)</p>
 <ul>
 <li>布局问题 <a
@@ -994,15 +993,15 @@ class="uri">https://matplotlib.org/mpl_toolkits/mplot3d/tutorial.html</a></li>
 <h3 id="示例文件">示例文件</h3>
 <ul>
 <li><p>读取 fits, submap, 作图 <a
-href="https://lydiazly.github.io/example_plothmi.html">example_plothmi</a></p></li>
+href="/example_plothmi.html">example_plothmi</a></p></li>
 <li><p>投影 <a
-href="https://lydiazly.github.io/example_projection.html">example_projection</a></p></li>
-<li><p>下载数据 <a href="https://lydiazly.github.io/fido.html">fido</a>,
-<a href="https://lydiazly.github.io/jsoc.html">jsoc</a></p></li>
+href="/example_projection.html">example_projection</a></p></li>
+<li><p>下载数据 <a href="/fido.html">fido</a>, <a
+href="/jsoc.html">jsoc</a></p></li>
 </ul>
 <p>注意: 这些例子只是提供一个使用参考, 不一定是最优的.</p>
 <h3 id="示例中的-fits-读取方法">示例中的 fits 读取方法</h3>
-<p>更多 FITS 的读取方法参见 <a href="main.html#fits-文件读取">Python
+<p>更多 FITS 的读取方法参见 <a href="/main.html#fits-文件读取">Python
 简易教程#FITS-文件读取</a><br> 另见 <a
 target="_blank" rel="noopener" href="http://docs.astropy.org/en/stable/io/fits/usage/scripts.html">Astropy
 的命令行工具</a></p>
@@ -1153,9 +1152,8 @@ class="uri">http://docs.sunpy.org/en/stable/code_ref/map.html#using-map-objects<
 &gt;A number of the <strong>properties</strong> of this class are
 returned as <strong>two-value named tuples</strong> that can either be -
 indexed by
-position: <strong><font color=blue>[0]</font>, <font color=blue><a
-href="/downloads/notebooks/python-intro.zip">1</a></font></strong> - be
-accessed by the names: - pixel
+position: <strong><font color=blue>[0]</font>, <font color=blue>[1]</font></strong>
+- be accessed by the names: - pixel
 axes: <strong><font color=blue>.x</font>, <font color=blue>.y</font></strong><br>
 x and y refer to the FITS axes (x for columns y for rows) - spatial
 axes: <strong><font color=blue>.axis1</font>, <font color=blue>.axis2</font></strong><br>
@@ -1270,13 +1268,13 @@ plot_map<span class="token punctuation">(</span>ax<span class="token punctuation
 plot_vmap<span class="token punctuation">(</span>ax<span class="token punctuation">,</span> smapbx_h<span class="token punctuation">,</span> smapby_h<span class="token punctuation">,</span> smapbz_h<span class="token punctuation">,</span> coords<span class="token operator">=</span><span class="token punctuation">(</span>hx<span class="token punctuation">,</span> hy<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></p>
 <h2 id="插值-拟合">插值, 拟合</h2>
 <p>选择不限于这里列举的包, 以后也可能会有更合适的方法出现.</p>
-<p>相关安装见 <a href="installpy.html#其他">Python 安装和配置</a></p>
+<p>相关安装见 <a href="/installpy.html#其他">Python 安装和配置</a></p>
 <h3 id="插值">插值</h3>
 <ul>
 <li><p>numpy <pre class="line-numbers language-none"><code class="language-none">f &#x3D; interp1d(x, y, kind&#x3D;&#39;cubic&#39;[, fill_value&#x3D;&#39;extrapolate&#39;])
 x2 &#x3D; np.linspace(...)
 y2 &#x3D; f(x2)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre> 见 <a
-href="examples/test_plot.py">examples/test_plot.py</a></p></li>
+target="_blank" rel="noopener" href="https://github.com/lydiazly/python-intro/blob/master/examples/test_plot.py">examples/test_plot.py</a></p></li>
 <li><p>scipy <a
 target="_blank" rel="noopener" href="https://docs.scipy.org/doc/scipy/tutorial/interpolate.html"
 class="uri">https://docs.scipy.org/doc/scipy/tutorial/interpolate.html</a></p></li>
@@ -1302,7 +1300,9 @@ class="uri">https://github.com/lmfit/lmfit-py</a></p>
 class="uri">http://lmfit.github.io/lmfit-py/</a></p>
 <p>有现成模型, 也可以自定义模型.<br>
 可以方便地叠加不同拟合模型(比如多个高斯, 线性加高斯, 等等).<br> 例子见
-<a href="examples/lmfits.zip">examples/lmfits</a> (来自 <a
+<a
+target="_blank" rel="noopener" href="https://github.com/lydiazly/python-intro/raw/master/examples/lmfits.zip">examples/lmfits</a>
+(来自 <a
 target="_blank" rel="noopener" href="http://lmfit.github.io/lmfit-py/builtin_models.html#example-1-fit-peak-data-to-gaussian-lorentzian-and-voigt-profiles">LMFIT网站示例</a>
 )</p>
 <p>使用内置模型:</p>
@@ -1747,7 +1747,7 @@ class="uri">https://portal.hdfgroup.org/display/HDF5/Introduction+to+HDF5</a></p
 <p>相关包: <code>h5py</code> 或 <code>pandas</code> +
 <code>pytables</code>
 (http://www.pytables.org/usersguide/datatypes.html)</p>
-<p>安装见 <a href="installpy.html#其他">Python 安装和配置</a></p>
+<p>安装见 <a href="/installpy.html#其他">Python 安装和配置</a></p>
 <ul>
 <li>查看</li>
 </ul>
@@ -1991,7 +1991,7 @@ complib='zlib', complevel=9</td>
 4.8M    data/fits_pd_zlib.hdf5</code></pre>
 <h4 id="读取-cdf-文件">读取 CDF 文件</h4>
 <p>相关包 <code>cdflib</code>, 安装见 <a
-href="installpy.html#其他">Python 安装和配置#其他</a>
+href="/installpy.html#其他">Python 安装和配置#其他</a>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> cdflib
 f <span class="token operator">=</span> cdflib<span class="token punctuation">.</span>CDF<span class="token punctuation">(</span><span class="token string">"&lt;filename>.cdf"</span><span class="token punctuation">)</span>
 f<span class="token punctuation">.</span>cdf_info<span class="token punctuation">(</span><span class="token punctuation">)</span>  <span class="token comment"># 总体信息</span>
@@ -2002,10 +2002,10 @@ f<span class="token punctuation">.</span>close<span class="token punctuation">(<
 <p>参考 <a
 target="_blank" rel="noopener" href="https://pyscience.wordpress.com/2014/09/06/numpy-to-vtk-converting-your-numpy-arrays-to-vtk-arrays-and-files/"
 class="uri">https://pyscience.wordpress.com/2014/09/06/numpy-to-vtk-converting-your-numpy-arrays-to-vtk-arrays-and-files/</a><br>
-以及 <a href="installpy.html#其他">Python 安装和配置</a> <br><br>
+以及 <a href="/installpy.html#其他">Python 安装和配置</a> <br><br>
 e.g.<br> 运行 <a
-href="examples/field2dvtk.py">examples/field2dvtk.py</a> ,<br>
-打开Paraview, 选择 state 文件 'field2d.pvsm', 再选择数据文件
+target="_blank" rel="noopener" href="https://github.com/lydiazly/python-intro/blob/master/examples/field2dvtk.py">examples/field2dvtk.py</a>
+,<br> 打开Paraview, 选择 state 文件 'field2d.pvsm', 再选择数据文件
 'field2d.vtr'</p>
 <h3 id="matlab-mat-文件读写">Matlab mat 文件读写</h3>
 <p>(未测试) <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> scipy<span class="token punctuation">.</span>io
@@ -2306,7 +2306,7 @@ r <span class="token operator">=</span> requests<span class="token punctuation">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/medium-zoom/1.0.6/medium-zoom.min.js" integrity="sha256-EdPgYcPk/IIrw7FYeuJQexva49pVRZNmt3LculEr7zM=" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lozad.js/1.16.0/lozad.min.js" integrity="sha256-mOFREFhqmHeQbXpK2lp4nA3qooVgACfh88fpJftLBbc=" crossorigin="anonymous"></script>
-<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/next-boot.js"></script>
 
   
 <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.0/search.js" integrity="sha256-vXZMYLEqsROAXkEw93GGIvaB2ab+QW6w3+1ahD9nXXA=" crossorigin="anonymous"></script>
