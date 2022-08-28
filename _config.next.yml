@@ -180,7 +180,7 @@ links_settings:
   layout: block
 
 links:
-  my sunpy scripts: https://github.com/lydiazly/scripts-sunpy
+  My SunPy scripts: https://github.com/lydiazly/scripts-sunpy
 
 # Table of Contents in the Sidebar
 # Front-matter variable (nonsupport wrap expand_all).

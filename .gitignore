@@ -4,6 +4,7 @@
 # Deploy
 .deploy_git
 public
+themes
 db.json
 
 # Logs

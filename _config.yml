@@ -199,3 +199,7 @@ feed:
 #         path: 'link-checker.json'
 
 # hexo-renderer-pandoc
+pandoc:
+  template: ./source/templates/pandoc-template.html
+  # extra:
+  #   # - from: gfm
