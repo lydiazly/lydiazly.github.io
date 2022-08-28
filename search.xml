@@ -6366,6 +6366,65 @@ ax3<span class="token punctuation">.</span>set_ylim<span class="token punctuatio
       </tags>
   </entry>
   <entry>
+    <title>SunPy scripts updates</title>
+    <url>/2018-10-14-sunpy-scripts-updates.html</url>
+    <content><![CDATA[<p>Update:</p>
+<p>
+<a class="btn" href="https://github.com/lydiazly/python-intro/raw/master/notebooks/example_hmi.zip"><i class="fa fa-download fa-fw"></i>Jupyter Notebook</a>
+<wbr> <a class="btn" href="https://pan.baidu.com/s/1nwsIcDr?pwd=s5re"><i class="fa fa-download fa-fw"></i>Example Data</a> <wbr> <a class="btn" href="https://github.com/lydiazly/python-intro/raw/master/sunpy-modules.zip"><i class="fa fa-download fa-fw"></i>User Module</a><nobr>
+(<a href="https://github.com/lydiazly/scripts-sunpy/tree/master/modules">source</a>
+/ <a href="/usr_sunpy.html">doc</a>)
+</p>
+<p>[ Tested ]</p>
+<p>Ubuntu 16.04 LTS</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Date</th>
+<th style="text-align: center;">Python</th>
+<th style="text-align: center;">Sunpy</th>
+<th style="text-align: center;">NumPy</th>
+<th style="text-align: center;">SciPy</th>
+<th style="text-align: center;">Matplotlib</th>
+<th style="text-align: center;">Astropy</th>
+<th style="text-align: center;">Pandas</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">2018-10-13</td>
+<td style="text-align: center;">3.6.6</td>
+<td style="text-align: center;"><strong>0.9.3</strong></td>
+<td style="text-align: center;">1.15.2</td>
+<td style="text-align: center;">1.1.0</td>
+<td style="text-align: center;">3.0.0</td>
+<td style="text-align: center;">3.0.4</td>
+<td style="text-align: center;">0.23.4</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Add <code>aiaprep_usr()</code>.</li>
+<li>Change parameter list of <code>plot_map()</code>,
+<code>plot_vmap()</code>, <code>proj_matrix()</code>.</li>
+<li>Change return value of <code>_get_image_params()</code> from a tuple
+to a dict.</li>
+<li>Adjust positions of colorbar &amp; title.</li>
+<li>Fix docs.</li>
+</ul>
+<script src="https://cdn.jsdelivr.net/npm/anchor-js/anchor.min.js"></script>
+<script>
+  anchors.add();
+</script>]]></content>
+      <categories>
+        <category>Solar Physics</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+        <tag>sunpy</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Python notes: invoke variables from scripts in interactive mode</title>
     <url>/2018-10-15-scripts-and-interactive-mode.html</url>
     <content><![CDATA[<p>目的是从交互环境调用脚本产生的变量, 可用于调试脚本和测试数据等等.</p>
@@ -6633,65 +6692,6 @@ found):</p>
       <tags>
         <tag>wsl2</tag>
         <tag>powershell</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>SunPy scripts updates</title>
-    <url>/2018-10-14-sunpy-scripts-updates.html</url>
-    <content><![CDATA[<p>Update:</p>
-<p>
-<a class="btn" href="https://github.com/lydiazly/python-intro/raw/master/notebooks/example_hmi.zip"><i class="fa fa-download fa-fw"></i>Jupyter Notebook</a>
-<wbr> <a class="btn" href="https://pan.baidu.com/s/1nwsIcDr?pwd=s5re"><i class="fa fa-download fa-fw"></i>Example Data</a> <wbr> <a class="btn" href="https://github.com/lydiazly/python-intro/raw/master/sunpy-modules.zip"><i class="fa fa-download fa-fw"></i>User Module</a><nobr>
-(<a href="https://github.com/lydiazly/scripts-sunpy/tree/master/modules">source</a>
-/ <a href="/usr_sunpy.html">doc</a>)
-</p>
-<p>[ Tested ]</p>
-<p>Ubuntu 16.04 LTS</p>
-<table>
-<thead>
-<tr class="header">
-<th style="text-align: center;">Date</th>
-<th style="text-align: center;">Python</th>
-<th style="text-align: center;">Sunpy</th>
-<th style="text-align: center;">NumPy</th>
-<th style="text-align: center;">SciPy</th>
-<th style="text-align: center;">Matplotlib</th>
-<th style="text-align: center;">Astropy</th>
-<th style="text-align: center;">Pandas</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: center;">2018-10-13</td>
-<td style="text-align: center;">3.6.6</td>
-<td style="text-align: center;"><strong>0.9.3</strong></td>
-<td style="text-align: center;">1.15.2</td>
-<td style="text-align: center;">1.1.0</td>
-<td style="text-align: center;">3.0.0</td>
-<td style="text-align: center;">3.0.4</td>
-<td style="text-align: center;">0.23.4</td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li>Add <code>aiaprep_usr()</code>.</li>
-<li>Change parameter list of <code>plot_map()</code>,
-<code>plot_vmap()</code>, <code>proj_matrix()</code>.</li>
-<li>Change return value of <code>_get_image_params()</code> from a tuple
-to a dict.</li>
-<li>Adjust positions of colorbar &amp; title.</li>
-<li>Fix docs.</li>
-</ul>
-<script src="https://cdn.jsdelivr.net/npm/anchor-js/anchor.min.js"></script>
-<script>
-  anchors.add();
-</script>]]></content>
-      <categories>
-        <category>Solar Physics</category>
-      </categories>
-      <tags>
-        <tag>python</tag>
-        <tag>sunpy</tag>
       </tags>
   </entry>
 </search>
