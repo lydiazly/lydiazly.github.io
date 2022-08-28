@@ -1921,7 +1921,10 @@ r <span class="token operator">=</span> requests<span class="token punctuation">
 <span class="token keyword">with</span> <span class="token builtin">open</span><span class="token punctuation">(</span>filename<span class="token punctuation">,</span> <span class="token string">'wb'</span><span class="token punctuation">)</span> <span class="token keyword">as</span> f<span class="token punctuation">:</span>
     <span class="token keyword">for</span> chunk <span class="token keyword">in</span> r<span class="token punctuation">.</span>iter_content<span class="token punctuation">(</span>chunk_size<span class="token operator">=</span><span class="token number">128</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
         f<span class="token punctuation">.</span>write<span class="token punctuation">(</span>chunk<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-]]></content>
+<script src="https://cdn.jsdelivr.net/npm/anchor-js/anchor.min.js"></script>
+<script>
+  anchors.add();
+</script>]]></content>
       <categories>
         <category>Solar Physics</category>
       </categories>
@@ -2472,7 +2475,10 @@ python setup.py build --debug <span class="token function">install</span><span a
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">pip <span class="token function">install</span> mayavi  <span class="token comment"># 将同时安装 vtk. (pip 是目前 mayavi 最保险的安装方式)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># shell</span>
 mayavi2<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-]]></content>
+<script src="https://cdn.jsdelivr.net/npm/anchor-js/anchor.min.js"></script>
+<script>
+  anchors.add();
+</script>]]></content>
       <categories>
         <category>Solar Physics</category>
       </categories>
@@ -3163,7 +3169,10 @@ class="uri">https://www.jetbrains.com/pycharm/</a>
 class="uri">http://jupyterlab.readthedocs.io/en/stable/</a>
 <img data-src='/main/jupyterlab.png' ></li>
 </ul>
-]]></content>
+<script src="https://cdn.jsdelivr.net/npm/anchor-js/anchor.min.js"></script>
+<script>
+  anchors.add();
+</script>]]></content>
       <categories>
         <category>Solar Physics</category>
       </categories>
@@ -3925,7 +3934,10 @@ FULLDISK
 <p>Download a subset:</p>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python">res <span class="token operator">=</span> Fido<span class="token punctuation">.</span>fetch<span class="token punctuation">(</span>response<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span> path<span class="token operator">=</span><span class="token string">'./data'</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p><code>Fido.fetch</code> will output a progress bar by default.</p>
-]]></content>
+<script src="https://cdn.jsdelivr.net/npm/anchor-js/anchor.min.js"></script>
+<script>
+  anchors.add();
+</script>]]></content>
       <categories>
         <category>Solar Physics</category>
       </categories>
@@ -5530,7 +5542,10 @@ HMI_SIDE1
 </tr>
 </table>
 <p><br></p>
-]]></content>
+<script src="https://cdn.jsdelivr.net/npm/anchor-js/anchor.min.js"></script>
+<script>
+  anchors.add();
+</script>]]></content>
       <categories>
         <category>Solar Physics</category>
       </categories>
@@ -5674,7 +5689,10 @@ $HOME&#x2F;software&#x2F;harris&#x2F;envi55&#x2F;idl87&#x2F;bin&#x2F;idl $@<span
 <p>执行</p>
 <pre class="line-numbers language-sh" data-language="sh"><code class="language-sh">$ source ~&#x2F;.bashrc<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>之后再用 <code>idl</code> 命令即调用的是自定义的脚本.</p>
-]]></content>
+<script src="https://cdn.jsdelivr.net/npm/anchor-js/anchor.min.js"></script>
+<script>
+  anchors.add();
+</script>]]></content>
       <categories>
         <category>Solar Physics</category>
       </categories>
@@ -5907,7 +5925,10 @@ AIA_4
 即中断该 Cell).<br> 随后执行下面语句, 然后再回去执行
 <code>.wait()</code> 看是否恢复.</p>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python">res<span class="token punctuation">.</span>poke<span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-]]></content>
+<script src="https://cdn.jsdelivr.net/npm/anchor-js/anchor.min.js"></script>
+<script>
+  anchors.add();
+</script>]]></content>
       <categories>
         <category>Solar Physics</category>
       </categories>
@@ -6182,69 +6203,16 @@ im2 <span class="token operator">=</span> plot_map<span class="token punctuation
 plot_vmap<span class="token punctuation">(</span>smapbx<span class="token punctuation">,</span> smapby<span class="token punctuation">,</span> smapbz<span class="token punctuation">,</span> ax2<span class="token punctuation">,</span> cmin<span class="token operator">=</span><span class="token number">20.</span><span class="token punctuation">,</span> vmax<span class="token operator">=</span><span class="token number">500.</span><span class="token punctuation">,</span> cmap<span class="token operator">=</span><span class="token string">'binary'</span><span class="token punctuation">,</span>
           scale_units<span class="token operator">=</span><span class="token string">'xy'</span><span class="token punctuation">,</span> scale<span class="token operator">=</span><span class="token number">1</span><span class="token operator">/</span><span class="token number">0.05</span><span class="token punctuation">,</span> minlength<span class="token operator">=</span><span class="token number">0.02</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p><img data-src="/example_plothmi/plothmi5.png" width="900"></p>
-]]></content>
+<script src="https://cdn.jsdelivr.net/npm/anchor-js/anchor.min.js"></script>
+<script>
+  anchors.add();
+</script>]]></content>
       <categories>
         <category>Solar Physics</category>
       </categories>
       <tags>
         <tag>python</tag>
         <tag>jupyter</tag>
-        <tag>sunpy</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>SunPy scripts updates</title>
-    <url>/2018-10-14-sunpy-scripts-updates.html</url>
-    <content><![CDATA[<p>Update:</p>
-<p>
-<a class="btn" href="https://github.com/lydiazly/python-intro/raw/master/notebooks/example_hmi.zip"><i class="fa fa-download fa-fw"></i>Jupyter Notebook</a>
-<wbr> <a class="btn" href="https://pan.baidu.com/s/1nwsIcDr?pwd=s5re"><i class="fa fa-download fa-fw"></i>Example Data</a> <wbr> <a class="btn" href="https://github.com/lydiazly/python-intro/raw/master/sunpy-modules.zip"><i class="fa fa-download fa-fw"></i>User Module</a><nobr>
-(<a href="https://github.com/lydiazly/scripts-sunpy/tree/master/modules">source</a>
-/ <a href="/usr_sunpy.html">doc</a>)
-</p>
-<p>[ Tested ]</p>
-<p>Ubuntu 16.04 LTS</p>
-<table>
-<thead>
-<tr class="header">
-<th style="text-align: center;">Date</th>
-<th style="text-align: center;">Python</th>
-<th style="text-align: center;">Sunpy</th>
-<th style="text-align: center;">NumPy</th>
-<th style="text-align: center;">SciPy</th>
-<th style="text-align: center;">Matplotlib</th>
-<th style="text-align: center;">Astropy</th>
-<th style="text-align: center;">Pandas</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: center;">2018-10-13</td>
-<td style="text-align: center;">3.6.6</td>
-<td style="text-align: center;"><strong>0.9.3</strong></td>
-<td style="text-align: center;">1.15.2</td>
-<td style="text-align: center;">1.1.0</td>
-<td style="text-align: center;">3.0.0</td>
-<td style="text-align: center;">3.0.4</td>
-<td style="text-align: center;">0.23.4</td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li>Add <code>aiaprep_usr()</code>.</li>
-<li>Change parameter list of <code>plot_map()</code>,
-<code>plot_vmap()</code>, <code>proj_matrix()</code>.</li>
-<li>Change return value of <code>_get_image_params()</code> from a tuple
-to a dict.</li>
-<li>Adjust positions of colorbar &amp; title.</li>
-<li>Fix docs.</li>
-</ul>
-]]></content>
-      <categories>
-        <category>Solar Physics</category>
-      </categories>
-      <tags>
-        <tag>python</tag>
         <tag>sunpy</tag>
       </tags>
   </entry>
@@ -6384,7 +6352,10 @@ ax3<span class="token punctuation">.</span>grid<span class="token punctuation">(
 ax3<span class="token punctuation">.</span>set_xlim<span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">170</span><span class="token punctuation">,</span><span class="token number">170</span><span class="token punctuation">)</span><span class="token punctuation">)</span>  <span class="token comment"># arcsec</span>
 ax3<span class="token punctuation">.</span>set_ylim<span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">110</span><span class="token punctuation">,</span><span class="token number">100</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment"># arcsec</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p><img data-src="/example_projection/projection3.png" width="900"></p>
-]]></content>
+<script src="https://cdn.jsdelivr.net/npm/anchor-js/anchor.min.js"></script>
+<script>
+  anchors.add();
+</script>]]></content>
       <categories>
         <category>Solar Physics</category>
       </categories>
@@ -6393,127 +6364,6 @@ ax3<span class="token punctuation">.</span>set_ylim<span class="token punctuatio
         <tag>jupyter</tag>
         <tag>sunpy</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>使用 pickle 模块存取 dict</title>
-    <url>/2018-10-20-pickle.html</url>
-    <content><![CDATA[<p>Python 自带一个存取 dict 到二进制文件的工具 <a
-href="https://docs.python.org/3/library/pickle.html">pickle</a>,
-支持数值型的 key (<a
-href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.savez.html">numpy.savez</a>
-和 <a
-href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.savez_compressed.html">numpy.savez_compressed</a>
-只支持字符串作为 key).</p>
-<p>用法:</p>
-<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> pickle
-<span class="token comment"># 存入</span>
-pickle<span class="token punctuation">.</span>dump<span class="token punctuation">(</span>data<span class="token punctuation">,</span> <span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">"filename.p"</span><span class="token punctuation">,</span> <span class="token string">"wb"</span><span class="token punctuation">)</span><span class="token punctuation">)</span>  <span class="token comment"># type(data): dict</span>
-<span class="token comment"># 读取</span>
-data <span class="token operator">=</span> pickle<span class="token punctuation">.</span>load<span class="token punctuation">(</span><span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">"filename.p"</span><span class="token punctuation">,</span> <span class="token string">"rb"</span><span class="token punctuation">)</span><span class="token punctuation">)</span>  <span class="token comment"># 返回一个 dict</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<span id="more"></span>
-<p>以下示例特地使用了数值型的 key:</p>
-<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token operator">>></span><span class="token operator">></span> <span class="token keyword">import</span> pickle
-<span class="token operator">>></span><span class="token operator">></span> a <span class="token operator">=</span> <span class="token punctuation">&#123;</span><span class="token number">1.1</span><span class="token punctuation">:</span><span class="token number">1.1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">:</span><span class="token number">2</span><span class="token punctuation">&#125;</span>  <span class="token comment"># 以 float 和 int 作为 key</span>
-<span class="token operator">>></span><span class="token operator">></span> <span class="token keyword">import</span> pickle
-<span class="token operator">>></span><span class="token operator">></span> pickle<span class="token punctuation">.</span>dump<span class="token punctuation">(</span>a<span class="token punctuation">,</span> <span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">"data.p"</span><span class="token punctuation">,</span> <span class="token string">"wb"</span><span class="token punctuation">)</span><span class="token punctuation">)</span>  <span class="token comment"># 并不会自动添加后缀名</span>
-<span class="token operator">>></span><span class="token operator">></span> b <span class="token operator">=</span> pickle<span class="token punctuation">.</span>load<span class="token punctuation">(</span><span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">"data.p"</span><span class="token punctuation">,</span> <span class="token string">"rb"</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
-<span class="token operator">>></span><span class="token operator">></span> b<span class="token punctuation">.</span>keys<span class="token punctuation">(</span><span class="token punctuation">)</span>
-dict_keys<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">1.1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
-<span class="token operator">>></span><span class="token operator">></span> b<span class="token punctuation">[</span><span class="token number">1.1</span><span class="token punctuation">]</span>
-<span class="token number">1.1</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>注意 <code>pickle.load()</code> 返回的类型是 dict, 但
-<code>numpy.load()</code> 读取 '*.npz' 文件所返回是一个可以像 dict
-一样使用 key 来索引数据的 <code>numpy.lib.npyio.NpzFile</code> 对象.</p>
-<p>'*.p' 文件的大小和非压缩的 '*.npz' (<code>numpy.savez()</code>) 一致,
-然而压缩过的 '*.npz' (<code>numpy.savez_compressed()</code>)
-显然占用空间更小, 因此在方便的情况下 (例如 key 是字符串,
-读取后直接操作数据而不需要得到一个 dict), 推荐优先使用 numpy. <br><br>
-如果要存入上述示例中同样的数据到 '*.npz' 格式, 需要转换 key 的类型
-(读取时也需要使用字符串型的 key):</p>
-<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token operator">>></span><span class="token operator">></span> a <span class="token operator">=</span> <span class="token punctuation">&#123;</span><span class="token builtin">str</span><span class="token punctuation">(</span>key<span class="token punctuation">)</span><span class="token punctuation">:</span>value <span class="token keyword">for</span> key<span class="token punctuation">,</span> value <span class="token keyword">in</span> a<span class="token punctuation">.</span>items<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">&#125;</span>
-<span class="token operator">>></span><span class="token operator">></span> a
-<span class="token punctuation">&#123;</span><span class="token string">'1.1'</span><span class="token punctuation">:</span> <span class="token number">1.1</span><span class="token punctuation">,</span> <span class="token string">'2'</span><span class="token punctuation">:</span> <span class="token number">2</span><span class="token punctuation">&#125;</span>
-<span class="token operator">>></span><span class="token operator">></span> np<span class="token punctuation">.</span>savez_compressed<span class="token punctuation">(</span><span class="token string">'data2'</span><span class="token punctuation">,</span> <span class="token operator">**</span>a<span class="token punctuation">)</span>  <span class="token comment"># 会自动添加后缀名, 得到 'data2.npz'</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-<hr />
-<p>其他数据存取教程:</p>
-<ul>
-<li><a href="/main.html#常见数据文件读写">Python 简易教程 (lecture for
-Solar Group)</a>
-<ul>
-<li><a href="/main.html#一般情况">一般情况</a></li>
-<li><a href="/main.html#txt-csv-文件读写">txt, csv 文件读写</a></li>
-<li><a href="/main.html#numpy-save-文件读写">numpy save
-文件读写</a></li>
-<li><a href="/main.html#idl-sav-文件读取">IDL sav 文件读取</a></li>
-<li><a href="/main.html#fits-文件读取">FITS 文件读取</a></li>
-</ul></li>
-<li><a href="/advance.html#其他格式文件读写">Python 进阶 (lecture for
-Solar Group)</a>
-<ul>
-<li><a href="/advance.html#用-pandas-读-csv">用 pandas 读 csv</a></li>
-<li><a href="/advance.html#fortran-二进制文件读写">Fortran
-二进制文件读写</a></li>
-<li><a href="/advance.html#hdf5-文件读写-ncdf-cdf-文件读取">HDF5
-文件读写, NCDF, CDF 文件读取</a></li>
-<li><a href="/advance.html#numpy-to-vtk">NumPy to VTK</a></li>
-<li><a href="/advance.html#matlab-mat-文件读写">Matlab mat
-文件读写</a></li>
-</ul></li>
-</ul>
-]]></content>
-      <categories>
-        <category>Solar Physics</category>
-      </categories>
-      <tags>
-        <tag>python</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Pandas sep=&#39;\s+&#39; 的问题</title>
-    <url>/2018-12-04-pandas-sep.html</url>
-    <content><![CDATA[<p>Pandas 的 <code>read_table</code> (<a
-href="https://pandas.pydata.org/pandas-docs/stable/generated/pandas.read_table.html">官方文档</a>)
-和 <code>read_csv</code> (<a
-href="https://pandas.pydata.org/pandas-docs/stable/generated/pandas.read_csv.html">官方文档</a>)
-(指定分隔符的情况下两者无区别), 有关键字 <code>sep=</code>
-(<code>read_table</code> 默认为 <code>sep='\t'</code>,
-<code>read_csv</code> 默认为 <code>sep=','</code>).</p>
-<p>但当需要指定多个空格的情况下, 指定 <code>sep='\s+'</code>
-可能无法被正确识别. <span id="more"></span></p>
-<p>请使用 <strong><code>' +'</code></strong> 代替.</p>
-<p>官方文档中关于 <code>sep</code> 关键字的说明有如下描述:</p>
-<blockquote>
-<p>In addition, separators longer than 1 character and <strong>different
-from <code>'\s+'</code></strong> will be interpreted as regular
-expressions and will also force the use of the Python parsing
-engine.</p>
-</blockquote>
-<p>指定 <code>sep='\s+'</code> 可能无法被正确识别,</p>
-<p>暂时的办法是:<br> 加上参数 <code>engine='python'</code>, 或使用
-<strong><code>' +'</code></strong> 代替 (此时
-<code>engine='python'</code>).<br> 如果设为 <code>engine='c'</code>,
-速度较快, 但不便识别正则表达, 追求效率的话可以配合使用:<br>
-<code>quoting=3</code> (即使用 <code>csv.QUOTE_NONE</code>)</p>
-<hr />
-<p>Pandas 的读取方法简单介绍参见: <a
-href="/advance.html#用-pandas-读-csv">用 pandas 读 csv</a></p>
-]]></content>
-      <categories>
-        <category>Solar Physics</category>
-      </categories>
-      <tags>
-        <tag>python</tag>
-        <tag>pandas</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Coming back</title>
-    <url>/2022-07-12-Coming-back-soon.html</url>
-    <content><![CDATA[<p>Welcome!</p>
-<p>The posts in my old blog have been transferred here (the original
-site has not been accessible for quit a long time).</p>
-<p>I'm working on something new. See you later ~</p>
-]]></content>
   </entry>
   <entry>
     <title>Python notes: invoke variables from scripts in interactive mode</title>
@@ -6583,13 +6433,146 @@ a <span class="token operator">=</span> <span class="token number">1</span><span
 <span class="token builtin">locals</span><span class="token punctuation">(</span><span class="token punctuation">)</span>  <span class="token comment"># a dictionary containing the current scope's local variables</span>
 <span class="token builtin">vars</span><span class="token punctuation">(</span><span class="token punctuation">)</span>  <span class="token comment"># without arguments, equivalent to locals();</span>
         <span class="token comment"># with an argument, equivalent to object.__dict__.</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-]]></content>
+<script src="https://cdn.jsdelivr.net/npm/anchor-js/anchor.min.js"></script>
+<script>
+  anchors.add();
+</script>]]></content>
       <categories>
         <category>Solar Physics</category>
       </categories>
       <tags>
         <tag>python</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>使用 pickle 模块存取 dict</title>
+    <url>/2018-10-20-pickle.html</url>
+    <content><![CDATA[<p>Python 自带一个存取 dict 到二进制文件的工具 <a
+href="https://docs.python.org/3/library/pickle.html">pickle</a>,
+支持数值型的 key (<a
+href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.savez.html">numpy.savez</a>
+和 <a
+href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.savez_compressed.html">numpy.savez_compressed</a>
+只支持字符串作为 key).</p>
+<p>用法:</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> pickle
+<span class="token comment"># 存入</span>
+pickle<span class="token punctuation">.</span>dump<span class="token punctuation">(</span>data<span class="token punctuation">,</span> <span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">"filename.p"</span><span class="token punctuation">,</span> <span class="token string">"wb"</span><span class="token punctuation">)</span><span class="token punctuation">)</span>  <span class="token comment"># type(data): dict</span>
+<span class="token comment"># 读取</span>
+data <span class="token operator">=</span> pickle<span class="token punctuation">.</span>load<span class="token punctuation">(</span><span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">"filename.p"</span><span class="token punctuation">,</span> <span class="token string">"rb"</span><span class="token punctuation">)</span><span class="token punctuation">)</span>  <span class="token comment"># 返回一个 dict</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span id="more"></span>
+<p>以下示例特地使用了数值型的 key:</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token operator">>></span><span class="token operator">></span> <span class="token keyword">import</span> pickle
+<span class="token operator">>></span><span class="token operator">></span> a <span class="token operator">=</span> <span class="token punctuation">&#123;</span><span class="token number">1.1</span><span class="token punctuation">:</span><span class="token number">1.1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">:</span><span class="token number">2</span><span class="token punctuation">&#125;</span>  <span class="token comment"># 以 float 和 int 作为 key</span>
+<span class="token operator">>></span><span class="token operator">></span> <span class="token keyword">import</span> pickle
+<span class="token operator">>></span><span class="token operator">></span> pickle<span class="token punctuation">.</span>dump<span class="token punctuation">(</span>a<span class="token punctuation">,</span> <span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">"data.p"</span><span class="token punctuation">,</span> <span class="token string">"wb"</span><span class="token punctuation">)</span><span class="token punctuation">)</span>  <span class="token comment"># 并不会自动添加后缀名</span>
+<span class="token operator">>></span><span class="token operator">></span> b <span class="token operator">=</span> pickle<span class="token punctuation">.</span>load<span class="token punctuation">(</span><span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">"data.p"</span><span class="token punctuation">,</span> <span class="token string">"rb"</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token operator">>></span><span class="token operator">></span> b<span class="token punctuation">.</span>keys<span class="token punctuation">(</span><span class="token punctuation">)</span>
+dict_keys<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">1.1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span class="token operator">>></span><span class="token operator">></span> b<span class="token punctuation">[</span><span class="token number">1.1</span><span class="token punctuation">]</span>
+<span class="token number">1.1</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>注意 <code>pickle.load()</code> 返回的类型是 dict, 但
+<code>numpy.load()</code> 读取 '*.npz' 文件所返回是一个可以像 dict
+一样使用 key 来索引数据的 <code>numpy.lib.npyio.NpzFile</code> 对象.</p>
+<p>'*.p' 文件的大小和非压缩的 '*.npz' (<code>numpy.savez()</code>) 一致,
+然而压缩过的 '*.npz' (<code>numpy.savez_compressed()</code>)
+显然占用空间更小, 因此在方便的情况下 (例如 key 是字符串,
+读取后直接操作数据而不需要得到一个 dict), 推荐优先使用 numpy. <br><br>
+如果要存入上述示例中同样的数据到 '*.npz' 格式, 需要转换 key 的类型
+(读取时也需要使用字符串型的 key):</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token operator">>></span><span class="token operator">></span> a <span class="token operator">=</span> <span class="token punctuation">&#123;</span><span class="token builtin">str</span><span class="token punctuation">(</span>key<span class="token punctuation">)</span><span class="token punctuation">:</span>value <span class="token keyword">for</span> key<span class="token punctuation">,</span> value <span class="token keyword">in</span> a<span class="token punctuation">.</span>items<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">&#125;</span>
+<span class="token operator">>></span><span class="token operator">></span> a
+<span class="token punctuation">&#123;</span><span class="token string">'1.1'</span><span class="token punctuation">:</span> <span class="token number">1.1</span><span class="token punctuation">,</span> <span class="token string">'2'</span><span class="token punctuation">:</span> <span class="token number">2</span><span class="token punctuation">&#125;</span>
+<span class="token operator">>></span><span class="token operator">></span> np<span class="token punctuation">.</span>savez_compressed<span class="token punctuation">(</span><span class="token string">'data2'</span><span class="token punctuation">,</span> <span class="token operator">**</span>a<span class="token punctuation">)</span>  <span class="token comment"># 会自动添加后缀名, 得到 'data2.npz'</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<hr />
+<p>其他数据存取教程:</p>
+<ul>
+<li><a href="/main.html#常见数据文件读写">Python 简易教程 (lecture for
+Solar Group)</a>
+<ul>
+<li><a href="/main.html#一般情况">一般情况</a></li>
+<li><a href="/main.html#txt-csv-文件读写">txt, csv 文件读写</a></li>
+<li><a href="/main.html#numpy-save-文件读写">numpy save
+文件读写</a></li>
+<li><a href="/main.html#idl-sav-文件读取">IDL sav 文件读取</a></li>
+<li><a href="/main.html#fits-文件读取">FITS 文件读取</a></li>
+</ul></li>
+<li><a href="/advance.html#其他格式文件读写">Python 进阶 (lecture for
+Solar Group)</a>
+<ul>
+<li><a href="/advance.html#用-pandas-读-csv">用 pandas 读 csv</a></li>
+<li><a href="/advance.html#fortran-二进制文件读写">Fortran
+二进制文件读写</a></li>
+<li><a href="/advance.html#hdf5-文件读写-ncdf-cdf-文件读取">HDF5
+文件读写, NCDF, CDF 文件读取</a></li>
+<li><a href="/advance.html#numpy-to-vtk">NumPy to VTK</a></li>
+<li><a href="/advance.html#matlab-mat-文件读写">Matlab mat
+文件读写</a></li>
+</ul></li>
+</ul>
+<script src="https://cdn.jsdelivr.net/npm/anchor-js/anchor.min.js"></script>
+<script>
+  anchors.add();
+</script>]]></content>
+      <categories>
+        <category>Solar Physics</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Pandas sep=&#39;\s+&#39; 的问题</title>
+    <url>/2018-12-04-pandas-sep.html</url>
+    <content><![CDATA[<p>Pandas 的 <code>read_table</code> (<a
+href="https://pandas.pydata.org/pandas-docs/stable/generated/pandas.read_table.html">官方文档</a>)
+和 <code>read_csv</code> (<a
+href="https://pandas.pydata.org/pandas-docs/stable/generated/pandas.read_csv.html">官方文档</a>)
+(指定分隔符的情况下两者无区别), 有关键字 <code>sep=</code>
+(<code>read_table</code> 默认为 <code>sep='\t'</code>,
+<code>read_csv</code> 默认为 <code>sep=','</code>).</p>
+<p>但当需要指定多个空格的情况下, 指定 <code>sep='\s+'</code>
+可能无法被正确识别. <span id="more"></span></p>
+<p>请使用 <strong><code>' +'</code></strong> 代替.</p>
+<p>官方文档中关于 <code>sep</code> 关键字的说明有如下描述:</p>
+<blockquote>
+<p>In addition, separators longer than 1 character and <strong>different
+from <code>'\s+'</code></strong> will be interpreted as regular
+expressions and will also force the use of the Python parsing
+engine.</p>
+</blockquote>
+<p>指定 <code>sep='\s+'</code> 可能无法被正确识别,</p>
+<p>暂时的办法是:<br> 加上参数 <code>engine='python'</code>, 或使用
+<strong><code>' +'</code></strong> 代替 (此时
+<code>engine='python'</code>).<br> 如果设为 <code>engine='c'</code>,
+速度较快, 但不便识别正则表达, 追求效率的话可以配合使用:<br>
+<code>quoting=3</code> (即使用 <code>csv.QUOTE_NONE</code>)</p>
+<hr />
+<p>Pandas 的读取方法简单介绍参见: <a
+href="/advance.html#用-pandas-读-csv">用 pandas 读 csv</a></p>
+<script src="https://cdn.jsdelivr.net/npm/anchor-js/anchor.min.js"></script>
+<script>
+  anchors.add();
+</script>]]></content>
+      <categories>
+        <category>Solar Physics</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+        <tag>pandas</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Coming back</title>
+    <url>/2022-07-12-Coming-back-soon.html</url>
+    <content><![CDATA[<p>Welcome!</p>
+<p>The posts in my old blog have been transferred here (the original
+site has not been accessible for quit a long time).</p>
+<p>I'm working on something new. See you later ~</p>
+<script src="https://cdn.jsdelivr.net/npm/anchor-js/anchor.min.js"></script>
+<script>
+  anchors.add();
+</script>]]></content>
   </entry>
   <entry>
     <title>Limit the memory usage in Windows 10 WSL2</title>
@@ -6640,13 +6623,75 @@ DISKPART> detach vdisk<span aria-hidden="true" class="line-numbers-rows"><span><
 found):</p>
 <pre class="line-numbers language-powershell" data-language="powershell"><code class="language-powershell">> <span class="token function">optimize-vhd</span> <span class="token operator">-</span>Path <span class="token punctuation">.</span>\ext4<span class="token punctuation">.</span>vhdx <span class="token operator">-</span>Mode full<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p><br> I'm not using Docker, btw.</p>
-]]></content>
+<script src="https://cdn.jsdelivr.net/npm/anchor-js/anchor.min.js"></script>
+<script>
+  anchors.add();
+</script>]]></content>
       <categories>
         <category>Miscellaneous</category>
       </categories>
       <tags>
         <tag>wsl2</tag>
         <tag>powershell</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>SunPy scripts updates</title>
+    <url>/2018-10-14-sunpy-scripts-updates.html</url>
+    <content><![CDATA[<p>Update:</p>
+<p>
+<a class="btn" href="https://github.com/lydiazly/python-intro/raw/master/notebooks/example_hmi.zip"><i class="fa fa-download fa-fw"></i>Jupyter Notebook</a>
+<wbr> <a class="btn" href="https://pan.baidu.com/s/1nwsIcDr?pwd=s5re"><i class="fa fa-download fa-fw"></i>Example Data</a> <wbr> <a class="btn" href="https://github.com/lydiazly/python-intro/raw/master/sunpy-modules.zip"><i class="fa fa-download fa-fw"></i>User Module</a><nobr>
+(<a href="https://github.com/lydiazly/scripts-sunpy/tree/master/modules">source</a>
+/ <a href="/usr_sunpy.html">doc</a>)
+</p>
+<p>[ Tested ]</p>
+<p>Ubuntu 16.04 LTS</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Date</th>
+<th style="text-align: center;">Python</th>
+<th style="text-align: center;">Sunpy</th>
+<th style="text-align: center;">NumPy</th>
+<th style="text-align: center;">SciPy</th>
+<th style="text-align: center;">Matplotlib</th>
+<th style="text-align: center;">Astropy</th>
+<th style="text-align: center;">Pandas</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">2018-10-13</td>
+<td style="text-align: center;">3.6.6</td>
+<td style="text-align: center;"><strong>0.9.3</strong></td>
+<td style="text-align: center;">1.15.2</td>
+<td style="text-align: center;">1.1.0</td>
+<td style="text-align: center;">3.0.0</td>
+<td style="text-align: center;">3.0.4</td>
+<td style="text-align: center;">0.23.4</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Add <code>aiaprep_usr()</code>.</li>
+<li>Change parameter list of <code>plot_map()</code>,
+<code>plot_vmap()</code>, <code>proj_matrix()</code>.</li>
+<li>Change return value of <code>_get_image_params()</code> from a tuple
+to a dict.</li>
+<li>Adjust positions of colorbar &amp; title.</li>
+<li>Fix docs.</li>
+</ul>
+<script src="https://cdn.jsdelivr.net/npm/anchor-js/anchor.min.js"></script>
+<script>
+  anchors.add();
+</script>]]></content>
+      <categories>
+        <category>Solar Physics</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+        <tag>sunpy</tag>
       </tags>
   </entry>
 </search>
