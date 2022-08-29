@@ -17,7 +17,7 @@
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha256-xejo6yLi6vGtAjcMIsY8BHdKsLg7QynVlFMzdQgUuy8=" crossorigin="anonymous">
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"lydiazly.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.12.3","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"width":250},"copycode":{"enable":true,"style":"mac"},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":true,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":false,"async":true,"transition":{"post_block":"none","post_header":"none","post_body":"none","coll_header":"fadeInLeft","sidebar":"none"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+<script class="next-config" data-name="main" type="application/json">{"hostname":"lydiazly.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.12.3","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"width":250},"copycode":{"enable":true,"style":"mac"},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":true,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":false,"async":false,"transition":{"post_block":"none","post_header":"none","post_body":"none","coll_header":"fadeInLeft","sidebar":"none"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
     <meta name="description" content="Jupyter Notebook  Example Data  User Module (source &#x2F; doc)  from __future__ import division, print_function  # Reload user modules automatically # %load_ext autoreload # %autoreload 2  # notebook, in">
 <meta property="og:type" content="blog">
@@ -50,7 +50,6 @@
 <script class="next-config" data-name="calendar" type="application/json">""</script>
 <title>Example: plot HMI | Lydia's notes</title>
   
-
 
 
 
@@ -154,7 +153,8 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#read-data"><span class="nav-number">1.</span> <span class="nav-text">Read data</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#plot"><span class="nav-number">2.</span> <span class="nav-text">Plot</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#submap"><span class="nav-number">3.</span> <span class="nav-text">Submap</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#without-disambiguation"><span class="nav-number">3.1.</span> <span class="nav-text">Without disambiguation:</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#read-data"><span class="nav-number">1.</span> <span class="nav-text">Read
+data</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#plot"><span class="nav-number">2.</span> <span class="nav-text">Plot</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#submap"><span class="nav-number">3.</span> <span class="nav-text">Submap</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#without-disambiguation"><span class="nav-number">3.1.</span> <span class="nav-text">Without disambiguation:</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -323,7 +323,8 @@ sys<span class="token punctuation">.</span>path<span class="token punctuation">.
 <span class="token comment"># print('Python version: %s' % sys.version.split('(')[0])  # Python version: 3.6.6 |Anaconda, Inc.| </span>
 <span class="token comment"># print('SunPy version: %s' % sunpy.__version__)  # SunPy version: 0.9.3</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <span id="more"></span>
-<h2 id="read-data">Read data</h2>
+<h2 id="read-data"><a href="#read-data" class="headerlink"></a>Read
+data</h2>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python">fnames <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token string">'data/hmi.B_720s.20150827_052400_TAI.field.fits'</span><span class="token punctuation">,</span>
           <span class="token string">'data/hmi.B_720s.20150827_052400_TAI.inclination.fits'</span><span class="token punctuation">,</span>
           <span class="token string">'data/hmi.B_720s.20150827_052400_TAI.azimuth.fits'</span><span class="token punctuation">,</span>
@@ -470,7 +471,7 @@ center <span class="token operator">=</span> mapbz<span class="token punctuation
 <p>A quick look:</p>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python">mapbz<span class="token punctuation">.</span>peek<span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p><img data-src="/example_plothmi/plothmi1.png" width="640"></p>
-<h2 id="plot">Plot</h2>
+<h2 id="plot"><a href="#plot" class="headerlink"></a>Plot</h2>
 <p><a
 target="_blank" rel="noopener" href="https://docs.sunpy.org/en/stable/guide/plotting.html?highlight=peek#plotting-maps-with-wcsaxes"
 class="uri">https://docs.sunpy.org/en/stable/guide/plotting.html?highlight=peek#plotting-maps-with-wcsaxes</a></p>
@@ -493,7 +494,7 @@ ax1<span class="token punctuation">.</span>plot_coord<span class="token punctuat
 ax1<span class="token punctuation">.</span>legend<span class="token punctuation">(</span>loc<span class="token operator">=</span><span class="token string">'upper right'</span><span class="token punctuation">,</span> fontsize<span class="token operator">=</span><span class="token number">8</span><span class="token punctuation">,</span> markerscale<span class="token operator">=</span><span class="token number">0.6</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token comment"># fig1.savefig('example_plothmi_disk.png', dpi=200, bbox_inches='tight')</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p><img data-src="/example_plothmi/plothmi2.png" width="800"></p>
-<h2 id="submap">Submap</h2>
+<h2 id="submap"><a href="#submap" class="headerlink"></a>Submap</h2>
 <p><a
 target="_blank" rel="noopener" href="http://docs.sunpy.org/en/v0.9.3/code_ref/map.html?highlight=peek#sunpy.map.mapbase.GenericMap.submap"
 class="uri">http://docs.sunpy.org/en/v0.9.3/code_ref/map.html?highlight=peek#sunpy.map.mapbase.GenericMap.submap</a><br>
@@ -547,7 +548,8 @@ im2 <span class="token operator">=</span> plot_map<span class="token punctuation
 plot_vmap<span class="token punctuation">(</span>smapbx<span class="token punctuation">,</span> smapby<span class="token punctuation">,</span> smapbz<span class="token punctuation">,</span> ax2<span class="token punctuation">,</span> cmin<span class="token operator">=</span><span class="token number">20.</span><span class="token punctuation">,</span> vmax<span class="token operator">=</span><span class="token number">500.</span><span class="token punctuation">,</span> cmap<span class="token operator">=</span><span class="token string">'binary'</span><span class="token punctuation">,</span>
           scale_units<span class="token operator">=</span><span class="token string">'xy'</span><span class="token punctuation">,</span> scale<span class="token operator">=</span><span class="token number">1</span><span class="token operator">/</span><span class="token number">0.05</span><span class="token punctuation">,</span> minlength<span class="token operator">=</span><span class="token number">0.02</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p><img data-src="/example_plothmi/plothmi4.png" width="900"></p>
-<h3 id="without-disambiguation">Without disambiguation:</h3>
+<h3 id="without-disambiguation"><a href="#without-disambiguation"
+class="headerlink"></a>Without disambiguation:</h3>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">from</span> usr_sunpy <span class="token keyword">import</span> plot_map<span class="token punctuation">,</span> plot_vmap
 
 fig2 <span class="token operator">=</span> plt<span class="token punctuation">.</span>figure<span class="token punctuation">(</span>figsize<span class="token operator">=</span><span class="token punctuation">(</span><span class="token number">9</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">)</span><span class="token punctuation">,</span> dpi<span class="token operator">=</span><span class="token number">100</span><span class="token punctuation">)</span>
@@ -556,10 +558,7 @@ im2 <span class="token operator">=</span> plot_map<span class="token punctuation
 plot_vmap<span class="token punctuation">(</span>smapbx<span class="token punctuation">,</span> smapby<span class="token punctuation">,</span> smapbz<span class="token punctuation">,</span> ax2<span class="token punctuation">,</span> cmin<span class="token operator">=</span><span class="token number">20.</span><span class="token punctuation">,</span> vmax<span class="token operator">=</span><span class="token number">500.</span><span class="token punctuation">,</span> cmap<span class="token operator">=</span><span class="token string">'binary'</span><span class="token punctuation">,</span>
           scale_units<span class="token operator">=</span><span class="token string">'xy'</span><span class="token punctuation">,</span> scale<span class="token operator">=</span><span class="token number">1</span><span class="token operator">/</span><span class="token number">0.05</span><span class="token punctuation">,</span> minlength<span class="token operator">=</span><span class="token number">0.02</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p><img data-src="/example_plothmi/plothmi5.png" width="900"></p>
-<script src="https://cdn.jsdelivr.net/npm/anchor-js/anchor.min.js"></script>
-<script>
-  anchors.add();
-</script>
+
     </div>
 
     

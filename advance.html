@@ -17,7 +17,7 @@
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha256-xejo6yLi6vGtAjcMIsY8BHdKsLg7QynVlFMzdQgUuy8=" crossorigin="anonymous">
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"lydiazly.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.12.3","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"width":250},"copycode":{"enable":true,"style":"mac"},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":true,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":false,"async":true,"transition":{"post_block":"none","post_header":"none","post_body":"none","coll_header":"fadeInLeft","sidebar":"none"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+<script class="next-config" data-name="main" type="application/json">{"hostname":"lydiazly.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.12.3","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"width":250},"copycode":{"enable":true,"style":"mac"},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":true,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":false,"async":false,"transition":{"post_block":"none","post_header":"none","post_body":"none","coll_header":"fadeInLeft","sidebar":"none"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
     <meta name="description" content="Jupyter Notebook  FITS Data  Anaconda  A conda package is a compressed tarball file that contains system-level libraries, Python or other modules, executable programs and other components. Conda keep">
 <meta property="og:type" content="blog">
@@ -61,7 +61,6 @@
 <script class="next-config" data-name="calendar" type="application/json">""</script>
 <title>Python 进阶 (lecture for Solar Group) | Lydia's notes</title>
   
-
 
 
 
@@ -165,9 +164,12 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#anaconda"><span class="nav-number">1.</span> <span class="nav-text">Anaconda</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ipython-jupyter"><span class="nav-number">2.</span> <span class="nav-text">IPython &amp; Jupyter</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AF%AD%E6%B3%95%E7%BB%86%E8%8A%82"><span class="nav-number">3.</span> <span class="nav-text">语法细节</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#python2-python3"><span class="nav-number">3.1.</span> <span class="nav-text">python2 &amp; python3</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#list-tuple"><span class="nav-number">3.2.</span> <span class="nav-text">list, tuple</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#dict"><span class="nav-number">3.3.</span> <span class="nav-text">dict</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#set"><span class="nav-number">3.4.</span> <span class="nav-text">set</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%80%E4%BA%9B%E7%89%B9%E6%80%A7%E7%9A%84%E6%BC%94%E7%A4%BA"><span class="nav-number">3.5.</span> <span class="nav-text">一些特性的演示</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8C%85%E5%90%AB%E5%88%A4%E6%96%AD%E7%9A%84%E5%8D%95%E8%A1%8C%E5%BE%AA%E7%8E%AF"><span class="nav-number">3.6.</span> <span class="nav-text">包含判断的单行循环</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8D%95%E8%A1%8C-if-%E4%B8%89%E5%85%83%E5%85%B3%E7%B3%BB%E8%BF%90%E7%AE%97"><span class="nav-number">3.7.</span> <span class="nav-text">单行 if (三元关系运算)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BE%AA%E7%8E%AF-%E8%BF%AD%E4%BB%A3%E5%99%A8-%E7%94%9F%E6%88%90%E5%99%A8"><span class="nav-number">3.8.</span> <span class="nav-text">循环, 迭代器, 生成器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%87%BD%E6%95%B0%E5%AE%9A%E4%B9%89"><span class="nav-number">3.9.</span> <span class="nav-text">函数定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%91%BD%E5%90%8D%E7%A9%BA%E9%97%B4%E5%92%8C%E5%8F%98%E9%87%8F%E4%BD%9C%E7%94%A8%E5%9F%9F"><span class="nav-number">3.10.</span> <span class="nav-text">命名空间和变量作用域</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#numpy"><span class="nav-number">4.</span> <span class="nav-text">NumPy</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#numpy-%E7%9A%84%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B-dtype"><span class="nav-number">4.1.</span> <span class="nav-text">numpy 的数据类型 dtype</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#np.arange-%E5%8F%82%E6%95%B0%E4%B8%BA%E6%B5%AE%E7%82%B9%E6%95%B0%E6%97%B6%E8%A6%81%E6%B3%A8%E6%84%8F%E7%9A%84%E7%BB%86%E8%8A%82"><span class="nav-number">4.2.</span> <span class="nav-text">np.arange
-参数为浮点数时要注意的细节</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%9F%A9%E9%98%B5"><span class="nav-number">4.3.</span> <span class="nav-text">矩阵</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%95%B0%E7%BB%84%E5%92%8C%E7%9F%A9%E9%98%B5%E8%BF%90%E7%AE%97"><span class="nav-number">4.4.</span> <span class="nav-text">数组和矩阵运算</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%95%B0%E7%BB%84%E8%BF%90%E7%AE%97"><span class="nav-number">4.4.1.</span> <span class="nav-text">数组运算</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8%E6%95%B0%E7%BB%84%E8%BF%9B%E8%A1%8C%E7%9F%A9%E9%98%B5%E8%BF%90%E7%AE%97"><span class="nav-number">4.4.2.</span> <span class="nav-text">使用数组进行矩阵运算</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%9B%B4%E6%8E%A5%E4%BD%BF%E7%94%A8%E7%9F%A9%E9%98%B5%E7%B1%BB%E5%9E%8B%E8%BF%9B%E8%A1%8C%E8%BF%90%E7%AE%97"><span class="nav-number">4.4.3.</span> <span class="nav-text">直接使用矩阵类型进行运算</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%94%A8%E4%BD%9C%E5%9D%90%E6%A0%87%E6%A0%BC%E7%82%B9%E7%9A%84%E6%95%B0%E7%BB%84%E7%9A%84%E5%87%A0%E7%A7%8D%E5%BD%A2%E5%BC%8F"><span class="nav-number">4.5.</span> <span class="nav-text">用作坐标格点的数组的几种形式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#mask"><span class="nav-number">4.6.</span> <span class="nav-text">mask</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%B6%E4%BB%96%E5%AF%B9%E6%95%B0%E7%BB%84%E5%85%83%E7%B4%A0%E7%9A%84%E5%A4%84%E7%90%86"><span class="nav-number">4.7.</span> <span class="nav-text">其他对数组元素的处理</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#matplotlib"><span class="nav-number">5.</span> <span class="nav-text">Matplotlib</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#sunpy-%E7%A4%BA%E4%BE%8B"><span class="nav-number">6.</span> <span class="nav-text">SunPy 示例</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%A4%BA%E4%BE%8B%E6%96%87%E4%BB%B6"><span class="nav-number">6.1.</span> <span class="nav-text">示例文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%A4%BA%E4%BE%8B%E4%B8%AD%E7%9A%84-fits-%E8%AF%BB%E5%8F%96%E6%96%B9%E6%B3%95"><span class="nav-number">6.2.</span> <span class="nav-text">示例中的 fits 读取方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%B3%E4%BA%8E-scaled-image-data"><span class="nav-number">6.3.</span> <span class="nav-text">关于 Scaled Image Data</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9D%90%E6%A0%87%E5%92%8C%E5%8D%95%E4%BD%8D"><span class="nav-number">6.4.</span> <span class="nav-text">坐标和单位</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AF%AD%E6%B3%95%E5%AF%B9%E6%AF%94"><span class="nav-number">6.5.</span> <span class="nav-text">语法对比</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8F%92%E5%80%BC-%E6%8B%9F%E5%90%88"><span class="nav-number">7.</span> <span class="nav-text">插值, 拟合</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8F%92%E5%80%BC"><span class="nav-number">7.1.</span> <span class="nav-text">插值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B1%82%E6%9E%81%E5%80%BC"><span class="nav-number">7.2.</span> <span class="nav-text">求极值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8B%9F%E5%90%88"><span class="nav-number">7.3.</span> <span class="nav-text">拟合</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%B6%E4%BB%96"><span class="nav-number">7.4.</span> <span class="nav-text">其他</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#copy-%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9"><span class="nav-number">8.</span> <span class="nav-text">copy 注意事项</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%B6%E4%BB%96%E6%A0%BC%E5%BC%8F%E6%96%87%E4%BB%B6%E8%AF%BB%E5%86%99"><span class="nav-number">9.</span> <span class="nav-text">其他格式文件读写</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%94%A8-pandas-%E8%AF%BB-csv"><span class="nav-number">9.1.</span> <span class="nav-text">用 pandas 读 csv</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#fortran-%E4%BA%8C%E8%BF%9B%E5%88%B6%E6%96%87%E4%BB%B6%E8%AF%BB%E5%86%99"><span class="nav-number">9.2.</span> <span class="nav-text">Fortran 二进制文件读写</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#unformatted-sequential"><span class="nav-number">9.2.1.</span> <span class="nav-text">Unformatted (sequential)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#unformatted-stream"><span class="nav-number">9.2.2.</span> <span class="nav-text">Unformatted (stream)</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#hdf5-%E6%96%87%E4%BB%B6%E8%AF%BB%E5%86%99-ncdf-cdf-%E6%96%87%E4%BB%B6%E8%AF%BB%E5%8F%96"><span class="nav-number">9.3.</span> <span class="nav-text">HDF5 文件读写, NCDF, CDF
-文件读取</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%AF%BB%E5%86%99-hdf5-%E6%96%87%E4%BB%B6-%E8%AF%BB-ncdf-%E6%96%87%E4%BB%B6"><span class="nav-number">9.3.1.</span> <span class="nav-text">读写 HDF5 文件, 读 NCDF 文件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%A4%A7%E5%B0%8F%E6%AF%94%E8%BE%83"><span class="nav-number">9.3.2.</span> <span class="nav-text">大小比较</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%AF%BB%E5%8F%96-cdf-%E6%96%87%E4%BB%B6"><span class="nav-number">9.3.3.</span> <span class="nav-text">读取 CDF 文件</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#numpy-to-vtk"><span class="nav-number">9.4.</span> <span class="nav-text">NumPy to VTK</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#matlab-mat-%E6%96%87%E4%BB%B6%E8%AF%BB%E5%86%99"><span class="nav-number">9.5.</span> <span class="nav-text">Matlab mat 文件读写</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%84%9A%E6%9C%AC%E7%9B%B8%E5%85%B3"><span class="nav-number">10.</span> <span class="nav-text">脚本相关</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%84%9A%E6%9C%AC%E7%BB%93%E6%9E%84"><span class="nav-number">10.1.</span> <span class="nav-text">脚本结构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#try-...-except-...-%E8%AF%AD%E6%B3%95"><span class="nav-number">10.2.</span> <span class="nav-text">try ... except ... 语法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#paraview-%E8%84%9A%E6%9C%AC"><span class="nav-number">10.3.</span> <span class="nav-text">Paraview 脚本</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#python-2---3-%E7%9A%84%E8%BD%AC%E6%8D%A2"><span class="nav-number">10.4.</span> <span class="nav-text">Python 2 -&gt; 3 的转换</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%89%A7%E8%A1%8C-shell-%E5%91%BD%E4%BB%A4"><span class="nav-number">10.5.</span> <span class="nav-text">执行 shell 命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%84%9A%E6%9C%AC%E9%80%89%E9%A1%B9"><span class="nav-number">10.6.</span> <span class="nav-text">脚本选项</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A4%84%E7%90%86-warnings"><span class="nav-number">10.7.</span> <span class="nav-text">处理 warnings</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#urllib-requests"><span class="nav-number">11.</span> <span class="nav-text">urllib, requests</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#anaconda"><span class="nav-number">1.</span> <span class="nav-text">Anaconda</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ipython-jupyter"><span class="nav-number">2.</span> <span class="nav-text">IPython &amp; Jupyter</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AF%AD%E6%B3%95%E7%BB%86%E8%8A%82"><span class="nav-number">3.</span> <span class="nav-text">语法细节</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#python2-python3"><span class="nav-number">3.1.</span> <span class="nav-text">python2 &amp; python3</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#list-tuple"><span class="nav-number">3.2.</span> <span class="nav-text">list,
+tuple</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#dict"><span class="nav-number">3.3.</span> <span class="nav-text">dict</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#set"><span class="nav-number">3.4.</span> <span class="nav-text">set</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%80%E4%BA%9B%E7%89%B9%E6%80%A7%E7%9A%84%E6%BC%94%E7%A4%BA"><span class="nav-number">3.5.</span> <span class="nav-text">一些特性的演示</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8C%85%E5%90%AB%E5%88%A4%E6%96%AD%E7%9A%84%E5%8D%95%E8%A1%8C%E5%BE%AA%E7%8E%AF"><span class="nav-number">3.6.</span> <span class="nav-text">包含判断的单行循环</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8D%95%E8%A1%8C-if-%E4%B8%89%E5%85%83%E5%85%B3%E7%B3%BB%E8%BF%90%E7%AE%97"><span class="nav-number">3.7.</span> <span class="nav-text">单行 if (三元关系运算)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BE%AA%E7%8E%AF-%E8%BF%AD%E4%BB%A3%E5%99%A8-%E7%94%9F%E6%88%90%E5%99%A8"><span class="nav-number">3.8.</span> <span class="nav-text">循环, 迭代器, 生成器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%87%BD%E6%95%B0%E5%AE%9A%E4%B9%89"><span class="nav-number">3.9.</span> <span class="nav-text">函数定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%91%BD%E5%90%8D%E7%A9%BA%E9%97%B4%E5%92%8C%E5%8F%98%E9%87%8F%E4%BD%9C%E7%94%A8%E5%9F%9F"><span class="nav-number">3.10.</span> <span class="nav-text">命名空间和变量作用域</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#numpy"><span class="nav-number">4.</span> <span class="nav-text">NumPy</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#numpy-%E7%9A%84%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B-dtype"><span class="nav-number">4.1.</span> <span class="nav-text">numpy 的数据类型 dtype</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#np.arange-%E5%8F%82%E6%95%B0%E4%B8%BA%E6%B5%AE%E7%82%B9%E6%95%B0%E6%97%B6%E8%A6%81%E6%B3%A8%E6%84%8F%E7%9A%84%E7%BB%86%E8%8A%82"><span class="nav-number">4.2.</span> <span class="nav-text">np.arange 参数为浮点数时要注意的细节</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%9F%A9%E9%98%B5"><span class="nav-number">4.3.</span> <span class="nav-text">矩阵</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%95%B0%E7%BB%84%E5%92%8C%E7%9F%A9%E9%98%B5%E8%BF%90%E7%AE%97"><span class="nav-number">4.4.</span> <span class="nav-text">数组和矩阵运算</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%95%B0%E7%BB%84%E8%BF%90%E7%AE%97"><span class="nav-number">4.4.1.</span> <span class="nav-text">数组运算</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8%E6%95%B0%E7%BB%84%E8%BF%9B%E8%A1%8C%E7%9F%A9%E9%98%B5%E8%BF%90%E7%AE%97"><span class="nav-number">4.4.2.</span> <span class="nav-text">使用数组进行矩阵运算</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%9B%B4%E6%8E%A5%E4%BD%BF%E7%94%A8%E7%9F%A9%E9%98%B5%E7%B1%BB%E5%9E%8B%E8%BF%9B%E8%A1%8C%E8%BF%90%E7%AE%97"><span class="nav-number">4.4.3.</span> <span class="nav-text">直接使用矩阵类型进行运算</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%94%A8%E4%BD%9C%E5%9D%90%E6%A0%87%E6%A0%BC%E7%82%B9%E7%9A%84%E6%95%B0%E7%BB%84%E7%9A%84%E5%87%A0%E7%A7%8D%E5%BD%A2%E5%BC%8F"><span class="nav-number">4.5.</span> <span class="nav-text">用作坐标格点的数组的几种形式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#mask"><span class="nav-number">4.6.</span> <span class="nav-text">mask</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%B6%E4%BB%96%E5%AF%B9%E6%95%B0%E7%BB%84%E5%85%83%E7%B4%A0%E7%9A%84%E5%A4%84%E7%90%86"><span class="nav-number">4.7.</span> <span class="nav-text">其他对数组元素的处理</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#matplotlib"><span class="nav-number">5.</span> <span class="nav-text">Matplotlib</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#sunpy-%E7%A4%BA%E4%BE%8B"><span class="nav-number">6.</span> <span class="nav-text">SunPy
+示例</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%A4%BA%E4%BE%8B%E6%96%87%E4%BB%B6"><span class="nav-number">6.1.</span> <span class="nav-text">示例文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%A4%BA%E4%BE%8B%E4%B8%AD%E7%9A%84-fits-%E8%AF%BB%E5%8F%96%E6%96%B9%E6%B3%95"><span class="nav-number">6.2.</span> <span class="nav-text">示例中的 fits 读取方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%B3%E4%BA%8E-scaled-image-data"><span class="nav-number">6.3.</span> <span class="nav-text">关于 Scaled Image Data</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9D%90%E6%A0%87%E5%92%8C%E5%8D%95%E4%BD%8D"><span class="nav-number">6.4.</span> <span class="nav-text">坐标和单位</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AF%AD%E6%B3%95%E5%AF%B9%E6%AF%94"><span class="nav-number">6.5.</span> <span class="nav-text">语法对比</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8F%92%E5%80%BC-%E6%8B%9F%E5%90%88"><span class="nav-number">7.</span> <span class="nav-text">插值,
+拟合</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8F%92%E5%80%BC"><span class="nav-number">7.1.</span> <span class="nav-text">插值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B1%82%E6%9E%81%E5%80%BC"><span class="nav-number">7.2.</span> <span class="nav-text">求极值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8B%9F%E5%90%88"><span class="nav-number">7.3.</span> <span class="nav-text">拟合</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%B6%E4%BB%96"><span class="nav-number">7.4.</span> <span class="nav-text">其他</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#copy-%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9"><span class="nav-number">8.</span> <span class="nav-text">copy 注意事项</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%B6%E4%BB%96%E6%A0%BC%E5%BC%8F%E6%96%87%E4%BB%B6%E8%AF%BB%E5%86%99"><span class="nav-number">9.</span> <span class="nav-text">其他格式文件读写</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%94%A8-pandas-%E8%AF%BB-csv"><span class="nav-number">9.1.</span> <span class="nav-text">用 pandas 读 csv</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#fortran-%E4%BA%8C%E8%BF%9B%E5%88%B6%E6%96%87%E4%BB%B6%E8%AF%BB%E5%86%99"><span class="nav-number">9.2.</span> <span class="nav-text">Fortran 二进制文件读写</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#unformatted-sequential"><span class="nav-number">9.2.1.</span> <span class="nav-text">Unformatted (sequential)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#unformatted-stream"><span class="nav-number">9.2.2.</span> <span class="nav-text">Unformatted (stream)</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#hdf5-%E6%96%87%E4%BB%B6%E8%AF%BB%E5%86%99-ncdf-cdf-%E6%96%87%E4%BB%B6%E8%AF%BB%E5%8F%96"><span class="nav-number">9.3.</span> <span class="nav-text">HDF5
+文件读写, NCDF, CDF 文件读取</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%AF%BB%E5%86%99-hdf5-%E6%96%87%E4%BB%B6-%E8%AF%BB-ncdf-%E6%96%87%E4%BB%B6"><span class="nav-number">9.3.1.</span> <span class="nav-text">读写 HDF5
+文件, 读 NCDF 文件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%A4%A7%E5%B0%8F%E6%AF%94%E8%BE%83"><span class="nav-number">9.3.2.</span> <span class="nav-text">大小比较</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%AF%BB%E5%8F%96-cdf-%E6%96%87%E4%BB%B6"><span class="nav-number">9.3.3.</span> <span class="nav-text">读取 CDF 文件</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#numpy-to-vtk"><span class="nav-number">9.4.</span> <span class="nav-text">NumPy to VTK</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#matlab-mat-%E6%96%87%E4%BB%B6%E8%AF%BB%E5%86%99"><span class="nav-number">9.5.</span> <span class="nav-text">Matlab mat 文件读写</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%84%9A%E6%9C%AC%E7%9B%B8%E5%85%B3"><span class="nav-number">10.</span> <span class="nav-text">脚本相关</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%84%9A%E6%9C%AC%E7%BB%93%E6%9E%84"><span class="nav-number">10.1.</span> <span class="nav-text">脚本结构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#try-...-except-...-%E8%AF%AD%E6%B3%95"><span class="nav-number">10.2.</span> <span class="nav-text">try ... except ... 语法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#paraview-%E8%84%9A%E6%9C%AC"><span class="nav-number">10.3.</span> <span class="nav-text">Paraview 脚本</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#python-2---3-%E7%9A%84%E8%BD%AC%E6%8D%A2"><span class="nav-number">10.4.</span> <span class="nav-text">Python 2 -&gt; 3 的转换</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%89%A7%E8%A1%8C-shell-%E5%91%BD%E4%BB%A4"><span class="nav-number">10.5.</span> <span class="nav-text">执行 shell 命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%84%9A%E6%9C%AC%E9%80%89%E9%A1%B9"><span class="nav-number">10.6.</span> <span class="nav-text">脚本选项</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A4%84%E7%90%86-warnings"><span class="nav-number">10.7.</span> <span class="nav-text">处理 warnings</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#urllib-requests"><span class="nav-number">11.</span> <span class="nav-text">urllib, requests</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -311,7 +313,8 @@
 <a class="btn" target="_blank" rel="noopener" href="https://github.com/lydiazly/python-intro/raw/master/notebooks/python-intro.zip"><i class="fa fa-download fa-fw"></i>Jupyter Notebook</a>
 <wbr> <a class="btn" target="_blank" rel="noopener" href="https://pan.baidu.com/s/1nwsIcDr?pwd=s5re"><i class="fa fa-download fa-fw"></i>FITS Data</a>
 </p>
-<h2 id="anaconda">Anaconda</h2>
+<h2 id="anaconda"><a href="#anaconda"
+class="headerlink"></a>Anaconda</h2>
 <blockquote>
 <p>A <strong>conda package</strong> is a compressed tarball file that
 contains system-level libraries, Python or other modules, executable
@@ -384,7 +387,8 @@ class="uri">https://jakevdp.github.io/blog/2016/08/25/conda-myths-and-misconcept
     │        └── ...
     └── ...
 </pre>
-<h2 id="ipython-jupyter">IPython &amp; Jupyter</h2>
+<h2 id="ipython-jupyter"><a href="#ipython-jupyter"
+class="headerlink"></a>IPython &amp; Jupyter</h2>
 <p>参考文档 <a target="_blank" rel="noopener" href="http://jupyter-notebook.readthedocs.io/en/stable/"
 class="uri">http://jupyter-notebook.readthedocs.io/en/stable/</a></p>
 <ul>
@@ -466,8 +470,10 @@ b <span class="token operator">=</span> <span class="token string">'x'</span>
 ----------------------------
 a          int     1
 b          str     x</code></pre>
-<h2 id="语法细节">语法细节</h2>
-<h3 id="python2-python3">python2 &amp; python3</h3>
+<h2 id="语法细节"><a href="#语法细节"
+class="headerlink"></a>语法细节</h2>
+<h3 id="python2-python3"><a href="#python2-python3"
+class="headerlink"></a>python2 &amp; python3</h3>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token operator">%</span><span class="token operator">%</span>python2
 <span class="token keyword">print</span> <span class="token number">1</span> <span class="token operator">/</span> <span class="token number">2</span>
 <span class="token keyword">print</span> <span class="token number">1</span> <span class="token operator">//</span> <span class="token number">2</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
@@ -479,7 +485,8 @@ b          str     x</code></pre>
 <pre><code>0.5
 0</code></pre>
 <p>详见 <a href="#python-2---3-的转换">Python 2 -&gt; 3 的转换</a></p>
-<h3 id="list-tuple">list, tuple</h3>
+<h3 id="list-tuple"><a href="#list-tuple" class="headerlink"></a>list,
+tuple</h3>
 <ul>
 <li>对 list 或 tuple, 当只有一个元素时, 注意加逗号:</li>
 </ul>
@@ -505,7 +512,7 @@ a<span class="token punctuation">,</span> b<span class="token punctuation">,</sp
 <pre class="line-numbers language-python" data-language="python"><code class="language-python">a<span class="token punctuation">,</span> <span class="token operator">*</span>_ <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span> <span class="token comment"># 或 a, = ...</span>
 a<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 <pre><code>0</code></pre>
-<h3 id="dict">dict</h3>
+<h3 id="dict"><a href="#dict" class="headerlink"></a>dict</h3>
 <ul>
 <li>dict 改变某个 key 但 value 不变的方法</li>
 </ul>
@@ -525,7 +532,7 @@ d2 <span class="token operator">=</span> <span class="token punctuation">&#123;<
 <pre class="line-numbers language-python" data-language="python"><code class="language-python">d1<span class="token punctuation">.</span>update<span class="token punctuation">(</span>d2<span class="token punctuation">)</span>
 d1<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 <pre><code>&#123;&#39;a&#39;: -1, &#39;b&#39;: 2, &#39;c&#39;: 3, &#39;d&#39;: 4&#125;</code></pre>
-<h3 id="set">set</h3>
+<h3 id="set"><a href="#set" class="headerlink"></a>set</h3>
 <ul>
 <li>set 基本操作</li>
 </ul>
@@ -576,7 +583,8 @@ s<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></
 <pre><code>True</code></pre>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token punctuation">&#123;</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">&#125;</span> <span class="token operator">>=</span> <span class="token punctuation">&#123;</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <pre><code>True</code></pre>
-<h3 id="一些特性的演示">一些特性的演示</h3>
+<h3 id="一些特性的演示"><a href="#一些特性的演示"
+class="headerlink"></a>一些特性的演示</h3>
 <p>插件 <a target="_blank" rel="noopener" href="https://github.com/lgpage/nbtutor"
 class="uri">https://github.com/lgpage/nbtutor</a><br> 网页版 <a
 target="_blank" rel="noopener" href="http://pythontutor.com/"
@@ -597,7 +605,8 @@ t<span class="token punctuation">[</span><span class="token number">2</span><spa
 <pre><code>(1, 2, [&#39;xx&#39;, 4])</code></pre>
 <p><a target="_blank" rel="noopener" href="http://t.cn/Rg9idUn">网页版演示</a></p>
 <p><img data-src='/advance/nbtutor2.png' width='550'/></p>
-<h3 id="包含判断的单行循环">包含判断的单行循环</h3>
+<h3 id="包含判断的单行循环"><a href="#包含判断的单行循环"
+class="headerlink"></a>包含判断的单行循环</h3>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python">l <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">]</span>
 <span class="token punctuation">[</span>i <span class="token keyword">for</span> i <span class="token keyword">in</span> l <span class="token keyword">if</span> i <span class="token operator">></span> <span class="token number">2</span><span class="token punctuation">]</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 <pre><code>[3, 4, 5]</code></pre>
@@ -611,12 +620,14 @@ b <span class="token operator">=</span> <span class="token number">2</span>
     <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f'</span><span class="token interpolation"><span class="token punctuation">&#123;</span>namestr<span class="token punctuation">(</span>var<span class="token punctuation">,</span> <span class="token builtin">globals</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">&#125;</span></span><span class="token string"> = </span><span class="token interpolation"><span class="token punctuation">&#123;</span>var<span class="token punctuation">&#125;</span></span><span class="token string">'</span></span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <pre><code>a = 1
 b = 2</code></pre>
-<h3 id="单行-if-三元关系运算">单行 if (三元关系运算)</h3>
+<h3 id="单行-if-三元关系运算"><a href="#单行-if-三元关系运算"
+class="headerlink"></a>单行 if (三元关系运算)</h3>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python">a <span class="token operator">=</span> <span class="token number">1</span>
 b <span class="token operator">=</span> <span class="token string">'y'</span> <span class="token keyword">if</span> a <span class="token operator">></span> <span class="token number">0</span> <span class="token keyword">else</span> <span class="token string">'n'</span>
 b<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 <pre><code>&#39;y&#39;</code></pre>
-<h3 id="循环-迭代器-生成器">循环, 迭代器, 生成器</h3>
+<h3 id="循环-迭代器-生成器"><a href="#循环-迭代器-生成器"
+class="headerlink"></a>循环, 迭代器, 生成器</h3>
 <p>Python 的 for 循环不使用索引变量, 而使用遍历<strong>迭代器</strong>
 (iterator) 的方式处理<strong>可迭代对象</strong> (range, set 等):</p>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
@@ -643,7 +654,8 @@ a<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></
 <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># 转化成 tuple</span>
 <span class="token builtin">tuple</span><span class="token punctuation">(</span>i <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 <pre><code>(0, 1, 2)</code></pre>
-<h3 id="函数定义">函数定义</h3>
+<h3 id="函数定义"><a href="#函数定义"
+class="headerlink"></a>函数定义</h3>
 <ul>
 <li>一般的函数定义:</li>
 </ul>
@@ -664,7 +676,8 @@ f<span class="token punctuation">(</span><span class="token number">1</span><spa
 <pre><code>3</code></pre>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token punctuation">(</span><span class="token keyword">lambda</span> x<span class="token punctuation">,</span> y<span class="token punctuation">:</span> x <span class="token operator">+</span> y<span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span>  <span class="token comment"># 不一定需要定义函数名称</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <pre><code>3</code></pre>
-<h3 id="命名空间和变量作用域">命名空间和变量作用域</h3>
+<h3 id="命名空间和变量作用域"><a href="#命名空间和变量作用域"
+class="headerlink"></a>命名空间和变量作用域</h3>
 <p><a
 target="_blank" rel="noopener" href="https://sebastianraschka.com/Articles/2014_python_scope_and_namespaces.html"
 class="uri">https://sebastianraschka.com/Articles/2014_python_scope_and_namespaces.html</a></p>
@@ -719,8 +732,9 @@ names) may exist in more than one scope, and since it's the same object,
 <br><strong>any changes will be visible in all scopes</strong>.</p></li>
 </ul>
 </blockquote>
-<h2 id="numpy">NumPy</h2>
-<h3 id="numpy-的数据类型-dtype">numpy 的数据类型 dtype</h3>
+<h2 id="numpy"><a href="#numpy" class="headerlink"></a>NumPy</h2>
+<h3 id="numpy-的数据类型-dtype"><a href="#numpy-的数据类型-dtype"
+class="headerlink"></a>numpy 的数据类型 dtype</h3>
 <p><a target="_blank" rel="noopener" href="https://www.tutorialspoint.com/numpy/numpy_data_types.htm"
 class="uri">https://www.tutorialspoint.com/numpy/numpy_data_types.htm</a>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token operator">>></span><span class="token operator">></span> np<span class="token punctuation">.</span>dtype<span class="token punctuation">(</span>np<span class="token punctuation">.</span>int64<span class="token punctuation">)</span> <span class="token keyword">is</span> np<span class="token punctuation">.</span>dtype<span class="token punctuation">(</span><span class="token string">'i8'</span><span class="token punctuation">)</span> <span class="token keyword">is</span> np<span class="token punctuation">.</span>dtype<span class="token punctuation">(</span><span class="token string">'&lt;i8'</span><span class="token punctuation">)</span>
@@ -733,8 +747,9 @@ class="uri">https://www.tutorialspoint.com/numpy/numpy_data_types.htm</a>
 <span class="token operator">>></span><span class="token operator">></span> np<span class="token punctuation">.</span>dtype<span class="token punctuation">(</span>np<span class="token punctuation">.</span>float64<span class="token punctuation">)</span> <span class="token keyword">is</span> np<span class="token punctuation">.</span>dtype<span class="token punctuation">(</span><span class="token string">'float'</span><span class="token punctuation">)</span> <span class="token keyword">is</span> np<span class="token punctuation">.</span>dtype<span class="token punctuation">(</span><span class="token string">'float64'</span><span class="token punctuation">)</span>
 <span class="token boolean">True</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre> 见 <a
 href="#fortran-二进制文件读写">Fortran 二进制文件读写</a> 中的应用.</p>
-<h3 id="np.arange-参数为浮点数时要注意的细节">np.arange
-参数为浮点数时要注意的细节</h3>
+<h3 id="np.arange-参数为浮点数时要注意的细节"><a
+href="#np.arange-参数为浮点数时要注意的细节"
+class="headerlink"></a>np.arange 参数为浮点数时要注意的细节</h3>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python">np<span class="token punctuation">.</span>arange<span class="token punctuation">(</span><span class="token number">0.</span><span class="token punctuation">,</span> <span class="token number">1.8</span><span class="token punctuation">,</span> <span class="token number">0.3</span><span class="token punctuation">)</span>  <span class="token comment"># 默认不包含 `stop` 这个点</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <pre><code>array([0. , 0.3, 0.6, 0.9, 1.2, 1.5])</code></pre>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python">np<span class="token punctuation">.</span>arange<span class="token punctuation">(</span><span class="token number">0.</span><span class="token punctuation">,</span> <span class="token number">2.1</span><span class="token punctuation">,</span> <span class="token number">0.3</span><span class="token punctuation">)</span>  <span class="token comment"># 这里却包括了, 为什么?</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
@@ -765,7 +780,7 @@ class="uri">https://docs.python.org/3/tutorial/floatingpoint.html</a></p>
 <p>建议是: 使用整数; 对浮点数的情况, stop 值设得略小一些
 (比如减去步长的一般) 以防止改点被包含, 或使用 <code>np.linspace</code>
 代替.</p>
-<h3 id="矩阵">矩阵</h3>
+<h3 id="矩阵"><a href="#矩阵" class="headerlink"></a>矩阵</h3>
 <p><code>np.matrix</code>(矩阵) 是 <code>np.ndarray</code>(数组)
 的一个子类, 继承了父级的方法, 也定义了新的方法 (例如矩阵运算).</p>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token builtin">issubclass</span><span class="token punctuation">(</span>np<span class="token punctuation">.</span>matrix<span class="token punctuation">,</span> np<span class="token punctuation">.</span>ndarray<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
@@ -796,8 +811,10 @@ x<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><s
 <pre><code>True</code></pre>
 <p>注意: <code>np.matrix</code> 既是一个类名也是一个函数名, 而
 <code>np.mat</code>, <code>np.asmatrix</code> 只是函数名.</p>
-<h3 id="数组和矩阵运算">数组和矩阵运算</h3>
-<h4 id="数组运算">数组运算</h4>
+<h3 id="数组和矩阵运算"><a href="#数组和矩阵运算"
+class="headerlink"></a>数组和矩阵运算</h3>
+<h4 id="数组运算"><a href="#数组运算"
+class="headerlink"></a>数组运算</h4>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python">a <span class="token operator">=</span> np<span class="token punctuation">.</span>arange<span class="token punctuation">(</span><span class="token number">12</span><span class="token punctuation">)</span><span class="token punctuation">.</span>reshape<span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span> a<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <pre><code>array([[ 0,  1,  2,  3],
        [ 4,  5,  6,  7],
@@ -812,7 +829,8 @@ x<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><s
 <pre><code>array([[  0,   1,   4,   9],
        [ 16,  25,  36,  49],
        [ 64,  81, 100, 121]])</code></pre>
-<h4 id="使用数组进行矩阵运算">使用数组进行矩阵运算</h4>
+<h4 id="使用数组进行矩阵运算"><a href="#使用数组进行矩阵运算"
+class="headerlink"></a>使用数组进行矩阵运算</h4>
 <p><code>scipy.linalg</code> 与 <code>numpy.linalg</code> 的比较: <a
 target="_blank" rel="noopener" href="https://scipy.github.io/devdocs/tutorial/linalg.html"
 class="uri">https://scipy.github.io/devdocs/tutorial/linalg.html</a>
@@ -840,7 +858,8 @@ inv<span class="token punctuation">(</span>a<span class="token punctuation">)</s
 <pre><code>array([[-1.,  0.],
        [-2.,  0.],
        [-3.,  0.]])</code></pre>
-<h4 id="直接使用矩阵类型进行运算">直接使用矩阵类型进行运算</h4>
+<h4 id="直接使用矩阵类型进行运算"><a href="#直接使用矩阵类型进行运算"
+class="headerlink"></a>直接使用矩阵类型进行运算</h4>
 <p>使用 numpy 的矩阵类型 <code>numpy.matrix</code></p>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python">a <span class="token operator">=</span> np<span class="token punctuation">.</span>mat<span class="token punctuation">(</span>np<span class="token punctuation">.</span>diagflat<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">1.</span><span class="token punctuation">,</span> <span class="token number">2.</span><span class="token punctuation">,</span> <span class="token number">3.</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> a<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <pre><code>matrix([[1., 0., 0.],
@@ -861,7 +880,9 @@ inv<span class="token punctuation">(</span>a<span class="token punctuation">)</s
 <pre><code>matrix([[ 1.        ,  0.        , -0.        ],
         [ 0.        ,  0.5       , -0.        ],
         [ 0.        ,  0.        ,  0.33333333]])</code></pre>
-<h3 id="用作坐标格点的数组的几种形式">用作坐标格点的数组的几种形式</h3>
+<h3 id="用作坐标格点的数组的几种形式"><a
+href="#用作坐标格点的数组的几种形式"
+class="headerlink"></a>用作坐标格点的数组的几种形式</h3>
 <ul>
 <li><strong><code>np.meshgrid</code></strong></li>
 </ul>
@@ -921,7 +942,7 @@ array<span class="token punctuation">(</span><span class="token punctuation">[</
 array<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token number">3.</span><span class="token punctuation">,</span> <span class="token number">4.</span><span class="token punctuation">,</span> <span class="token number">5.</span><span class="token punctuation">,</span> <span class="token number">6.</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
        <span class="token punctuation">[</span><span class="token number">3.</span><span class="token punctuation">,</span> <span class="token number">4.</span><span class="token punctuation">,</span> <span class="token number">5.</span><span class="token punctuation">,</span> <span class="token number">6.</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
        <span class="token punctuation">[</span><span class="token number">3.</span><span class="token punctuation">,</span> <span class="token number">4.</span><span class="token punctuation">,</span> <span class="token number">5.</span><span class="token punctuation">,</span> <span class="token number">6.</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h3 id="mask">mask</h3>
+<h3 id="mask"><a href="#mask" class="headerlink"></a>mask</h3>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python">a <span class="token operator">=</span> np<span class="token punctuation">.</span>arange<span class="token punctuation">(</span><span class="token number">9</span><span class="token punctuation">)</span><span class="token punctuation">.</span>reshape<span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span> a<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <pre><code>array([[0, 1, 2],
        [3, 4, 5],
@@ -938,11 +959,13 @@ array<span class="token punctuation">(</span><span class="token punctuation">[</
 <pre><code>array([[ 0,  1,  2],
        [ 3,  4, -1],
        [-1, -1, -1]])</code></pre>
-<h3 id="其他对数组元素的处理">其他对数组元素的处理</h3>
+<h3 id="其他对数组元素的处理"><a href="#其他对数组元素的处理"
+class="headerlink"></a>其他对数组元素的处理</h3>
 <p>处理含有 NaN 的数据:</p>
 <p>e.g. 求最值可使用 <code>np.nanmin(...)</code> 和
 <code>np.nanmax(...)</code></p>
-<h2 id="matplotlib">Matplotlib</h2>
+<h2 id="matplotlib"><a href="#matplotlib"
+class="headerlink"></a>Matplotlib</h2>
 <ul>
 <li>官方教程 <a
 target="_blank" rel="noopener" href="https://matplotlib.org/tutorials/introductory/usage.html"
@@ -990,8 +1013,10 @@ class="uri">https://matplotlib.org/mpl_toolkits/mplot3d/tutorial.html</a></li>
 <li>更复杂的 3D 可转存可视化数据用其他软件或使用 Mayavi
 (http://docs.enthought.com/mayavi/mayavi)</li>
 </ul>
-<h2 id="sunpy-示例">SunPy 示例</h2>
-<h3 id="示例文件">示例文件</h3>
+<h2 id="sunpy-示例"><a href="#sunpy-示例" class="headerlink"></a>SunPy
+示例</h2>
+<h3 id="示例文件"><a href="#示例文件"
+class="headerlink"></a>示例文件</h3>
 <ul>
 <li><p>读取 fits, submap, 作图 <a
 href="/example_plothmi.html">example_plothmi</a></p></li>
@@ -1001,7 +1026,8 @@ href="/example_projection.html">example_projection</a></p></li>
 href="/jsoc.html">jsoc</a></p></li>
 </ul>
 <p>注意: 这些例子只是提供一个使用参考, 不一定是最优的.</p>
-<h3 id="示例中的-fits-读取方法">示例中的 fits 读取方法</h3>
+<h3 id="示例中的-fits-读取方法"><a href="#示例中的-fits-读取方法"
+class="headerlink"></a>示例中的 fits 读取方法</h3>
 <p>更多 FITS 的读取方法参见 <a href="/main.html#fits-文件读取">Python
 简易教程#FITS-文件读取</a><br> 另见 <a
 target="_blank" rel="noopener" href="http://docs.astropy.org/en/stable/io/fits/usage/scripts.html">Astropy
@@ -1029,7 +1055,8 @@ plt<span class="token punctuation">.</span>show<span class="token punctuation">(
 <img data-src="/advance/advance_205_0.png" alt="png" />
 <figcaption aria-hidden="true">png</figcaption>
 </figure>
-<h3 id="关于-scaled-image-data">关于 Scaled Image Data</h3>
+<h3 id="关于-scaled-image-data"><a href="#关于-scaled-image-data"
+class="headerlink"></a>关于 Scaled Image Data</h3>
 <p>这一部分将更仔细地检查 Astropy 对示例中的 FITS 文件的处理.</p>
 <p>参见 <a
 target="_blank" rel="noopener" href="http://docs.astropy.org/en/stable/io/fits/usage/image.html#scaled-data"
@@ -1146,7 +1173,8 @@ smap <span class="token operator">=</span> sunpy<span class="token punctuation">
 <pre><code>0.01</code></pre>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python">smap<span class="token punctuation">.</span>meta<span class="token punctuation">[</span><span class="token string">'BZERO'</span><span class="token punctuation">]</span>  <span class="token comment"># 不变</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <pre><code>0.0</code></pre>
-<h3 id="坐标和单位">坐标和单位</h3>
+<h3 id="坐标和单位"><a href="#坐标和单位"
+class="headerlink"></a>坐标和单位</h3>
 <p><strong>SunPy map</strong> <a
 target="_blank" rel="noopener" href="http://docs.sunpy.org/en/stable/code_ref/map.html#using-map-objects"
 class="uri">http://docs.sunpy.org/en/stable/code_ref/map.html#using-map-objects</a>
@@ -1222,7 +1250,8 @@ class="math inline">\(\mathrm{-7.65399^{\prime\prime}}\)</span></p>
 smap<span class="token punctuation">.</span>coordinate_frame<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 <pre><code>&lt;Helioprojective Frame (obstime=2015-08-27 05:22:21.800000, rsun=696000000.0 m, observer=&lt;HeliographicStonyhurst Coordinate (obstime=2015-08-27 05:22:21.800000): (lon, lat, radius) in (deg, deg, m)
     (0., 7.089004, 1.51196988e+11)&gt;)&gt;</code></pre>
-<h3 id="语法对比">语法对比</h3>
+<h3 id="语法对比"><a href="#语法对比"
+class="headerlink"></a>语法对比</h3>
 <p>比较 <code>plothmi.py</code> 与对应 IDL 程序的语法:</p>
 <p>下面的语句中, 为了简便和方便对比, 使用了自定义的一些函数. 导入方法:
 <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">from</span> usr_sunpy <span class="token keyword">import</span> read_sdo<span class="token punctuation">,</span> plot_map<span class="token punctuation">,</span> plot_vmap<span class="token punctuation">,</span> image_to_helio<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></p>
@@ -1267,10 +1296,11 @@ smapbx_h<span class="token punctuation">,</span> smapby_h<span class="token punc
 
 plot_map<span class="token punctuation">(</span>ax<span class="token punctuation">,</span> smapbz_h<span class="token punctuation">,</span> coords<span class="token operator">=</span><span class="token punctuation">(</span>hx<span class="token punctuation">,</span> hy<span class="token punctuation">)</span><span class="token punctuation">)</span>
 plot_vmap<span class="token punctuation">(</span>ax<span class="token punctuation">,</span> smapbx_h<span class="token punctuation">,</span> smapby_h<span class="token punctuation">,</span> smapbz_h<span class="token punctuation">,</span> coords<span class="token operator">=</span><span class="token punctuation">(</span>hx<span class="token punctuation">,</span> hy<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></p>
-<h2 id="插值-拟合">插值, 拟合</h2>
+<h2 id="插值-拟合"><a href="#插值-拟合" class="headerlink"></a>插值,
+拟合</h2>
 <p>选择不限于这里列举的包, 以后也可能会有更合适的方法出现.</p>
 <p>相关安装见 <a href="/installpy.html#其他">Python 安装和配置</a></p>
-<h3 id="插值">插值</h3>
+<h3 id="插值"><a href="#插值" class="headerlink"></a>插值</h3>
 <ul>
 <li><p>numpy <pre class="line-numbers language-none"><code class="language-none">f &#x3D; interp1d(x, y, kind&#x3D;&#39;cubic&#39;[, fill_value&#x3D;&#39;extrapolate&#39;])
 x2 &#x3D; np.linspace(...)
@@ -1280,7 +1310,7 @@ target="_blank" rel="noopener" href="https://github.com/lydiazly/python-intro/bl
 target="_blank" rel="noopener" href="https://docs.scipy.org/doc/scipy/tutorial/interpolate.html"
 class="uri">https://docs.scipy.org/doc/scipy/tutorial/interpolate.html</a></p></li>
 </ul>
-<h3 id="求极值">求极值</h3>
+<h3 id="求极值"><a href="#求极值" class="headerlink"></a>求极值</h3>
 <ul>
 <li>PeakUtils <a target="_blank" rel="noopener" href="http://peakutils.readthedocs.io/en/latest/"
 class="uri">http://peakutils.readthedocs.io/en/latest/</a></li>
@@ -1291,7 +1321,7 @@ class="uri">http://peakutils.readthedocs.io/en/latest/</a></li>
 indexes <span class="token operator">=</span> peakutils<span class="token punctuation">.</span>indexes<span class="token punctuation">(</span>y<span class="token punctuation">,</span> thres<span class="token operator">=</span><span class="token number">0.5</span><span class="token punctuation">,</span> min_dist<span class="token operator">=</span><span class="token number">30</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 <p><img data-src='/advance/tut_a_2.png' width='500' /></p>
 <p>Enhancing the resolution by interpolation: <pre class="line-numbers language-python" data-language="python"><code class="language-python">peaks_x <span class="token operator">=</span> peakutils<span class="token punctuation">.</span>interpolate<span class="token punctuation">(</span>x<span class="token punctuation">,</span> y<span class="token punctuation">,</span> ind<span class="token operator">=</span>indexes<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></p>
-<h3 id="拟合">拟合</h3>
+<h3 id="拟合"><a href="#拟合" class="headerlink"></a>拟合</h3>
 <ul>
 <li>LMFIT (Non-Linear Least-Squares Minimization and Curve-Fitting)</li>
 </ul>
@@ -1390,7 +1420,7 @@ plt<span class="token punctuation">.</span>plot<span class="token punctuation">(
 </figure>
 <p>自定义模型的方法见 <a
 target="_blank" rel="noopener" href="http://lmfit.github.io/lmfit-py/builtin_models.html#user-defined-models">LMFIT网站示例</a></p>
-<h3 id="其他">其他</h3>
+<h3 id="其他"><a href="#其他" class="headerlink"></a>其他</h3>
 <ul>
 <li>Sherpa(Modeling and Fitting) <a
 target="_blank" rel="noopener" href="http://cxc.cfa.harvard.edu/contrib/sherpa/"
@@ -1400,7 +1430,8 @@ target="_blank" rel="noopener" href="https://python4astronomers.github.io/fittin
 class="uri">https://python4astronomers.github.io/fitting/image.html</a><br></li>
 <li><em>etc.</em></li>
 </ul>
-<h2 id="copy-注意事项">copy 注意事项</h2>
+<h2 id="copy-注意事项"><a href="#copy-注意事项"
+class="headerlink"></a>copy 注意事项</h2>
 <p><strong>"shallow copy"</strong> vs <strong>"deep copy"</strong></p>
 <ul>
 <li>对于 list 的情况</li>
@@ -1475,8 +1506,10 @@ d<span class="token punctuation">[</span><span class="token number">1</span><spa
 Error</strong>: Ruby and Python+Anaconda backends are permanently
 unavailable)</p>
 <p>参见之前的 <a href="#矩阵">np.matrix, np.asmatrix</a></p>
-<h2 id="其他格式文件读写">其他格式文件读写</h2>
-<h3 id="用-pandas-读-csv">用 pandas 读 csv</h3>
+<h2 id="其他格式文件读写"><a href="#其他格式文件读写"
+class="headerlink"></a>其他格式文件读写</h2>
+<h3 id="用-pandas-读-csv"><a href="#用-pandas-读-csv"
+class="headerlink"></a>用 pandas 读 csv</h3>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> pandas <span class="token keyword">as</span> pd
 data <span class="token operator">=</span> pd<span class="token punctuation">.</span>read_csv<span class="token punctuation">(</span><span class="token string">"data/data.csv"</span><span class="token punctuation">)</span>
 data<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
@@ -1627,8 +1660,10 @@ row2
 <p>对于超大文件, 参见: <a
 target="_blank" rel="noopener" href="https://www.dataquest.io/blog/pandas-big-data/"
 class="uri">https://www.dataquest.io/blog/pandas-big-data/</a></p>
-<h3 id="fortran-二进制文件读写">Fortran 二进制文件读写</h3>
-<h4 id="unformatted-sequential">Unformatted (sequential)</h4>
+<h3 id="fortran-二进制文件读写"><a href="#fortran-二进制文件读写"
+class="headerlink"></a>Fortran 二进制文件读写</h3>
+<h4 id="unformatted-sequential"><a href="#unformatted-sequential"
+class="headerlink"></a>Unformatted (sequential)</h4>
 <p>使用 <code>scipy.io.FortranFile</code><br> 参考: <a
 target="_blank" rel="noopener" href="https://docs.scipy.org/doc/scipy-0.15.1/reference/generated/scipy.io.FortranFile.read_record.html"
 class="uri">https://docs.scipy.org/doc/scipy-0.15.1/reference/generated/scipy.io.FortranFile.read_record.html</a></p>
@@ -1700,7 +1735,8 @@ ifort -o test_read_seq test_read_seq.f90
 <p>见 Structured arrays: <a
 target="_blank" rel="noopener" href="https://docs.scipy.org/doc/numpy/user/basics.rec.html"
 class="uri">https://docs.scipy.org/doc/numpy/user/basics.rec.html</a></p>
-<h4 id="unformatted-stream">Unformatted (stream)</h4>
+<h4 id="unformatted-stream"><a href="#unformatted-stream"
+class="headerlink"></a>Unformatted (stream)</h4>
 <p><code>struct</code> 参考 <a
 target="_blank" rel="noopener" href="https://docs.python.org/3/library/struct.html"
 class="uri">https://docs.python.org/3/library/struct.html</a></p>
@@ -1739,9 +1775,12 @@ ifort -o test_read_stream test_read_stream.f90
   0.0 1.0 2.0
   3.0 4.0 5.0
  arr(2, 1) =  1.0</code></pre>
-<h3 id="hdf5-文件读写-ncdf-cdf-文件读取">HDF5 文件读写, NCDF, CDF
-文件读取</h3>
-<h4 id="读写-hdf5-文件-读-ncdf-文件">读写 HDF5 文件, 读 NCDF 文件</h4>
+<h3 id="hdf5-文件读写-ncdf-cdf-文件读取"><a
+href="#hdf5-文件读写-ncdf-cdf-文件读取" class="headerlink"></a>HDF5
+文件读写, NCDF, CDF 文件读取</h3>
+<h4 id="读写-hdf5-文件-读-ncdf-文件"><a
+href="#读写-hdf5-文件-读-ncdf-文件" class="headerlink"></a>读写 HDF5
+文件, 读 NCDF 文件</h4>
 <p>HDF5 格式介绍 <a
 target="_blank" rel="noopener" href="https://portal.hdfgroup.org/display/HDF5/Introduction+to+HDF5"
 class="uri">https://portal.hdfgroup.org/display/HDF5/Introduction+to+HDF5</a></p>
@@ -1807,7 +1846,8 @@ f<span class="token punctuation">.</span>close<span class="token punctuation">(<
          <span class="token string-interpolation"><span class="token string">f'</span><span class="token interpolation"><span class="token punctuation">&#123;</span>np<span class="token punctuation">.</span>dtype<span class="token punctuation">(</span>f<span class="token punctuation">.</span>get_node<span class="token punctuation">(</span>k<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">&#125;</span></span><span class="token string">'</span></span><span class="token punctuation">.</span>rjust<span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
          <span class="token keyword">for</span> k <span class="token keyword">in</span> <span class="token builtin">list</span><span class="token punctuation">(</span>f<span class="token punctuation">.</span>root<span class="token punctuation">.</span>_v_children<span class="token punctuation">.</span>keys<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
  Bug: 无法读出 <code>H5T_STRING</code></p>
-<h4 id="大小比较">大小比较</h4>
+<h4 id="大小比较"><a href="#大小比较"
+class="headerlink"></a>大小比较</h4>
 <p>用于比较的文件名说明:</p>
 <table>
 <thead>
@@ -1990,7 +2030,8 @@ complib='zlib', complevel=9</td>
 4.1M    data/fits_pd_bzip2.hdf5
 7.6M    data/fits_pd_lzo.hdf5
 4.8M    data/fits_pd_zlib.hdf5</code></pre>
-<h4 id="读取-cdf-文件">读取 CDF 文件</h4>
+<h4 id="读取-cdf-文件"><a href="#读取-cdf-文件"
+class="headerlink"></a>读取 CDF 文件</h4>
 <p>相关包 <code>cdflib</code>, 安装见 <a
 href="/installpy.html#其他">Python 安装和配置#其他</a>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> cdflib
@@ -1999,7 +2040,8 @@ f<span class="token punctuation">.</span>cdf_info<span class="token punctuation"
 f<span class="token punctuation">.</span>varinq<span class="token punctuation">(</span><span class="token string">'&lt;key>'</span><span class="token punctuation">)</span>  <span class="token comment"># 变量信息</span>
 f<span class="token punctuation">.</span>varget<span class="token punctuation">(</span><span class="token string">'&lt;key>'</span><span class="token punctuation">)</span>  <span class="token comment"># 值</span>
 f<span class="token punctuation">.</span>close<span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></p>
-<h3 id="numpy-to-vtk">NumPy to VTK</h3>
+<h3 id="numpy-to-vtk"><a href="#numpy-to-vtk"
+class="headerlink"></a>NumPy to VTK</h3>
 <p>参考 <a
 target="_blank" rel="noopener" href="https://pyscience.wordpress.com/2014/09/06/numpy-to-vtk-converting-your-numpy-arrays-to-vtk-arrays-and-files/"
 class="uri">https://pyscience.wordpress.com/2014/09/06/numpy-to-vtk-converting-your-numpy-arrays-to-vtk-arrays-and-files/</a><br>
@@ -2008,14 +2050,17 @@ e.g.<br> 运行 <a
 target="_blank" rel="noopener" href="https://github.com/lydiazly/python-intro/blob/master/examples/field2dvtk.py">examples/field2dvtk.py</a>
 ,<br> 打开Paraview, 选择 state 文件 'field2d.pvsm', 再选择数据文件
 'field2d.vtr'</p>
-<h3 id="matlab-mat-文件读写">Matlab mat 文件读写</h3>
+<h3 id="matlab-mat-文件读写"><a href="#matlab-mat-文件读写"
+class="headerlink"></a>Matlab mat 文件读写</h3>
 <p>(未测试) <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> scipy<span class="token punctuation">.</span>io
 scipy<span class="token punctuation">.</span>io<span class="token punctuation">.</span>loadmat<span class="token punctuation">(</span><span class="token string">"&lt;filename>"</span><span class="token punctuation">,</span> mdict<span class="token operator">=</span><span class="token boolean">None</span><span class="token punctuation">,</span> appendmat<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">,</span> <span class="token operator">**</span>kwargs<span class="token punctuation">)</span>
 <span class="token comment"># 如果 appendmat=True，则文件名不需要'.mat'后缀)</span>
 scipy<span class="token punctuation">.</span>io<span class="token punctuation">.</span>savemat<span class="token punctuation">(</span><span class="token string">"&lt;filename>"</span><span class="token punctuation">,</span> mdict<span class="token punctuation">,</span> appendmat<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">,</span> <span class="token builtin">format</span><span class="token operator">=</span><span class="token string">'5'</span><span class="token punctuation">,</span>
                  long_field_names<span class="token operator">=</span><span class="token boolean">False</span><span class="token punctuation">,</span> do_compression<span class="token operator">=</span><span class="token boolean">False</span><span class="token punctuation">,</span> oned_as<span class="token operator">=</span><span class="token string">'row'</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre></p>
-<h2 id="脚本相关">脚本相关</h2>
-<h3 id="脚本结构">脚本结构</h3>
+<h2 id="脚本相关"><a href="#脚本相关"
+class="headerlink"></a>脚本相关</h2>
+<h3 id="脚本结构"><a href="#脚本结构"
+class="headerlink"></a>脚本结构</h3>
 <p>文件头: <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment">#!/usr/bin/env python</span>
 <span class="token comment"># -*- coding: utf-8 -*-</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre></p>
 <p>脚本结构: <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment">#!/usr/bin/env python</span>
@@ -2048,7 +2093,8 @@ c <span class="token operator">=</span> <span class="token number">1</span>
 <p><code>help()</code> 也可以查看模块内的函数文档:</p>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> usr_sunpy
 <span class="token builtin">help</span><span class="token punctuation">(</span>usr_sunpy<span class="token punctuation">.</span>plot_map<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-<h3 id="try-...-except-...-语法">try ... except ... 语法</h3>
+<h3 id="try-...-except-...-语法"><a href="#try-...-except-...-语法"
+class="headerlink"></a>try ... except ... 语法</h3>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">try</span><span class="token punctuation">:</span>
     <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
 <span class="token keyword">except</span> ValueError <span class="token keyword">as</span> e<span class="token punctuation">:</span>
@@ -2060,7 +2106,8 @@ c <span class="token operator">=</span> <span class="token number">1</span>
 <span class="token keyword">finally</span><span class="token punctuation">:</span>
     <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'finally...'</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>见 <a href="#paraview-脚本">Paraview 的例子</a></p>
-<h3 id="paraview-脚本">Paraview 脚本</h3>
+<h3 id="paraview-脚本"><a href="#paraview-脚本"
+class="headerlink"></a>Paraview 脚本</h3>
 <p>官方文档 <a
 target="_blank" rel="noopener" href="https://www.paraview.org/ParaView/Doc/Nightly/www/py-doc/index.html"
 class="uri">https://www.paraview.org/ParaView/Doc/Nightly/www/py-doc/index.html</a>
@@ -2103,7 +2150,8 @@ unset PYTHONSTARTUP  # 如果有的话
 export PYTHONPATH&#x3D;&#x2F;&lt;your_path&gt;&#x2F;ParaView&#x2F;lib&#x2F;python2.7&#x2F;site-packages
 &#x2F;&lt;your_path&gt;&#x2F;ParaView&#x2F;bin&#x2F;paraview $@<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre> 用这个脚本替代原有 <code>paraview</code>,
 <code>pvpython</code> 和 <code>pvbatch</code> 命令.</p>
-<h3 id="python-2---3-的转换">Python 2 -&gt; 3 的转换</h3>
+<h3 id="python-2---3-的转换"><a href="#python-2---3-的转换"
+class="headerlink"></a>Python 2 -&gt; 3 的转换</h3>
 <p>比较推荐的安全的检查方式:</p>
 <ul>
 <li><p>备份的原文件且自动生成转换过的文件 <pre class="line-numbers language-none"><code class="language-none">$ 2to3 -w filename<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></p></li>
@@ -2119,7 +2167,8 @@ $ meld filename filename.bak<span aria-hidden="true" class="line-numbers-rows"><
 <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> sys
 <span class="token keyword">print</span><span class="token punctuation">(</span>sys<span class="token punctuation">.</span>version_info <span class="token operator">>=</span> <span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
 <span class="token keyword">print</span><span class="token punctuation">(</span>sys<span class="token punctuation">.</span>version_info<span class="token punctuation">.</span>major <span class="token operator">>=</span> <span class="token number">3</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-<h3 id="执行-shell-命令">执行 shell 命令</h3>
+<h3 id="执行-shell-命令"><a href="#执行-shell-命令"
+class="headerlink"></a>执行 shell 命令</h3>
 <p><a target="_blank" rel="noopener" href="https://docs.python.org/3/library/subprocess.html"
 class="uri">https://docs.python.org/3/library/subprocess.html</a></p>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> subprocess
@@ -2169,7 +2218,8 @@ os<span class="token punctuation">.</span>getcwd<span class="token punctuation">
 <p><code>os.path.dirname</code> 类似于 bash 的 <code>dirname</code></p>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python">!dirname <span class="token string">'your/path/filename'</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <pre><code>your/path</code></pre>
-<h3 id="脚本选项">脚本选项</h3>
+<h3 id="脚本选项"><a href="#脚本选项"
+class="headerlink"></a>脚本选项</h3>
 <p>推荐 <code>argparse</code>, 在过去的其他方法的基础上有所增强 <a
 target="_blank" rel="noopener" href="https://docs.python.org/3/library/argparse.html"
 class="uri">https://docs.python.org/3/library/argparse.html</a></p>
@@ -2189,7 +2239,8 @@ positional arguments:
 optional arguments:
  -h, --help  show this help message and exit
  --sum       sum the integers (default: find the max)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></p>
-<h3 id="处理-warnings">处理 warnings</h3>
+<h3 id="处理-warnings"><a href="#处理-warnings"
+class="headerlink"></a>处理 warnings</h3>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># Suppress warnings of NaNs:</span>
 <span class="token keyword">with</span> np<span class="token punctuation">.</span>errstate<span class="token punctuation">(</span>invalid<span class="token operator">=</span><span class="token string">'ignore'</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
     <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
@@ -2204,7 +2255,8 @@ optional arguments:
 warnings<span class="token punctuation">.</span>simplefilter<span class="token punctuation">(</span><span class="token string">"ignore"</span><span class="token punctuation">,</span> category<span class="token operator">=</span>xxx<span class="token punctuation">)</span>  <span class="token comment"># UserWarning, FutureWarning, etc.</span>
 <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
 <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h2 id="urllib-requests">urllib, requests</h2>
+<h2 id="urllib-requests"><a href="#urllib-requests"
+class="headerlink"></a>urllib, requests</h2>
 <p>示例和文件来自 <a target="_blank" rel="noopener" href="http://python4astronomers.github.io"
 class="uri">http://python4astronomers.github.io</a></p>
 <p>注意 python3 不再使用 <code>urllib2</code></p>
@@ -2225,10 +2277,7 @@ r <span class="token operator">=</span> requests<span class="token punctuation">
 <span class="token keyword">with</span> <span class="token builtin">open</span><span class="token punctuation">(</span>filename<span class="token punctuation">,</span> <span class="token string">'wb'</span><span class="token punctuation">)</span> <span class="token keyword">as</span> f<span class="token punctuation">:</span>
     <span class="token keyword">for</span> chunk <span class="token keyword">in</span> r<span class="token punctuation">.</span>iter_content<span class="token punctuation">(</span>chunk_size<span class="token operator">=</span><span class="token number">128</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
         f<span class="token punctuation">.</span>write<span class="token punctuation">(</span>chunk<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<script src="https://cdn.jsdelivr.net/npm/anchor-js/anchor.min.js"></script>
-<script>
-  anchors.add();
-</script>
+
     </div>
 
     

@@ -7,7 +7,8 @@
 <a class="btn" href="https://github.com/lydiazly/python-intro/raw/master/notebooks/python-intro.zip"><i class="fa fa-download fa-fw"></i>Jupyter Notebook</a>
 <wbr> <a class="btn" href="https://pan.baidu.com/s/1nwsIcDr?pwd=s5re"><i class="fa fa-download fa-fw"></i>FITS Data</a>
 </p>
-<h2 id="anaconda">Anaconda</h2>
+<h2 id="anaconda"><a href="#anaconda"
+class="headerlink"></a>Anaconda</h2>
 <blockquote>
 <p>A <strong>conda package</strong> is a compressed tarball file that
 contains system-level libraries, Python or other modules, executable
@@ -80,7 +81,8 @@ class="uri">https://jakevdp.github.io/blog/2016/08/25/conda-myths-and-misconcept
     │        └── ...
     └── ...
 </pre>
-<h2 id="ipython-jupyter">IPython &amp; Jupyter</h2>
+<h2 id="ipython-jupyter"><a href="#ipython-jupyter"
+class="headerlink"></a>IPython &amp; Jupyter</h2>
 <p>参考文档 <a href="http://jupyter-notebook.readthedocs.io/en/stable/"
 class="uri">http://jupyter-notebook.readthedocs.io/en/stable/</a></p>
 <ul>
@@ -162,8 +164,10 @@ b <span class="token operator">=</span> <span class="token string">'x'</span>
 ----------------------------
 a          int     1
 b          str     x</code></pre>
-<h2 id="语法细节">语法细节</h2>
-<h3 id="python2-python3">python2 &amp; python3</h3>
+<h2 id="语法细节"><a href="#语法细节"
+class="headerlink"></a>语法细节</h2>
+<h3 id="python2-python3"><a href="#python2-python3"
+class="headerlink"></a>python2 &amp; python3</h3>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token operator">%</span><span class="token operator">%</span>python2
 <span class="token keyword">print</span> <span class="token number">1</span> <span class="token operator">/</span> <span class="token number">2</span>
 <span class="token keyword">print</span> <span class="token number">1</span> <span class="token operator">//</span> <span class="token number">2</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
@@ -175,7 +179,8 @@ b          str     x</code></pre>
 <pre><code>0.5
 0</code></pre>
 <p>详见 <a href="#python-2---3-的转换">Python 2 -&gt; 3 的转换</a></p>
-<h3 id="list-tuple">list, tuple</h3>
+<h3 id="list-tuple"><a href="#list-tuple" class="headerlink"></a>list,
+tuple</h3>
 <ul>
 <li>对 list 或 tuple, 当只有一个元素时, 注意加逗号:</li>
 </ul>
@@ -201,7 +206,7 @@ a<span class="token punctuation">,</span> b<span class="token punctuation">,</sp
 <pre class="line-numbers language-python" data-language="python"><code class="language-python">a<span class="token punctuation">,</span> <span class="token operator">*</span>_ <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span> <span class="token comment"># 或 a, = ...</span>
 a<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 <pre><code>0</code></pre>
-<h3 id="dict">dict</h3>
+<h3 id="dict"><a href="#dict" class="headerlink"></a>dict</h3>
 <ul>
 <li>dict 改变某个 key 但 value 不变的方法</li>
 </ul>
@@ -221,7 +226,7 @@ d2 <span class="token operator">=</span> <span class="token punctuation">&#123;<
 <pre class="line-numbers language-python" data-language="python"><code class="language-python">d1<span class="token punctuation">.</span>update<span class="token punctuation">(</span>d2<span class="token punctuation">)</span>
 d1<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 <pre><code>&#123;&#39;a&#39;: -1, &#39;b&#39;: 2, &#39;c&#39;: 3, &#39;d&#39;: 4&#125;</code></pre>
-<h3 id="set">set</h3>
+<h3 id="set"><a href="#set" class="headerlink"></a>set</h3>
 <ul>
 <li>set 基本操作</li>
 </ul>
@@ -272,7 +277,8 @@ s<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></
 <pre><code>True</code></pre>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token punctuation">&#123;</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">&#125;</span> <span class="token operator">>=</span> <span class="token punctuation">&#123;</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <pre><code>True</code></pre>
-<h3 id="一些特性的演示">一些特性的演示</h3>
+<h3 id="一些特性的演示"><a href="#一些特性的演示"
+class="headerlink"></a>一些特性的演示</h3>
 <p>插件 <a href="https://github.com/lgpage/nbtutor"
 class="uri">https://github.com/lgpage/nbtutor</a><br> 网页版 <a
 href="http://pythontutor.com/"
@@ -293,7 +299,8 @@ t<span class="token punctuation">[</span><span class="token number">2</span><spa
 <pre><code>(1, 2, [&#39;xx&#39;, 4])</code></pre>
 <p><a href="http://t.cn/Rg9idUn">网页版演示</a></p>
 <p><img data-src='/advance/nbtutor2.png' width='550'/></p>
-<h3 id="包含判断的单行循环">包含判断的单行循环</h3>
+<h3 id="包含判断的单行循环"><a href="#包含判断的单行循环"
+class="headerlink"></a>包含判断的单行循环</h3>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python">l <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">]</span>
 <span class="token punctuation">[</span>i <span class="token keyword">for</span> i <span class="token keyword">in</span> l <span class="token keyword">if</span> i <span class="token operator">></span> <span class="token number">2</span><span class="token punctuation">]</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 <pre><code>[3, 4, 5]</code></pre>
@@ -307,12 +314,14 @@ b <span class="token operator">=</span> <span class="token number">2</span>
     <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f'</span><span class="token interpolation"><span class="token punctuation">&#123;</span>namestr<span class="token punctuation">(</span>var<span class="token punctuation">,</span> <span class="token builtin">globals</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">&#125;</span></span><span class="token string"> = </span><span class="token interpolation"><span class="token punctuation">&#123;</span>var<span class="token punctuation">&#125;</span></span><span class="token string">'</span></span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <pre><code>a = 1
 b = 2</code></pre>
-<h3 id="单行-if-三元关系运算">单行 if (三元关系运算)</h3>
+<h3 id="单行-if-三元关系运算"><a href="#单行-if-三元关系运算"
+class="headerlink"></a>单行 if (三元关系运算)</h3>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python">a <span class="token operator">=</span> <span class="token number">1</span>
 b <span class="token operator">=</span> <span class="token string">'y'</span> <span class="token keyword">if</span> a <span class="token operator">></span> <span class="token number">0</span> <span class="token keyword">else</span> <span class="token string">'n'</span>
 b<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 <pre><code>&#39;y&#39;</code></pre>
-<h3 id="循环-迭代器-生成器">循环, 迭代器, 生成器</h3>
+<h3 id="循环-迭代器-生成器"><a href="#循环-迭代器-生成器"
+class="headerlink"></a>循环, 迭代器, 生成器</h3>
 <p>Python 的 for 循环不使用索引变量, 而使用遍历<strong>迭代器</strong>
 (iterator) 的方式处理<strong>可迭代对象</strong> (range, set 等):</p>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
@@ -339,7 +348,8 @@ a<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></
 <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># 转化成 tuple</span>
 <span class="token builtin">tuple</span><span class="token punctuation">(</span>i <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 <pre><code>(0, 1, 2)</code></pre>
-<h3 id="函数定义">函数定义</h3>
+<h3 id="函数定义"><a href="#函数定义"
+class="headerlink"></a>函数定义</h3>
 <ul>
 <li>一般的函数定义:</li>
 </ul>
@@ -360,7 +370,8 @@ f<span class="token punctuation">(</span><span class="token number">1</span><spa
 <pre><code>3</code></pre>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token punctuation">(</span><span class="token keyword">lambda</span> x<span class="token punctuation">,</span> y<span class="token punctuation">:</span> x <span class="token operator">+</span> y<span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span>  <span class="token comment"># 不一定需要定义函数名称</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <pre><code>3</code></pre>
-<h3 id="命名空间和变量作用域">命名空间和变量作用域</h3>
+<h3 id="命名空间和变量作用域"><a href="#命名空间和变量作用域"
+class="headerlink"></a>命名空间和变量作用域</h3>
 <p><a
 href="https://sebastianraschka.com/Articles/2014_python_scope_and_namespaces.html"
 class="uri">https://sebastianraschka.com/Articles/2014_python_scope_and_namespaces.html</a></p>
@@ -415,8 +426,9 @@ names) may exist in more than one scope, and since it's the same object,
 <br><strong>any changes will be visible in all scopes</strong>.</p></li>
 </ul>
 </blockquote>
-<h2 id="numpy">NumPy</h2>
-<h3 id="numpy-的数据类型-dtype">numpy 的数据类型 dtype</h3>
+<h2 id="numpy"><a href="#numpy" class="headerlink"></a>NumPy</h2>
+<h3 id="numpy-的数据类型-dtype"><a href="#numpy-的数据类型-dtype"
+class="headerlink"></a>numpy 的数据类型 dtype</h3>
 <p><a href="https://www.tutorialspoint.com/numpy/numpy_data_types.htm"
 class="uri">https://www.tutorialspoint.com/numpy/numpy_data_types.htm</a>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token operator">>></span><span class="token operator">></span> np<span class="token punctuation">.</span>dtype<span class="token punctuation">(</span>np<span class="token punctuation">.</span>int64<span class="token punctuation">)</span> <span class="token keyword">is</span> np<span class="token punctuation">.</span>dtype<span class="token punctuation">(</span><span class="token string">'i8'</span><span class="token punctuation">)</span> <span class="token keyword">is</span> np<span class="token punctuation">.</span>dtype<span class="token punctuation">(</span><span class="token string">'&lt;i8'</span><span class="token punctuation">)</span>
@@ -429,8 +441,9 @@ class="uri">https://www.tutorialspoint.com/numpy/numpy_data_types.htm</a>
 <span class="token operator">>></span><span class="token operator">></span> np<span class="token punctuation">.</span>dtype<span class="token punctuation">(</span>np<span class="token punctuation">.</span>float64<span class="token punctuation">)</span> <span class="token keyword">is</span> np<span class="token punctuation">.</span>dtype<span class="token punctuation">(</span><span class="token string">'float'</span><span class="token punctuation">)</span> <span class="token keyword">is</span> np<span class="token punctuation">.</span>dtype<span class="token punctuation">(</span><span class="token string">'float64'</span><span class="token punctuation">)</span>
 <span class="token boolean">True</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre> 见 <a
 href="#fortran-二进制文件读写">Fortran 二进制文件读写</a> 中的应用.</p>
-<h3 id="np.arange-参数为浮点数时要注意的细节">np.arange
-参数为浮点数时要注意的细节</h3>
+<h3 id="np.arange-参数为浮点数时要注意的细节"><a
+href="#np.arange-参数为浮点数时要注意的细节"
+class="headerlink"></a>np.arange 参数为浮点数时要注意的细节</h3>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python">np<span class="token punctuation">.</span>arange<span class="token punctuation">(</span><span class="token number">0.</span><span class="token punctuation">,</span> <span class="token number">1.8</span><span class="token punctuation">,</span> <span class="token number">0.3</span><span class="token punctuation">)</span>  <span class="token comment"># 默认不包含 `stop` 这个点</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <pre><code>array([0. , 0.3, 0.6, 0.9, 1.2, 1.5])</code></pre>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python">np<span class="token punctuation">.</span>arange<span class="token punctuation">(</span><span class="token number">0.</span><span class="token punctuation">,</span> <span class="token number">2.1</span><span class="token punctuation">,</span> <span class="token number">0.3</span><span class="token punctuation">)</span>  <span class="token comment"># 这里却包括了, 为什么?</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
@@ -461,7 +474,7 @@ class="uri">https://docs.python.org/3/tutorial/floatingpoint.html</a></p>
 <p>建议是: 使用整数; 对浮点数的情况, stop 值设得略小一些
 (比如减去步长的一般) 以防止改点被包含, 或使用 <code>np.linspace</code>
 代替.</p>
-<h3 id="矩阵">矩阵</h3>
+<h3 id="矩阵"><a href="#矩阵" class="headerlink"></a>矩阵</h3>
 <p><code>np.matrix</code>(矩阵) 是 <code>np.ndarray</code>(数组)
 的一个子类, 继承了父级的方法, 也定义了新的方法 (例如矩阵运算).</p>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token builtin">issubclass</span><span class="token punctuation">(</span>np<span class="token punctuation">.</span>matrix<span class="token punctuation">,</span> np<span class="token punctuation">.</span>ndarray<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
@@ -492,8 +505,10 @@ x<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><s
 <pre><code>True</code></pre>
 <p>注意: <code>np.matrix</code> 既是一个类名也是一个函数名, 而
 <code>np.mat</code>, <code>np.asmatrix</code> 只是函数名.</p>
-<h3 id="数组和矩阵运算">数组和矩阵运算</h3>
-<h4 id="数组运算">数组运算</h4>
+<h3 id="数组和矩阵运算"><a href="#数组和矩阵运算"
+class="headerlink"></a>数组和矩阵运算</h3>
+<h4 id="数组运算"><a href="#数组运算"
+class="headerlink"></a>数组运算</h4>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python">a <span class="token operator">=</span> np<span class="token punctuation">.</span>arange<span class="token punctuation">(</span><span class="token number">12</span><span class="token punctuation">)</span><span class="token punctuation">.</span>reshape<span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span> a<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <pre><code>array([[ 0,  1,  2,  3],
        [ 4,  5,  6,  7],
@@ -508,7 +523,8 @@ x<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><s
 <pre><code>array([[  0,   1,   4,   9],
        [ 16,  25,  36,  49],
        [ 64,  81, 100, 121]])</code></pre>
-<h4 id="使用数组进行矩阵运算">使用数组进行矩阵运算</h4>
+<h4 id="使用数组进行矩阵运算"><a href="#使用数组进行矩阵运算"
+class="headerlink"></a>使用数组进行矩阵运算</h4>
 <p><code>scipy.linalg</code> 与 <code>numpy.linalg</code> 的比较: <a
 href="https://scipy.github.io/devdocs/tutorial/linalg.html"
 class="uri">https://scipy.github.io/devdocs/tutorial/linalg.html</a>
@@ -536,7 +552,8 @@ inv<span class="token punctuation">(</span>a<span class="token punctuation">)</s
 <pre><code>array([[-1.,  0.],
        [-2.,  0.],
        [-3.,  0.]])</code></pre>
-<h4 id="直接使用矩阵类型进行运算">直接使用矩阵类型进行运算</h4>
+<h4 id="直接使用矩阵类型进行运算"><a href="#直接使用矩阵类型进行运算"
+class="headerlink"></a>直接使用矩阵类型进行运算</h4>
 <p>使用 numpy 的矩阵类型 <code>numpy.matrix</code></p>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python">a <span class="token operator">=</span> np<span class="token punctuation">.</span>mat<span class="token punctuation">(</span>np<span class="token punctuation">.</span>diagflat<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">1.</span><span class="token punctuation">,</span> <span class="token number">2.</span><span class="token punctuation">,</span> <span class="token number">3.</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> a<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <pre><code>matrix([[1., 0., 0.],
@@ -557,7 +574,9 @@ inv<span class="token punctuation">(</span>a<span class="token punctuation">)</s
 <pre><code>matrix([[ 1.        ,  0.        , -0.        ],
         [ 0.        ,  0.5       , -0.        ],
         [ 0.        ,  0.        ,  0.33333333]])</code></pre>
-<h3 id="用作坐标格点的数组的几种形式">用作坐标格点的数组的几种形式</h3>
+<h3 id="用作坐标格点的数组的几种形式"><a
+href="#用作坐标格点的数组的几种形式"
+class="headerlink"></a>用作坐标格点的数组的几种形式</h3>
 <ul>
 <li><strong><code>np.meshgrid</code></strong></li>
 </ul>
@@ -617,7 +636,7 @@ array<span class="token punctuation">(</span><span class="token punctuation">[</
 array<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token number">3.</span><span class="token punctuation">,</span> <span class="token number">4.</span><span class="token punctuation">,</span> <span class="token number">5.</span><span class="token punctuation">,</span> <span class="token number">6.</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
        <span class="token punctuation">[</span><span class="token number">3.</span><span class="token punctuation">,</span> <span class="token number">4.</span><span class="token punctuation">,</span> <span class="token number">5.</span><span class="token punctuation">,</span> <span class="token number">6.</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
        <span class="token punctuation">[</span><span class="token number">3.</span><span class="token punctuation">,</span> <span class="token number">4.</span><span class="token punctuation">,</span> <span class="token number">5.</span><span class="token punctuation">,</span> <span class="token number">6.</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h3 id="mask">mask</h3>
+<h3 id="mask"><a href="#mask" class="headerlink"></a>mask</h3>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python">a <span class="token operator">=</span> np<span class="token punctuation">.</span>arange<span class="token punctuation">(</span><span class="token number">9</span><span class="token punctuation">)</span><span class="token punctuation">.</span>reshape<span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span> a<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <pre><code>array([[0, 1, 2],
        [3, 4, 5],
@@ -634,11 +653,13 @@ array<span class="token punctuation">(</span><span class="token punctuation">[</
 <pre><code>array([[ 0,  1,  2],
        [ 3,  4, -1],
        [-1, -1, -1]])</code></pre>
-<h3 id="其他对数组元素的处理">其他对数组元素的处理</h3>
+<h3 id="其他对数组元素的处理"><a href="#其他对数组元素的处理"
+class="headerlink"></a>其他对数组元素的处理</h3>
 <p>处理含有 NaN 的数据:</p>
 <p>e.g. 求最值可使用 <code>np.nanmin(...)</code> 和
 <code>np.nanmax(...)</code></p>
-<h2 id="matplotlib">Matplotlib</h2>
+<h2 id="matplotlib"><a href="#matplotlib"
+class="headerlink"></a>Matplotlib</h2>
 <ul>
 <li>官方教程 <a
 href="https://matplotlib.org/tutorials/introductory/usage.html"
@@ -686,8 +707,10 @@ class="uri">https://matplotlib.org/mpl_toolkits/mplot3d/tutorial.html</a></li>
 <li>更复杂的 3D 可转存可视化数据用其他软件或使用 Mayavi
 (http://docs.enthought.com/mayavi/mayavi)</li>
 </ul>
-<h2 id="sunpy-示例">SunPy 示例</h2>
-<h3 id="示例文件">示例文件</h3>
+<h2 id="sunpy-示例"><a href="#sunpy-示例" class="headerlink"></a>SunPy
+示例</h2>
+<h3 id="示例文件"><a href="#示例文件"
+class="headerlink"></a>示例文件</h3>
 <ul>
 <li><p>读取 fits, submap, 作图 <a
 href="/example_plothmi.html">example_plothmi</a></p></li>
@@ -697,7 +720,8 @@ href="/example_projection.html">example_projection</a></p></li>
 href="/jsoc.html">jsoc</a></p></li>
 </ul>
 <p>注意: 这些例子只是提供一个使用参考, 不一定是最优的.</p>
-<h3 id="示例中的-fits-读取方法">示例中的 fits 读取方法</h3>
+<h3 id="示例中的-fits-读取方法"><a href="#示例中的-fits-读取方法"
+class="headerlink"></a>示例中的 fits 读取方法</h3>
 <p>更多 FITS 的读取方法参见 <a href="/main.html#fits-文件读取">Python
 简易教程#FITS-文件读取</a><br> 另见 <a
 href="http://docs.astropy.org/en/stable/io/fits/usage/scripts.html">Astropy
@@ -725,7 +749,8 @@ plt<span class="token punctuation">.</span>show<span class="token punctuation">(
 <img data-src="/advance/advance_205_0.png" alt="png" />
 <figcaption aria-hidden="true">png</figcaption>
 </figure>
-<h3 id="关于-scaled-image-data">关于 Scaled Image Data</h3>
+<h3 id="关于-scaled-image-data"><a href="#关于-scaled-image-data"
+class="headerlink"></a>关于 Scaled Image Data</h3>
 <p>这一部分将更仔细地检查 Astropy 对示例中的 FITS 文件的处理.</p>
 <p>参见 <a
 href="http://docs.astropy.org/en/stable/io/fits/usage/image.html#scaled-data"
@@ -842,7 +867,8 @@ smap <span class="token operator">=</span> sunpy<span class="token punctuation">
 <pre><code>0.01</code></pre>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python">smap<span class="token punctuation">.</span>meta<span class="token punctuation">[</span><span class="token string">'BZERO'</span><span class="token punctuation">]</span>  <span class="token comment"># 不变</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <pre><code>0.0</code></pre>
-<h3 id="坐标和单位">坐标和单位</h3>
+<h3 id="坐标和单位"><a href="#坐标和单位"
+class="headerlink"></a>坐标和单位</h3>
 <p><strong>SunPy map</strong> <a
 href="http://docs.sunpy.org/en/stable/code_ref/map.html#using-map-objects"
 class="uri">http://docs.sunpy.org/en/stable/code_ref/map.html#using-map-objects</a>
@@ -918,7 +944,8 @@ class="math inline">\(\mathrm{-7.65399^{\prime\prime}}\)</span></p>
 smap<span class="token punctuation">.</span>coordinate_frame<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 <pre><code>&lt;Helioprojective Frame (obstime=2015-08-27 05:22:21.800000, rsun=696000000.0 m, observer=&lt;HeliographicStonyhurst Coordinate (obstime=2015-08-27 05:22:21.800000): (lon, lat, radius) in (deg, deg, m)
     (0., 7.089004, 1.51196988e+11)&gt;)&gt;</code></pre>
-<h3 id="语法对比">语法对比</h3>
+<h3 id="语法对比"><a href="#语法对比"
+class="headerlink"></a>语法对比</h3>
 <p>比较 <code>plothmi.py</code> 与对应 IDL 程序的语法:</p>
 <p>下面的语句中, 为了简便和方便对比, 使用了自定义的一些函数. 导入方法:
 <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">from</span> usr_sunpy <span class="token keyword">import</span> read_sdo<span class="token punctuation">,</span> plot_map<span class="token punctuation">,</span> plot_vmap<span class="token punctuation">,</span> image_to_helio<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></p>
@@ -963,10 +990,11 @@ smapbx_h<span class="token punctuation">,</span> smapby_h<span class="token punc
 
 plot_map<span class="token punctuation">(</span>ax<span class="token punctuation">,</span> smapbz_h<span class="token punctuation">,</span> coords<span class="token operator">=</span><span class="token punctuation">(</span>hx<span class="token punctuation">,</span> hy<span class="token punctuation">)</span><span class="token punctuation">)</span>
 plot_vmap<span class="token punctuation">(</span>ax<span class="token punctuation">,</span> smapbx_h<span class="token punctuation">,</span> smapby_h<span class="token punctuation">,</span> smapbz_h<span class="token punctuation">,</span> coords<span class="token operator">=</span><span class="token punctuation">(</span>hx<span class="token punctuation">,</span> hy<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></p>
-<h2 id="插值-拟合">插值, 拟合</h2>
+<h2 id="插值-拟合"><a href="#插值-拟合" class="headerlink"></a>插值,
+拟合</h2>
 <p>选择不限于这里列举的包, 以后也可能会有更合适的方法出现.</p>
 <p>相关安装见 <a href="/installpy.html#其他">Python 安装和配置</a></p>
-<h3 id="插值">插值</h3>
+<h3 id="插值"><a href="#插值" class="headerlink"></a>插值</h3>
 <ul>
 <li><p>numpy <pre class="line-numbers language-none"><code class="language-none">f &#x3D; interp1d(x, y, kind&#x3D;&#39;cubic&#39;[, fill_value&#x3D;&#39;extrapolate&#39;])
 x2 &#x3D; np.linspace(...)
@@ -976,7 +1004,7 @@ href="https://github.com/lydiazly/python-intro/blob/master/examples/test_plot.py
 href="https://docs.scipy.org/doc/scipy/tutorial/interpolate.html"
 class="uri">https://docs.scipy.org/doc/scipy/tutorial/interpolate.html</a></p></li>
 </ul>
-<h3 id="求极值">求极值</h3>
+<h3 id="求极值"><a href="#求极值" class="headerlink"></a>求极值</h3>
 <ul>
 <li>PeakUtils <a href="http://peakutils.readthedocs.io/en/latest/"
 class="uri">http://peakutils.readthedocs.io/en/latest/</a></li>
@@ -987,7 +1015,7 @@ class="uri">http://peakutils.readthedocs.io/en/latest/</a></li>
 indexes <span class="token operator">=</span> peakutils<span class="token punctuation">.</span>indexes<span class="token punctuation">(</span>y<span class="token punctuation">,</span> thres<span class="token operator">=</span><span class="token number">0.5</span><span class="token punctuation">,</span> min_dist<span class="token operator">=</span><span class="token number">30</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 <p><img data-src='/advance/tut_a_2.png' width='500' /></p>
 <p>Enhancing the resolution by interpolation: <pre class="line-numbers language-python" data-language="python"><code class="language-python">peaks_x <span class="token operator">=</span> peakutils<span class="token punctuation">.</span>interpolate<span class="token punctuation">(</span>x<span class="token punctuation">,</span> y<span class="token punctuation">,</span> ind<span class="token operator">=</span>indexes<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></p>
-<h3 id="拟合">拟合</h3>
+<h3 id="拟合"><a href="#拟合" class="headerlink"></a>拟合</h3>
 <ul>
 <li>LMFIT (Non-Linear Least-Squares Minimization and Curve-Fitting)</li>
 </ul>
@@ -1086,7 +1114,7 @@ plt<span class="token punctuation">.</span>plot<span class="token punctuation">(
 </figure>
 <p>自定义模型的方法见 <a
 href="http://lmfit.github.io/lmfit-py/builtin_models.html#user-defined-models">LMFIT网站示例</a></p>
-<h3 id="其他">其他</h3>
+<h3 id="其他"><a href="#其他" class="headerlink"></a>其他</h3>
 <ul>
 <li>Sherpa(Modeling and Fitting) <a
 href="http://cxc.cfa.harvard.edu/contrib/sherpa/"
@@ -1096,7 +1124,8 @@ href="https://python4astronomers.github.io/fitting/image.html"
 class="uri">https://python4astronomers.github.io/fitting/image.html</a><br></li>
 <li><em>etc.</em></li>
 </ul>
-<h2 id="copy-注意事项">copy 注意事项</h2>
+<h2 id="copy-注意事项"><a href="#copy-注意事项"
+class="headerlink"></a>copy 注意事项</h2>
 <p><strong>"shallow copy"</strong> vs <strong>"deep copy"</strong></p>
 <ul>
 <li>对于 list 的情况</li>
@@ -1171,8 +1200,10 @@ d<span class="token punctuation">[</span><span class="token number">1</span><spa
 Error</strong>: Ruby and Python+Anaconda backends are permanently
 unavailable)</p>
 <p>参见之前的 <a href="#矩阵">np.matrix, np.asmatrix</a></p>
-<h2 id="其他格式文件读写">其他格式文件读写</h2>
-<h3 id="用-pandas-读-csv">用 pandas 读 csv</h3>
+<h2 id="其他格式文件读写"><a href="#其他格式文件读写"
+class="headerlink"></a>其他格式文件读写</h2>
+<h3 id="用-pandas-读-csv"><a href="#用-pandas-读-csv"
+class="headerlink"></a>用 pandas 读 csv</h3>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> pandas <span class="token keyword">as</span> pd
 data <span class="token operator">=</span> pd<span class="token punctuation">.</span>read_csv<span class="token punctuation">(</span><span class="token string">"data/data.csv"</span><span class="token punctuation">)</span>
 data<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
@@ -1323,8 +1354,10 @@ row2
 <p>对于超大文件, 参见: <a
 href="https://www.dataquest.io/blog/pandas-big-data/"
 class="uri">https://www.dataquest.io/blog/pandas-big-data/</a></p>
-<h3 id="fortran-二进制文件读写">Fortran 二进制文件读写</h3>
-<h4 id="unformatted-sequential">Unformatted (sequential)</h4>
+<h3 id="fortran-二进制文件读写"><a href="#fortran-二进制文件读写"
+class="headerlink"></a>Fortran 二进制文件读写</h3>
+<h4 id="unformatted-sequential"><a href="#unformatted-sequential"
+class="headerlink"></a>Unformatted (sequential)</h4>
 <p>使用 <code>scipy.io.FortranFile</code><br> 参考: <a
 href="https://docs.scipy.org/doc/scipy-0.15.1/reference/generated/scipy.io.FortranFile.read_record.html"
 class="uri">https://docs.scipy.org/doc/scipy-0.15.1/reference/generated/scipy.io.FortranFile.read_record.html</a></p>
@@ -1396,7 +1429,8 @@ ifort -o test_read_seq test_read_seq.f90
 <p>见 Structured arrays: <a
 href="https://docs.scipy.org/doc/numpy/user/basics.rec.html"
 class="uri">https://docs.scipy.org/doc/numpy/user/basics.rec.html</a></p>
-<h4 id="unformatted-stream">Unformatted (stream)</h4>
+<h4 id="unformatted-stream"><a href="#unformatted-stream"
+class="headerlink"></a>Unformatted (stream)</h4>
 <p><code>struct</code> 参考 <a
 href="https://docs.python.org/3/library/struct.html"
 class="uri">https://docs.python.org/3/library/struct.html</a></p>
@@ -1435,9 +1469,12 @@ ifort -o test_read_stream test_read_stream.f90
   0.0 1.0 2.0
   3.0 4.0 5.0
  arr(2, 1) =  1.0</code></pre>
-<h3 id="hdf5-文件读写-ncdf-cdf-文件读取">HDF5 文件读写, NCDF, CDF
-文件读取</h3>
-<h4 id="读写-hdf5-文件-读-ncdf-文件">读写 HDF5 文件, 读 NCDF 文件</h4>
+<h3 id="hdf5-文件读写-ncdf-cdf-文件读取"><a
+href="#hdf5-文件读写-ncdf-cdf-文件读取" class="headerlink"></a>HDF5
+文件读写, NCDF, CDF 文件读取</h3>
+<h4 id="读写-hdf5-文件-读-ncdf-文件"><a
+href="#读写-hdf5-文件-读-ncdf-文件" class="headerlink"></a>读写 HDF5
+文件, 读 NCDF 文件</h4>
 <p>HDF5 格式介绍 <a
 href="https://portal.hdfgroup.org/display/HDF5/Introduction+to+HDF5"
 class="uri">https://portal.hdfgroup.org/display/HDF5/Introduction+to+HDF5</a></p>
@@ -1503,7 +1540,8 @@ f<span class="token punctuation">.</span>close<span class="token punctuation">(<
          <span class="token string-interpolation"><span class="token string">f'</span><span class="token interpolation"><span class="token punctuation">&#123;</span>np<span class="token punctuation">.</span>dtype<span class="token punctuation">(</span>f<span class="token punctuation">.</span>get_node<span class="token punctuation">(</span>k<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">&#125;</span></span><span class="token string">'</span></span><span class="token punctuation">.</span>rjust<span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
          <span class="token keyword">for</span> k <span class="token keyword">in</span> <span class="token builtin">list</span><span class="token punctuation">(</span>f<span class="token punctuation">.</span>root<span class="token punctuation">.</span>_v_children<span class="token punctuation">.</span>keys<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
  Bug: 无法读出 <code>H5T_STRING</code></p>
-<h4 id="大小比较">大小比较</h4>
+<h4 id="大小比较"><a href="#大小比较"
+class="headerlink"></a>大小比较</h4>
 <p>用于比较的文件名说明:</p>
 <table>
 <thead>
@@ -1686,7 +1724,8 @@ complib='zlib', complevel=9</td>
 4.1M    data/fits_pd_bzip2.hdf5
 7.6M    data/fits_pd_lzo.hdf5
 4.8M    data/fits_pd_zlib.hdf5</code></pre>
-<h4 id="读取-cdf-文件">读取 CDF 文件</h4>
+<h4 id="读取-cdf-文件"><a href="#读取-cdf-文件"
+class="headerlink"></a>读取 CDF 文件</h4>
 <p>相关包 <code>cdflib</code>, 安装见 <a
 href="/installpy.html#其他">Python 安装和配置#其他</a>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> cdflib
@@ -1695,7 +1734,8 @@ f<span class="token punctuation">.</span>cdf_info<span class="token punctuation"
 f<span class="token punctuation">.</span>varinq<span class="token punctuation">(</span><span class="token string">'&lt;key>'</span><span class="token punctuation">)</span>  <span class="token comment"># 变量信息</span>
 f<span class="token punctuation">.</span>varget<span class="token punctuation">(</span><span class="token string">'&lt;key>'</span><span class="token punctuation">)</span>  <span class="token comment"># 值</span>
 f<span class="token punctuation">.</span>close<span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></p>
-<h3 id="numpy-to-vtk">NumPy to VTK</h3>
+<h3 id="numpy-to-vtk"><a href="#numpy-to-vtk"
+class="headerlink"></a>NumPy to VTK</h3>
 <p>参考 <a
 href="https://pyscience.wordpress.com/2014/09/06/numpy-to-vtk-converting-your-numpy-arrays-to-vtk-arrays-and-files/"
 class="uri">https://pyscience.wordpress.com/2014/09/06/numpy-to-vtk-converting-your-numpy-arrays-to-vtk-arrays-and-files/</a><br>
@@ -1704,14 +1744,17 @@ e.g.<br> 运行 <a
 href="https://github.com/lydiazly/python-intro/blob/master/examples/field2dvtk.py">examples/field2dvtk.py</a>
 ,<br> 打开Paraview, 选择 state 文件 'field2d.pvsm', 再选择数据文件
 'field2d.vtr'</p>
-<h3 id="matlab-mat-文件读写">Matlab mat 文件读写</h3>
+<h3 id="matlab-mat-文件读写"><a href="#matlab-mat-文件读写"
+class="headerlink"></a>Matlab mat 文件读写</h3>
 <p>(未测试) <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> scipy<span class="token punctuation">.</span>io
 scipy<span class="token punctuation">.</span>io<span class="token punctuation">.</span>loadmat<span class="token punctuation">(</span><span class="token string">"&lt;filename>"</span><span class="token punctuation">,</span> mdict<span class="token operator">=</span><span class="token boolean">None</span><span class="token punctuation">,</span> appendmat<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">,</span> <span class="token operator">**</span>kwargs<span class="token punctuation">)</span>
 <span class="token comment"># 如果 appendmat=True，则文件名不需要'.mat'后缀)</span>
 scipy<span class="token punctuation">.</span>io<span class="token punctuation">.</span>savemat<span class="token punctuation">(</span><span class="token string">"&lt;filename>"</span><span class="token punctuation">,</span> mdict<span class="token punctuation">,</span> appendmat<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">,</span> <span class="token builtin">format</span><span class="token operator">=</span><span class="token string">'5'</span><span class="token punctuation">,</span>
                  long_field_names<span class="token operator">=</span><span class="token boolean">False</span><span class="token punctuation">,</span> do_compression<span class="token operator">=</span><span class="token boolean">False</span><span class="token punctuation">,</span> oned_as<span class="token operator">=</span><span class="token string">'row'</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre></p>
-<h2 id="脚本相关">脚本相关</h2>
-<h3 id="脚本结构">脚本结构</h3>
+<h2 id="脚本相关"><a href="#脚本相关"
+class="headerlink"></a>脚本相关</h2>
+<h3 id="脚本结构"><a href="#脚本结构"
+class="headerlink"></a>脚本结构</h3>
 <p>文件头: <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment">#!/usr/bin/env python</span>
 <span class="token comment"># -*- coding: utf-8 -*-</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre></p>
 <p>脚本结构: <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment">#!/usr/bin/env python</span>
@@ -1744,7 +1787,8 @@ c <span class="token operator">=</span> <span class="token number">1</span>
 <p><code>help()</code> 也可以查看模块内的函数文档:</p>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> usr_sunpy
 <span class="token builtin">help</span><span class="token punctuation">(</span>usr_sunpy<span class="token punctuation">.</span>plot_map<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-<h3 id="try-...-except-...-语法">try ... except ... 语法</h3>
+<h3 id="try-...-except-...-语法"><a href="#try-...-except-...-语法"
+class="headerlink"></a>try ... except ... 语法</h3>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">try</span><span class="token punctuation">:</span>
     <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
 <span class="token keyword">except</span> ValueError <span class="token keyword">as</span> e<span class="token punctuation">:</span>
@@ -1756,7 +1800,8 @@ c <span class="token operator">=</span> <span class="token number">1</span>
 <span class="token keyword">finally</span><span class="token punctuation">:</span>
     <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'finally...'</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>见 <a href="#paraview-脚本">Paraview 的例子</a></p>
-<h3 id="paraview-脚本">Paraview 脚本</h3>
+<h3 id="paraview-脚本"><a href="#paraview-脚本"
+class="headerlink"></a>Paraview 脚本</h3>
 <p>官方文档 <a
 href="https://www.paraview.org/ParaView/Doc/Nightly/www/py-doc/index.html"
 class="uri">https://www.paraview.org/ParaView/Doc/Nightly/www/py-doc/index.html</a>
@@ -1799,7 +1844,8 @@ unset PYTHONSTARTUP  # 如果有的话
 export PYTHONPATH&#x3D;&#x2F;&lt;your_path&gt;&#x2F;ParaView&#x2F;lib&#x2F;python2.7&#x2F;site-packages
 &#x2F;&lt;your_path&gt;&#x2F;ParaView&#x2F;bin&#x2F;paraview $@<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre> 用这个脚本替代原有 <code>paraview</code>,
 <code>pvpython</code> 和 <code>pvbatch</code> 命令.</p>
-<h3 id="python-2---3-的转换">Python 2 -&gt; 3 的转换</h3>
+<h3 id="python-2---3-的转换"><a href="#python-2---3-的转换"
+class="headerlink"></a>Python 2 -&gt; 3 的转换</h3>
 <p>比较推荐的安全的检查方式:</p>
 <ul>
 <li><p>备份的原文件且自动生成转换过的文件 <pre class="line-numbers language-none"><code class="language-none">$ 2to3 -w filename<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></p></li>
@@ -1815,7 +1861,8 @@ $ meld filename filename.bak<span aria-hidden="true" class="line-numbers-rows"><
 <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> sys
 <span class="token keyword">print</span><span class="token punctuation">(</span>sys<span class="token punctuation">.</span>version_info <span class="token operator">>=</span> <span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
 <span class="token keyword">print</span><span class="token punctuation">(</span>sys<span class="token punctuation">.</span>version_info<span class="token punctuation">.</span>major <span class="token operator">>=</span> <span class="token number">3</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-<h3 id="执行-shell-命令">执行 shell 命令</h3>
+<h3 id="执行-shell-命令"><a href="#执行-shell-命令"
+class="headerlink"></a>执行 shell 命令</h3>
 <p><a href="https://docs.python.org/3/library/subprocess.html"
 class="uri">https://docs.python.org/3/library/subprocess.html</a></p>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> subprocess
@@ -1865,7 +1912,8 @@ os<span class="token punctuation">.</span>getcwd<span class="token punctuation">
 <p><code>os.path.dirname</code> 类似于 bash 的 <code>dirname</code></p>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python">!dirname <span class="token string">'your/path/filename'</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <pre><code>your/path</code></pre>
-<h3 id="脚本选项">脚本选项</h3>
+<h3 id="脚本选项"><a href="#脚本选项"
+class="headerlink"></a>脚本选项</h3>
 <p>推荐 <code>argparse</code>, 在过去的其他方法的基础上有所增强 <a
 href="https://docs.python.org/3/library/argparse.html"
 class="uri">https://docs.python.org/3/library/argparse.html</a></p>
@@ -1885,7 +1933,8 @@ positional arguments:
 optional arguments:
  -h, --help  show this help message and exit
  --sum       sum the integers (default: find the max)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></p>
-<h3 id="处理-warnings">处理 warnings</h3>
+<h3 id="处理-warnings"><a href="#处理-warnings"
+class="headerlink"></a>处理 warnings</h3>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># Suppress warnings of NaNs:</span>
 <span class="token keyword">with</span> np<span class="token punctuation">.</span>errstate<span class="token punctuation">(</span>invalid<span class="token operator">=</span><span class="token string">'ignore'</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
     <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
@@ -1900,7 +1949,8 @@ optional arguments:
 warnings<span class="token punctuation">.</span>simplefilter<span class="token punctuation">(</span><span class="token string">"ignore"</span><span class="token punctuation">,</span> category<span class="token operator">=</span>xxx<span class="token punctuation">)</span>  <span class="token comment"># UserWarning, FutureWarning, etc.</span>
 <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
 <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h2 id="urllib-requests">urllib, requests</h2>
+<h2 id="urllib-requests"><a href="#urllib-requests"
+class="headerlink"></a>urllib, requests</h2>
 <p>示例和文件来自 <a href="http://python4astronomers.github.io"
 class="uri">http://python4astronomers.github.io</a></p>
 <p>注意 python3 不再使用 <code>urllib2</code></p>
@@ -1921,10 +1971,7 @@ r <span class="token operator">=</span> requests<span class="token punctuation">
 <span class="token keyword">with</span> <span class="token builtin">open</span><span class="token punctuation">(</span>filename<span class="token punctuation">,</span> <span class="token string">'wb'</span><span class="token punctuation">)</span> <span class="token keyword">as</span> f<span class="token punctuation">:</span>
     <span class="token keyword">for</span> chunk <span class="token keyword">in</span> r<span class="token punctuation">.</span>iter_content<span class="token punctuation">(</span>chunk_size<span class="token operator">=</span><span class="token number">128</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
         f<span class="token punctuation">.</span>write<span class="token punctuation">(</span>chunk<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<script src="https://cdn.jsdelivr.net/npm/anchor-js/anchor.min.js"></script>
-<script>
-  anchors.add();
-</script>]]></content>
+]]></content>
       <categories>
         <category>Solar Physics</category>
       </categories>
@@ -1945,8 +1992,10 @@ r <span class="token operator">=</span> requests<span class="token punctuation">
 <p><small><font color=gray>[Update 2022-07-12] Some outputs were updated
 with python 3.10.</font></small></p>
 <span id="more"></span>
-<h2 id="安装-python">安装 python</h2>
-<h3 id="安装-python-3">安装 python 3</h3>
+<h2 id="安装-python"><a href="#安装-python" class="headerlink"></a>安装
+python</h2>
+<h3 id="安装-python-3"><a href="#安装-python-3"
+class="headerlink"></a>安装 python 3</h3>
 <ul>
 <li>检查系统自带的版本:</li>
 </ul>
@@ -1960,8 +2009,9 @@ python --version
 python3 --version<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 <pre><code>Python 3.10.5
 Python 3.10.5</code></pre>
-<h3 id="pip">pip</h3>
-<h4 id="安装-pip">安装 pip</h4>
+<h3 id="pip"><a href="#pip" class="headerlink"></a>pip</h3>
+<h4 id="安装-pip"><a href="#安装-pip" class="headerlink"></a>安装
+pip</h4>
 <p>检查 pip 是否安装以及版本</p>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">%%bash
 pip --version<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
@@ -1971,7 +2021,8 @@ python -m pip --version<span aria-hidden="true" class="line-numbers-rows"><span>
 <pre><code>pip 22.1.2 from /home/lydia/miniconda3/lib/python3.10/site-packages/pip (python 3.10)</code></pre>
 <p>安装 (Ubuntu):</p>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">sudo</span> <span class="token function">apt-get</span> <span class="token function">install</span> python3-pip<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<h4 id="用-pip-安装-python-包">用 pip 安装 python 包</h4>
+<h4 id="用-pip-安装-python-包"><a href="#用-pip-安装-python-包"
+class="headerlink"></a>用 pip 安装 python 包</h4>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">pip <span class="token function">install</span> <span class="token operator">&lt;</span>package<span class="token operator">></span>
 pip <span class="token function">install</span> --upgrade <span class="token operator">&lt;</span>package<span class="token operator">></span>
 pip uninstall <span class="token operator">&lt;</span>package<span class="token operator">></span>
@@ -2026,8 +2077,9 @@ style="text-align: left;">"<font color=blue><em>package</em></font>&lt;x.x.x"</t
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">python -c <span class="token string">"import &lt;package>"</span>
 python -c <span class="token string">"import &lt;package>; print(&lt;package>.__version__)"</span>  <span class="token comment"># 版本号</span>
 python -c <span class="token string">"import &lt;package>; print(&lt;package>.version)"</span>  <span class="token comment"># 安装位置</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-<h4 id="使-pip-安装-python-包到用户路径">使 pip 安装 python
-包到用户路径</h4>
+<h4 id="使-pip-安装-python-包到用户路径"><a
+href="#使-pip-安装-python-包到用户路径" class="headerlink"></a>使 pip
+安装 python 包到用户路径</h4>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">%%bash
 python -m site <span class="token operator">|</span> <span class="token function">grep</span> <span class="token string">'USER_SITE'</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 <pre><code>USER_SITE: &#39;/home/lydia/.local/lib/python3.10/site-packages&#39; (doesn&#39;t exist)
@@ -2048,9 +2100,11 @@ ENABLE_USER_SITE: True</code></pre>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">pip <span class="token function">install</span> --user <span class="token operator">&lt;</span>pkg_name<span class="token operator">></span>
 pip list --user
 pip list --outdated --user<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-<h3 id="anaconda">Anaconda</h3>
-<h4 id="安装-anaconda-或-miniconda-推荐">安装 Anaconda 或 Miniconda
-(推荐)</h4>
+<h3 id="anaconda"><a href="#anaconda"
+class="headerlink"></a>Anaconda</h3>
+<h4 id="安装-anaconda-或-miniconda-推荐"><a
+href="#安装-anaconda-或-miniconda-推荐" class="headerlink"></a>安装
+Anaconda 或 Miniconda (推荐)</h4>
 <ul>
 <li><p>安装 miniconda 64位 (默认安装到
 <font color=blue>~/miniconda3/</font>)</p>
@@ -2077,7 +2131,8 @@ class="uri">https://conda.io/miniconda.html</a></p></li>
 class="uri">https://conda.io/miniconda.html</a><br> 安装参考 <a
 href="https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html"
 class="uri">https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html</a></p>
-<h4 id="environment">environment</h4>
+<h4 id="environment"><a href="#environment"
+class="headerlink"></a>environment</h4>
 <p>默认环境为 base<br> <code>-n, --name &lt;env_name&gt;</code>
 指定环境</p>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">conda create --name <span class="token operator">&lt;</span>env_name<span class="token operator">></span> <span class="token punctuation">[</span><span class="token operator">&lt;</span>packages<span class="token operator">></span><span class="token punctuation">]</span> <span class="token assign-left variable">python</span><span class="token operator">=</span><span class="token number">3.6</span>
@@ -2102,7 +2157,8 @@ conda deactivate
 
 <span class="token comment"># 在某环境中执行操作</span>
 conda <span class="token operator">&lt;</span>commands<span class="token operator">></span> --name <span class="token operator">&lt;</span>env_name<span class="token operator">></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h4 id="使用-conda-命令">使用 conda 命令</h4>
+<h4 id="使用-conda-命令"><a href="#使用-conda-命令"
+class="headerlink"></a>使用 conda 命令</h4>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">conda info
 conda list <span class="token punctuation">[</span><span class="token operator">&lt;</span>packages<span class="token operator">></span><span class="token punctuation">]</span>
 conda search <span class="token operator">&lt;</span>package<span class="token operator">></span>
@@ -2138,15 +2194,17 @@ href="https://conda.io/docs/user-guide/configuration/use-condarc.html"
 class="uri">https://conda.io/docs/user-guide/configuration/use-condarc.html</a></p>
 <p>也可以在不同的环境用不同的配置文件:
 <code>~/miniconda3/envs/&lt;env_name&gt;/.condarc</code></p>
-<h3 id="镜像源">镜像源</h3>
-<h4 id="pip-镜像源">pip 镜像源</h4>
+<h3 id="镜像源"><a href="#镜像源" class="headerlink"></a>镜像源</h3>
+<h4 id="pip-镜像源"><a href="#pip-镜像源" class="headerlink"></a>pip
+镜像源</h4>
 <p>用户配置文件:</p>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">%%bash
 <span class="token function">cat</span> ~/.pip/pip.conf<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 <pre><code>[global]
 index-url = &lt;https://pypi.douban.com/simple&gt;
 trusted-host = pypi.doubanio.com</code></pre>
-<h4 id="conda-镜像源">conda 镜像源</h4>
+<h4 id="conda-镜像源"><a href="#conda-镜像源"
+class="headerlink"></a>conda 镜像源</h4>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">conda config --add/--prepend channels <span class="token operator">&lt;</span>new_channel<span class="token operator">></span>
 conda config --append channels <span class="token operator">&lt;</span>new_channel<span class="token operator">></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 <p>清华源:<br> <a
@@ -2170,15 +2228,20 @@ href="https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/conda-forge/"
 class="uri">https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/conda-forge/</a><br>
  - defaults</p>
 </blockquote>
-<h3 id="troubleshooting">Troubleshooting</h3>
-<h4 id="conda-安装时指定源且禁用其他源">conda
+<h3 id="troubleshooting"><a href="#troubleshooting"
+class="headerlink"></a>Troubleshooting</h3>
+<h4 id="conda-安装时指定源且禁用其他源"><a
+href="#conda-安装时指定源且禁用其他源" class="headerlink"></a>conda
 安装时指定源且禁用其他源</h4>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">conda <span class="token function">install</span> <span class="token operator">&lt;</span>packages<span class="token operator">></span> -c <span class="token operator">&lt;</span>channel<span class="token operator">></span> --override-channels<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<h4 id="astropy-新版不再支持旧版-python">Astropy 新版不再支持旧版
-Python</h4>
+<h4 id="astropy-新版不再支持旧版-python"><a
+href="#astropy-新版不再支持旧版-python" class="headerlink"></a>Astropy
+新版不再支持旧版 Python</h4>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">pip <span class="token function">install</span> <span class="token string">"astropy&lt;3.0"</span> <span class="token comment"># for python &lt; 3.5</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<h2 id="安装常用包">安装常用包</h2>
-<h3 id="numpy-scipy-matplotlib">numpy, scipy, matplotlib</h3>
+<h2 id="安装常用包"><a href="#安装常用包"
+class="headerlink"></a>安装常用包</h2>
+<h3 id="numpy-scipy-matplotlib"><a href="#numpy-scipy-matplotlib"
+class="headerlink"></a>numpy, scipy, matplotlib</h3>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">conda <span class="token function">install</span> numpy
 conda <span class="token function">install</span> scipy
 conda <span class="token function">install</span> matplotlib<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
@@ -2225,7 +2288,8 @@ else:
     print(&quot;--- Tab completion: [ON] ---&quot;)
     print(&quot;--- History: [ON] ---&quot;)
     print(&quot;--- [Tab] -&gt; [Ctrl+L] ---&quot;)</code></pre>
-<h3 id="astropy-sunpy">Astropy, SunPy</h3>
+<h3 id="astropy-sunpy"><a href="#astropy-sunpy"
+class="headerlink"></a>Astropy, SunPy</h3>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">conda <span class="token function">install</span> astropy
 conda <span class="token function">install</span> sunpy -c conda-forge<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 <p> Or <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">pip <span class="token function">install</span> astropy
@@ -2359,7 +2423,7 @@ class="uri">http://docs.sunpy.org/en/stable/guide/customization.html?=sunpy.conf
 <p>退出后再进入 python 如果发现没有修改成功, 则需要手动修改
 ~/.sunpy/sunpyrc 文件.<br> 不能用 '$USER' 代替具体的用户名
 '&lt;user&gt;'</p>
-<h3 id="jupyter">Jupyter</h3>
+<h3 id="jupyter"><a href="#jupyter" class="headerlink"></a>Jupyter</h3>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">conda <span class="token function">install</span> jupyter -c conda-forge<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p> Or <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">pip <span class="token function">install</span> jupyter<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></p>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">%%bash
@@ -2431,7 +2495,7 @@ Cell 内导入) <pre class="line-numbers language-python" data-language="python"
 <span class="token operator">%</span><span class="token operator">%</span>nbtutor <span class="token operator">-</span>r <span class="token operator">-</span>f
 <span class="token comment"># 或</span>
 <span class="token operator">%</span><span class="token operator">%</span>nbtutor <span class="token operator">-</span>r <span class="token operator">-</span>f <span class="token operator">-</span>i  <span class="token comment"># 缩减显示</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre></p>
-<h3 id="其他">其他</h3>
+<h3 id="其他"><a href="#其他" class="headerlink"></a>其他</h3>
 <ul>
 <li>PeakUtils (http://peakutils.readthedocs.io/en/latest/)</li>
 </ul>
@@ -2475,10 +2539,7 @@ python setup.py build --debug <span class="token function">install</span><span a
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">pip <span class="token function">install</span> mayavi  <span class="token comment"># 将同时安装 vtk. (pip 是目前 mayavi 最保险的安装方式)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># shell</span>
 mayavi2<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-<script src="https://cdn.jsdelivr.net/npm/anchor-js/anchor.min.js"></script>
-<script>
-  anchors.add();
-</script>]]></content>
+]]></content>
       <categories>
         <category>Solar Physics</category>
       </categories>
@@ -2498,7 +2559,7 @@ mayavi2<span aria-hidden="true" class="line-numbers-rows"><span></span><span></s
 <a class="btn" href="https://github.com/lydiazly/python-intro/raw/master/notebooks/python-intro.zip"><i class="fa fa-download fa-fw"></i>Jupyter Notebook</a>
 <wbr> <a class="btn" href="https://pan.baidu.com/s/1nwsIcDr?pwd=s5re"><i class="fa fa-download fa-fw"></i>FITS Data</a>
 </p>
-<h2 id="简介">简介</h2>
+<h2 id="简介"><a href="#简介" class="headerlink"></a>简介</h2>
 <p>优势: 开源, 用户广, 用途广, 社区完善, 新手友好</p>
 <p><a
 href="https://www.jetbrains.com/research/python-developers-survey-2017/"
@@ -2537,8 +2598,10 @@ $ pydoc -w &lt;name&gt;  # 生成一个 html 帮助文件<span aria-hidden="true
 <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># ipython/jupyter</span>
 name?  <span class="token comment"># 弹出帮助文档, `Esc` 退出文档</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 <span id="more"></span>
-<h2 id="基本语法">基本语法</h2>
-<h3 id="语法特点">语法特点</h3>
+<h2 id="基本语法"><a href="#基本语法"
+class="headerlink"></a>基本语法</h2>
+<h3 id="语法特点"><a href="#语法特点"
+class="headerlink"></a>语法特点</h3>
 <ul>
 <li>对象编程的概念<br> 类 -&gt; 创建一个实例 -&gt;
 使用该实例所属的类下面的方法 <pre class="line-numbers language-python" data-language="python"><code class="language-python">l <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">]</span>  <span class="token comment"># l 是 list 的一个实例</span>
@@ -2569,7 +2632,8 @@ dataFrame <span class="token operator">=</span> pd<span class="token punctuation
 <span class="token punctuation">&#123;</span><span class="token string">'a'</span> <span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token string">'b'</span> <span class="token punctuation">:</span> <span class="token number">2</span><span class="token punctuation">,</span><span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre> <br></li>
 <li><em>etc.</em></li>
 </ul>
-<h3 id="print函数">print函数</h3>
+<h3 id="print函数"><a href="#print函数"
+class="headerlink"></a>print函数</h3>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python">a <span class="token operator">=</span> <span class="token number">1.</span><span class="token punctuation">;</span> b <span class="token operator">=</span> <span class="token number">2.</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'a=%.3f, b=%.1e'</span> <span class="token operator">%</span> <span class="token punctuation">(</span>a<span class="token punctuation">,</span> b<span class="token punctuation">)</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <pre><code>a=1.000, b=2.0e+00</code></pre>
@@ -2585,7 +2649,8 @@ dataFrame <span class="token operator">=</span> pd<span class="token punctuation
 <pre><code>xxx yyy</code></pre>
 <p>更多格式化参考 <a href="https://pyformat.info/"
 class="uri">https://pyformat.info/</a></p>
-<h3 id="基本运算">基本运算</h3>
+<h3 id="基本运算"><a href="#基本运算"
+class="headerlink"></a>基本运算</h3>
 <p>运算符参考:<br> <a
 href="https://en.wikibooks.org/wiki/Python_Programming/Basic_Math"
 class="uri">https://en.wikibooks.org/wiki/Python_Programming/Basic_Math</a><br>
@@ -2603,7 +2668,7 @@ a<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><s
 <pre class="line-numbers language-python" data-language="python"><code class="language-python">a <span class="token operator">=</span> <span class="token boolean">None</span>
 a <span class="token keyword">is</span> <span class="token boolean">None</span>  <span class="token comment"># 注意这时不用 `==`</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 <pre><code>True</code></pre>
-<h3 id="字符串">字符串</h3>
+<h3 id="字符串"><a href="#字符串" class="headerlink"></a>字符串</h3>
 <p>用双引号和单引号皆可 (取决于所引内容).<br> 字符串具有和列表 (list)
 类似的运算规则 (见之后的 list 说明):</p>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token string">'a'</span> <span class="token operator">*</span> <span class="token number">10</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
@@ -2615,7 +2680,8 @@ a <span class="token keyword">is</span> <span class="token boolean">None</span> 
 <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'\n'</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">r'\n'</span><span class="token punctuation">)</span>  <span class="token comment"># same as '\\n'</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <pre><code>\n</code></pre>
-<h3 id="list-tuple-dict-set">list, tuple, dict, set</h3>
+<h3 id="list-tuple-dict-set"><a href="#list-tuple-dict-set"
+class="headerlink"></a>list, tuple, dict, set</h3>
 <ul>
 <li>有序表 list, tuple</li>
 </ul>
@@ -2677,7 +2743,7 @@ href="/advance.html#循环-迭代器-生成器">Python 进阶#迭代器</a></p>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python">l2 <span class="token operator">=</span> <span class="token punctuation">[</span>i <span class="token keyword">for</span> i <span class="token keyword">in</span> s<span class="token punctuation">]</span>
 <span class="token keyword">print</span><span class="token punctuation">(</span>l2<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 <pre><code>[1, 2, 3]</code></pre>
-<h3 id="if-语句">if 语句</h3>
+<h3 id="if-语句"><a href="#if-语句" class="headerlink"></a>if 语句</h3>
 <p>python 里没有 <code>case</code>, 只有 <code>if</code>
 (非零数值、非空字符串、非空 list 等皆为 True) <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">if</span> <span class="token operator">&lt;</span>条件判断<span class="token number">1</span><span class="token operator">></span><span class="token punctuation">:</span>
     <span class="token operator">&lt;</span>执行<span class="token number">1</span><span class="token operator">></span>
@@ -2687,8 +2753,9 @@ href="/advance.html#循环-迭代器-生成器">Python 进阶#迭代器</a></p>
     <span class="token operator">&lt;</span>执行<span class="token number">3</span><span class="token operator">></span>
 <span class="token keyword">else</span><span class="token punctuation">:</span>
     <span class="token operator">&lt;</span>执行<span class="token number">4</span><span class="token operator">></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></p>
-<h3 id="相关工具">相关工具</h3>
-<h4 id="pip">pip</h4>
+<h3 id="相关工具"><a href="#相关工具"
+class="headerlink"></a>相关工具</h3>
+<h4 id="pip"><a href="#pip" class="headerlink"></a>pip</h4>
 <p><img data-src='/main/logo-large.72ad8bf1.svg' /></p>
 <blockquote>
 <p>The <strong>Python Package Index (PyPI)</strong> is a repository of
@@ -2700,7 +2767,8 @@ and install software developed and shared by the Python community.<br/>
 <p>    (其他命令见 <a
 href="/installpy.html#用-pip-安装-python-包">Python 安装和配置#用 pip
 安装 python 包</a>)</p>
-<h4 id="anaconda">Anaconda</h4>
+<h4 id="anaconda"><a href="#anaconda"
+class="headerlink"></a>Anaconda</h4>
 <p><img data-src='/main/DataScienceLibraries-01.png' />
 <img data-src='/main/Conda-DistributionDiagram-01.png' /></p>
 <p><img data-src='/main/Conda — Conda documentation.png' /></p>
@@ -2712,7 +2780,8 @@ python 版本或不同的包的组合.</p>
 <p>其他命令见 <a href="/installpy.html#使用-conda-命令">Python
 安装和配置#使用 conda 命令</a><br> 详细说明见 <a
 href="/advance.html#anaconda">Python 进阶#Anaconda</a></p>
-<h4 id="ipython-jupyter">IPython &amp; Jupyter</h4>
+<h4 id="ipython-jupyter"><a href="#ipython-jupyter"
+class="headerlink"></a>IPython &amp; Jupyter</h4>
 <p><img style='float: center;' data-src='/main/IPython.png' /></p>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># Have a look (ipython)</span>
 !cd <span class="token operator">&amp;</span><span class="token operator">&amp;</span> gnome<span class="token operator">-</span>terminal <span class="token operator">-</span><span class="token operator">-</span>window<span class="token operator">-</span><span class="token keyword">with</span><span class="token operator">-</span>profile<span class="token operator">=</span><span class="token string">'lydia_white'</span>
@@ -2735,16 +2804,19 @@ class="uri">http://jupyter-notebook.readthedocs.io/en/stable/</a></p>
 <li>打开 <code>jupyter notebook</code>:</li>
 </ul>
 <pre class="line-numbers language-none"><code class="language-none">$ jupyter notebook [filename]<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<h2 id="常用包介绍">常用包介绍</h2>
-<h3 id="python-自带包和模块">Python 自带包和模块</h3>
+<h2 id="常用包介绍"><a href="#常用包介绍"
+class="headerlink"></a>常用包介绍</h2>
+<h3 id="python-自带包和模块"><a href="#python-自带包和模块"
+class="headerlink"></a>Python 自带包和模块</h3>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">from</span> math <span class="token keyword">import</span> <span class="token operator">*</span> <span class="token comment"># 包含 pi 等, 但更推荐 numpy</span>
 <span class="token keyword">from</span> copy <span class="token keyword">import</span> deepcopy
 <span class="token keyword">from</span> pprint <span class="token keyword">import</span> pprint  <span class="token comment"># 打印 list, dict 等更好看</span>
 <span class="token keyword">import</span> requests
 <span class="token keyword">import</span> os
 <span class="token keyword">import</span> sys<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h3 id="numpy-scipy">NumPy, SciPy</h3>
-<h4 id="概览">概览</h4>
+<h3 id="numpy-scipy"><a href="#numpy-scipy"
+class="headerlink"></a>NumPy, SciPy</h3>
+<h4 id="概览"><a href="#概览" class="headerlink"></a>概览</h4>
 <center>
 <a href="https://www.scipy.org" class="uri">https://www.scipy.org</a>
 </center>
@@ -2783,7 +2855,8 @@ class="uri">http://blog.rtwilson.com/ten-little-idl-programs-in-python/</a></li>
 class="uri">http://www.astrobetter.com/blog/2009/05/04/idl-vs-python/</a></li>
 </ul></li>
 </ul>
-<h4 id="生成-numpy.ndarray-数组">生成 numpy.ndarray 数组</h4>
+<h4 id="生成-numpy.ndarray-数组"><a href="#生成-numpy.ndarray-数组"
+class="headerlink"></a>生成 numpy.ndarray 数组</h4>
 <p>将 list 或 tuple 转换为 <code>numpy.ndarray</code> <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> numpy <span class="token keyword">as</span> np
 a <span class="token operator">=</span> np<span class="token punctuation">.</span>array<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
 <span class="token comment"># 切片(slice), 索引可以是 int 或 list (python list 只支持 list作为索引)</span>
@@ -2880,7 +2953,8 @@ class="uri">https://docs.scipy.org/doc/numpy/user/basics.creation.html#arrays-cr
 href="https://docs.scipy.org/doc/numpy/reference/routines.array-manipulation.html"
 class="uri">https://docs.scipy.org/doc/numpy/reference/routines.array-manipulation.html</a>
 矩阵操作见 <a href="/advance.html#矩阵">Python 进阶#矩阵</a></p>
-<h3 id="matplotlib">Matplotlib</h3>
+<h3 id="matplotlib"><a href="#matplotlib"
+class="headerlink"></a>Matplotlib</h3>
 <ul>
 <li><p>官方示例 <a href="https://matplotlib.org/tutorials/index.html"
 class="uri">https://matplotlib.org/tutorials/index.html</a>
@@ -2917,8 +2991,9 @@ class="uri">https://matplotlib.org/examples/color/colormaps_reference.html</a></
 class="uri">https://matplotlib.org/users/legend_guide.html</a> <br>
 <img data-src='/main/named_colors.png' /></li>
 </ul>
-<h3 id="天文相关包">天文相关包</h3>
-<h4 id="astropy">Astropy</h4>
+<h3 id="天文相关包"><a href="#天文相关包"
+class="headerlink"></a>天文相关包</h3>
+<h4 id="astropy"><a href="#astropy" class="headerlink"></a>Astropy</h4>
 <p><img data-src='/main/astropy_banner.svg' /></p>
 <p>官方文档 <a href="http://docs.astropy.org/en/stable/index.html"
 class="uri">http://docs.astropy.org/en/stable/index.html</a></p>
@@ -2930,7 +3005,7 @@ class="uri">http://docs.astropy.org/en/stable/coordinates/index.html</a></p>
 <p>参考 <a
 href="https://python4astronomers.github.io/astropy/astropy.html"
 class="uri">https://python4astronomers.github.io/astropy/astropy.html</a></p>
-<h4 id="sunpy">SunPy</h4>
+<h4 id="sunpy"><a href="#sunpy" class="headerlink"></a>SunPy</h4>
 <p><img data-src='/main/Screenshot_20180625-005924.png' />
 <img data-src='/main/sphx_glr_lat_lon_lines_001.png' />
 <img data-src='/main/sphx_glr_submaps_and_cropping_001.png' /></p>
@@ -2999,8 +3074,10 @@ plt<span class="token punctuation">.</span>colorbar<span class="token punctuatio
   Uncertainty  = 26000.0
   Unit  = m
   Reference = Allen&#39;s Astrophysical Quantities 4th Ed.</code></pre>
-<h2 id="常见数据文件读写">常见数据文件读写</h2>
-<h3 id="一般情况">一般情况</h3>
+<h2 id="常见数据文件读写"><a href="#常见数据文件读写"
+class="headerlink"></a>常见数据文件读写</h2>
+<h3 id="一般情况"><a href="#一般情况"
+class="headerlink"></a>一般情况</h3>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python">f <span class="token operator">=</span> <span class="token builtin">open</span><span class="token punctuation">(</span>filename<span class="token punctuation">,</span> <span class="token string">'w'</span><span class="token punctuation">)</span>  <span class="token comment"># 'w', 'r', ...</span>
 <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
 <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
@@ -3008,7 +3085,8 @@ f<span class="token punctuation">.</span>close<span class="token punctuation">(<
 <p>更好的用法: <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">with</span> <span class="token builtin">open</span><span class="token punctuation">(</span>filename<span class="token punctuation">,</span> <span class="token string">'w'</span><span class="token punctuation">)</span> <span class="token keyword">as</span> f<span class="token punctuation">:</span>  <span class="token comment"># 'w', 'r', ...</span>
     <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
     <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre></p>
-<h3 id="txt-csv-文件读写">txt, csv 文件读写</h3>
+<h3 id="txt-csv-文件读写"><a href="#txt-csv-文件读写"
+class="headerlink"></a>txt, csv 文件读写</h3>
 <ul>
 <li>逐行读取整行的方式:<br> 使用 <code>strip</code>
 可以用来去掉读入的每行末尾的 ''</li>
@@ -3060,7 +3138,8 @@ skip_header=1)</p>
 <pre><code>array([0, 1, 2])</code></pre>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python">np<span class="token punctuation">.</span>fromstring<span class="token punctuation">(</span><span class="token string">'0., 1., 2.'</span><span class="token punctuation">,</span> sep<span class="token operator">=</span><span class="token string">','</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <pre><code>array([0., 1., 2.])</code></pre>
-<h3 id="numpy-save-文件读写">numpy save 文件读写</h3>
+<h3 id="numpy-save-文件读写"><a href="#numpy-save-文件读写"
+class="headerlink"></a>numpy save 文件读写</h3>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python">np<span class="token punctuation">.</span>save<span class="token punctuation">(</span><span class="token string">'fname'</span><span class="token punctuation">,</span> arr<span class="token punctuation">)</span>  <span class="token comment"># 'fname.npy'</span>
 np<span class="token punctuation">.</span>savez<span class="token punctuation">(</span><span class="token string">'fname'</span><span class="token punctuation">,</span> arr<span class="token punctuation">)</span>  <span class="token comment"># 'fname.npz', 多个变量</span>
 np<span class="token punctuation">.</span>savez_compressed<span class="token punctuation">(</span><span class="token string">'fname'</span><span class="token punctuation">,</span> arr<span class="token punctuation">)</span>  <span class="token comment"># 'fname.npz', 多个变量 &amp; 压缩</span>
@@ -3074,7 +3153,8 @@ np<span class="token punctuation">.</span>savez<span class="token punctuation">(
 data <span class="token operator">=</span> np<span class="token punctuation">.</span>load<span class="token punctuation">(</span><span class="token string">'data/np_array.npz'</span><span class="token punctuation">)</span>
 <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token punctuation">(</span>data<span class="token punctuation">[</span><span class="token string">'a'</span><span class="token punctuation">]</span><span class="token punctuation">,</span> data<span class="token punctuation">[</span><span class="token string">'b'</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token builtin">int</span><span class="token punctuation">(</span>data<span class="token punctuation">[</span><span class="token string">'b'</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>  <span class="token comment"># 默认以`ndarray`读取</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 <pre><code>(array([1., 1., 1., 1., 1.]), array(0), 0)</code></pre>
-<h3 id="idl-sav-文件读取">IDL sav 文件读取</h3>
+<h3 id="idl-sav-文件读取"><a href="#idl-sav-文件读取"
+class="headerlink"></a>IDL sav 文件读取</h3>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">from</span> scipy<span class="token punctuation">.</span>io<span class="token punctuation">.</span>idl <span class="token keyword">import</span> readsav
 data <span class="token operator">=</span> readsav<span class="token punctuation">(</span><span class="token string">'dname.sav'</span><span class="token punctuation">,</span> verbose<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">,</span> python_dict<span class="token operator">=</span><span class="token boolean">False</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 <p>默认读出的是<code>scipy.io.idl.AttrDict</code>类型, 即 key
@@ -3093,7 +3173,8 @@ dict_keys([&#39;x&#39;, &#39;y&#39;, &#39;str&#39;])
 (25,)
 &lt;class &#39;dict&#39;&gt;
 (25,)</code></pre>
-<h3 id="fits-文件读取">FITS 文件读取</h3>
+<h3 id="fits-文件读取"><a href="#fits-文件读取"
+class="headerlink"></a>FITS 文件读取</h3>
 <ul>
 <li>Astropy</li>
 </ul>
@@ -3153,7 +3234,8 @@ hdulist <span class="token operator">=</span> sunpy<span class="token punctuatio
 hdu <span class="token operator">=</span> hdulist<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span>
 hdu<span class="token punctuation">.</span>data<span class="token punctuation">.</span>shape<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 <pre><code>(4096, 4096)</code></pre>
-<h2 id="其他包和软件">其他包和软件</h2>
+<h2 id="其他包和软件"><a href="#其他包和软件"
+class="headerlink"></a>其他包和软件</h2>
 <ul>
 <li>Astroconda <a href="https://astroconda.readthedocs.io/en/latest/"
 class="uri">https://astroconda.readthedocs.io/en/latest/</a> &gt;
@@ -3169,10 +3251,7 @@ class="uri">https://www.jetbrains.com/pycharm/</a>
 class="uri">http://jupyterlab.readthedocs.io/en/stable/</a>
 <img data-src='/main/jupyterlab.png' ></li>
 </ul>
-<script src="https://cdn.jsdelivr.net/npm/anchor-js/anchor.min.js"></script>
-<script>
-  anchors.add();
-</script>]]></content>
+]]></content>
       <categories>
         <category>Solar Physics</category>
       </categories>
@@ -3199,7 +3278,8 @@ JSOC</a></p>
 href="http://docs.sunpy.org/en/stable/guide/acquiring_data/jsoc.html"
 class="uri">http://docs.sunpy.org/en/stable/guide/acquiring_data/jsoc.html</a>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">from</span> sunpy<span class="token punctuation">.</span>net <span class="token keyword">import</span> Fido<span class="token punctuation">,</span> attrs <span class="token keyword">as</span> a<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre> <span id="more"></span></p>
-<h2 id="searching-for-data">Searching for data</h2>
+<h2 id="searching-for-data"><a href="#searching-for-data"
+class="headerlink"></a>Searching for data</h2>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python">response <span class="token operator">=</span> Fido<span class="token punctuation">.</span>search<span class="token punctuation">(</span>
     attrs<span class="token punctuation">.</span>Time<span class="token punctuation">(</span><span class="token string">'2014-01-01T00:00:00'</span><span class="token punctuation">,</span> <span class="token string">'2014-01-01T00:01:00'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
     <span class="token comment"># UTC time as default</span>
@@ -3537,7 +3617,8 @@ FULLDISK
 </tr>
 </table>
 <p><br></p>
-<h2 id="indexing">Indexing</h2>
+<h2 id="indexing"><a href="#indexing"
+class="headerlink"></a>Indexing</h2>
 <ul>
 <li><p>First index: client (still necessary even if results are only
 found for a single client)</p></li>
@@ -3928,16 +4009,14 @@ FULLDISK
 </tr>
 </table>
 <p><br></p>
-<h2 id="downloading-data">Downloading data</h2>
+<h2 id="downloading-data"><a href="#downloading-data"
+class="headerlink"></a>Downloading data</h2>
 <p>Download the entire results:</p>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python">res <span class="token operator">=</span> Fido<span class="token punctuation">.</span>fetch<span class="token punctuation">(</span>response<span class="token punctuation">,</span> path<span class="token operator">=</span><span class="token string">'./data'</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>Download a subset:</p>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python">res <span class="token operator">=</span> Fido<span class="token punctuation">.</span>fetch<span class="token punctuation">(</span>response<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span> path<span class="token operator">=</span><span class="token string">'./data'</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p><code>Fido.fetch</code> will output a progress bar by default.</p>
-<script src="https://cdn.jsdelivr.net/npm/anchor-js/anchor.min.js"></script>
-<script>
-  anchors.add();
-</script>]]></content>
+]]></content>
       <categories>
         <category>Solar Physics</category>
       </categories>
@@ -3972,13 +4051,14 @@ warnings<span class="token punctuation">.</span>simplefilter<span class="token p
 href="http://docs.sunpy.org/en/stable/guide/acquiring_data/jsoc.html"
 class="uri">http://docs.sunpy.org/en/stable/guide/acquiring_data/jsoc.html</a>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">from</span> sunpy<span class="token punctuation">.</span>net <span class="token keyword">import</span> Fido<span class="token punctuation">,</span> attrs <span class="token keyword">as</span> a<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre> <span id="more"></span></p>
-<h2 id="getting-information">Getting information</h2>
+<h2 id="getting-information"><a href="#getting-information"
+class="headerlink"></a>Getting information</h2>
 <p><code>drms</code> - Python module for accessing HMI, AIA and MDI
 data<br> - <a href="https://github.com/kbg/drms"
 class="uri">https://github.com/kbg/drms</a> - <a
 href="http://drms.readthedocs.io/en/stable/tutorial.html"
 class="uri">http://drms.readthedocs.io/en/stable/tutorial.html</a></p>
-<h3 id="series">Series</h3>
+<h3 id="series"><a href="#series" class="headerlink"></a>Series</h3>
 <p><img data-src='/jsoc/hmi01.png'/></p>
 <p>Import the <code>drms</code> module and create an instance of the
 <code>drms.Client</code> class:</p>
@@ -4006,14 +4086,16 @@ c <span class="token operator">=</span> drms<span class="token punctuation">.</s
  &#39;hmi.b_synoptic&#39;,
  &#39;hmi.b_synoptic_small&#39;,
  &#39;hmi.bmap_lowres_latlon_720s&#39;]</code></pre>
-<h3 id="primekeys">PrimeKeys</h3>
+<h3 id="primekeys"><a href="#primekeys"
+class="headerlink"></a>PrimeKeys</h3>
 <p>Find out the <code>PrimeKeys</code> supported in any
 <code>Series</code>:</p>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python">c<span class="token punctuation">.</span>pkeys<span class="token punctuation">(</span><span class="token string">'aia.lev1_euv_12s'</span><span class="token punctuation">)</span>  <span class="token comment"># case-insensitive</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <pre><code>[&#39;T_REC&#39;, &#39;WAVELNTH&#39;]</code></pre>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python">c<span class="token punctuation">.</span>pkeys<span class="token punctuation">(</span><span class="token string">'hmi.B_720s'</span><span class="token punctuation">)</span>  <span class="token comment"># case-insensitive</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <pre><code>[&#39;T_REC&#39;]</code></pre>
-<h3 id="segments">Segments</h3>
+<h3 id="segments"><a href="#segments"
+class="headerlink"></a>Segments</h3>
 <p>Find out the <code>Segments</code> supported in any
 <code>Series</code>:</p>
 <ul>
@@ -4259,7 +4341,8 @@ Field Strength
 </tbody>
 </table>
 </div>
-<h2 id="basic-usage">Basic usage</h2>
+<h2 id="basic-usage"><a href="#basic-usage" class="headerlink"></a>Basic
+usage</h2>
 <p>See <a
 href="http://docs.sunpy.org/en/stable/guide/acquiring_data/jsoc.html"
 class="uri">http://docs.sunpy.org/en/stable/guide/acquiring_data/jsoc.html</a></p>
@@ -4273,8 +4356,9 @@ This option can be preferred when the complex searches are to be made,
 or when you need to separate the staging and downloading steps, which is
 not supported by <code>Fido</code>.</p>
 </blockquote>
-<h3 id="fido">Fido</h3>
-<h4 id="searching-for-data">Searching for data</h4>
+<h3 id="fido"><a href="#fido" class="headerlink"></a>Fido</h3>
+<h4 id="searching-for-data"><a href="#searching-for-data"
+class="headerlink"></a>Searching for data</h4>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python">response <span class="token operator">=</span> Fido<span class="token punctuation">.</span>search<span class="token punctuation">(</span>
     attrs<span class="token punctuation">.</span>jsoc<span class="token punctuation">.</span>Time<span class="token punctuation">(</span><span class="token string">'2014-01-01T00:00:00'</span><span class="token punctuation">,</span> <span class="token string">'2014-01-01T00:00:30'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
     attrs<span class="token punctuation">.</span>jsoc<span class="token punctuation">.</span>Notify<span class="token punctuation">(</span><span class="token string">'lydiazly@nju.edu.cn'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
@@ -4470,7 +4554,8 @@ AIA_3
 <p><br></p>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token builtin">type</span><span class="token punctuation">(</span>response<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <pre><code>sunpy.net.fido_factory.UnifiedResponse</code></pre>
-<h4 id="indexing">Indexing</h4>
+<h4 id="indexing"><a href="#indexing"
+class="headerlink"></a>Indexing</h4>
 <ul>
 <li><p>First index: client (still necessary even if results are only
 found for a single client)</p></li>
@@ -4712,10 +4797,12 @@ AIA_4
 </tr>
 </table>
 <p><br></p>
-<h4 id="downloading-data">Downloading data</h4>
+<h4 id="downloading-data"><a href="#downloading-data"
+class="headerlink"></a>Downloading data</h4>
 <p>Download the entire results:</p>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python">res <span class="token operator">=</span> Fido<span class="token punctuation">.</span>fetch<span class="token punctuation">(</span>response<span class="token punctuation">,</span> path<span class="token operator">=</span><span class="token string">'./data'</span><span class="token punctuation">)</span>  <span class="token comment"># Will output a progress bar by default</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<h3 id="jsocclient">JSOCClient</h3>
+<h3 id="jsocclient"><a href="#jsocclient"
+class="headerlink"></a>JSOCClient</h3>
 <blockquote>
 <p>The JSOC stages data before you can download it, so a JSOC query is a
 <strong>three</strong> stage process. 1.
@@ -4729,7 +4816,8 @@ download.</p>
 <p>(<code>Fido</code> combines the stages into 2, <code>search</code>
 and <code>fetch</code>.)</p>
 </blockquote>
-<h4 id="searching-for-data-1">Searching for data</h4>
+<h4 id="searching-for-data-1"><a href="#searching-for-data-1"
+class="headerlink"></a>Searching for data</h4>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">from</span> sunpy<span class="token punctuation">.</span>net <span class="token keyword">import</span> jsoc
 client <span class="token operator">=</span> jsoc<span class="token punctuation">.</span>JSOCClient<span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python">response <span class="token operator">=</span> client<span class="token punctuation">.</span>search<span class="token punctuation">(</span>
@@ -4851,7 +4939,8 @@ AIA_3
 <p>Note here we get a single table.</p>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token builtin">type</span><span class="token punctuation">(</span>response<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <pre><code>sunpy.net.jsoc.jsoc.JSOCResponse</code></pre>
-<h4 id="indexing-1">Indexing</h4>
+<h4 id="indexing-1"><a href="#indexing-1"
+class="headerlink"></a>Indexing</h4>
 <p>An integer get a <code>Row</code>:</p>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python">response<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <i>Row index=2</i>
@@ -5262,7 +5351,8 @@ AIA_3
 </td>
 </tr>
 </table>
-<h4 id="downloading-data-1">Downloading data</h4>
+<h4 id="downloading-data-1"><a href="#downloading-data-1"
+class="headerlink"></a>Downloading data</h4>
 <p>Download the entire results:</p>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python">res <span class="token operator">=</span> client<span class="token punctuation">.</span>fetch<span class="token punctuation">(</span>response<span class="token punctuation">,</span> path<span class="token operator">=</span><span class="token string">'./data'</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <pre><code>Export request pending. [id=&quot;JSOC_20180710_1151&quot;, status=2]
@@ -5304,8 +5394,10 @@ except <code>query_args</code> is lost.</p>
   &#39;series&#39;: &#39;aia.lev1_euv_12s&#39;&#125;]</code></pre>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python">response<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">.</span>query_args<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>This will cause an error in <code>fetch</code>.</p>
-<h2 id="constructing-complex-queries">Constructing complex queries</h2>
-<h3 id="time">Time</h3>
+<h2 id="constructing-complex-queries"><a
+href="#constructing-complex-queries" class="headerlink"></a>Constructing
+complex queries</h2>
+<h3 id="time"><a href="#time" class="headerlink"></a>Time</h3>
 <p><a
 href="http://docs.sunpy.org/en/stable/guide/acquiring_data/jsoc.html"
 class="uri">http://docs.sunpy.org/en/stable/guide/acquiring_data/jsoc.html</a>
@@ -5349,7 +5441,8 @@ scale:</p>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python">tai<span class="token punctuation">(</span><span class="token string">'2015.08.27_06:00:00_TAI'</span><span class="token punctuation">,</span> <span class="token string">'2015.08.27_06:01:00_TAI'</span><span class="token punctuation">)</span>  <span class="token comment"># Returns a list</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <pre><code>[&lt;Time object: scale=&#39;tai&#39; format=&#39;datetime&#39; value=2015-08-27 06:00:00&gt;,
  &lt;Time object: scale=&#39;tai&#39; format=&#39;datetime&#39; value=2015-08-27 06:01:00&gt;]</code></pre>
-<h3 id="searching-for-data-2">Searching for data</h3>
+<h3 id="searching-for-data-2"><a href="#searching-for-data-2"
+class="headerlink"></a>Searching for data</h3>
 <p>JSOC <a href="http://jsoc.stanford.edu/ajax/lookdata.html"
 class="uri">http://jsoc.stanford.edu/ajax/lookdata.html</a></p>
 <ul>
@@ -5542,10 +5635,7 @@ HMI_SIDE1
 </tr>
 </table>
 <p><br></p>
-<script src="https://cdn.jsdelivr.net/npm/anchor-js/anchor.min.js"></script>
-<script>
-  anchors.add();
-</script>]]></content>
+]]></content>
       <categories>
         <category>Solar Physics</category>
       </categories>
@@ -5572,7 +5662,7 @@ Linux 版本试用, 咨询客服之后终于收到了链接, 于是先测试一�
 href="https://www.harrisgeospatial.com/docs/Python.html">Python Bridge
 官方文档</a></p>
 <span id="more"></span>
-<h2 id="安装">1. 安装</h2>
+<h2 id="安装"><a href="#安装" class="headerlink"></a>1. 安装</h2>
 <p>下载之后解压这两个文件:<br> <code>envi55-linux.tar.gz</code><br>
 <code>flexnetserver2017.08-linux.tar.gz</code></p>
 <p>以安装至 <code>~/software/harris</code> 为例. <br><br>
@@ -5588,7 +5678,7 @@ source $HOME&#x2F;software&#x2F;harris&#x2F;envi55&#x2F;bin&#x2F;envi_setup.bash
 之后影响了其他程序使用, 因此处理方法见 <a
 href="#5-troubleshooting">Troubleshooting</a>) <br><br> 随后</p>
 <pre class="line-numbers language-sh" data-language="sh"><code class="language-sh">$ source ~&#x2F;.bashrc<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<h2 id="激活">2. 激活</h2>
+<h2 id="激活"><a href="#激活" class="headerlink"></a>2. 激活</h2>
 <p>经过上述步骤, 图形界面的激活程序 <code>harrislicense</code>
 已被加入系统路径.</p>
 <p>打开</p>
@@ -5604,12 +5694,13 @@ $ .&#x2F;activate -a &lt;activation-code&gt; -q 1
 # Deactivate
 $ .&#x2F;activate -a &lt;activation-code&gt; -q 0<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>必要时将会提示需要 root 权限.</p>
-<h2 id="安装-idl-python-bridge">3. 安装 IDL Python bridge</h2>
+<h2 id="安装-idl-python-bridge"><a href="#安装-idl-python-bridge"
+class="headerlink"></a>3. 安装 IDL Python bridge</h2>
 <p>首先确认 python 命令在系统路径 <code>PATH</code> 中.</p>
 <p>安装</p>
 <pre class="line-numbers language-sh" data-language="sh"><code class="language-sh">$ cd ~&#x2F;software&#x2F;harris&#x2F;envi&#x2F;idl&#x2F;lib&#x2F;bridges
 $ python setup.py install<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-<h2 id="使用">4. 使用</h2>
+<h2 id="使用"><a href="#使用" class="headerlink"></a>4. 使用</h2>
 <ul>
 <li><a
 href="https://www.harrisgeospatial.com/docs/PythonToIDL.html">Python To
@@ -5658,7 +5749,8 @@ href="https://www.harrisgeospatial.com/docs/pythondataconvert.html">Parameter
 Passing and Data Conversion</a> - <a
 href="https://www.harrisgeospatial.com/docs/idl_kernel.html">IDL IPython
 Notebook Kernel</a></p>
-<h2 id="troubleshooting">5. Troubleshooting</h2>
+<h2 id="troubleshooting"><a href="#troubleshooting"
+class="headerlink"></a>5. Troubleshooting</h2>
 <p>出现 &gt; .../lib/libuuid.so.1: no version information available
 ...</p>
 <p>这是因为使用 anaconda 的 python, 默认调用的是 anaconda 的
@@ -5689,10 +5781,7 @@ $HOME&#x2F;software&#x2F;harris&#x2F;envi55&#x2F;idl87&#x2F;bin&#x2F;idl $@<span
 <p>执行</p>
 <pre class="line-numbers language-sh" data-language="sh"><code class="language-sh">$ source ~&#x2F;.bashrc<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>之后再用 <code>idl</code> 命令即调用的是自定义的脚本.</p>
-<script src="https://cdn.jsdelivr.net/npm/anchor-js/anchor.min.js"></script>
-<script>
-  anchors.add();
-</script>]]></content>
+]]></content>
       <categories>
         <category>Solar Physics</category>
       </categories>
@@ -5925,10 +6014,155 @@ AIA_4
 即中断该 Cell).<br> 随后执行下面语句, 然后再回去执行
 <code>.wait()</code> 看是否恢复.</p>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python">res<span class="token punctuation">.</span>poke<span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<script src="https://cdn.jsdelivr.net/npm/anchor-js/anchor.min.js"></script>
-<script>
-  anchors.add();
-</script>]]></content>
+]]></content>
+      <categories>
+        <category>Solar Physics</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+        <tag>jupyter</tag>
+        <tag>sunpy</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Example: projection</title>
+    <url>//example_projection.html</url>
+    <content><![CDATA[<p>
+<a class="btn" href="https://github.com/lydiazly/python-intro/raw/master/notebooks/example_hmi.zip"><i class="fa fa-download fa-fw"></i>Jupyter Notebook</a>
+<wbr> <a class="btn" href="https://pan.baidu.com/s/1nwsIcDr?pwd=s5re"><i class="fa fa-download fa-fw"></i>Example Data</a> <wbr> <a class="btn" href="https://github.com/lydiazly/python-intro/raw/master/sunpy-modules.zip"><i class="fa fa-download fa-fw"></i>User Module</a><nobr>
+(<a href="https://github.com/lydiazly/scripts-sunpy/tree/master/modules">source</a>
+/ <a href="/usr_sunpy.html">doc</a>)
+</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">from</span> __future__ <span class="token keyword">import</span> division<span class="token punctuation">,</span> print_function
+
+<span class="token comment"># Reload user modules automatically</span>
+<span class="token comment"># %load_ext autoreload</span>
+<span class="token comment"># %autoreload 2</span>
+
+<span class="token comment"># notebook, inline, ...</span>
+<span class="token operator">%</span>matplotlib notebook
+
+<span class="token keyword">from</span> astropy<span class="token punctuation">.</span>coordinates <span class="token keyword">import</span> SkyCoord
+<span class="token keyword">import</span> astropy<span class="token punctuation">.</span>units <span class="token keyword">as</span> u
+<span class="token keyword">import</span> matplotlib<span class="token punctuation">.</span>pyplot <span class="token keyword">as</span> plt
+<span class="token keyword">import</span> numpy <span class="token keyword">as</span> np
+<span class="token keyword">import</span> sunpy<span class="token punctuation">.</span><span class="token builtin">map</span>
+<span class="token keyword">from</span> copy <span class="token keyword">import</span> deepcopy
+
+<span class="token comment"># To use user modules</span>
+<span class="token keyword">import</span> sys
+sys<span class="token punctuation">.</span>path<span class="token punctuation">.</span>append<span class="token punctuation">(</span><span class="token string">'../modules'</span><span class="token punctuation">)</span>
+
+<span class="token comment"># print('Python version: %s' % sys.version.split('(')[0])  # Python version: 3.6.6 |Anaconda, Inc.|</span>
+<span class="token comment"># print('SunPy version: %s' % sunpy.__version__)  # SunPy version: 0.9.3</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span id="more"></span>
+<h2 id="read-data"><a href="#read-data" class="headerlink"></a>Read
+data</h2>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">fnames <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token string">'data/hmi.B_720s.20150827_052400_TAI.field.fits'</span><span class="token punctuation">,</span>
+          <span class="token string">'data/hmi.B_720s.20150827_052400_TAI.inclination.fits'</span><span class="token punctuation">,</span>
+          <span class="token string">'data/hmi.B_720s.20150827_052400_TAI.azimuth.fits'</span><span class="token punctuation">,</span>
+          <span class="token string">'data/hmi.B_720s.20150827_052400_TAI.disambig.fits'</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">from</span> usr_sunpy <span class="token keyword">import</span> read_sdo
+mapb<span class="token punctuation">,</span> mapi<span class="token punctuation">,</span> mapa<span class="token punctuation">,</span> mapd <span class="token operator">=</span> <span class="token builtin">list</span><span class="token punctuation">(</span><span class="token builtin">map</span><span class="token punctuation">(</span>read_sdo<span class="token punctuation">,</span> fnames<span class="token punctuation">)</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<pre><code>hmi.B_720s.20150827_052400_TAI.field.fits   [4096, 4096]
+hmi.B_720s.20150827_052400_TAI.inclination.fits [4096, 4096]
+hmi.B_720s.20150827_052400_TAI.azimuth.fits [4096, 4096]
+hmi.B_720s.20150827_052400_TAI.disambig.fits    [4096, 4096]</code></pre>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># Disambiguate</span>
+mapa<span class="token punctuation">.</span>data<span class="token punctuation">[</span>mapd<span class="token punctuation">.</span>data <span class="token operator">></span> <span class="token number">3</span><span class="token punctuation">]</span> <span class="token operator">+=</span> <span class="token number">180.</span>
+
+mapbx <span class="token operator">=</span> deepcopy<span class="token punctuation">(</span>mapb<span class="token punctuation">)</span>
+mapby <span class="token operator">=</span> deepcopy<span class="token punctuation">(</span>mapb<span class="token punctuation">)</span>
+mapbz <span class="token operator">=</span> deepcopy<span class="token punctuation">(</span>mapb<span class="token punctuation">)</span>
+mapbx<span class="token punctuation">.</span>data<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">]</span> <span class="token operator">=</span> mapb<span class="token punctuation">.</span>data <span class="token operator">*</span> np<span class="token punctuation">.</span>sin<span class="token punctuation">(</span>np<span class="token punctuation">.</span>deg2rad<span class="token punctuation">(</span>mapi<span class="token punctuation">.</span>data<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">*</span> np<span class="token punctuation">.</span>cos<span class="token punctuation">(</span>np<span class="token punctuation">.</span>deg2rad<span class="token punctuation">(</span>mapa<span class="token punctuation">.</span>data <span class="token operator">+</span> <span class="token number">270.</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+mapby<span class="token punctuation">.</span>data<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">]</span> <span class="token operator">=</span> mapb<span class="token punctuation">.</span>data <span class="token operator">*</span> np<span class="token punctuation">.</span>sin<span class="token punctuation">(</span>np<span class="token punctuation">.</span>deg2rad<span class="token punctuation">(</span>mapi<span class="token punctuation">.</span>data<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">*</span> np<span class="token punctuation">.</span>sin<span class="token punctuation">(</span>np<span class="token punctuation">.</span>deg2rad<span class="token punctuation">(</span>mapa<span class="token punctuation">.</span>data <span class="token operator">+</span> <span class="token number">270.</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+mapbz<span class="token punctuation">.</span>data<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">]</span> <span class="token operator">=</span> mapb<span class="token punctuation">.</span>data <span class="token operator">*</span> np<span class="token punctuation">.</span>cos<span class="token punctuation">(</span>np<span class="token punctuation">.</span>deg2rad<span class="token punctuation">(</span>mapi<span class="token punctuation">.</span>data<span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+<span class="token comment"># Suppress metadata warnings</span>
+<span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token punctuation">&#123;</span>mapbx<span class="token punctuation">,</span> mapby<span class="token punctuation">,</span> mapbz<span class="token punctuation">&#125;</span><span class="token punctuation">:</span>
+    i<span class="token punctuation">.</span>meta<span class="token punctuation">[</span><span class="token string">'hgln_obs'</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">0.</span>
+
+<span class="token keyword">from</span> usr_sunpy <span class="token keyword">import</span> aiaprep_usr <span class="token keyword">as</span> aiaprep
+<span class="token keyword">import</span> warnings
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'level 1 -> level 1.5 ...'</span><span class="token punctuation">)</span>
+<span class="token keyword">with</span> warnings<span class="token punctuation">.</span>catch_warnings<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    warnings<span class="token punctuation">.</span>simplefilter<span class="token punctuation">(</span><span class="token string">"ignore"</span><span class="token punctuation">)</span>
+    mapbx <span class="token operator">=</span> aiaprep<span class="token punctuation">(</span>mapbx<span class="token punctuation">)</span>
+    mapby <span class="token operator">=</span> aiaprep<span class="token punctuation">(</span>mapby<span class="token punctuation">)</span>
+    mapbz <span class="token operator">=</span> aiaprep<span class="token punctuation">(</span>mapbz<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'level    ='</span><span class="token punctuation">,</span> mapbz<span class="token punctuation">.</span>meta<span class="token punctuation">[</span><span class="token string">'lvl_num'</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'rsun_obs ='</span><span class="token punctuation">,</span> mapbz<span class="token punctuation">.</span>meta<span class="token punctuation">[</span><span class="token string">'rsun_obs'</span><span class="token punctuation">]</span> <span class="token operator">*</span> u<span class="token punctuation">.</span>arcsec<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'r_sun    ='</span><span class="token punctuation">,</span> mapbz<span class="token punctuation">.</span>meta<span class="token punctuation">[</span><span class="token string">'r_sun'</span><span class="token punctuation">]</span> <span class="token operator">*</span> u<span class="token punctuation">.</span>pix<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre><code>level 1 -&gt; level 1.5 ...
+level    = 1.5
+rsun_obs = 949.495178 arcsec
+r_sun    = 1582.4919633333334 pix</code></pre>
+<h2 id="submap"><a href="#submap" class="headerlink"></a>Submap</h2>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token builtin">xrange</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token number">500.</span><span class="token punctuation">,</span><span class="token number">800.</span><span class="token punctuation">)</span> <span class="token operator">*</span> u<span class="token punctuation">.</span>arcsec
+yrange <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">450.</span><span class="token punctuation">,</span><span class="token operator">-</span><span class="token number">200.</span><span class="token punctuation">)</span> <span class="token operator">*</span> u<span class="token punctuation">.</span>arcsec
+
+subcoord <span class="token operator">=</span> SkyCoord<span class="token punctuation">(</span><span class="token builtin">xrange</span><span class="token punctuation">,</span> yrange<span class="token punctuation">,</span> frame<span class="token operator">=</span>mapbz<span class="token punctuation">.</span>coordinate_frame<span class="token punctuation">)</span>
+smapbx <span class="token operator">=</span> mapbx<span class="token punctuation">.</span>submap<span class="token punctuation">(</span>subcoord<span class="token punctuation">)</span>
+smapby <span class="token operator">=</span> mapby<span class="token punctuation">.</span>submap<span class="token punctuation">(</span>subcoord<span class="token punctuation">)</span>
+smapbz <span class="token operator">=</span> mapbz<span class="token punctuation">.</span>submap<span class="token punctuation">(</span>subcoord<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'Submap: (%s, %s) arcsec  (%d x %d)'</span>
+      <span class="token operator">%</span> <span class="token punctuation">(</span><span class="token builtin">xrange</span><span class="token punctuation">.</span>value<span class="token punctuation">,</span> yrange<span class="token punctuation">.</span>value<span class="token punctuation">,</span> <span class="token operator">*</span>smapbz<span class="token punctuation">.</span>data<span class="token punctuation">.</span>shape<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+<span class="token keyword">from</span> usr_sunpy <span class="token keyword">import</span> plot_map
+fig1 <span class="token operator">=</span> plt<span class="token punctuation">.</span>figure<span class="token punctuation">(</span>figsize<span class="token operator">=</span><span class="token punctuation">(</span><span class="token number">8</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">)</span><span class="token punctuation">,</span> dpi<span class="token operator">=</span><span class="token number">100</span><span class="token punctuation">)</span>
+ax1 <span class="token operator">=</span> fig1<span class="token punctuation">.</span>add_subplot<span class="token punctuation">(</span><span class="token number">111</span><span class="token punctuation">,</span> projection<span class="token operator">=</span>mapbz<span class="token punctuation">)</span>
+plot_map<span class="token punctuation">(</span>mapbz<span class="token punctuation">,</span> ax<span class="token operator">=</span>ax1<span class="token punctuation">,</span> vmin<span class="token operator">=</span><span class="token operator">-</span><span class="token number">2000.</span><span class="token punctuation">,</span> vmax<span class="token operator">=</span><span class="token number">2000.</span><span class="token punctuation">,</span> grid_color<span class="token operator">=</span><span class="token string">'w'</span><span class="token punctuation">)</span>
+mapbz<span class="token punctuation">.</span>draw_rectangle<span class="token punctuation">(</span>subcoord<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token builtin">xrange</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token operator">-</span><span class="token builtin">xrange</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span> yrange<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token operator">-</span>yrange<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span> axes<span class="token operator">=</span>ax1<span class="token punctuation">,</span> color<span class="token operator">=</span><span class="token string">'yellow'</span><span class="token punctuation">,</span> linewidth<span class="token operator">=</span><span class="token number">1.5</span><span class="token punctuation">)</span>
+
+<span class="token comment"># Specify xlim, ylim by pixels</span>
+<span class="token comment"># lim_arcsec = ((-1000.1, 1000.1) * u.arcsec, (-1000.1, 1000.1) * u.arcsec)</span>
+<span class="token comment"># lim_pix = mapbz.world_to_pixel(SkyCoord(*lim_arcsec, frame=mapbz.coordinate_frame))  # pix</span>
+<span class="token comment"># ax1.set_xlim(lim_pix[0].value)  # pix</span>
+<span class="token comment"># ax1.set_ylim(lim_pix[1].value);  # pix</span>
+
+<span class="token comment"># Clip NaNs</span>
+valid_index <span class="token operator">=</span> np<span class="token punctuation">.</span>where<span class="token punctuation">(</span>np<span class="token punctuation">.</span>isfinite<span class="token punctuation">(</span>mapbz<span class="token punctuation">.</span>data<span class="token punctuation">)</span><span class="token punctuation">)</span>
+ax1<span class="token punctuation">.</span>set_xlim<span class="token punctuation">(</span><span class="token punctuation">(</span>valid_index<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token builtin">min</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">-</span><span class="token number">100</span><span class="token punctuation">,</span> valid_index<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token builtin">max</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">+</span><span class="token number">100</span><span class="token punctuation">)</span><span class="token punctuation">)</span>  <span class="token comment"># pix</span>
+ax1<span class="token punctuation">.</span>set_ylim<span class="token punctuation">(</span><span class="token punctuation">(</span>valid_index<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token builtin">min</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">-</span><span class="token number">100</span><span class="token punctuation">,</span> valid_index<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token builtin">max</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">+</span><span class="token number">100</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment"># pix</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre><code>Submap: ([500. 800.], [-450. -200.]) arcsec  (500 x 417)</code></pre>
+<p><img data-src="/example_projection/projection1.png" width="800"></p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">from</span> usr_sunpy <span class="token keyword">import</span> plot_map<span class="token punctuation">,</span> plot_vmap
+
+iskip<span class="token punctuation">,</span> jskip <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token number">12</span><span class="token punctuation">,</span> <span class="token number">12</span><span class="token punctuation">)</span>
+
+fig2 <span class="token operator">=</span> plt<span class="token punctuation">.</span>figure<span class="token punctuation">(</span>figsize<span class="token operator">=</span><span class="token punctuation">(</span><span class="token number">9</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">)</span><span class="token punctuation">,</span> dpi<span class="token operator">=</span><span class="token number">100</span><span class="token punctuation">)</span>
+ax2 <span class="token operator">=</span> fig2<span class="token punctuation">.</span>add_subplot<span class="token punctuation">(</span><span class="token number">111</span><span class="token punctuation">,</span> projection<span class="token operator">=</span>smapbz<span class="token punctuation">)</span>
+im2 <span class="token operator">=</span> plot_map<span class="token punctuation">(</span>smapbz<span class="token punctuation">,</span> ax<span class="token operator">=</span>ax2<span class="token punctuation">,</span> vmin<span class="token operator">=</span><span class="token operator">-</span><span class="token number">2000.</span><span class="token punctuation">,</span> vmax<span class="token operator">=</span><span class="token number">2000.</span><span class="token punctuation">,</span> grid<span class="token operator">=</span><span class="token number">10</span><span class="token operator">*</span>u<span class="token punctuation">.</span>deg<span class="token punctuation">,</span> title<span class="token operator">=</span>mapbz<span class="token punctuation">.</span>latex_name<span class="token operator">+</span><span class="token string">' (submap)'</span><span class="token punctuation">)</span>
+plot_vmap<span class="token punctuation">(</span>smapbx<span class="token punctuation">,</span> smapby<span class="token punctuation">,</span> smapbz<span class="token punctuation">,</span> ax2<span class="token punctuation">,</span> iskip<span class="token operator">=</span>iskip<span class="token punctuation">,</span> jskip<span class="token operator">=</span>jskip<span class="token punctuation">,</span> cmin<span class="token operator">=</span><span class="token number">50.</span><span class="token punctuation">,</span> vmax<span class="token operator">=</span><span class="token number">500.</span><span class="token punctuation">,</span> cmap<span class="token operator">=</span><span class="token string">'binary'</span><span class="token punctuation">,</span>
+          scale_units<span class="token operator">=</span><span class="token string">'xy'</span><span class="token punctuation">,</span> scale<span class="token operator">=</span><span class="token number">1</span><span class="token operator">/</span><span class="token number">0.05</span><span class="token punctuation">,</span> minlength<span class="token operator">=</span><span class="token number">0.02</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><img data-src="/example_projection/projection2.png" width="900"></p>
+<h2 id="projection"><a href="#projection"
+class="headerlink"></a>Projection</h2>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">from</span> usr_sunpy <span class="token keyword">import</span> image_to_helio
+
+hx<span class="token punctuation">,</span> hy <span class="token operator">=</span> image_to_helio<span class="token punctuation">(</span>smapbz<span class="token punctuation">)</span>
+smapbx_h<span class="token punctuation">,</span> smapby_h<span class="token punctuation">,</span> smapbz_h <span class="token operator">=</span> image_to_helio<span class="token punctuation">(</span>smapbx<span class="token punctuation">,</span> smapby<span class="token punctuation">,</span> smapbz<span class="token punctuation">)</span>
+
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'(xmin, xmax) = (%9.3f, %9.3f) arcsec\n(ymin, ymax) = (%9.3f, %9.3f) arcsec'</span> <span class="token operator">%</span>
+      <span class="token punctuation">(</span>hx<span class="token punctuation">.</span><span class="token builtin">min</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> hx<span class="token punctuation">.</span><span class="token builtin">max</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> hy<span class="token punctuation">.</span><span class="token builtin">min</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> hy<span class="token punctuation">.</span><span class="token builtin">min</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre><code>(xmin, xmax) = ( -251.988,   251.988) arcsec
+(ymin, ymax) = ( -156.811,  -156.811) arcsec</code></pre>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">iskip<span class="token punctuation">,</span> jskip <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">)</span>
+
+fig3 <span class="token operator">=</span> plt<span class="token punctuation">.</span>figure<span class="token punctuation">(</span>figsize<span class="token operator">=</span><span class="token punctuation">(</span><span class="token number">9</span><span class="token punctuation">,</span> <span class="token number">4.5</span><span class="token punctuation">)</span><span class="token punctuation">,</span> dpi<span class="token operator">=</span><span class="token number">100</span><span class="token punctuation">)</span>
+ax3 <span class="token operator">=</span> fig3<span class="token punctuation">.</span>add_subplot<span class="token punctuation">(</span><span class="token number">111</span><span class="token punctuation">)</span>
+im3 <span class="token operator">=</span> plot_map<span class="token punctuation">(</span>smapbz_h<span class="token punctuation">,</span> ax<span class="token operator">=</span>ax3<span class="token punctuation">,</span> coords<span class="token operator">=</span><span class="token punctuation">(</span>hx<span class="token punctuation">,</span> hy<span class="token punctuation">)</span><span class="token punctuation">,</span> cmap<span class="token operator">=</span><span class="token string">'gray'</span><span class="token punctuation">,</span>
+               vmin<span class="token operator">=</span><span class="token operator">-</span><span class="token number">2000.</span><span class="token punctuation">,</span> vmax<span class="token operator">=</span><span class="token number">2000.</span><span class="token punctuation">,</span> title<span class="token operator">=</span>mapbz<span class="token punctuation">.</span>latex_name<span class="token operator">+</span><span class="token string">' (projected)'</span><span class="token punctuation">)</span>
+plot_vmap<span class="token punctuation">(</span>smapbx_h<span class="token punctuation">,</span> smapby_h<span class="token punctuation">,</span> smapbz_h<span class="token punctuation">,</span> ax3<span class="token punctuation">,</span> coords<span class="token operator">=</span><span class="token punctuation">(</span>hx<span class="token punctuation">,</span> hy<span class="token punctuation">)</span><span class="token punctuation">,</span>
+          iskip<span class="token operator">=</span>iskip<span class="token punctuation">,</span> jskip<span class="token operator">=</span>jskip<span class="token punctuation">,</span> cmin<span class="token operator">=</span><span class="token number">100.</span><span class="token punctuation">,</span> vmax<span class="token operator">=</span><span class="token number">300.</span><span class="token punctuation">,</span> cmap<span class="token operator">=</span><span class="token string">'binary'</span><span class="token punctuation">,</span>
+          scale_units<span class="token operator">=</span><span class="token string">'xy'</span><span class="token punctuation">,</span> scale<span class="token operator">=</span><span class="token number">1</span><span class="token operator">/</span><span class="token number">0.04</span><span class="token punctuation">,</span> minlength<span class="token operator">=</span><span class="token number">0.02</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment"># Properties</span>
+ax3<span class="token punctuation">.</span>grid<span class="token punctuation">(</span><span class="token boolean">True</span><span class="token punctuation">,</span> ls<span class="token operator">=</span><span class="token string">':'</span><span class="token punctuation">,</span> alpha<span class="token operator">=</span><span class="token number">0.8</span><span class="token punctuation">)</span>
+ax3<span class="token punctuation">.</span>set_xlim<span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">170</span><span class="token punctuation">,</span><span class="token number">170</span><span class="token punctuation">)</span><span class="token punctuation">)</span>  <span class="token comment"># arcsec</span>
+ax3<span class="token punctuation">.</span>set_ylim<span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">110</span><span class="token punctuation">,</span><span class="token number">100</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment"># arcsec</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><img data-src="/example_projection/projection3.png" width="900"></p>
+]]></content>
       <categories>
         <category>Solar Physics</category>
       </categories>
@@ -5970,7 +6204,8 @@ sys<span class="token punctuation">.</span>path<span class="token punctuation">.
 <span class="token comment"># print('Python version: %s' % sys.version.split('(')[0])  # Python version: 3.6.6 |Anaconda, Inc.| </span>
 <span class="token comment"># print('SunPy version: %s' % sunpy.__version__)  # SunPy version: 0.9.3</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <span id="more"></span>
-<h2 id="read-data">Read data</h2>
+<h2 id="read-data"><a href="#read-data" class="headerlink"></a>Read
+data</h2>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python">fnames <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token string">'data/hmi.B_720s.20150827_052400_TAI.field.fits'</span><span class="token punctuation">,</span>
           <span class="token string">'data/hmi.B_720s.20150827_052400_TAI.inclination.fits'</span><span class="token punctuation">,</span>
           <span class="token string">'data/hmi.B_720s.20150827_052400_TAI.azimuth.fits'</span><span class="token punctuation">,</span>
@@ -6117,7 +6352,7 @@ center <span class="token operator">=</span> mapbz<span class="token punctuation
 <p>A quick look:</p>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python">mapbz<span class="token punctuation">.</span>peek<span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p><img data-src="/example_plothmi/plothmi1.png" width="640"></p>
-<h2 id="plot">Plot</h2>
+<h2 id="plot"><a href="#plot" class="headerlink"></a>Plot</h2>
 <p><a
 href="https://docs.sunpy.org/en/stable/guide/plotting.html?highlight=peek#plotting-maps-with-wcsaxes"
 class="uri">https://docs.sunpy.org/en/stable/guide/plotting.html?highlight=peek#plotting-maps-with-wcsaxes</a></p>
@@ -6140,7 +6375,7 @@ ax1<span class="token punctuation">.</span>plot_coord<span class="token punctuat
 ax1<span class="token punctuation">.</span>legend<span class="token punctuation">(</span>loc<span class="token operator">=</span><span class="token string">'upper right'</span><span class="token punctuation">,</span> fontsize<span class="token operator">=</span><span class="token number">8</span><span class="token punctuation">,</span> markerscale<span class="token operator">=</span><span class="token number">0.6</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token comment"># fig1.savefig('example_plothmi_disk.png', dpi=200, bbox_inches='tight')</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p><img data-src="/example_plothmi/plothmi2.png" width="800"></p>
-<h2 id="submap">Submap</h2>
+<h2 id="submap"><a href="#submap" class="headerlink"></a>Submap</h2>
 <p><a
 href="http://docs.sunpy.org/en/v0.9.3/code_ref/map.html?highlight=peek#sunpy.map.mapbase.GenericMap.submap"
 class="uri">http://docs.sunpy.org/en/v0.9.3/code_ref/map.html?highlight=peek#sunpy.map.mapbase.GenericMap.submap</a><br>
@@ -6194,7 +6429,8 @@ im2 <span class="token operator">=</span> plot_map<span class="token punctuation
 plot_vmap<span class="token punctuation">(</span>smapbx<span class="token punctuation">,</span> smapby<span class="token punctuation">,</span> smapbz<span class="token punctuation">,</span> ax2<span class="token punctuation">,</span> cmin<span class="token operator">=</span><span class="token number">20.</span><span class="token punctuation">,</span> vmax<span class="token operator">=</span><span class="token number">500.</span><span class="token punctuation">,</span> cmap<span class="token operator">=</span><span class="token string">'binary'</span><span class="token punctuation">,</span>
           scale_units<span class="token operator">=</span><span class="token string">'xy'</span><span class="token punctuation">,</span> scale<span class="token operator">=</span><span class="token number">1</span><span class="token operator">/</span><span class="token number">0.05</span><span class="token punctuation">,</span> minlength<span class="token operator">=</span><span class="token number">0.02</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p><img data-src="/example_plothmi/plothmi4.png" width="900"></p>
-<h3 id="without-disambiguation">Without disambiguation:</h3>
+<h3 id="without-disambiguation"><a href="#without-disambiguation"
+class="headerlink"></a>Without disambiguation:</h3>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">from</span> usr_sunpy <span class="token keyword">import</span> plot_map<span class="token punctuation">,</span> plot_vmap
 
 fig2 <span class="token operator">=</span> plt<span class="token punctuation">.</span>figure<span class="token punctuation">(</span>figsize<span class="token operator">=</span><span class="token punctuation">(</span><span class="token number">9</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">)</span><span class="token punctuation">,</span> dpi<span class="token operator">=</span><span class="token number">100</span><span class="token punctuation">)</span>
@@ -6203,159 +6439,7 @@ im2 <span class="token operator">=</span> plot_map<span class="token punctuation
 plot_vmap<span class="token punctuation">(</span>smapbx<span class="token punctuation">,</span> smapby<span class="token punctuation">,</span> smapbz<span class="token punctuation">,</span> ax2<span class="token punctuation">,</span> cmin<span class="token operator">=</span><span class="token number">20.</span><span class="token punctuation">,</span> vmax<span class="token operator">=</span><span class="token number">500.</span><span class="token punctuation">,</span> cmap<span class="token operator">=</span><span class="token string">'binary'</span><span class="token punctuation">,</span>
           scale_units<span class="token operator">=</span><span class="token string">'xy'</span><span class="token punctuation">,</span> scale<span class="token operator">=</span><span class="token number">1</span><span class="token operator">/</span><span class="token number">0.05</span><span class="token punctuation">,</span> minlength<span class="token operator">=</span><span class="token number">0.02</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p><img data-src="/example_plothmi/plothmi5.png" width="900"></p>
-<script src="https://cdn.jsdelivr.net/npm/anchor-js/anchor.min.js"></script>
-<script>
-  anchors.add();
-</script>]]></content>
-      <categories>
-        <category>Solar Physics</category>
-      </categories>
-      <tags>
-        <tag>python</tag>
-        <tag>jupyter</tag>
-        <tag>sunpy</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Example: projection</title>
-    <url>//example_projection.html</url>
-    <content><![CDATA[<p>
-<a class="btn" href="https://github.com/lydiazly/python-intro/raw/master/notebooks/example_hmi.zip"><i class="fa fa-download fa-fw"></i>Jupyter Notebook</a>
-<wbr> <a class="btn" href="https://pan.baidu.com/s/1nwsIcDr?pwd=s5re"><i class="fa fa-download fa-fw"></i>Example Data</a> <wbr> <a class="btn" href="https://github.com/lydiazly/python-intro/raw/master/sunpy-modules.zip"><i class="fa fa-download fa-fw"></i>User Module</a><nobr>
-(<a href="https://github.com/lydiazly/scripts-sunpy/tree/master/modules">source</a>
-/ <a href="/usr_sunpy.html">doc</a>)
-</p>
-<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">from</span> __future__ <span class="token keyword">import</span> division<span class="token punctuation">,</span> print_function
-
-<span class="token comment"># Reload user modules automatically</span>
-<span class="token comment"># %load_ext autoreload</span>
-<span class="token comment"># %autoreload 2</span>
-
-<span class="token comment"># notebook, inline, ...</span>
-<span class="token operator">%</span>matplotlib notebook
-
-<span class="token keyword">from</span> astropy<span class="token punctuation">.</span>coordinates <span class="token keyword">import</span> SkyCoord
-<span class="token keyword">import</span> astropy<span class="token punctuation">.</span>units <span class="token keyword">as</span> u
-<span class="token keyword">import</span> matplotlib<span class="token punctuation">.</span>pyplot <span class="token keyword">as</span> plt
-<span class="token keyword">import</span> numpy <span class="token keyword">as</span> np
-<span class="token keyword">import</span> sunpy<span class="token punctuation">.</span><span class="token builtin">map</span>
-<span class="token keyword">from</span> copy <span class="token keyword">import</span> deepcopy
-
-<span class="token comment"># To use user modules</span>
-<span class="token keyword">import</span> sys
-sys<span class="token punctuation">.</span>path<span class="token punctuation">.</span>append<span class="token punctuation">(</span><span class="token string">'../modules'</span><span class="token punctuation">)</span>
-
-<span class="token comment"># print('Python version: %s' % sys.version.split('(')[0])  # Python version: 3.6.6 |Anaconda, Inc.|</span>
-<span class="token comment"># print('SunPy version: %s' % sunpy.__version__)  # SunPy version: 0.9.3</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<span id="more"></span>
-<h2 id="read-data">Read data</h2>
-<pre class="line-numbers language-python" data-language="python"><code class="language-python">fnames <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token string">'data/hmi.B_720s.20150827_052400_TAI.field.fits'</span><span class="token punctuation">,</span>
-          <span class="token string">'data/hmi.B_720s.20150827_052400_TAI.inclination.fits'</span><span class="token punctuation">,</span>
-          <span class="token string">'data/hmi.B_720s.20150827_052400_TAI.azimuth.fits'</span><span class="token punctuation">,</span>
-          <span class="token string">'data/hmi.B_720s.20150827_052400_TAI.disambig.fits'</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">from</span> usr_sunpy <span class="token keyword">import</span> read_sdo
-mapb<span class="token punctuation">,</span> mapi<span class="token punctuation">,</span> mapa<span class="token punctuation">,</span> mapd <span class="token operator">=</span> <span class="token builtin">list</span><span class="token punctuation">(</span><span class="token builtin">map</span><span class="token punctuation">(</span>read_sdo<span class="token punctuation">,</span> fnames<span class="token punctuation">)</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-<pre><code>hmi.B_720s.20150827_052400_TAI.field.fits   [4096, 4096]
-hmi.B_720s.20150827_052400_TAI.inclination.fits [4096, 4096]
-hmi.B_720s.20150827_052400_TAI.azimuth.fits [4096, 4096]
-hmi.B_720s.20150827_052400_TAI.disambig.fits    [4096, 4096]</code></pre>
-<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># Disambiguate</span>
-mapa<span class="token punctuation">.</span>data<span class="token punctuation">[</span>mapd<span class="token punctuation">.</span>data <span class="token operator">></span> <span class="token number">3</span><span class="token punctuation">]</span> <span class="token operator">+=</span> <span class="token number">180.</span>
-
-mapbx <span class="token operator">=</span> deepcopy<span class="token punctuation">(</span>mapb<span class="token punctuation">)</span>
-mapby <span class="token operator">=</span> deepcopy<span class="token punctuation">(</span>mapb<span class="token punctuation">)</span>
-mapbz <span class="token operator">=</span> deepcopy<span class="token punctuation">(</span>mapb<span class="token punctuation">)</span>
-mapbx<span class="token punctuation">.</span>data<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">]</span> <span class="token operator">=</span> mapb<span class="token punctuation">.</span>data <span class="token operator">*</span> np<span class="token punctuation">.</span>sin<span class="token punctuation">(</span>np<span class="token punctuation">.</span>deg2rad<span class="token punctuation">(</span>mapi<span class="token punctuation">.</span>data<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">*</span> np<span class="token punctuation">.</span>cos<span class="token punctuation">(</span>np<span class="token punctuation">.</span>deg2rad<span class="token punctuation">(</span>mapa<span class="token punctuation">.</span>data <span class="token operator">+</span> <span class="token number">270.</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
-mapby<span class="token punctuation">.</span>data<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">]</span> <span class="token operator">=</span> mapb<span class="token punctuation">.</span>data <span class="token operator">*</span> np<span class="token punctuation">.</span>sin<span class="token punctuation">(</span>np<span class="token punctuation">.</span>deg2rad<span class="token punctuation">(</span>mapi<span class="token punctuation">.</span>data<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">*</span> np<span class="token punctuation">.</span>sin<span class="token punctuation">(</span>np<span class="token punctuation">.</span>deg2rad<span class="token punctuation">(</span>mapa<span class="token punctuation">.</span>data <span class="token operator">+</span> <span class="token number">270.</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
-mapbz<span class="token punctuation">.</span>data<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">]</span> <span class="token operator">=</span> mapb<span class="token punctuation">.</span>data <span class="token operator">*</span> np<span class="token punctuation">.</span>cos<span class="token punctuation">(</span>np<span class="token punctuation">.</span>deg2rad<span class="token punctuation">(</span>mapi<span class="token punctuation">.</span>data<span class="token punctuation">)</span><span class="token punctuation">)</span>
-
-<span class="token comment"># Suppress metadata warnings</span>
-<span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token punctuation">&#123;</span>mapbx<span class="token punctuation">,</span> mapby<span class="token punctuation">,</span> mapbz<span class="token punctuation">&#125;</span><span class="token punctuation">:</span>
-    i<span class="token punctuation">.</span>meta<span class="token punctuation">[</span><span class="token string">'hgln_obs'</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">0.</span>
-
-<span class="token keyword">from</span> usr_sunpy <span class="token keyword">import</span> aiaprep_usr <span class="token keyword">as</span> aiaprep
-<span class="token keyword">import</span> warnings
-<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'level 1 -> level 1.5 ...'</span><span class="token punctuation">)</span>
-<span class="token keyword">with</span> warnings<span class="token punctuation">.</span>catch_warnings<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
-    warnings<span class="token punctuation">.</span>simplefilter<span class="token punctuation">(</span><span class="token string">"ignore"</span><span class="token punctuation">)</span>
-    mapbx <span class="token operator">=</span> aiaprep<span class="token punctuation">(</span>mapbx<span class="token punctuation">)</span>
-    mapby <span class="token operator">=</span> aiaprep<span class="token punctuation">(</span>mapby<span class="token punctuation">)</span>
-    mapbz <span class="token operator">=</span> aiaprep<span class="token punctuation">(</span>mapbz<span class="token punctuation">)</span>
-<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'level    ='</span><span class="token punctuation">,</span> mapbz<span class="token punctuation">.</span>meta<span class="token punctuation">[</span><span class="token string">'lvl_num'</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
-<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'rsun_obs ='</span><span class="token punctuation">,</span> mapbz<span class="token punctuation">.</span>meta<span class="token punctuation">[</span><span class="token string">'rsun_obs'</span><span class="token punctuation">]</span> <span class="token operator">*</span> u<span class="token punctuation">.</span>arcsec<span class="token punctuation">)</span>
-<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'r_sun    ='</span><span class="token punctuation">,</span> mapbz<span class="token punctuation">.</span>meta<span class="token punctuation">[</span><span class="token string">'r_sun'</span><span class="token punctuation">]</span> <span class="token operator">*</span> u<span class="token punctuation">.</span>pix<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<pre><code>level 1 -&gt; level 1.5 ...
-level    = 1.5
-rsun_obs = 949.495178 arcsec
-r_sun    = 1582.4919633333334 pix</code></pre>
-<h2 id="submap">Submap</h2>
-<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token builtin">xrange</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token number">500.</span><span class="token punctuation">,</span><span class="token number">800.</span><span class="token punctuation">)</span> <span class="token operator">*</span> u<span class="token punctuation">.</span>arcsec
-yrange <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">450.</span><span class="token punctuation">,</span><span class="token operator">-</span><span class="token number">200.</span><span class="token punctuation">)</span> <span class="token operator">*</span> u<span class="token punctuation">.</span>arcsec
-
-subcoord <span class="token operator">=</span> SkyCoord<span class="token punctuation">(</span><span class="token builtin">xrange</span><span class="token punctuation">,</span> yrange<span class="token punctuation">,</span> frame<span class="token operator">=</span>mapbz<span class="token punctuation">.</span>coordinate_frame<span class="token punctuation">)</span>
-smapbx <span class="token operator">=</span> mapbx<span class="token punctuation">.</span>submap<span class="token punctuation">(</span>subcoord<span class="token punctuation">)</span>
-smapby <span class="token operator">=</span> mapby<span class="token punctuation">.</span>submap<span class="token punctuation">(</span>subcoord<span class="token punctuation">)</span>
-smapbz <span class="token operator">=</span> mapbz<span class="token punctuation">.</span>submap<span class="token punctuation">(</span>subcoord<span class="token punctuation">)</span>
-<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'Submap: (%s, %s) arcsec  (%d x %d)'</span>
-      <span class="token operator">%</span> <span class="token punctuation">(</span><span class="token builtin">xrange</span><span class="token punctuation">.</span>value<span class="token punctuation">,</span> yrange<span class="token punctuation">.</span>value<span class="token punctuation">,</span> <span class="token operator">*</span>smapbz<span class="token punctuation">.</span>data<span class="token punctuation">.</span>shape<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
-
-<span class="token keyword">from</span> usr_sunpy <span class="token keyword">import</span> plot_map
-fig1 <span class="token operator">=</span> plt<span class="token punctuation">.</span>figure<span class="token punctuation">(</span>figsize<span class="token operator">=</span><span class="token punctuation">(</span><span class="token number">8</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">)</span><span class="token punctuation">,</span> dpi<span class="token operator">=</span><span class="token number">100</span><span class="token punctuation">)</span>
-ax1 <span class="token operator">=</span> fig1<span class="token punctuation">.</span>add_subplot<span class="token punctuation">(</span><span class="token number">111</span><span class="token punctuation">,</span> projection<span class="token operator">=</span>mapbz<span class="token punctuation">)</span>
-plot_map<span class="token punctuation">(</span>mapbz<span class="token punctuation">,</span> ax<span class="token operator">=</span>ax1<span class="token punctuation">,</span> vmin<span class="token operator">=</span><span class="token operator">-</span><span class="token number">2000.</span><span class="token punctuation">,</span> vmax<span class="token operator">=</span><span class="token number">2000.</span><span class="token punctuation">,</span> grid_color<span class="token operator">=</span><span class="token string">'w'</span><span class="token punctuation">)</span>
-mapbz<span class="token punctuation">.</span>draw_rectangle<span class="token punctuation">(</span>subcoord<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token builtin">xrange</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token operator">-</span><span class="token builtin">xrange</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span> yrange<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token operator">-</span>yrange<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span> axes<span class="token operator">=</span>ax1<span class="token punctuation">,</span> color<span class="token operator">=</span><span class="token string">'yellow'</span><span class="token punctuation">,</span> linewidth<span class="token operator">=</span><span class="token number">1.5</span><span class="token punctuation">)</span>
-
-<span class="token comment"># Specify xlim, ylim by pixels</span>
-<span class="token comment"># lim_arcsec = ((-1000.1, 1000.1) * u.arcsec, (-1000.1, 1000.1) * u.arcsec)</span>
-<span class="token comment"># lim_pix = mapbz.world_to_pixel(SkyCoord(*lim_arcsec, frame=mapbz.coordinate_frame))  # pix</span>
-<span class="token comment"># ax1.set_xlim(lim_pix[0].value)  # pix</span>
-<span class="token comment"># ax1.set_ylim(lim_pix[1].value);  # pix</span>
-
-<span class="token comment"># Clip NaNs</span>
-valid_index <span class="token operator">=</span> np<span class="token punctuation">.</span>where<span class="token punctuation">(</span>np<span class="token punctuation">.</span>isfinite<span class="token punctuation">(</span>mapbz<span class="token punctuation">.</span>data<span class="token punctuation">)</span><span class="token punctuation">)</span>
-ax1<span class="token punctuation">.</span>set_xlim<span class="token punctuation">(</span><span class="token punctuation">(</span>valid_index<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token builtin">min</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">-</span><span class="token number">100</span><span class="token punctuation">,</span> valid_index<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token builtin">max</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">+</span><span class="token number">100</span><span class="token punctuation">)</span><span class="token punctuation">)</span>  <span class="token comment"># pix</span>
-ax1<span class="token punctuation">.</span>set_ylim<span class="token punctuation">(</span><span class="token punctuation">(</span>valid_index<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token builtin">min</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">-</span><span class="token number">100</span><span class="token punctuation">,</span> valid_index<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token builtin">max</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">+</span><span class="token number">100</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment"># pix</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<pre><code>Submap: ([500. 800.], [-450. -200.]) arcsec  (500 x 417)</code></pre>
-<p><img data-src="/example_projection/projection1.png" width="800"></p>
-<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">from</span> usr_sunpy <span class="token keyword">import</span> plot_map<span class="token punctuation">,</span> plot_vmap
-
-iskip<span class="token punctuation">,</span> jskip <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token number">12</span><span class="token punctuation">,</span> <span class="token number">12</span><span class="token punctuation">)</span>
-
-fig2 <span class="token operator">=</span> plt<span class="token punctuation">.</span>figure<span class="token punctuation">(</span>figsize<span class="token operator">=</span><span class="token punctuation">(</span><span class="token number">9</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">)</span><span class="token punctuation">,</span> dpi<span class="token operator">=</span><span class="token number">100</span><span class="token punctuation">)</span>
-ax2 <span class="token operator">=</span> fig2<span class="token punctuation">.</span>add_subplot<span class="token punctuation">(</span><span class="token number">111</span><span class="token punctuation">,</span> projection<span class="token operator">=</span>smapbz<span class="token punctuation">)</span>
-im2 <span class="token operator">=</span> plot_map<span class="token punctuation">(</span>smapbz<span class="token punctuation">,</span> ax<span class="token operator">=</span>ax2<span class="token punctuation">,</span> vmin<span class="token operator">=</span><span class="token operator">-</span><span class="token number">2000.</span><span class="token punctuation">,</span> vmax<span class="token operator">=</span><span class="token number">2000.</span><span class="token punctuation">,</span> grid<span class="token operator">=</span><span class="token number">10</span><span class="token operator">*</span>u<span class="token punctuation">.</span>deg<span class="token punctuation">,</span> title<span class="token operator">=</span>mapbz<span class="token punctuation">.</span>latex_name<span class="token operator">+</span><span class="token string">' (submap)'</span><span class="token punctuation">)</span>
-plot_vmap<span class="token punctuation">(</span>smapbx<span class="token punctuation">,</span> smapby<span class="token punctuation">,</span> smapbz<span class="token punctuation">,</span> ax2<span class="token punctuation">,</span> iskip<span class="token operator">=</span>iskip<span class="token punctuation">,</span> jskip<span class="token operator">=</span>jskip<span class="token punctuation">,</span> cmin<span class="token operator">=</span><span class="token number">50.</span><span class="token punctuation">,</span> vmax<span class="token operator">=</span><span class="token number">500.</span><span class="token punctuation">,</span> cmap<span class="token operator">=</span><span class="token string">'binary'</span><span class="token punctuation">,</span>
-          scale_units<span class="token operator">=</span><span class="token string">'xy'</span><span class="token punctuation">,</span> scale<span class="token operator">=</span><span class="token number">1</span><span class="token operator">/</span><span class="token number">0.05</span><span class="token punctuation">,</span> minlength<span class="token operator">=</span><span class="token number">0.02</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p><img data-src="/example_projection/projection2.png" width="900"></p>
-<h2 id="projection">Projection</h2>
-<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">from</span> usr_sunpy <span class="token keyword">import</span> image_to_helio
-
-hx<span class="token punctuation">,</span> hy <span class="token operator">=</span> image_to_helio<span class="token punctuation">(</span>smapbz<span class="token punctuation">)</span>
-smapbx_h<span class="token punctuation">,</span> smapby_h<span class="token punctuation">,</span> smapbz_h <span class="token operator">=</span> image_to_helio<span class="token punctuation">(</span>smapbx<span class="token punctuation">,</span> smapby<span class="token punctuation">,</span> smapbz<span class="token punctuation">)</span>
-
-<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'(xmin, xmax) = (%9.3f, %9.3f) arcsec\n(ymin, ymax) = (%9.3f, %9.3f) arcsec'</span> <span class="token operator">%</span>
-      <span class="token punctuation">(</span>hx<span class="token punctuation">.</span><span class="token builtin">min</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> hx<span class="token punctuation">.</span><span class="token builtin">max</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> hy<span class="token punctuation">.</span><span class="token builtin">min</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> hy<span class="token punctuation">.</span><span class="token builtin">min</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<pre><code>(xmin, xmax) = ( -251.988,   251.988) arcsec
-(ymin, ymax) = ( -156.811,  -156.811) arcsec</code></pre>
-<pre class="line-numbers language-python" data-language="python"><code class="language-python">iskip<span class="token punctuation">,</span> jskip <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">)</span>
-
-fig3 <span class="token operator">=</span> plt<span class="token punctuation">.</span>figure<span class="token punctuation">(</span>figsize<span class="token operator">=</span><span class="token punctuation">(</span><span class="token number">9</span><span class="token punctuation">,</span> <span class="token number">4.5</span><span class="token punctuation">)</span><span class="token punctuation">,</span> dpi<span class="token operator">=</span><span class="token number">100</span><span class="token punctuation">)</span>
-ax3 <span class="token operator">=</span> fig3<span class="token punctuation">.</span>add_subplot<span class="token punctuation">(</span><span class="token number">111</span><span class="token punctuation">)</span>
-im3 <span class="token operator">=</span> plot_map<span class="token punctuation">(</span>smapbz_h<span class="token punctuation">,</span> ax<span class="token operator">=</span>ax3<span class="token punctuation">,</span> coords<span class="token operator">=</span><span class="token punctuation">(</span>hx<span class="token punctuation">,</span> hy<span class="token punctuation">)</span><span class="token punctuation">,</span> cmap<span class="token operator">=</span><span class="token string">'gray'</span><span class="token punctuation">,</span>
-               vmin<span class="token operator">=</span><span class="token operator">-</span><span class="token number">2000.</span><span class="token punctuation">,</span> vmax<span class="token operator">=</span><span class="token number">2000.</span><span class="token punctuation">,</span> title<span class="token operator">=</span>mapbz<span class="token punctuation">.</span>latex_name<span class="token operator">+</span><span class="token string">' (projected)'</span><span class="token punctuation">)</span>
-plot_vmap<span class="token punctuation">(</span>smapbx_h<span class="token punctuation">,</span> smapby_h<span class="token punctuation">,</span> smapbz_h<span class="token punctuation">,</span> ax3<span class="token punctuation">,</span> coords<span class="token operator">=</span><span class="token punctuation">(</span>hx<span class="token punctuation">,</span> hy<span class="token punctuation">)</span><span class="token punctuation">,</span>
-          iskip<span class="token operator">=</span>iskip<span class="token punctuation">,</span> jskip<span class="token operator">=</span>jskip<span class="token punctuation">,</span> cmin<span class="token operator">=</span><span class="token number">100.</span><span class="token punctuation">,</span> vmax<span class="token operator">=</span><span class="token number">300.</span><span class="token punctuation">,</span> cmap<span class="token operator">=</span><span class="token string">'binary'</span><span class="token punctuation">,</span>
-          scale_units<span class="token operator">=</span><span class="token string">'xy'</span><span class="token punctuation">,</span> scale<span class="token operator">=</span><span class="token number">1</span><span class="token operator">/</span><span class="token number">0.04</span><span class="token punctuation">,</span> minlength<span class="token operator">=</span><span class="token number">0.02</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-<span class="token comment"># Properties</span>
-ax3<span class="token punctuation">.</span>grid<span class="token punctuation">(</span><span class="token boolean">True</span><span class="token punctuation">,</span> ls<span class="token operator">=</span><span class="token string">':'</span><span class="token punctuation">,</span> alpha<span class="token operator">=</span><span class="token number">0.8</span><span class="token punctuation">)</span>
-ax3<span class="token punctuation">.</span>set_xlim<span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">170</span><span class="token punctuation">,</span><span class="token number">170</span><span class="token punctuation">)</span><span class="token punctuation">)</span>  <span class="token comment"># arcsec</span>
-ax3<span class="token punctuation">.</span>set_ylim<span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">110</span><span class="token punctuation">,</span><span class="token number">100</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment"># arcsec</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p><img data-src="/example_projection/projection3.png" width="900"></p>
-<script src="https://cdn.jsdelivr.net/npm/anchor-js/anchor.min.js"></script>
-<script>
-  anchors.add();
-</script>]]></content>
+]]></content>
       <categories>
         <category>Solar Physics</category>
       </categories>
@@ -6412,10 +6496,7 @@ to a dict.</li>
 <li>Adjust positions of colorbar &amp; title.</li>
 <li>Fix docs.</li>
 </ul>
-<script src="https://cdn.jsdelivr.net/npm/anchor-js/anchor.min.js"></script>
-<script>
-  anchors.add();
-</script>]]></content>
+]]></content>
       <categories>
         <category>Solar Physics</category>
       </categories>
@@ -6433,8 +6514,9 @@ to a dict.</li>
 a<span class="token operator">=</span><span class="token number">1</span>
 <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'a ='</span><span class="token punctuation">,</span> a<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 <span id="more"></span>
-<h3 id="方法-1.-shell---interactive-mode-推荐">方法 1. shell -&gt;
-interactive mode (推荐)</h3>
+<h3 id="方法-1.-shell---interactive-mode-推荐"><a
+href="#方法-1.-shell---interactive-mode-推荐"
+class="headerlink"></a>方法 1. shell -&gt; interactive mode (推荐)</h3>
 <p>使用 <code>-i</code> 选项:</p>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># shell</span>
 $ python -i test.py<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
@@ -6443,8 +6525,9 @@ $ python -i test.py<span aria-hidden="true" class="line-numbers-rows"><span></sp
 a <span class="token operator">=</span> <span class="token number">1</span>
 <span class="token operator">>></span><span class="token operator">></span> a
 <span class="token number">1</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-<h3 id="方法-2.-in-ipython-jupyter-第二推荐">方法 2. In ipython /
-jupyter (第二推荐)</h3>
+<h3 id="方法-2.-in-ipython-jupyter-第二推荐"><a
+href="#方法-2.-in-ipython-jupyter-第二推荐" class="headerlink"></a>方法
+2. In ipython / jupyter (第二推荐)</h3>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># ipython</span>
 In <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">:</span> <span class="token operator">%</span>run test<span class="token punctuation">.</span>py
 a <span class="token operator">=</span> <span class="token number">1</span>
@@ -6459,7 +6542,9 @@ In <span class="token punctuation">[</span><span class="token number">4</span><s
 Variable   Type    Data<span class="token operator">/</span>Info
 <span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span>
 a          <span class="token builtin">int</span>     <span class="token number">1</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h3 id="方法-3.-in-interactive-mode">方法 3. In interactive mode</h3>
+<h3 id="方法-3.-in-interactive-mode"><a
+href="#方法-3.-in-interactive-mode" class="headerlink"></a>方法 3. In
+interactive mode</h3>
 <blockquote>
 <p><strong>NOTE</strong>: Python 3 取消了 <code>execfile()</code>
 这个函数! 如今使用 <code>exec()</code>.</p>
@@ -6492,10 +6577,7 @@ a <span class="token operator">=</span> <span class="token number">1</span><span
 <span class="token builtin">locals</span><span class="token punctuation">(</span><span class="token punctuation">)</span>  <span class="token comment"># a dictionary containing the current scope's local variables</span>
 <span class="token builtin">vars</span><span class="token punctuation">(</span><span class="token punctuation">)</span>  <span class="token comment"># without arguments, equivalent to locals();</span>
         <span class="token comment"># with an argument, equivalent to object.__dict__.</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<script src="https://cdn.jsdelivr.net/npm/anchor-js/anchor.min.js"></script>
-<script>
-  anchors.add();
-</script>]]></content>
+]]></content>
       <categories>
         <category>Solar Physics</category>
       </categories>
@@ -6569,15 +6651,81 @@ Solar Group)</a>
 文件读写</a></li>
 </ul></li>
 </ul>
-<script src="https://cdn.jsdelivr.net/npm/anchor-js/anchor.min.js"></script>
-<script>
-  anchors.add();
-</script>]]></content>
+]]></content>
       <categories>
         <category>Solar Physics</category>
       </categories>
       <tags>
         <tag>python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Coming back</title>
+    <url>/2022-07-12-Coming-back-soon.html</url>
+    <content><![CDATA[<p>Welcome!</p>
+<p>The posts in my old blog have been transferred here (the original
+site has not been accessible for quit a long time).</p>
+<p>I'm working on something new. See you later ~</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>Limit the memory usage in Windows 10 WSL2</title>
+    <url>/2022-07-16-Limit-memory-usage-in-Windows-10-WSL2.html</url>
+    <content><![CDATA[<h2 id="limit-the-memory-usage"><a href="#limit-the-memory-usage"
+class="headerlink"></a>Limit the memory usage</h2>
+<p>It's very annoying that WSL2 was always eating up my poor RAM. There
+is a solution. It's working, except that the memory usage can't be
+exactly 'limited' but 'fixed'.</p>
+<p>My distribution is:</p>
+<pre class="line-numbers language-powershell" data-language="powershell"><code class="language-powershell">> wsl <span class="token operator">-</span>l <span class="token operator">-</span>v
+  NAME            STATE           VERSION
+<span class="token operator">*</span> Ubuntu-18<span class="token punctuation">.</span>04    Running         2<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<p>Create a configure file named <code>.wslconfig</code> in your user
+directory in Windows.</p>
+<p>Open PowerShell as Administrator, shutdown your WSL2 and edit the
+file:</p>
+<pre class="line-numbers language-powershell" data-language="powershell"><code class="language-powershell">> wsl <span class="token operator">--</span>shutdown
+> notepad <span class="token string">"<span class="token variable">$env</span>:USERPROFILE\.wslconfig"</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<p>For me the content is:</p>
+<pre><code>[wsl2]
+memory=2GB
+swap=0</code></pre>
+<span id="more"></span>
+<p>After that, the memory usage of my WSL2 never bothered me again.</p>
+<h2 id="compact-the-virtual-disk"><a href="#compact-the-virtual-disk"
+class="headerlink"></a>Compact the virtual disk</h2>
+<p>You may notice that this file occupies a huge amount of space:
+<code>%USERPROFILE%\AppData\Local\Packages\CanonicalGroupLimited.Ubuntu18.04onWindows_*\LocalState\ext4.vhdx</code>.
+It's said that WSL2 won't actually release the space after files are
+deleted. So I compacted the virtual disk to reduce the size as
+follows.</p>
+<p>Open PowerShell as Administrator:</p>
+<pre class="line-numbers language-powershell" data-language="powershell"><code class="language-powershell">> wsl <span class="token operator">--</span>shutdown
+> diskpart
+
+<span class="token comment"># Raplace &lt;user> and &lt;pkg> by yours. It has to be a full path.</span>
+DISKPART> <span class="token function">select</span> vdisk file=<span class="token string">"C:\Users\&lt;user>\AppData\Local\Packages\CanonicalGroupLimited.&lt;pkg>\LocalState\ext4.vhdx"</span>
+  DiskPart successfully selected the virtual disk file<span class="token punctuation">.</span>
+
+<span class="token comment"># Compact and wait for minutes</span>
+DISKPART> compact vdisk
+  100 percent completed
+  DiskPart successfully compacted the virtual disk file<span class="token punctuation">.</span>
+
+DISKPART> detach vdisk<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>Press <code>Ctrl+C</code> to exit <code>DISKPART</code>.</p>
+<p>I've no idea who is the original author for this. Thanks a lot.</p>
+<p><br> This is not working for me (<code>optimize-vhd</code> is not
+found):</p>
+<pre class="line-numbers language-powershell" data-language="powershell"><code class="language-powershell">> <span class="token function">optimize-vhd</span> <span class="token operator">-</span>Path <span class="token punctuation">.</span>\ext4<span class="token punctuation">.</span>vhdx <span class="token operator">-</span>Mode full<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p><br> I'm not using Docker, btw.</p>
+]]></content>
+      <categories>
+        <category>Miscellaneous</category>
+      </categories>
+      <tags>
+        <tag>wsl2</tag>
+        <tag>powershell</tag>
       </tags>
   </entry>
   <entry>
@@ -6609,89 +6757,13 @@ engine.</p>
 <hr />
 <p>Pandas 的读取方法简单介绍参见: <a
 href="/advance.html#用-pandas-读-csv">用 pandas 读 csv</a></p>
-<script src="https://cdn.jsdelivr.net/npm/anchor-js/anchor.min.js"></script>
-<script>
-  anchors.add();
-</script>]]></content>
+]]></content>
       <categories>
         <category>Solar Physics</category>
       </categories>
       <tags>
         <tag>python</tag>
         <tag>pandas</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Coming back</title>
-    <url>/2022-07-12-Coming-back-soon.html</url>
-    <content><![CDATA[<p>Welcome!</p>
-<p>The posts in my old blog have been transferred here (the original
-site has not been accessible for quit a long time).</p>
-<p>I'm working on something new. See you later ~</p>
-<script src="https://cdn.jsdelivr.net/npm/anchor-js/anchor.min.js"></script>
-<script>
-  anchors.add();
-</script>]]></content>
-  </entry>
-  <entry>
-    <title>Limit the memory usage in Windows 10 WSL2</title>
-    <url>/2022-07-16-Limit-memory-usage-in-Windows-10-WSL2.html</url>
-    <content><![CDATA[<h2 id="limit-the-memory-usage">Limit the memory usage</h2>
-<p>It's very annoying that WSL2 was always eating up my poor RAM. There
-is a solution. It's working, except that the memory usage can't be
-exactly 'limited' but 'fixed'.</p>
-<p>My distribution is:</p>
-<pre class="line-numbers language-powershell" data-language="powershell"><code class="language-powershell">> wsl <span class="token operator">-</span>l <span class="token operator">-</span>v
-  NAME            STATE           VERSION
-<span class="token operator">*</span> Ubuntu-18<span class="token punctuation">.</span>04    Running         2<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-<p>Create a configure file named <code>.wslconfig</code> in your user
-directory in Windows.</p>
-<p>Open PowerShell as Administrator, shutdown your WSL2 and edit the
-file:</p>
-<pre class="line-numbers language-powershell" data-language="powershell"><code class="language-powershell">> wsl <span class="token operator">--</span>shutdown
-> notepad <span class="token string">"<span class="token variable">$env</span>:USERPROFILE\.wslconfig"</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-<p>For me the content is:</p>
-<pre><code>[wsl2]
-memory=2GB
-swap=0</code></pre>
-<span id="more"></span>
-<p>After that, the memory usage of my WSL2 never bothered me again.</p>
-<h2 id="compact-the-virtual-disk">Compact the virtual disk</h2>
-<p>You may notice that this file occupies a huge amount of space:
-<code>%USERPROFILE%\AppData\Local\Packages\CanonicalGroupLimited.Ubuntu18.04onWindows_*\LocalState\ext4.vhdx</code>.
-It's said that WSL2 won't actually release the space after files are
-deleted. So I compacted the virtual disk to reduce the size as
-follows.</p>
-<p>Open PowerShell as Administrator:</p>
-<pre class="line-numbers language-powershell" data-language="powershell"><code class="language-powershell">> wsl <span class="token operator">--</span>shutdown
-> diskpart
-
-<span class="token comment"># Raplace &lt;user> and &lt;pkg> by yours. It has to be a full path.</span>
-DISKPART> <span class="token function">select</span> vdisk file=<span class="token string">"C:\Users\&lt;user>\AppData\Local\Packages\CanonicalGroupLimited.&lt;pkg>\LocalState\ext4.vhdx"</span>
-  DiskPart successfully selected the virtual disk file<span class="token punctuation">.</span>
-
-<span class="token comment"># Compact and wait for minutes</span>
-DISKPART> compact vdisk
-  100 percent completed
-  DiskPart successfully compacted the virtual disk file<span class="token punctuation">.</span>
-
-DISKPART> detach vdisk<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>Press <code>Ctrl+C</code> to exit <code>DISKPART</code>.</p>
-<p>I've no idea who is the original author for this. Thanks a lot.</p>
-<p><br> This is not working for me (<code>optimize-vhd</code> is not
-found):</p>
-<pre class="line-numbers language-powershell" data-language="powershell"><code class="language-powershell">> <span class="token function">optimize-vhd</span> <span class="token operator">-</span>Path <span class="token punctuation">.</span>\ext4<span class="token punctuation">.</span>vhdx <span class="token operator">-</span>Mode full<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p><br> I'm not using Docker, btw.</p>
-<script src="https://cdn.jsdelivr.net/npm/anchor-js/anchor.min.js"></script>
-<script>
-  anchors.add();
-</script>]]></content>
-      <categories>
-        <category>Miscellaneous</category>
-      </categories>
-      <tags>
-        <tag>wsl2</tag>
-        <tag>powershell</tag>
       </tags>
   </entry>
 </search>

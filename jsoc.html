@@ -17,7 +17,7 @@
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha256-xejo6yLi6vGtAjcMIsY8BHdKsLg7QynVlFMzdQgUuy8=" crossorigin="anonymous">
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"lydiazly.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.12.3","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"width":250},"copycode":{"enable":true,"style":"mac"},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":true,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":false,"async":true,"transition":{"post_block":"none","post_header":"none","post_body":"none","coll_header":"fadeInLeft","sidebar":"none"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+<script class="next-config" data-name="main" type="application/json">{"hostname":"lydiazly.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.12.3","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"width":250},"copycode":{"enable":true,"style":"mac"},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":true,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":false,"async":false,"transition":{"post_block":"none","post_header":"none","post_body":"none","coll_header":"fadeInLeft","sidebar":"none"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
     <meta name="description" content="Jupyter Notebook  Reference http:&#x2F;&#x2F;docs.sunpy.org&#x2F;en&#x2F;stable&#x2F;guide&#x2F;acquiring_data&#x2F;jsoc.html %load_ext autoreload %autoreload 2  import astropy.units as u  from sunpy.net import Fido, attrs  # Suppress">
 <meta property="og:type" content="blog">
@@ -49,7 +49,6 @@
 <script class="next-config" data-name="calendar" type="application/json">""</script>
 <title>Example: downloading data from JSOC | Lydia's notes</title>
   
-
 
 
 
@@ -153,7 +152,9 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#getting-information"><span class="nav-number">1.</span> <span class="nav-text">Getting information</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#series"><span class="nav-number">1.1.</span> <span class="nav-text">Series</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#primekeys"><span class="nav-number">1.2.</span> <span class="nav-text">PrimeKeys</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#segments"><span class="nav-number">1.3.</span> <span class="nav-text">Segments</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#basic-usage"><span class="nav-number">2.</span> <span class="nav-text">Basic usage</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#fido"><span class="nav-number">2.1.</span> <span class="nav-text">Fido</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#searching-for-data"><span class="nav-number">2.1.1.</span> <span class="nav-text">Searching for data</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#indexing"><span class="nav-number">2.1.2.</span> <span class="nav-text">Indexing</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#downloading-data"><span class="nav-number">2.1.3.</span> <span class="nav-text">Downloading data</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#jsocclient"><span class="nav-number">2.2.</span> <span class="nav-text">JSOCClient</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#searching-for-data-1"><span class="nav-number">2.2.1.</span> <span class="nav-text">Searching for data</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#indexing-1"><span class="nav-number">2.2.2.</span> <span class="nav-text">Indexing</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#downloading-data-1"><span class="nav-number">2.2.3.</span> <span class="nav-text">Downloading data</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#constructing-complex-queries"><span class="nav-number">3.</span> <span class="nav-text">Constructing complex queries</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#time"><span class="nav-number">3.1.</span> <span class="nav-text">Time</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#searching-for-data-2"><span class="nav-number">3.2.</span> <span class="nav-text">Searching for data</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#getting-information"><span class="nav-number">1.</span> <span class="nav-text">Getting information</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#series"><span class="nav-number">1.1.</span> <span class="nav-text">Series</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#primekeys"><span class="nav-number">1.2.</span> <span class="nav-text">PrimeKeys</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#segments"><span class="nav-number">1.3.</span> <span class="nav-text">Segments</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#basic-usage"><span class="nav-number">2.</span> <span class="nav-text">Basic
+usage</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#fido"><span class="nav-number">2.1.</span> <span class="nav-text">Fido</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#searching-for-data"><span class="nav-number">2.1.1.</span> <span class="nav-text">Searching for data</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#indexing"><span class="nav-number">2.1.2.</span> <span class="nav-text">Indexing</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#downloading-data"><span class="nav-number">2.1.3.</span> <span class="nav-text">Downloading data</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#jsocclient"><span class="nav-number">2.2.</span> <span class="nav-text">JSOCClient</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#searching-for-data-1"><span class="nav-number">2.2.1.</span> <span class="nav-text">Searching for data</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#indexing-1"><span class="nav-number">2.2.2.</span> <span class="nav-text">Indexing</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#downloading-data-1"><span class="nav-number">2.2.3.</span> <span class="nav-text">Downloading data</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#constructing-complex-queries"><span class="nav-number">3.</span> <span class="nav-text">Constructing
+complex queries</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#time"><span class="nav-number">3.1.</span> <span class="nav-text">Time</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#searching-for-data-2"><span class="nav-number">3.2.</span> <span class="nav-text">Searching for data</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -315,13 +316,14 @@ warnings<span class="token punctuation">.</span>simplefilter<span class="token p
 target="_blank" rel="noopener" href="http://docs.sunpy.org/en/stable/guide/acquiring_data/jsoc.html"
 class="uri">http://docs.sunpy.org/en/stable/guide/acquiring_data/jsoc.html</a>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">from</span> sunpy<span class="token punctuation">.</span>net <span class="token keyword">import</span> Fido<span class="token punctuation">,</span> attrs <span class="token keyword">as</span> a<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre> <span id="more"></span></p>
-<h2 id="getting-information">Getting information</h2>
+<h2 id="getting-information"><a href="#getting-information"
+class="headerlink"></a>Getting information</h2>
 <p><code>drms</code> - Python module for accessing HMI, AIA and MDI
 data<br> - <a target="_blank" rel="noopener" href="https://github.com/kbg/drms"
 class="uri">https://github.com/kbg/drms</a> - <a
 target="_blank" rel="noopener" href="http://drms.readthedocs.io/en/stable/tutorial.html"
 class="uri">http://drms.readthedocs.io/en/stable/tutorial.html</a></p>
-<h3 id="series">Series</h3>
+<h3 id="series"><a href="#series" class="headerlink"></a>Series</h3>
 <p><img data-src='/jsoc/hmi01.png'/></p>
 <p>Import the <code>drms</code> module and create an instance of the
 <code>drms.Client</code> class:</p>
@@ -349,14 +351,16 @@ c <span class="token operator">=</span> drms<span class="token punctuation">.</s
  &#39;hmi.b_synoptic&#39;,
  &#39;hmi.b_synoptic_small&#39;,
  &#39;hmi.bmap_lowres_latlon_720s&#39;]</code></pre>
-<h3 id="primekeys">PrimeKeys</h3>
+<h3 id="primekeys"><a href="#primekeys"
+class="headerlink"></a>PrimeKeys</h3>
 <p>Find out the <code>PrimeKeys</code> supported in any
 <code>Series</code>:</p>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python">c<span class="token punctuation">.</span>pkeys<span class="token punctuation">(</span><span class="token string">'aia.lev1_euv_12s'</span><span class="token punctuation">)</span>  <span class="token comment"># case-insensitive</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <pre><code>[&#39;T_REC&#39;, &#39;WAVELNTH&#39;]</code></pre>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python">c<span class="token punctuation">.</span>pkeys<span class="token punctuation">(</span><span class="token string">'hmi.B_720s'</span><span class="token punctuation">)</span>  <span class="token comment"># case-insensitive</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <pre><code>[&#39;T_REC&#39;]</code></pre>
-<h3 id="segments">Segments</h3>
+<h3 id="segments"><a href="#segments"
+class="headerlink"></a>Segments</h3>
 <p>Find out the <code>Segments</code> supported in any
 <code>Series</code>:</p>
 <ul>
@@ -602,7 +606,8 @@ Field Strength
 </tbody>
 </table>
 </div>
-<h2 id="basic-usage">Basic usage</h2>
+<h2 id="basic-usage"><a href="#basic-usage" class="headerlink"></a>Basic
+usage</h2>
 <p>See <a
 target="_blank" rel="noopener" href="http://docs.sunpy.org/en/stable/guide/acquiring_data/jsoc.html"
 class="uri">http://docs.sunpy.org/en/stable/guide/acquiring_data/jsoc.html</a></p>
@@ -616,8 +621,9 @@ This option can be preferred when the complex searches are to be made,
 or when you need to separate the staging and downloading steps, which is
 not supported by <code>Fido</code>.</p>
 </blockquote>
-<h3 id="fido">Fido</h3>
-<h4 id="searching-for-data">Searching for data</h4>
+<h3 id="fido"><a href="#fido" class="headerlink"></a>Fido</h3>
+<h4 id="searching-for-data"><a href="#searching-for-data"
+class="headerlink"></a>Searching for data</h4>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python">response <span class="token operator">=</span> Fido<span class="token punctuation">.</span>search<span class="token punctuation">(</span>
     attrs<span class="token punctuation">.</span>jsoc<span class="token punctuation">.</span>Time<span class="token punctuation">(</span><span class="token string">'2014-01-01T00:00:00'</span><span class="token punctuation">,</span> <span class="token string">'2014-01-01T00:00:30'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
     attrs<span class="token punctuation">.</span>jsoc<span class="token punctuation">.</span>Notify<span class="token punctuation">(</span><span class="token string">'lydiazly@nju.edu.cn'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
@@ -813,7 +819,8 @@ AIA_3
 <p><br></p>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token builtin">type</span><span class="token punctuation">(</span>response<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <pre><code>sunpy.net.fido_factory.UnifiedResponse</code></pre>
-<h4 id="indexing">Indexing</h4>
+<h4 id="indexing"><a href="#indexing"
+class="headerlink"></a>Indexing</h4>
 <ul>
 <li><p>First index: client (still necessary even if results are only
 found for a single client)</p></li>
@@ -1055,10 +1062,12 @@ AIA_4
 </tr>
 </table>
 <p><br></p>
-<h4 id="downloading-data">Downloading data</h4>
+<h4 id="downloading-data"><a href="#downloading-data"
+class="headerlink"></a>Downloading data</h4>
 <p>Download the entire results:</p>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python">res <span class="token operator">=</span> Fido<span class="token punctuation">.</span>fetch<span class="token punctuation">(</span>response<span class="token punctuation">,</span> path<span class="token operator">=</span><span class="token string">'./data'</span><span class="token punctuation">)</span>  <span class="token comment"># Will output a progress bar by default</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<h3 id="jsocclient">JSOCClient</h3>
+<h3 id="jsocclient"><a href="#jsocclient"
+class="headerlink"></a>JSOCClient</h3>
 <blockquote>
 <p>The JSOC stages data before you can download it, so a JSOC query is a
 <strong>three</strong> stage process. 1.
@@ -1072,7 +1081,8 @@ download.</p>
 <p>(<code>Fido</code> combines the stages into 2, <code>search</code>
 and <code>fetch</code>.)</p>
 </blockquote>
-<h4 id="searching-for-data-1">Searching for data</h4>
+<h4 id="searching-for-data-1"><a href="#searching-for-data-1"
+class="headerlink"></a>Searching for data</h4>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">from</span> sunpy<span class="token punctuation">.</span>net <span class="token keyword">import</span> jsoc
 client <span class="token operator">=</span> jsoc<span class="token punctuation">.</span>JSOCClient<span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python">response <span class="token operator">=</span> client<span class="token punctuation">.</span>search<span class="token punctuation">(</span>
@@ -1194,7 +1204,8 @@ AIA_3
 <p>Note here we get a single table.</p>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token builtin">type</span><span class="token punctuation">(</span>response<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <pre><code>sunpy.net.jsoc.jsoc.JSOCResponse</code></pre>
-<h4 id="indexing-1">Indexing</h4>
+<h4 id="indexing-1"><a href="#indexing-1"
+class="headerlink"></a>Indexing</h4>
 <p>An integer get a <code>Row</code>:</p>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python">response<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <i>Row index=2</i>
@@ -1605,7 +1616,8 @@ AIA_3
 </td>
 </tr>
 </table>
-<h4 id="downloading-data-1">Downloading data</h4>
+<h4 id="downloading-data-1"><a href="#downloading-data-1"
+class="headerlink"></a>Downloading data</h4>
 <p>Download the entire results:</p>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python">res <span class="token operator">=</span> client<span class="token punctuation">.</span>fetch<span class="token punctuation">(</span>response<span class="token punctuation">,</span> path<span class="token operator">=</span><span class="token string">'./data'</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <pre><code>Export request pending. [id=&quot;JSOC_20180710_1151&quot;, status=2]
@@ -1647,8 +1659,10 @@ except <code>query_args</code> is lost.</p>
   &#39;series&#39;: &#39;aia.lev1_euv_12s&#39;&#125;]</code></pre>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python">response<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">.</span>query_args<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>This will cause an error in <code>fetch</code>.</p>
-<h2 id="constructing-complex-queries">Constructing complex queries</h2>
-<h3 id="time">Time</h3>
+<h2 id="constructing-complex-queries"><a
+href="#constructing-complex-queries" class="headerlink"></a>Constructing
+complex queries</h2>
+<h3 id="time"><a href="#time" class="headerlink"></a>Time</h3>
 <p><a
 target="_blank" rel="noopener" href="http://docs.sunpy.org/en/stable/guide/acquiring_data/jsoc.html"
 class="uri">http://docs.sunpy.org/en/stable/guide/acquiring_data/jsoc.html</a>
@@ -1692,7 +1706,8 @@ scale:</p>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python">tai<span class="token punctuation">(</span><span class="token string">'2015.08.27_06:00:00_TAI'</span><span class="token punctuation">,</span> <span class="token string">'2015.08.27_06:01:00_TAI'</span><span class="token punctuation">)</span>  <span class="token comment"># Returns a list</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <pre><code>[&lt;Time object: scale=&#39;tai&#39; format=&#39;datetime&#39; value=2015-08-27 06:00:00&gt;,
  &lt;Time object: scale=&#39;tai&#39; format=&#39;datetime&#39; value=2015-08-27 06:01:00&gt;]</code></pre>
-<h3 id="searching-for-data-2">Searching for data</h3>
+<h3 id="searching-for-data-2"><a href="#searching-for-data-2"
+class="headerlink"></a>Searching for data</h3>
 <p>JSOC <a target="_blank" rel="noopener" href="http://jsoc.stanford.edu/ajax/lookdata.html"
 class="uri">http://jsoc.stanford.edu/ajax/lookdata.html</a></p>
 <ul>
@@ -1885,10 +1900,7 @@ HMI_SIDE1
 </tr>
 </table>
 <p><br></p>
-<script src="https://cdn.jsdelivr.net/npm/anchor-js/anchor.min.js"></script>
-<script>
-  anchors.add();
-</script>
+
     </div>
 
     

@@ -24,7 +24,8 @@
     <updated>2022-07-16T06:56:11.000Z</updated>
     
     
-    <summary type="html">&lt;h2 id=&quot;limit-the-memory-usage&quot;&gt;Limit the memory usage&lt;/h2&gt;
+    <summary type="html">&lt;h2 id=&quot;limit-the-memory-usage&quot;&gt;&lt;a href=&quot;#limit-the-memory-usage&quot;
+class=&quot;headerlink&quot;&gt;&lt;/a&gt;Limit the memory usage&lt;/h2&gt;
 &lt;p&gt;It&#39;s very annoying that WSL2 was always eating up my poor RAM. There
 is a solution. It&#39;s working, except that the memory usage can&#39;t be
 exactly &#39;limited&#39; but &#39;fixed&#39;.&lt;/p&gt;
@@ -462,7 +463,8 @@ class=&quot;uri&quot;&gt;http://docs.sunpy.org/en/stable/guide/acquiring_data/js
 &lt;a class=&quot;btn&quot; href=&quot;https://github.com/lydiazly/python-intro/raw/master/notebooks/python-intro.zip&quot;&gt;&lt;i class=&quot;fa fa-download fa-fw&quot;&gt;&lt;/i&gt;Jupyter Notebook&lt;/a&gt;
 &lt;wbr&gt; &lt;a class=&quot;btn&quot; href=&quot;https://pan.baidu.com/s/1nwsIcDr?pwd=s5re&quot;&gt;&lt;i class=&quot;fa fa-download fa-fw&quot;&gt;&lt;/i&gt;FITS Data&lt;/a&gt;
 &lt;/p&gt;
-&lt;h2 id=&quot;anaconda&quot;&gt;Anaconda&lt;/h2&gt;
+&lt;h2 id=&quot;anaconda&quot;&gt;&lt;a href=&quot;#anaconda&quot;
+class=&quot;headerlink&quot;&gt;&lt;/a&gt;Anaconda&lt;/h2&gt;
 &lt;blockquote&gt;
 &lt;p&gt;A &lt;strong&gt;conda package&lt;/strong&gt; is a compressed tarball file that
 contains system-level libraries, Python or other modules, executable
@@ -515,7 +517,7 @@ class=&quot;uri&quot;&gt;https://jakevdp.github.io/blog/2016/08/25/conda-myths-a
 &lt;a class=&quot;btn&quot; href=&quot;https://github.com/lydiazly/python-intro/raw/master/notebooks/python-intro.zip&quot;&gt;&lt;i class=&quot;fa fa-download fa-fw&quot;&gt;&lt;/i&gt;Jupyter Notebook&lt;/a&gt;
 &lt;wbr&gt; &lt;a class=&quot;btn&quot; href=&quot;https://pan.baidu.com/s/1nwsIcDr?pwd=s5re&quot;&gt;&lt;i class=&quot;fa fa-download fa-fw&quot;&gt;&lt;/i&gt;FITS Data&lt;/a&gt;
 &lt;/p&gt;
-&lt;h2 id=&quot;简介&quot;&gt;简介&lt;/h2&gt;
+&lt;h2 id=&quot;简介&quot;&gt;&lt;a href=&quot;#简介&quot; class=&quot;headerlink&quot;&gt;&lt;/a&gt;简介&lt;/h2&gt;
 &lt;p&gt;优势: 开源, 用户广, 用途广, 社区完善, 新手友好&lt;/p&gt;
 &lt;p&gt;&lt;a
 href=&quot;https://www.jetbrains.com/research/python-developers-survey-2017/&quot;

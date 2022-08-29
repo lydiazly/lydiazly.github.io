@@ -17,7 +17,7 @@
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha256-xejo6yLi6vGtAjcMIsY8BHdKsLg7QynVlFMzdQgUuy8=" crossorigin="anonymous">
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"lydiazly.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.12.3","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"width":250},"copycode":{"enable":true,"style":"mac"},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":true,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":false,"async":true,"transition":{"post_block":"none","post_header":"none","post_body":"none","coll_header":"fadeInLeft","sidebar":"none"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+<script class="next-config" data-name="main" type="application/json">{"hostname":"lydiazly.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.12.3","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"width":250},"copycode":{"enable":true,"style":"mac"},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":true,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":false,"async":false,"transition":{"post_block":"none","post_header":"none","post_body":"none","coll_header":"fadeInLeft","sidebar":"none"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
     <meta name="description" content="Jupyter Notebook  Example Data  User Module (source &#x2F; doc)  from __future__ import division, print_function  # Reload user modules automatically # %load_ext autoreload # %autoreload 2  # notebook, in">
 <meta property="og:type" content="blog">
@@ -48,7 +48,6 @@
 <script class="next-config" data-name="calendar" type="application/json">""</script>
 <title>Example: projection | Lydia's notes</title>
   
-
 
 
 
@@ -152,7 +151,8 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#read-data"><span class="nav-number">1.</span> <span class="nav-text">Read data</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#submap"><span class="nav-number">2.</span> <span class="nav-text">Submap</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#projection"><span class="nav-number">3.</span> <span class="nav-text">Projection</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#read-data"><span class="nav-number">1.</span> <span class="nav-text">Read
+data</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#submap"><span class="nav-number">2.</span> <span class="nav-text">Submap</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#projection"><span class="nav-number">3.</span> <span class="nav-text">Projection</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -321,7 +321,8 @@ sys<span class="token punctuation">.</span>path<span class="token punctuation">.
 <span class="token comment"># print('Python version: %s' % sys.version.split('(')[0])  # Python version: 3.6.6 |Anaconda, Inc.|</span>
 <span class="token comment"># print('SunPy version: %s' % sunpy.__version__)  # SunPy version: 0.9.3</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <span id="more"></span>
-<h2 id="read-data">Read data</h2>
+<h2 id="read-data"><a href="#read-data" class="headerlink"></a>Read
+data</h2>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python">fnames <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token string">'data/hmi.B_720s.20150827_052400_TAI.field.fits'</span><span class="token punctuation">,</span>
           <span class="token string">'data/hmi.B_720s.20150827_052400_TAI.inclination.fits'</span><span class="token punctuation">,</span>
           <span class="token string">'data/hmi.B_720s.20150827_052400_TAI.azimuth.fits'</span><span class="token punctuation">,</span>
@@ -361,7 +362,7 @@ mapbz<span class="token punctuation">.</span>data<span class="token punctuation"
 level    = 1.5
 rsun_obs = 949.495178 arcsec
 r_sun    = 1582.4919633333334 pix</code></pre>
-<h2 id="submap">Submap</h2>
+<h2 id="submap"><a href="#submap" class="headerlink"></a>Submap</h2>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token builtin">xrange</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token number">500.</span><span class="token punctuation">,</span><span class="token number">800.</span><span class="token punctuation">)</span> <span class="token operator">*</span> u<span class="token punctuation">.</span>arcsec
 yrange <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">450.</span><span class="token punctuation">,</span><span class="token operator">-</span><span class="token number">200.</span><span class="token punctuation">)</span> <span class="token operator">*</span> u<span class="token punctuation">.</span>arcsec
 
@@ -400,7 +401,8 @@ im2 <span class="token operator">=</span> plot_map<span class="token punctuation
 plot_vmap<span class="token punctuation">(</span>smapbx<span class="token punctuation">,</span> smapby<span class="token punctuation">,</span> smapbz<span class="token punctuation">,</span> ax2<span class="token punctuation">,</span> iskip<span class="token operator">=</span>iskip<span class="token punctuation">,</span> jskip<span class="token operator">=</span>jskip<span class="token punctuation">,</span> cmin<span class="token operator">=</span><span class="token number">50.</span><span class="token punctuation">,</span> vmax<span class="token operator">=</span><span class="token number">500.</span><span class="token punctuation">,</span> cmap<span class="token operator">=</span><span class="token string">'binary'</span><span class="token punctuation">,</span>
           scale_units<span class="token operator">=</span><span class="token string">'xy'</span><span class="token punctuation">,</span> scale<span class="token operator">=</span><span class="token number">1</span><span class="token operator">/</span><span class="token number">0.05</span><span class="token punctuation">,</span> minlength<span class="token operator">=</span><span class="token number">0.02</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p><img data-src="/example_projection/projection2.png" width="900"></p>
-<h2 id="projection">Projection</h2>
+<h2 id="projection"><a href="#projection"
+class="headerlink"></a>Projection</h2>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">from</span> usr_sunpy <span class="token keyword">import</span> image_to_helio
 
 hx<span class="token punctuation">,</span> hy <span class="token operator">=</span> image_to_helio<span class="token punctuation">(</span>smapbz<span class="token punctuation">)</span>
@@ -425,10 +427,7 @@ ax3<span class="token punctuation">.</span>grid<span class="token punctuation">(
 ax3<span class="token punctuation">.</span>set_xlim<span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">170</span><span class="token punctuation">,</span><span class="token number">170</span><span class="token punctuation">)</span><span class="token punctuation">)</span>  <span class="token comment"># arcsec</span>
 ax3<span class="token punctuation">.</span>set_ylim<span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">110</span><span class="token punctuation">,</span><span class="token number">100</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment"># arcsec</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p><img data-src="/example_projection/projection3.png" width="900"></p>
-<script src="https://cdn.jsdelivr.net/npm/anchor-js/anchor.min.js"></script>
-<script>
-  anchors.add();
-</script>
+
     </div>
 
     

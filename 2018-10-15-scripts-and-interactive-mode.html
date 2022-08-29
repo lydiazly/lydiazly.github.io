@@ -17,7 +17,7 @@
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha256-xejo6yLi6vGtAjcMIsY8BHdKsLg7QynVlFMzdQgUuy8=" crossorigin="anonymous">
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"lydiazly.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.12.3","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"width":250},"copycode":{"enable":true,"style":"mac"},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":true,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":false,"async":true,"transition":{"post_block":"none","post_header":"none","post_body":"none","coll_header":"fadeInLeft","sidebar":"none"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+<script class="next-config" data-name="main" type="application/json">{"hostname":"lydiazly.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.12.3","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"width":250},"copycode":{"enable":true,"style":"mac"},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":true,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":false,"async":false,"transition":{"post_block":"none","post_header":"none","post_body":"none","coll_header":"fadeInLeft","sidebar":"none"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
     <meta name="description" content="目的是从交互环境调用脚本产生的变量, 可用于调试脚本和测试数据等等. 比如当前目录下有一个包含如下内容的脚本: #!&#x2F;usr&#x2F;bin&#x2F;env python a&#x3D;1 print(&#39;a &#x3D;&#39;, a)">
 <meta property="og:type" content="blog">
@@ -42,7 +42,6 @@
 <script class="next-config" data-name="calendar" type="application/json">""</script>
 <title>Python notes: invoke variables from scripts in interactive mode | Lydia's notes</title>
   
-
 
 
 
@@ -146,9 +145,9 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%B9%E6%B3%95-1.-shell---interactive-mode-%E6%8E%A8%E8%8D%90"><span class="nav-number">1.</span> <span class="nav-text">方法 1. shell -&gt;
-interactive mode (推荐)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%B9%E6%B3%95-2.-in-ipython-jupyter-%E7%AC%AC%E4%BA%8C%E6%8E%A8%E8%8D%90"><span class="nav-number">2.</span> <span class="nav-text">方法 2. In ipython &#x2F;
-jupyter (第二推荐)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%B9%E6%B3%95-3.-in-interactive-mode"><span class="nav-number">3.</span> <span class="nav-text">方法 3. In interactive mode</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%B9%E6%B3%95-1.-shell---interactive-mode-%E6%8E%A8%E8%8D%90"><span class="nav-number">1.</span> <span class="nav-text">方法 1. shell -&gt; interactive mode (推荐)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%B9%E6%B3%95-2.-in-ipython-jupyter-%E7%AC%AC%E4%BA%8C%E6%8E%A8%E8%8D%90"><span class="nav-number">2.</span> <span class="nav-text">方法
+2. In ipython &#x2F; jupyter (第二推荐)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%B9%E6%B3%95-3.-in-interactive-mode"><span class="nav-number">3.</span> <span class="nav-text">方法 3. In
+interactive mode</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -294,8 +293,9 @@ jupyter (第二推荐)</span></a></li><li class="nav-item nav-level-3"><a class=
 a<span class="token operator">=</span><span class="token number">1</span>
 <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'a ='</span><span class="token punctuation">,</span> a<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 <span id="more"></span>
-<h3 id="方法-1.-shell---interactive-mode-推荐">方法 1. shell -&gt;
-interactive mode (推荐)</h3>
+<h3 id="方法-1.-shell---interactive-mode-推荐"><a
+href="#方法-1.-shell---interactive-mode-推荐"
+class="headerlink"></a>方法 1. shell -&gt; interactive mode (推荐)</h3>
 <p>使用 <code>-i</code> 选项:</p>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># shell</span>
 $ python -i test.py<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
@@ -304,8 +304,9 @@ $ python -i test.py<span aria-hidden="true" class="line-numbers-rows"><span></sp
 a <span class="token operator">=</span> <span class="token number">1</span>
 <span class="token operator">>></span><span class="token operator">></span> a
 <span class="token number">1</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-<h3 id="方法-2.-in-ipython-jupyter-第二推荐">方法 2. In ipython /
-jupyter (第二推荐)</h3>
+<h3 id="方法-2.-in-ipython-jupyter-第二推荐"><a
+href="#方法-2.-in-ipython-jupyter-第二推荐" class="headerlink"></a>方法
+2. In ipython / jupyter (第二推荐)</h3>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># ipython</span>
 In <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">:</span> <span class="token operator">%</span>run test<span class="token punctuation">.</span>py
 a <span class="token operator">=</span> <span class="token number">1</span>
@@ -320,7 +321,9 @@ In <span class="token punctuation">[</span><span class="token number">4</span><s
 Variable   Type    Data<span class="token operator">/</span>Info
 <span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span>
 a          <span class="token builtin">int</span>     <span class="token number">1</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h3 id="方法-3.-in-interactive-mode">方法 3. In interactive mode</h3>
+<h3 id="方法-3.-in-interactive-mode"><a
+href="#方法-3.-in-interactive-mode" class="headerlink"></a>方法 3. In
+interactive mode</h3>
 <blockquote>
 <p><strong>NOTE</strong>: Python 3 取消了 <code>execfile()</code>
 这个函数! 如今使用 <code>exec()</code>.</p>
@@ -353,10 +356,7 @@ a <span class="token operator">=</span> <span class="token number">1</span><span
 <span class="token builtin">locals</span><span class="token punctuation">(</span><span class="token punctuation">)</span>  <span class="token comment"># a dictionary containing the current scope's local variables</span>
 <span class="token builtin">vars</span><span class="token punctuation">(</span><span class="token punctuation">)</span>  <span class="token comment"># without arguments, equivalent to locals();</span>
         <span class="token comment"># with an argument, equivalent to object.__dict__.</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<script src="https://cdn.jsdelivr.net/npm/anchor-js/anchor.min.js"></script>
-<script>
-  anchors.add();
-</script>
+
     </div>
 
     

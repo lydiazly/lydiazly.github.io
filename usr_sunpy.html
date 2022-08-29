@@ -17,7 +17,7 @@
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha256-xejo6yLi6vGtAjcMIsY8BHdKsLg7QynVlFMzdQgUuy8=" crossorigin="anonymous">
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"lydiazly.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.12.3","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"width":250},"copycode":{"enable":true,"style":"mac"},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":true,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":false,"async":true,"transition":{"post_block":"none","post_header":"none","post_body":"none","coll_header":"fadeInLeft","sidebar":"none"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+<script class="next-config" data-name="main" type="application/json">{"hostname":"lydiazly.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.12.3","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"width":250},"copycode":{"enable":true,"style":"mac"},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":true,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":false,"async":false,"transition":{"post_block":"none","post_header":"none","post_body":"none","coll_header":"fadeInLeft","sidebar":"none"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
     <meta name="description" content="usr_sunpy  User functions. - SunPy Version: 0.9.3   usr_sunpy.basic   SunPy Version: 0.9.3 Reference http:&#x2F;&#x2F;docs.sunpy.org&#x2F;en&#x2F;stable&#x2F;code_ref&#x2F;map.html Change log:  2018-10-11  Add aiaprep_usr().">
 <meta property="og:type" content="blog">
@@ -44,7 +44,6 @@
 <title>SunPy module documentation | Lydia's notes
 </title>
   
-
 
 
 
@@ -325,13 +324,14 @@ center of the image. The actual transformation is done by Map's
 but it does not use the same transformation to rotate the image and it
 handles the meta data differently. It should therefore not be expected
 to produce the same results.</p>
-<h2 id="parameters">Parameters</h2>
+<h2 id="parameters"><a href="#parameters"
+class="headerlink"></a>Parameters</h2>
 <p>aiamap : <code>~sunpy.map.sources.sdo.AIAMap</code> instance A
 <code>sunpy.map.Map</code> from AIA</p>
-<h2 id="returns">Returns</h2>
+<h2 id="returns"><a href="#returns" class="headerlink"></a>Returns</h2>
 <p>newmap : A level 1.5 copy of
 <code>~sunpy.map.sources.sdo.AIAMap</code></p>
-<h2 id="notes">Notes</h2>
+<h2 id="notes"><a href="#notes" class="headerlink"></a>Notes</h2>
 <p>This routine makes use of Map's
 :meth:<code>~sunpy.map.mapbase.GenericMap.rotate</code> method, which
 modifies the header information to the standard PCi_j WCS formalism. The
@@ -439,10 +439,7 @@ a22</p>
 <p>[Reference] <a
 target="_blank" rel="noopener" href="http://link.springer.com/10.1007/BF00158295">http://link.springer.com/10.1007/BF00158295</a></p>
 <hr />
-<script src="https://cdn.jsdelivr.net/npm/anchor-js/anchor.min.js"></script>
-<script>
-  anchors.add();
-</script>
+
       </div>
       
       
