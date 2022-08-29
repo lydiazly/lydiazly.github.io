@@ -200,6 +200,7 @@ feed:
 
 # hexo-renderer-pandoc
 pandoc:
-  template: ./source/templates/pandoc-template.html
-  # extra:
-  #   # - from: gfm
+  # template: ./source/templates/pandoc-template.html
+  extra:
+    # - from: gfm
+    - lua-filter: ./source/filter/anchor-links.lua
