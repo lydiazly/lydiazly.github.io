@@ -30,6 +30,8 @@ category_dir: categories
 code_dir: downloads/code
 i18n_dir: :lang
 skip_render:
+  - googlea24ada8f7c1fd278.html
+  - BingSiteAuth.xml
 
 # Writing
 new_post_name: :year-:month-:day-:title.md # File name of new posts
