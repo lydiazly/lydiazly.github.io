@@ -1,5 +1,5 @@
 ---
-title: "SunPy scripts updates"
+title: "SunPy Scripts Updates"
 categories: 'Solar Physics'
 tags: [python, sunpy]
 date: "2018-10-14 16:07:46 +0800"

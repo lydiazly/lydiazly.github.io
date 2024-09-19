@@ -4,14 +4,14 @@ title: About
 type: "about"
 comments: false
 ---
-Welcome! This is Lydia Zhang. This blog is about my notes of Python, basically related to solar physics, but not restricted.
+Welcome! This is Lydia Zhang. I transitioned to computer science in 2023. This is my personal blog, where I keep my Python notes and other coding tips.
 
-Some of the posts and Jupyter notebooks (in Chinese) are backups of my two Python lectures in 2018 when I was in the Solar Physics Group, Nanjing University. The lectures are given to students, as well as researchers who are new to Python or SunPy. The contents are based on my own research experience. Hope it helps.
+Some of the posts and Jupyter notebooks (in Chinese) [[1](/main), [2](/advance)] are archives of two Python lectures I gave in 2018 while I was a member of the Solar Physics Group at Nanjing University. The lectures were designed to introduce Python and scientific packages to students and researchers. Most of the contents were based on my previous research experience. The custom scripts and modules included are just examples.
 
-Custom scripts and modules are just examples. Due to the development of SciPy, Astropy, and SunPy, some user-defined functions may no longer be necessary.
+Although some of these early posts might be outdated after all these years, and a few user-defined functions may no longer be necessary, I've decided to leave them as they are since the key concepts are still applicable. New tips and notes will be shared in future posts.
 
-Please contact me if you have any questions. :)
+Feel free to reach out if you have any questions. :)
 
-[<i class="fa fa-envelope"></i> E-Mail](mailto:lydiazly2@nju.edu.cn)
+[<i class="fa fa-envelope"></i> E-Mail](mailto:lydiazly2@gmail.com)
 
 <!-- <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>. -->

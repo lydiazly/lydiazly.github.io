@@ -4,12 +4,12 @@
 
 # Site
 title: Lydia's notes
-subtitle: 'Tips of Python, etc.'
-description: 'Tips of Python, etc.'
+subtitle: 'Tips about Python and Linux.'
+description: 'Tips about Python and Linux.'
 keywords: 'python, coding'
 author: Lydia Zhang
 language: en
-timezone: ''
+timezone: 'America/Vancouver'
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'

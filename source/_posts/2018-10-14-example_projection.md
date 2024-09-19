@@ -1,5 +1,5 @@
 ---
-title: "Example: projection"
+title: "Example: Projection"
 permalink: /example_projection.html
 categories: 'Solar Physics'
 tags: [python, jupyter, sunpy]

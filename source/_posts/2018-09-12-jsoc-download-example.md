@@ -1,5 +1,5 @@
 ---
-title: "JSOC download example"
+title: "JSOC Download Example"
 permalink: /jsoc-download-example.html
 categories: 'Solar Physics'
 tags: [python, jupyter, sunpy]

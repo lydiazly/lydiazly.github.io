@@ -1,5 +1,5 @@
 ---
-title: "Example: plot HMI"
+title: "Example: Plot HMI"
 permalink: /example_plothmi.html
 categories: 'Solar Physics'
 tags: [python, jupyter, sunpy]
