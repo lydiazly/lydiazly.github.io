@@ -1,6 +1,6 @@
 ---
 title: "Python Notes: Invoke Variables From Scripts in Interactive Mode"
-categories: 'Solar Physics'
+categories: 'Python Tips'
 tags: python
 date: 2018-10-15 22:46:01
 ---

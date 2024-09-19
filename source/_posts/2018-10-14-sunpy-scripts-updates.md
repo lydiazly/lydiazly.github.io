@@ -1,6 +1,6 @@
 ---
 title: "SunPy Scripts Updates"
-categories: 'Solar Physics'
+categories: 'Lecture Topics'
 tags: [python, sunpy]
 date: "2018-10-14 16:07:46 +0800"
 ---

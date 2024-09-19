@@ -1,5 +1,8 @@
 ---
 title: "New Web App: Star Path Viewer"
+permalink: /star-path-viewer.html
+categories: 'Web'
+tags: [python, astronomy]
 date: 2024-09-18 20:49:39
 sticky: 100
 ---

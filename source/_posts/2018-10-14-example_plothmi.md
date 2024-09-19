@@ -1,8 +1,8 @@
 ---
 title: "Example: Plot HMI"
 permalink: /example_plothmi.html
-categories: 'Solar Physics'
-tags: [python, jupyter, sunpy]
+categories: 'Lecture Topics'
+tags: [python, jupyter, sunpy, astronomy]
 date: 2018-10-14 16:06:23
 ---
 <p>

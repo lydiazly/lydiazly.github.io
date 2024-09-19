@@ -1,8 +1,8 @@
 ---
 title: "Example: Projection"
 permalink: /example_projection.html
-categories: 'Solar Physics'
-tags: [python, jupyter, sunpy]
+categories: 'Lecture Topics'
+tags: [python, jupyter, sunpy, astronomy]
 date: 2018-10-14 16:06:31
 ---
 <p>

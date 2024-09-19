@@ -1,6 +1,6 @@
 ---
 title: "Pandas sep='\\s+' 的问题"
-categories: 'Solar Physics'
+categories: 'Python Tips'
 tags: [python, pandas]
 date: 2018-12-04 17:00:03
 ---
