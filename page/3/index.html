@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 7.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+  <link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha256-XOqroi11tY4EFQMR9ZYwZWKj5ZXiftSx36RRuC3anlA=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"lydiazly.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.20.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12,"width":250},"copycode":{"enable":true,"style":"mac"},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":true,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":false,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"none","post_header":"none","post_body":"none","coll_header":"fadeInLeft","sidebar":"none"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="Tips about Python and Linux.">
+<meta property="og:type" content="blog">
+<meta property="og:title" content="Lydia&#39;s notes">
+<meta property="og:url" content="https://lydiazly.github.io/page/3/index.html">
+<meta property="og:site_name" content="Lydia&#39;s notes">
+<meta property="og:description" content="Tips about Python and Linux.">
+<meta property="og:locale" content="en_US">
+<meta property="article:author" content="Lydia Zhang">
+<meta property="article:tag" content="python, coding">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://lydiazly.github.io/page/3/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":true,"isPost":false,"lang":"en","comments":"","permalink":"","path":"page/3/index.html","title":""}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>Lydia's notes</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/atom.xml" title="Lydia's notes" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">Lydia's notes</h1>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">Tips about Python and Linux.</p>
+      <img class="custom-logo-image" src="/images/logo2.png" alt="Lydia's notes">
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="Search" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags<span class="badge">11</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories<span class="badge">4</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">15</span></a></li><li class="menu-item menu-item-rss"><a href="/atom.xml" rel="section"><i class="fa fa-rss fa-fw"></i>RSS</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="Searching..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-overview-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Lydia Zhang</p>
+  <div class="site-description" itemprop="description">Tips about Python and Linux.</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">15</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">11</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="mailto:lydiazly2@nju.edu.cn" title="E-Mail → mailto:lydiazly2@nju.edu.cn" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i></a>
+      </span>
+  </div>
+  <div class="cc-license animated" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.en" class="cc-opacity" rel="noopener" target="_blank"><img src="https://cdnjs.cloudflare.com/ajax/libs/creativecommons-vocabulary/2020.11.3/assets/license_badges/big/by_sa.svg" alt="Creative Commons"></a>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="sidebar-inner sidebar-blogroll">
+      <div class="links-of-blogroll animated">
+        <div class="links-of-blogroll-title"><i class="fa fa-globe fa-fw"></i>
+          Links
+        </div>
+        <ul class="links-of-blogroll-list">
+            <li class="links-of-blogroll-item">
+              <a href="https://github.com/lydiazly/scripts-sunpy" title="https:&#x2F;&#x2F;github.com&#x2F;lydiazly&#x2F;scripts-sunpy" rel="noopener" target="_blank">My SunPy scripts</a>
+            </li>
+        </ul>
+      </div>
+    </div>
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://lydiazly.github.io/jsoc">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Lydia Zhang">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Lydia's notes">
+      <meta itemprop="description" content="Tips about Python and Linux.">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Lydia's notes">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/jsoc" class="post-title-link" itemprop="url">Example: Downloading Data From JSOC</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2018-07-12 17:09:47" itemprop="dateCreated datePublished" datetime="2018-07-12T17:09:47-07:00">2018-07-12</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Lecture-Topics/" itemprop="url" rel="index"><span itemprop="name">Lecture Topics</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>
+<a class="btn" target="_blank" rel="noopener" href="https://github.com/lydiazly/python-intro/raw/master/notebooks/fido.zip"><i class="fa fa-download fa-fw"></i>Jupyter Notebook</a>
+</p>
+<p>Reference <a
+target="_blank" rel="noopener" href="http://docs.sunpy.org/en/stable/guide/acquiring_data/jsoc.html"
+class="uri">http://docs.sunpy.org/en/stable/guide/acquiring_data/jsoc.html</a></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">%load_ext autoreload</span><br><span class="line">%autoreload <span class="number">2</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> astropy.units <span class="keyword">as</span> u</span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> sunpy.net <span class="keyword">import</span> Fido, attrs</span><br><span class="line"></span><br><span class="line"><span class="comment"># Suppress warnings of pandas, astropy</span></span><br><span class="line"><span class="keyword">import</span> warnings</span><br><span class="line">warnings.simplefilter(<span class="string">&quot;ignore&quot;</span>, category=FutureWarning)</span><br><span class="line"><span class="keyword">from</span> astropy.utils.exceptions <span class="keyword">import</span> AstropyDeprecationWarning</span><br><span class="line">warnings.simplefilter(<span class="string">&quot;ignore&quot;</span>, category=AstropyDeprecationWarning)</span><br></pre></td></tr></table></figure>
+<p>To be clear, here we use <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> sunpy.net <span class="keyword">import</span> Fido, attrs</span><br></pre></td></tr></table></figure> instead of examples in <a
+target="_blank" rel="noopener" href="http://docs.sunpy.org/en/stable/guide/acquiring_data/jsoc.html"
+class="uri">http://docs.sunpy.org/en/stable/guide/acquiring_data/jsoc.html</a>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> sunpy.net <span class="keyword">import</span> Fido, attrs <span class="keyword">as</span> a</span><br></pre></td></tr></table></figure>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/jsoc#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://lydiazly.github.io/fido">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Lydia Zhang">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Lydia's notes">
+      <meta itemprop="description" content="Tips about Python and Linux.">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Lydia's notes">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/fido" class="post-title-link" itemprop="url">Example: Downloading Data Using Fido</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2018-07-11 22:10:47" itemprop="dateCreated datePublished" datetime="2018-07-11T22:10:47-07:00">2018-07-11</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Lecture-Topics/" itemprop="url" rel="index"><span itemprop="name">Lecture Topics</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>
+<a class="btn" target="_blank" rel="noopener" href="https://github.com/lydiazly/python-intro/raw/master/notebooks/fido.zip"><i class="fa fa-download fa-fw"></i>Jupyter Notebook</a>
+</p>
+<p>Reference <a
+target="_blank" rel="noopener" href="http://docs.sunpy.org/en/stable/guide/acquiring_data/fido.html"
+class="uri">http://docs.sunpy.org/en/stable/guide/acquiring_data/fido.html</a></p>
+<p>See also: <a href="/jsoc.html">Example: downloading data from
+JSOC</a></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> astropy.units <span class="keyword">as</span> u</span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> sunpy.net <span class="keyword">import</span> Fido, attrs</span><br></pre></td></tr></table></figure>
+<p>To be clear, here we use <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> sunpy.net <span class="keyword">import</span> Fido, attrs</span><br></pre></td></tr></table></figure> instead of examples in <a
+target="_blank" rel="noopener" href="http://docs.sunpy.org/en/stable/guide/acquiring_data/jsoc.html"
+class="uri">http://docs.sunpy.org/en/stable/guide/acquiring_data/jsoc.html</a>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> sunpy.net <span class="keyword">import</span> Fido, attrs <span class="keyword">as</span> a</span><br></pre></td></tr></table></figure>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/fido#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://lydiazly.github.io/advance">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Lydia Zhang">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Lydia's notes">
+      <meta itemprop="description" content="Tips about Python and Linux.">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Lydia's notes">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/advance" class="post-title-link" itemprop="url">Python 进阶 (lecture for Solar Group)</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2018-07-02 21:46:13" itemprop="dateCreated datePublished" datetime="2018-07-02T21:46:13-07:00">2018-07-02</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Lecture-Topics/" itemprop="url" rel="index"><span itemprop="name">Lecture Topics</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>
+<a class="btn" target="_blank" rel="noopener" href="https://github.com/lydiazly/python-intro/raw/master/notebooks/python-intro.zip"><i class="fa fa-download fa-fw"></i>Jupyter Notebook</a>
+<wbr> <a class="btn" target="_blank" rel="noopener" href="https://pan.baidu.com/s/1nwsIcDr?pwd=s5re"><i class="fa fa-download fa-fw"></i>FITS Data</a>
+</p>
+<h2 id="anaconda"><a href="#anaconda"
+class="headerlink"></a>Anaconda</h2>
+<blockquote>
+<p>A <strong>conda package</strong> is a compressed tarball file that
+contains system-level libraries, Python or other modules, executable
+programs and other components. <strong>Conda</strong> keeps track of the
+dependencies between packages and platforms.<br>
+(https://conda.io/docs/user-guide/concepts.html)</p>
+</blockquote>
+<ul>
+<li>凡使用 <span style="color:blue">pip install</span>
+安装的包均为编译安装, <span style="color:blue">conda install</span>
+安装的则为编译好的二进制包.</li>
+<li>conda 包可以打包其他语言, pip 包容易出现系统依赖问题</li>
+<li>conda 包的依赖管理更完善</li>
+<li>conda 环境下仍可使用 pip 进行安装, 但所使用的 pip 命令和系统中的 pip
+互不影响, 安装的包的位置也在 conda 本身的目录下.</li>
+<li>每个环境互不影响, 各环境下的包虽然必须分别安装 (也可以 clone
+一个现有环境),<br> 但如果有不同环境中有重复的包 conda 将默认使用
+<em>hard link</em>.</li>
+</ul>
+<p>(更多讨论参考 <a
+target="_blank" rel="noopener" href="https://jakevdp.github.io/blog/2016/08/25/conda-myths-and-misconceptions/)"
+class="uri">https://jakevdp.github.io/blog/2016/08/25/conda-myths-and-misconceptions/)</a>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/advance#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://lydiazly.github.io/main">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Lydia Zhang">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Lydia's notes">
+      <meta itemprop="description" content="Tips about Python and Linux.">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Lydia's notes">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/main" class="post-title-link" itemprop="url">Python 简易教程 (lecture for Solar Group)</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2018-07-02 20:56:13" itemprop="dateCreated datePublished" datetime="2018-07-02T20:56:13-07:00">2018-07-02</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Lecture-Topics/" itemprop="url" rel="index"><span itemprop="name">Lecture Topics</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>
+<a class="btn" target="_blank" rel="noopener" href="https://github.com/lydiazly/python-intro/raw/master/notebooks/python-intro.zip"><i class="fa fa-download fa-fw"></i>Jupyter Notebook</a>
+<wbr> <a class="btn" target="_blank" rel="noopener" href="https://pan.baidu.com/s/1nwsIcDr?pwd=s5re"><i class="fa fa-download fa-fw"></i>FITS Data</a>
+</p>
+<h2 id="简介"><a href="#简介" class="headerlink"></a>简介</h2>
+<p>优势: 开源, 用户广, 用途广, 社区完善, 新手友好</p>
+<p><a
+target="_blank" rel="noopener" href="https://www.jetbrains.com/research/python-developers-survey-2017/"
+class="uri">https://www.jetbrains.com/research/python-developers-survey-2017/</a></p>
+<p>2017年的 python 使用调查报告 <a
+target="_blank" rel="noopener" href="https://www.jetbrains.com/research/python-developers-survey-2017/"
+class="uri">https://www.jetbrains.com/research/python-developers-survey-2017/</a>
+<img data-src='/main/Python Developers Survey 2017 - Results-018.png' >
+<img data-src='/main/Python Developers Survey 2017 - Results-019.png' >
+<img data-src='/main/Python Developers Survey 2017 - Results-020.png' ></p>
+<p>参考网站:</p>
+<ul>
+<li>官方网站: <a target="_blank" rel="noopener" href="https://www.python.org/"
+class="uri">https://www.python.org/</a></li>
+<li>stackoverflow <a
+target="_blank" rel="noopener" href="https://stackoverflow.com/questions/tagged/python"
+class="uri">https://stackoverflow.com/questions/tagged/python</a></li>
+<li>官方文档 <a target="_blank" rel="noopener" href="https://docs.python.org"
+class="uri">https://docs.python.org</a></li>
+<li>廖雪峰的网站 (包含 python2.7 和 python3 的教程) <a
+target="_blank" rel="noopener" href="https://www.liaoxuefeng.com"
+class="uri">https://www.liaoxuefeng.com</a></li>
+<li>wikibooks <a target="_blank" rel="noopener" href="https://en.wikibooks.org/wiki/Python_Programming"
+class="uri">https://en.wikibooks.org/wiki/Python_Programming</a></li>
+<li>演示代码执行过程的工具 <a target="_blank" rel="noopener" href="http://pythontutor.com/"
+class="uri">http://pythontutor.com/</a></li>
+<li>天文相关教程 (较新) <a target="_blank" rel="noopener" href="https://python4astronomers.github.io"
+class="uri">https://python4astronomers.github.io</a></li>
+</ul>
+<p><br> 获取 python 包/模块/函数的帮助:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># python</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="built_in">help</span>(name)</span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># shell</span></span><br><span class="line">$ pydoc &lt;name&gt;</span><br><span class="line">$ pydoc -w &lt;name&gt;  <span class="comment"># 生成一个 html 帮助文件</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># ipython/jupyter</span></span><br><span class="line">name?  <span class="comment"># 弹出帮助文档, `Esc` 退出文档</span></span><br></pre></td></tr></table></figure>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/main#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://lydiazly.github.io/installpy">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Lydia Zhang">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Lydia's notes">
+      <meta itemprop="description" content="Tips about Python and Linux.">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Lydia's notes">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/installpy" class="post-title-link" itemprop="url">Python 安装和配置</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2018-07-02 20:45:13" itemprop="dateCreated datePublished" datetime="2018-07-02T20:45:13-07:00">2018-07-02</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Lecture-Topics/" itemprop="url" rel="index"><span itemprop="name">Lecture Topics</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>
+<a class="btn" target="_blank" rel="noopener" href="https://github.com/lydiazly/python-intro/raw/master/notebooks/installpy.zip"><i class="fa fa-download fa-fw"></i>Jupyter Notebook</a>
+</p>
+<p><small><font color=gray>[Update 2022-07-12] Some outputs were updated
+with python 3.10.</font></small></p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/installpy#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" title="Previous page" aria-label="Previous page" href="/page/2/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span>
+  </nav>
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 2018 – 
+    <span itemprop="copyrightYear">2024</span>
+    <span class="with-love">
+      <i class=""></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Lydia Zhang</span>
+  </div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="Total Visitors">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="Total Views">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="Back to top">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/next-theme-pjax/0.6.0/pjax.min.js" integrity="sha256-vxLn1tSKWD4dqbMRyv940UYw4sXgMtYcK6reefzZrao=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/medium-zoom/1.1.0/medium-zoom.min.js" integrity="sha256-ZgMyDAIYDYGxbcpJcfUnYwNevG/xi9OHKaR/8GK+jWc=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lozad.js/1.16.0/lozad.min.js" integrity="sha256-mOFREFhqmHeQbXpK2lp4nA3qooVgACfh88fpJftLBbc=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/sidebar.js"></script><script src="/js/next-boot.js"></script><script src="/js/pjax.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+
+
+
+
+
+  
+  <script data-pjax async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">true</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"all","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
+<script src="/js/third-party/math/mathjax.js"></script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 7.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+  <link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha256-XOqroi11tY4EFQMR9ZYwZWKj5ZXiftSx36RRuC3anlA=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"lydiazly.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.20.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12,"width":250},"copycode":{"enable":true,"style":"mac"},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":true,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":false,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"none","post_header":"none","post_body":"none","coll_header":"fadeInLeft","sidebar":"none"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="在 HARRIS 官网 申请了 IDL 8.7 的 Linux 版本试用, 咨询客服之后终于收到了链接. 先测试一下 Python Bridge 功能.  Ubuntu 16.04 LTS Python 3.6 Anaconda 需要使用收到的激活码 (试用期一个月. 激活之后运行程序不会自动退出)  参考 Python Bridge 官方文档">
+<meta property="og:type" content="blog">
+<meta property="og:title" content="IDL 8.7 Python Bridge 试用">
+<meta property="og:url" content="https://lydiazly.github.io/2018-07-25-IDL-8.7">
+<meta property="og:site_name" content="Lydia&#39;s notes">
+<meta property="og:description" content="在 HARRIS 官网 申请了 IDL 8.7 的 Linux 版本试用, 咨询客服之后终于收到了链接. 先测试一下 Python Bridge 功能.  Ubuntu 16.04 LTS Python 3.6 Anaconda 需要使用收到的激活码 (试用期一个月. 激活之后运行程序不会自动退出)  参考 Python Bridge 官方文档">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2018-07-25T15:01:11.000Z">
+<meta property="article:modified_time" content="2018-07-25T15:01:11.000Z">
+<meta property="article:author" content="Lydia Zhang">
+<meta property="article:tag" content="python">
+<meta property="article:tag" content="install">
+<meta property="article:tag" content="astronomy">
+<meta property="article:tag" content="idl">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://lydiazly.github.io/2018-07-25-IDL-8.7.html">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"https://lydiazly.github.io/2018-07-25-IDL-8.7","path":"2018-07-25-IDL-8.7.html","title":"IDL 8.7 Python Bridge 试用"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>IDL 8.7 Python Bridge 试用 | Lydia's notes</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/atom.xml" title="Lydia's notes" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">Lydia's notes</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">Tips about Python and Linux.</p>
+      <img class="custom-logo-image" src="/images/logo2.png" alt="Lydia's notes">
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="Search" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags<span class="badge">11</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories<span class="badge">4</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">15</span></a></li><li class="menu-item menu-item-rss"><a href="/atom.xml" rel="section"><i class="fa fa-rss fa-fw"></i>RSS</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="Searching..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85"><span class="nav-number">1.</span> <span class="nav-text">1. 安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%BF%80%E6%B4%BB"><span class="nav-number">2.</span> <span class="nav-text">2. 激活</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85-idl-python-bridge"><span class="nav-number">3.</span> <span class="nav-text">3. 安装 IDL Python bridge</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8"><span class="nav-number">4.</span> <span class="nav-text">4. 使用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#troubleshooting"><span class="nav-number">5.</span> <span class="nav-text">5. Troubleshooting</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Lydia Zhang</p>
+  <div class="site-description" itemprop="description">Tips about Python and Linux.</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">15</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">11</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="mailto:lydiazly2@nju.edu.cn" title="E-Mail → mailto:lydiazly2@nju.edu.cn" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i></a>
+      </span>
+  </div>
+  <div class="cc-license animated" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.en" class="cc-opacity" rel="noopener" target="_blank"><img src="https://cdnjs.cloudflare.com/ajax/libs/creativecommons-vocabulary/2020.11.3/assets/license_badges/big/by_sa.svg" alt="Creative Commons"></a>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="sidebar-inner sidebar-blogroll">
+      <div class="links-of-blogroll animated">
+        <div class="links-of-blogroll-title"><i class="fa fa-globe fa-fw"></i>
+          Links
+        </div>
+        <ul class="links-of-blogroll-list">
+            <li class="links-of-blogroll-item">
+              <a href="https://github.com/lydiazly/scripts-sunpy" title="https:&#x2F;&#x2F;github.com&#x2F;lydiazly&#x2F;scripts-sunpy" rel="noopener" target="_blank">My SunPy scripts</a>
+            </li>
+        </ul>
+      </div>
+    </div>
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://lydiazly.github.io/2018-07-25-IDL-8.7">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Lydia Zhang">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Lydia's notes">
+      <meta itemprop="description" content="Tips about Python and Linux.">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="IDL 8.7 Python Bridge 试用 | Lydia's notes">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          IDL 8.7 Python Bridge 试用
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2018-07-25 08:01:11" itemprop="dateCreated datePublished" datetime="2018-07-25T08:01:11-07:00">2018-07-25</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Lecture-Topics/" itemprop="url" rel="index"><span itemprop="name">Lecture Topics</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="Views" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">Views: </span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><p>在 <a target="_blank" rel="noopener" href="http://harrisgeospatial.com">HARRIS 官网</a> 申请了 <a
+target="_blank" rel="noopener" href="http://harrisgeospatial.com/docs/WhatsNew.html">IDL 8.7</a> 的
+Linux 版本试用, 咨询客服之后终于收到了链接.</p>
+<p>先测试一下 Python Bridge 功能.</p>
+<ul>
+<li>Ubuntu 16.04 LTS</li>
+<li>Python 3.6 Anaconda</li>
+<li>需要使用收到的激活码 (试用期一个月.
+激活之后运行程序不会自动退出)</li>
+</ul>
+<p>参考 <a
+target="_blank" rel="noopener" href="https://www.harrisgeospatial.com/docs/Python.html">Python Bridge
+官方文档</a></p>
+<span id="more"></span>
+<h2 id="安装"><a href="#安装" class="headerlink"></a>1. 安装</h2>
+<p>下载之后解压这两个文件:<br> <code>envi55-linux.tar.gz</code><br>
+<code>flexnetserver2017.08-linux.tar.gz</code></p>
+<p>以安装至 <code>~/software/harris</code> 为例. <br> 执行安装脚本:</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ ./envi55-linux/install.sh</span><br><span class="line">$ ./flexnetserver2017.08-linux/install.sh</span><br></pre></td></tr></table></figure>
+<p><br> 添加路径到 <code>~/.bashrc</code> (注意将
+<code>miniconda3/lib</code> 替换成你的 python lib 路径):</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># ~/.bashrc</span></span><br><span class="line"><span class="built_in">export</span> LD_LIBRARY_PATH=<span class="variable">$HOME</span>/miniconda3/lib:<span class="variable">$HOME</span>/software/harris/envi/idl/bin/bin.linux.x86_64:<span class="variable">$LD_LIBRARY_PATH</span></span><br><span class="line"><span class="built_in">source</span> <span class="variable">$HOME</span>/software/harris/envi55/bin/envi_setup.bash</span><br></pre></td></tr></table></figure>
+<p>(如果 <code>miniconda3/lib</code> 加入到 <code>LD_LIBRARY_PATH</code>
+之后影响了其他程序使用, 因此处理方法见 <a
+href="#5-troubleshooting">Troubleshooting</a>) <br><br> 随后</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">source</span> ~/.bashrc</span><br></pre></td></tr></table></figure>
+<h2 id="激活"><a href="#激活" class="headerlink"></a>2. 激活</h2>
+<p>经过上述步骤, 图形界面的激活程序 <code>harrislicense</code>
+已被加入系统路径.</p>
+<p>打开</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ harrislicense</span><br></pre></td></tr></table></figure>
+<p>或使用命令行</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> ~/software/harris/envi/idl/license_utils/bin.linux.x86_64</span><br><span class="line"></span><br><span class="line"><span class="comment"># Activate</span></span><br><span class="line">$ ./activate -a &lt;activation-code&gt; [-q &lt;quantity&gt;]</span><br><span class="line"><span class="comment"># e.g.</span></span><br><span class="line">$ ./activate -a &lt;activation-code&gt; -q 1</span><br><span class="line"></span><br><span class="line"><span class="comment"># Deactivate</span></span><br><span class="line">$ ./activate -a &lt;activation-code&gt; -q 0</span><br></pre></td></tr></table></figure>
+<p>必要时将会提示需要 root 权限.</p>
+<h2 id="安装-idl-python-bridge"><a href="#安装-idl-python-bridge"
+class="headerlink"></a>3. 安装 IDL Python bridge</h2>
+<p>首先确认 python 命令在系统路径 <code>PATH</code> 中.</p>
+<p>安装</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> ~/software/harris/envi/idl/lib/bridges</span><br><span class="line">$ python setup.py install</span><br></pre></td></tr></table></figure>
+<h2 id="使用"><a href="#使用" class="headerlink"></a>4. 使用</h2>
+<ul>
+<li><a
+target="_blank" rel="noopener" href="https://www.harrisgeospatial.com/docs/PythonToIDL.html">Python To
+IDL</a></li>
+</ul>
+<p>能使用的功能比较有限.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">from</span> idlpy <span class="keyword">import</span> *</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="built_in">print</span>(<span class="string">f&quot;<span class="subst">&#123;IDL.run(<span class="string">&#x27;for i=0, 3 do begin &amp; print, i &amp; endfor&#x27;</span>)&#125;</span>&quot;</span>)</span><br><span class="line"><span class="number">0</span></span><br><span class="line"><span class="number">1</span></span><br><span class="line"><span class="number">2</span></span><br><span class="line"><span class="number">3</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://www.harrisgeospatial.com/docs/IDLToPython.html">IDL
+To Python</a></li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">IDL&gt; &gt;&gt;&gt;<span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br></pre></td></tr></table></figure>
+<p>注意用这种写法时, python 的 <code>&gt;&gt;&gt;</code>
+提示符之后没有空格.</p>
+<p>或使用语句块 (Enter 退出):</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">IDL&gt; &gt;&gt;&gt;</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">import</span> numpy.random <span class="keyword">as</span> ran</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>arr = ran.rand(<span class="number">100</span>)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>p = plt.plot(arr)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>plt.show()</span><br><span class="line">&gt;&gt;&gt;</span><br><span class="line">IDL&gt;</span><br></pre></td></tr></table></figure>
+<p>或使用以下方式将 python 语句结果赋值:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">IDL&gt; np = Python.Import(<span class="string">&#x27;numpy&#x27;</span>)</span><br><span class="line">IDL&gt; arr = np.array([<span class="number">1.</span>, <span class="number">2.</span>, <span class="number">3.</span>])</span><br><span class="line">IDL&gt; <span class="built_in">help</span>, arr</span><br><span class="line">ARR             FLOAT     = Array[<span class="number">3</span>]</span><br><span class="line">IDL&gt; arr = np.arange(<span class="number">3</span>)          </span><br><span class="line">IDL&gt; <span class="built_in">help</span>, arr         </span><br><span class="line">ARR             LONG64    = Array[<span class="number">3</span>]</span><br><span class="line">IDL&gt; arr = np.arange(<span class="number">3.</span>)</span><br><span class="line">IDL&gt; <span class="built_in">help</span>, arr          </span><br><span class="line">ARR             DOUBLE    = Array[<span class="number">3</span>]</span><br><span class="line">IDL&gt; arr = np.ones(<span class="number">3</span>)   </span><br><span class="line">IDL&gt; <span class="built_in">help</span>, arr       </span><br><span class="line">ARR             DOUBLE    = Array[<span class="number">3</span>]</span><br></pre></td></tr></table></figure>
+<p>其他用法参见官方文档:</p>
+<ul>
+<li><a
+target="_blank" rel="noopener" href="https://www.harrisgeospatial.com/docs/pythondataconvert.html">Parameter
+Passing and Data Conversion</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.harrisgeospatial.com/docs/idl_kernel.html">IDL
+IPython Notebook Kernel</a></li>
+</ul>
+<h2 id="troubleshooting"><a href="#troubleshooting"
+class="headerlink"></a>5. Troubleshooting</h2>
+<p>出现 &gt; .../lib/libuuid.so.1: no version information available
+...</p>
+<p>这是因为使用 anaconda 的 python, 默认调用的是 anaconda 的
+libuuid.so.1, 版本较低, 使用系统的 libuuid.so.1 即可解决.</p>
+<p>或者出现 <code>miniconda3/lib</code> 加入
+<code>LD_LIBRARY_PATH</code> 之后影响其他程序调用的情况.</p>
+<p>同时考虑可能出现的这两种问题的解决办法如下:<br><br></p>
+<p><strong>使用自定义脚本替代 <code>idl</code> 命令</strong></p>
+<p>由于 idl 使用了 <code>alias</code> 来调用程序, 优先级最高, 因此需要在
+<code>.bashrc</code> 中重新 <code>alias</code>.</p>
+<p>以 miniconda3 为例, 新建脚本(注意替换相应路径):</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># python lib</span></span><br><span class="line"><span class="built_in">export</span> LD_LIBRARY_PATH=<span class="variable">$HOME</span>/miniconda3/lib:<span class="variable">$LD_LIBRARY_PATH</span>:<span class="variable">$HOME</span>/software/harris/envi/idl/bin/bin.linux.x86_64:<span class="variable">$LD_LIBRARY_PATH</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># libuuid issue</span></span><br><span class="line"><span class="built_in">export</span> LD_LIBRARY_PATH=/lib/x86_64-linux-gnu:<span class="variable">$LD_LIBRARY_PATH</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;=== <span class="variable">$0</span> ===&quot;</span></span><br><span class="line"><span class="variable">$HOME</span>/software/harris/envi55/idl87/bin/idl <span class="variable">$@</span></span><br></pre></td></tr></table></figure>
+<p>假设将脚本放在 <code>~/bin</code> , 保证该路径在 <code>PATH</code> 中
+( <code>export PATH=$HOME/bin:$PATH</code> ).</p>
+<p>在 <code>~/.bashrc</code> 中去掉 <a href="#1-安装">安装</a> 中添加的
+<code>LD_LIBRARY_PATH</code> 行, 并在 <code>envi_setup.bash</code>
+行之后添加:</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">alias</span> idl=<span class="variable">$HOME</span>/bin/idl</span><br></pre></td></tr></table></figure>
+<p>执行</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">source</span> ~/.bashrc</span><br></pre></td></tr></table></figure>
+<p>之后再用 <code>idl</code> 命令即调用的是自定义的脚本.</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/python/" rel="tag"><i class="fa fa-tag"></i> python</a>
+              <a href="/tags/install/" rel="tag"><i class="fa fa-tag"></i> install</a>
+              <a href="/tags/astronomy/" rel="tag"><i class="fa fa-tag"></i> astronomy</a>
+              <a href="/tags/idl/" rel="tag"><i class="fa fa-tag"></i> idl</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/jsoc" rel="prev" title="Example: Downloading Data From JSOC">
+                  <i class="fa fa-angle-left"></i> Example: Downloading Data From JSOC
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/jsoc-download-example" rel="next" title="JSOC Download Example">
+                  JSOC Download Example <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 2018 – 
+    <span itemprop="copyrightYear">2024</span>
+    <span class="with-love">
+      <i class=""></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Lydia Zhang</span>
+  </div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="Total Visitors">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="Total Views">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="Back to top">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/next-theme-pjax/0.6.0/pjax.min.js" integrity="sha256-vxLn1tSKWD4dqbMRyv940UYw4sXgMtYcK6reefzZrao=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/medium-zoom/1.1.0/medium-zoom.min.js" integrity="sha256-ZgMyDAIYDYGxbcpJcfUnYwNevG/xi9OHKaR/8GK+jWc=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lozad.js/1.16.0/lozad.min.js" integrity="sha256-mOFREFhqmHeQbXpK2lp4nA3qooVgACfh88fpJftLBbc=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/sidebar.js"></script><script src="/js/next-boot.js"></script><script src="/js/pjax.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+
+
+
+
+
+  
+  <script data-pjax async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"all","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
+<script src="/js/third-party/math/mathjax.js"></script>
+
+
+
+</body>
+</html>

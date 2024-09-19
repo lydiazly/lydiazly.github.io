@@ -1,0 +1,535 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Lydia&#39;s notes</title>
+  <icon>https://lydiazly.github.io/icon.png</icon>
+  <subtitle>Tips about Python and Linux.</subtitle>
+  <link href="https://lydiazly.github.io/atom.xml" rel="self"/>
+  
+  <link href="https://lydiazly.github.io/"/>
+  <updated>2024-09-19T03:49:39.000Z</updated>
+  <id>https://lydiazly.github.io/</id>
+  
+  <author>
+    <name>Lydia Zhang</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>New Web App: Star Path Viewer</title>
+    <link href="https://lydiazly.github.io/star-path-viewer"/>
+    <id>https://lydiazly.github.io/star-path-viewer</id>
+    <published>2024-09-19T03:49:39.000Z</published>
+    <updated>2024-09-19T03:49:39.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;img alt=&quot;thumbnail&quot; data-src=&quot;https://stardial-astro.github.io/star-path-data/images/star-path-viewer_thumbnail.png&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="Web" scheme="https://lydiazly.github.io/categories/Web/"/>
+    
+    
+    <category term="python" scheme="https://lydiazly.github.io/tags/python/"/>
+    
+    <category term="astronomy" scheme="https://lydiazly.github.io/tags/astronomy/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Limit the memory usage in Windows 10 WSL2</title>
+    <link href="https://lydiazly.github.io/2022-07-16-Limit-memory-usage-in-Windows-10-WSL2"/>
+    <id>https://lydiazly.github.io/2022-07-16-Limit-memory-usage-in-Windows-10-WSL2</id>
+    <published>2022-07-16T21:56:11.000Z</published>
+    <updated>2022-07-16T21:56:11.000Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;limit-the-memory-usage&quot;&gt;&lt;a href=&quot;#limit-the-memory-usage&quot;
+class=&quot;headerlink&quot;&gt;&lt;/a&gt;Limit the memory usage&lt;/h2&gt;
+&lt;p&gt;It was annoying that WSL2 was always eating up my poor RAM. The
+following solution worked. [&lt;a
+href=&quot;https://www.aleksandrhovhannisyan.com/blog/limiting-memory-usage-in-wsl-2/&quot;&gt;Reference&lt;/a&gt;]&lt;/p&gt;
+&lt;p&gt;My distribution is:&lt;/p&gt;
+&lt;figure class=&quot;highlight powershell&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&amp;gt; wsl &lt;span class=&quot;literal&quot;&gt;-l&lt;/span&gt; &lt;span class=&quot;literal&quot;&gt;-v&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  NAME            STATE           VERSION&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;* Ubuntu&lt;span class=&quot;literal&quot;&gt;-18&lt;/span&gt;.&lt;span class=&quot;number&quot;&gt;04&lt;/span&gt;    Running         &lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;Create a configure file named &lt;code&gt;.wslconfig&lt;/code&gt; in your user
+directory in Windows.&lt;/p&gt;
+&lt;p&gt;Open PowerShell as administrator, shutdown WSL2 and edit the
+file:&lt;/p&gt;
+&lt;figure class=&quot;highlight powershell&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&amp;gt; wsl &lt;span class=&quot;literal&quot;&gt;--shutdown&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;gt; notepad &lt;span class=&quot;string&quot;&gt;&amp;quot;&lt;span class=&quot;variable&quot;&gt;$env:USERPROFILE&lt;/span&gt;&#92;.wslconfig&amp;quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;For me the content is:&lt;/p&gt;
+&lt;figure class=&quot;highlight text&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;[wsl2]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;memory=2GB&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;swap=0&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
+    
+    
+    
+    <category term="Miscellaneous" scheme="https://lydiazly.github.io/categories/Miscellaneous/"/>
+    
+    
+    <category term="wsl2" scheme="https://lydiazly.github.io/tags/wsl2/"/>
+    
+    <category term="powershell" scheme="https://lydiazly.github.io/tags/powershell/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Pandas sep=&#39;&#92;s+&#39; 的问题</title>
+    <link href="https://lydiazly.github.io/2018-12-04-pandas-sep"/>
+    <id>https://lydiazly.github.io/2018-12-04-pandas-sep</id>
+    <published>2018-12-05T01:00:03.000Z</published>
+    <updated>2018-12-05T01:00:03.000Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;Pandas 的 &lt;code&gt;read_table&lt;/code&gt; (&lt;a
+href=&quot;https://pandas.pydata.org/pandas-docs/stable/generated/pandas.read_table.html&quot;&gt;官方文档&lt;/a&gt;)
+和 &lt;code&gt;read_csv&lt;/code&gt; (&lt;a
+href=&quot;https://pandas.pydata.org/pandas-docs/stable/generated/pandas.read_csv.html&quot;&gt;官方文档&lt;/a&gt;)
+(指定分隔符的情况下两者无区别), 有关键字 &lt;code&gt;sep=&lt;/code&gt;
+(&lt;code&gt;read_table&lt;/code&gt; 默认为 &lt;code&gt;sep=&#39;&#92;t&#39;&lt;/code&gt;,
+&lt;code&gt;read_csv&lt;/code&gt; 默认为 &lt;code&gt;sep=&#39;,&#39;&lt;/code&gt;).&lt;/p&gt;
+&lt;p&gt;但当需要指定多个空格的情况下, 指定 &lt;code&gt;sep=&#39;&#92;s+&#39;&lt;/code&gt;
+可能无法被正确识别.</summary>
+    
+    
+    
+    <category term="Python Tips" scheme="https://lydiazly.github.io/categories/Python-Tips/"/>
+    
+    
+    <category term="python" scheme="https://lydiazly.github.io/tags/python/"/>
+    
+    <category term="pandas" scheme="https://lydiazly.github.io/tags/pandas/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>使用 pickle 模块存取 dict</title>
+    <link href="https://lydiazly.github.io/2018-10-20-pickle"/>
+    <id>https://lydiazly.github.io/2018-10-20-pickle</id>
+    <published>2018-10-20T23:41:13.000Z</published>
+    <updated>2018-10-20T23:41:13.000Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;Python 自带一个存取 dict 到二进制文件的工具 &lt;a
+href=&quot;https://docs.python.org/3/library/pickle.html&quot;&gt;pickle&lt;/a&gt;,
+支持数值型的 key (&lt;a
+href=&quot;https://docs.scipy.org/doc/numpy/reference/generated/numpy.savez.html&quot;&gt;numpy.savez&lt;/a&gt;
+和 &lt;a
+href=&quot;https://docs.scipy.org/doc/numpy/reference/generated/numpy.savez_compressed.html&quot;&gt;numpy.savez_compressed&lt;/a&gt;
+只支持字符串作为 key).&lt;/p&gt;
+&lt;p&gt;用法:&lt;/p&gt;
+&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;import&lt;/span&gt; pickle&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# 存入&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;pickle.dump(data, &lt;span class=&quot;built_in&quot;&gt;open&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;&amp;quot;filename.p&amp;quot;&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&amp;quot;wb&amp;quot;&lt;/span&gt;))  &lt;span class=&quot;comment&quot;&gt;# type(data): dict&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# 读取&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;data = pickle.load(&lt;span class=&quot;built_in&quot;&gt;open&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;&amp;quot;filename.p&amp;quot;&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&amp;quot;rb&amp;quot;&lt;/span&gt;))  &lt;span class=&quot;comment&quot;&gt;# 返回一个 dict&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
+    
+    
+    
+    <category term="Python Tips" scheme="https://lydiazly.github.io/categories/Python-Tips/"/>
+    
+    
+    <category term="python" scheme="https://lydiazly.github.io/tags/python/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Python Notes: Invoke Variables From Scripts in Interactive Mode</title>
+    <link href="https://lydiazly.github.io/2018-10-15-scripts-and-interactive-mode"/>
+    <id>https://lydiazly.github.io/2018-10-15-scripts-and-interactive-mode</id>
+    <published>2018-10-16T05:46:01.000Z</published>
+    <updated>2018-10-16T05:46:01.000Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;目的是从交互环境调用脚本产生的变量, 可用于调试脚本和测试数据等等.&lt;/p&gt;
+&lt;p&gt;比如当前目录下有一个包含如下内容的脚本:&lt;/p&gt;
+&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;#!/usr/bin/env python&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;a=&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;print&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;&amp;#x27;a =&amp;#x27;&lt;/span&gt;, a)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
+    
+    
+    
+    <category term="Python Tips" scheme="https://lydiazly.github.io/categories/Python-Tips/"/>
+    
+    
+    <category term="python" scheme="https://lydiazly.github.io/tags/python/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Example: Projection</title>
+    <link href="https://lydiazly.github.io/example_projection"/>
+    <id>https://lydiazly.github.io/example_projection</id>
+    <published>2018-10-14T23:06:31.000Z</published>
+    <updated>2018-10-14T23:06:31.000Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;
+&lt;a class=&quot;btn&quot; href=&quot;https://github.com/lydiazly/python-intro/raw/master/notebooks/example_hmi.zip&quot;&gt;&lt;i class=&quot;fa fa-download fa-fw&quot;&gt;&lt;/i&gt;Jupyter Notebook&lt;/a&gt;
+&lt;wbr&gt; &lt;a class=&quot;btn&quot; href=&quot;https://pan.baidu.com/s/1nwsIcDr?pwd=s5re&quot;&gt;&lt;i class=&quot;fa fa-download fa-fw&quot;&gt;&lt;/i&gt;Example Data&lt;/a&gt; &lt;wbr&gt; &lt;a class=&quot;btn&quot; href=&quot;https://github.com/lydiazly/python-intro/raw/master/sunpy-modules.zip&quot;&gt;&lt;i class=&quot;fa fa-download fa-fw&quot;&gt;&lt;/i&gt;User Module&lt;/a&gt;&lt;nobr&gt;
+(&lt;a href=&quot;https://github.com/lydiazly/scripts-sunpy/tree/master/modules&quot;&gt;source&lt;/a&gt;
+/ &lt;a href=&quot;/usr_sunpy.html&quot;&gt;doc&lt;/a&gt;)
+&lt;/p&gt;
+&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;from&lt;/span&gt; __future__ &lt;span class=&quot;keyword&quot;&gt;import&lt;/span&gt; division, print_function&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# Reload user modules automatically&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# %load_ext autoreload&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# %autoreload 2&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# notebook, inline, ...&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;%matplotlib notebook&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;from&lt;/span&gt; astropy.coordinates &lt;span class=&quot;keyword&quot;&gt;import&lt;/span&gt; SkyCoord&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;import&lt;/span&gt; astropy.units &lt;span class=&quot;keyword&quot;&gt;as&lt;/span&gt; u&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;import&lt;/span&gt; matplotlib.pyplot &lt;span class=&quot;keyword&quot;&gt;as&lt;/span&gt; plt&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;import&lt;/span&gt; numpy &lt;span class=&quot;keyword&quot;&gt;as&lt;/span&gt; np&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;import&lt;/span&gt; sunpy.&lt;span class=&quot;built_in&quot;&gt;map&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;from&lt;/span&gt; copy &lt;span class=&quot;keyword&quot;&gt;import&lt;/span&gt; deepcopy&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# To use user modules&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;import&lt;/span&gt; sys&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;sys.path.append(&lt;span class=&quot;string&quot;&gt;&amp;#x27;../modules&amp;#x27;&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# print(&amp;#x27;Python version: %s&amp;#x27; % sys.version.split(&amp;#x27;(&amp;#x27;)[0])  # Python version: 3.6.6 |Anaconda, Inc.|&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# print(&amp;#x27;SunPy version: %s&amp;#x27; % sunpy.__version__)  # SunPy version: 0.9.3&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
+    
+    
+    
+    <category term="Lecture Topics" scheme="https://lydiazly.github.io/categories/Lecture-Topics/"/>
+    
+    
+    <category term="python" scheme="https://lydiazly.github.io/tags/python/"/>
+    
+    <category term="jupyter" scheme="https://lydiazly.github.io/tags/jupyter/"/>
+    
+    <category term="sunpy" scheme="https://lydiazly.github.io/tags/sunpy/"/>
+    
+    <category term="astronomy" scheme="https://lydiazly.github.io/tags/astronomy/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Example: Plot HMI</title>
+    <link href="https://lydiazly.github.io/example_plothmi"/>
+    <id>https://lydiazly.github.io/example_plothmi</id>
+    <published>2018-10-14T23:06:23.000Z</published>
+    <updated>2018-10-14T23:06:23.000Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;
+&lt;a class=&quot;btn&quot; href=&quot;https://github.com/lydiazly/python-intro/raw/master/notebooks/example_hmi.zip&quot;&gt;&lt;i class=&quot;fa fa-download fa-fw&quot;&gt;&lt;/i&gt;Jupyter Notebook&lt;/a&gt;
+&lt;wbr&gt; &lt;a class=&quot;btn&quot; href=&quot;https://pan.baidu.com/s/1nwsIcDr?pwd=s5re&quot;&gt;&lt;i class=&quot;fa fa-download fa-fw&quot;&gt;&lt;/i&gt;Example Data&lt;/a&gt; &lt;wbr&gt; &lt;a class=&quot;btn&quot; href=&quot;https://github.com/lydiazly/python-intro/raw/master/sunpy-modules.zip&quot;&gt;&lt;i class=&quot;fa fa-download fa-fw&quot;&gt;&lt;/i&gt;User Module&lt;/a&gt;&lt;nobr&gt;
+(&lt;a href=&quot;https://github.com/lydiazly/scripts-sunpy/tree/master/modules&quot;&gt;source&lt;/a&gt;
+/ &lt;a href=&quot;/usr_sunpy.html&quot;&gt;doc&lt;/a&gt;)
+&lt;/p&gt;
+&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;from&lt;/span&gt; __future__ &lt;span class=&quot;keyword&quot;&gt;import&lt;/span&gt; division, print_function&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# Reload user modules automatically&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# %load_ext autoreload&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# %autoreload 2&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# notebook, inline, ...&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;%matplotlib notebook&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;from&lt;/span&gt; astropy.coordinates &lt;span class=&quot;keyword&quot;&gt;import&lt;/span&gt; SkyCoord&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;import&lt;/span&gt; astropy.units &lt;span class=&quot;keyword&quot;&gt;as&lt;/span&gt; u&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;import&lt;/span&gt; matplotlib.pyplot &lt;span class=&quot;keyword&quot;&gt;as&lt;/span&gt; plt&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;import&lt;/span&gt; numpy &lt;span class=&quot;keyword&quot;&gt;as&lt;/span&gt; np&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;import&lt;/span&gt; sunpy.&lt;span class=&quot;built_in&quot;&gt;map&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;from&lt;/span&gt; copy &lt;span class=&quot;keyword&quot;&gt;import&lt;/span&gt; deepcopy&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# To use user modules&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;import&lt;/span&gt; sys&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;sys.path.append(&lt;span class=&quot;string&quot;&gt;&amp;#x27;../modules&amp;#x27;&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# print(&amp;#x27;Python version: %s&amp;#x27; % sys.version.split(&amp;#x27;(&amp;#x27;)[0])  # Python version: 3.6.6 |Anaconda, Inc.| &lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# print(&amp;#x27;SunPy version: %s&amp;#x27; % sunpy.__version__)  # SunPy version: 0.9.3&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
+    
+    
+    
+    <category term="Lecture Topics" scheme="https://lydiazly.github.io/categories/Lecture-Topics/"/>
+    
+    
+    <category term="python" scheme="https://lydiazly.github.io/tags/python/"/>
+    
+    <category term="jupyter" scheme="https://lydiazly.github.io/tags/jupyter/"/>
+    
+    <category term="sunpy" scheme="https://lydiazly.github.io/tags/sunpy/"/>
+    
+    <category term="astronomy" scheme="https://lydiazly.github.io/tags/astronomy/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>SunPy Scripts Updates</title>
+    <link href="https://lydiazly.github.io/2018-10-14-sunpy-scripts-updates"/>
+    <id>https://lydiazly.github.io/2018-10-14-sunpy-scripts-updates</id>
+    <published>2018-10-14T08:07:46.000Z</published>
+    <updated>2018-10-14T08:07:46.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;Update:&lt;/p&gt;
+&lt;p&gt;
+&lt;a class=&quot;btn&quot; href=&quot;https://github.com/lydiazly/python-intro/raw/master/notebooks/example_hmi.zip&quot;&gt;&lt;i class=&quot;fa</summary>
+        
+      
+    
+    
+    
+    <category term="Lecture Topics" scheme="https://lydiazly.github.io/categories/Lecture-Topics/"/>
+    
+    
+    <category term="python" scheme="https://lydiazly.github.io/tags/python/"/>
+    
+    <category term="sunpy" scheme="https://lydiazly.github.io/tags/sunpy/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>JSOC Download Example</title>
+    <link href="https://lydiazly.github.io/jsoc-download-example"/>
+    <id>https://lydiazly.github.io/jsoc-download-example</id>
+    <published>2018-09-13T03:16:36.000Z</published>
+    <updated>2018-09-13T03:16:36.000Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;
+&lt;a class=&quot;btn&quot; href=&quot;https://github.com/lydiazly/python-intro/raw/master/notebooks/fido.zip&quot;&gt;&lt;i class=&quot;fa fa-download fa-fw&quot;&gt;&lt;/i&gt;Jupyter Notebook&lt;/a&gt;
+&lt;/p&gt;
+&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;import&lt;/span&gt; astropy.units &lt;span class=&quot;keyword&quot;&gt;as&lt;/span&gt; u&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;from&lt;/span&gt; sunpy.net &lt;span class=&quot;keyword&quot;&gt;import&lt;/span&gt; attrs, jsoc&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# Suppress some warnings&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;import&lt;/span&gt; warnings&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;from&lt;/span&gt; astropy.utils.exceptions &lt;span class=&quot;keyword&quot;&gt;import&lt;/span&gt; AstropyDeprecationWarning&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;warnings.simplefilter(&lt;span class=&quot;string&quot;&gt;&amp;quot;ignore&amp;quot;&lt;/span&gt;, category=FutureWarning)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;warnings.simplefilter(&lt;span class=&quot;string&quot;&gt;&amp;quot;ignore&amp;quot;&lt;/span&gt;, category=AstropyDeprecationWarning)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# JSOC string: &amp;quot;aia.lev1_euv_12s[2014-10-26T10:00:00Z-2014-10-26T11:00:00Z@1m][193,304]&amp;#123;image&amp;#125;&amp;quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;client = jsoc.JSOCClient()&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;response = client.search(&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    attrs.jsoc.Time(&lt;span class=&quot;string&quot;&gt;&amp;#x27;2014-10-26T10:00:00&amp;#x27;&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&amp;#x27;2014-10-26T10:30:00&amp;#x27;&lt;/span&gt;),&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    attrs.jsoc.Notify(&lt;span class=&quot;string&quot;&gt;&amp;#x27;xxx@xxx&amp;#x27;&lt;/span&gt;),  &lt;span class=&quot;comment&quot;&gt;# email&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    attrs.jsoc.Series(&lt;span class=&quot;string&quot;&gt;&amp;#x27;aia.lev1_euv_12s&amp;#x27;&lt;/span&gt;),&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    attrs.jsoc.Segment(&lt;span class=&quot;string&quot;&gt;&amp;#x27;image&amp;#x27;&lt;/span&gt;),&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    attrs.Sample(&lt;span class=&quot;number&quot;&gt;10.&lt;/span&gt; * u.&lt;span class=&quot;built_in&quot;&gt;min&lt;/span&gt;),  &lt;span class=&quot;comment&quot;&gt;# interval&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    attrs.jsoc.Wavelength(&lt;span class=&quot;number&quot;&gt;193&lt;/span&gt; * u.AA) | attrs.jsoc.Wavelength(&lt;span class=&quot;number&quot;&gt;304&lt;/span&gt; * u.AA)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;response&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
+    
+    
+    
+    <category term="Lecture Topics" scheme="https://lydiazly.github.io/categories/Lecture-Topics/"/>
+    
+    
+    <category term="python" scheme="https://lydiazly.github.io/tags/python/"/>
+    
+    <category term="jupyter" scheme="https://lydiazly.github.io/tags/jupyter/"/>
+    
+    <category term="sunpy" scheme="https://lydiazly.github.io/tags/sunpy/"/>
+    
+    <category term="astronomy" scheme="https://lydiazly.github.io/tags/astronomy/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>IDL 8.7 Python Bridge 试用</title>
+    <link href="https://lydiazly.github.io/2018-07-25-IDL-8.7"/>
+    <id>https://lydiazly.github.io/2018-07-25-IDL-8.7</id>
+    <published>2018-07-25T15:01:11.000Z</published>
+    <updated>2018-07-25T15:01:11.000Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;在 &lt;a href=&quot;http://harrisgeospatial.com&quot;&gt;HARRIS 官网&lt;/a&gt; 申请了 &lt;a
+href=&quot;http://harrisgeospatial.com/docs/WhatsNew.html&quot;&gt;IDL 8.7&lt;/a&gt; 的
+Linux 版本试用, 咨询客服之后终于收到了链接.&lt;/p&gt;
+&lt;p&gt;先测试一下 Python Bridge 功能.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Ubuntu 16.04 LTS&lt;/li&gt;
+&lt;li&gt;Python 3.6 Anaconda&lt;/li&gt;
+&lt;li&gt;需要使用收到的激活码 (试用期一个月.
+激活之后运行程序不会自动退出)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;参考 &lt;a
+href=&quot;https://www.harrisgeospatial.com/docs/Python.html&quot;&gt;Python Bridge
+官方文档&lt;/a&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Lecture Topics" scheme="https://lydiazly.github.io/categories/Lecture-Topics/"/>
+    
+    
+    <category term="python" scheme="https://lydiazly.github.io/tags/python/"/>
+    
+    <category term="install" scheme="https://lydiazly.github.io/tags/install/"/>
+    
+    <category term="astronomy" scheme="https://lydiazly.github.io/tags/astronomy/"/>
+    
+    <category term="idl" scheme="https://lydiazly.github.io/tags/idl/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Example: Downloading Data From JSOC</title>
+    <link href="https://lydiazly.github.io/jsoc"/>
+    <id>https://lydiazly.github.io/jsoc</id>
+    <published>2018-07-13T00:09:47.000Z</published>
+    <updated>2018-07-13T00:09:47.000Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;
+&lt;a class=&quot;btn&quot; href=&quot;https://github.com/lydiazly/python-intro/raw/master/notebooks/fido.zip&quot;&gt;&lt;i class=&quot;fa fa-download fa-fw&quot;&gt;&lt;/i&gt;Jupyter Notebook&lt;/a&gt;
+&lt;/p&gt;
+&lt;p&gt;Reference &lt;a
+href=&quot;http://docs.sunpy.org/en/stable/guide/acquiring_data/jsoc.html&quot;
+class=&quot;uri&quot;&gt;http://docs.sunpy.org/en/stable/guide/acquiring_data/jsoc.html&lt;/a&gt;&lt;/p&gt;
+&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;%load_ext autoreload&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;%autoreload &lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;import&lt;/span&gt; astropy.units &lt;span class=&quot;keyword&quot;&gt;as&lt;/span&gt; u&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;from&lt;/span&gt; sunpy.net &lt;span class=&quot;keyword&quot;&gt;import&lt;/span&gt; Fido, attrs&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# Suppress warnings of pandas, astropy&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;import&lt;/span&gt; warnings&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;warnings.simplefilter(&lt;span class=&quot;string&quot;&gt;&amp;quot;ignore&amp;quot;&lt;/span&gt;, category=FutureWarning)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;from&lt;/span&gt; astropy.utils.exceptions &lt;span class=&quot;keyword&quot;&gt;import&lt;/span&gt; AstropyDeprecationWarning&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;warnings.simplefilter(&lt;span class=&quot;string&quot;&gt;&amp;quot;ignore&amp;quot;&lt;/span&gt;, category=AstropyDeprecationWarning)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;To be clear, here we use &lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;from&lt;/span&gt; sunpy.net &lt;span class=&quot;keyword&quot;&gt;import&lt;/span&gt; Fido, attrs&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt; instead of examples in &lt;a
+href=&quot;http://docs.sunpy.org/en/stable/guide/acquiring_data/jsoc.html&quot;
+class=&quot;uri&quot;&gt;http://docs.sunpy.org/en/stable/guide/acquiring_data/jsoc.html&lt;/a&gt;
+&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;from&lt;/span&gt; sunpy.net &lt;span class=&quot;keyword&quot;&gt;import&lt;/span&gt; Fido, attrs &lt;span class=&quot;keyword&quot;&gt;as&lt;/span&gt; a&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
+    
+    
+    
+    <category term="Lecture Topics" scheme="https://lydiazly.github.io/categories/Lecture-Topics/"/>
+    
+    
+    <category term="python" scheme="https://lydiazly.github.io/tags/python/"/>
+    
+    <category term="jupyter" scheme="https://lydiazly.github.io/tags/jupyter/"/>
+    
+    <category term="sunpy" scheme="https://lydiazly.github.io/tags/sunpy/"/>
+    
+    <category term="astronomy" scheme="https://lydiazly.github.io/tags/astronomy/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Example: Downloading Data Using Fido</title>
+    <link href="https://lydiazly.github.io/fido"/>
+    <id>https://lydiazly.github.io/fido</id>
+    <published>2018-07-12T05:10:47.000Z</published>
+    <updated>2018-07-12T05:10:47.000Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;
+&lt;a class=&quot;btn&quot; href=&quot;https://github.com/lydiazly/python-intro/raw/master/notebooks/fido.zip&quot;&gt;&lt;i class=&quot;fa fa-download fa-fw&quot;&gt;&lt;/i&gt;Jupyter Notebook&lt;/a&gt;
+&lt;/p&gt;
+&lt;p&gt;Reference &lt;a
+href=&quot;http://docs.sunpy.org/en/stable/guide/acquiring_data/fido.html&quot;
+class=&quot;uri&quot;&gt;http://docs.sunpy.org/en/stable/guide/acquiring_data/fido.html&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;See also: &lt;a href=&quot;/jsoc.html&quot;&gt;Example: downloading data from
+JSOC&lt;/a&gt;&lt;/p&gt;
+&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;import&lt;/span&gt; astropy.units &lt;span class=&quot;keyword&quot;&gt;as&lt;/span&gt; u&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;from&lt;/span&gt; sunpy.net &lt;span class=&quot;keyword&quot;&gt;import&lt;/span&gt; Fido, attrs&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;To be clear, here we use &lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;from&lt;/span&gt; sunpy.net &lt;span class=&quot;keyword&quot;&gt;import&lt;/span&gt; Fido, attrs&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt; instead of examples in &lt;a
+href=&quot;http://docs.sunpy.org/en/stable/guide/acquiring_data/jsoc.html&quot;
+class=&quot;uri&quot;&gt;http://docs.sunpy.org/en/stable/guide/acquiring_data/jsoc.html&lt;/a&gt;
+&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;from&lt;/span&gt; sunpy.net &lt;span class=&quot;keyword&quot;&gt;import&lt;/span&gt; Fido, attrs &lt;span class=&quot;keyword&quot;&gt;as&lt;/span&gt; a&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
+    
+    
+    
+    <category term="Lecture Topics" scheme="https://lydiazly.github.io/categories/Lecture-Topics/"/>
+    
+    
+    <category term="python" scheme="https://lydiazly.github.io/tags/python/"/>
+    
+    <category term="jupyter" scheme="https://lydiazly.github.io/tags/jupyter/"/>
+    
+    <category term="sunpy" scheme="https://lydiazly.github.io/tags/sunpy/"/>
+    
+    <category term="astronomy" scheme="https://lydiazly.github.io/tags/astronomy/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Python 进阶 (lecture for Solar Group)</title>
+    <link href="https://lydiazly.github.io/advance"/>
+    <id>https://lydiazly.github.io/advance</id>
+    <published>2018-07-03T04:46:13.000Z</published>
+    <updated>2018-07-03T04:46:13.000Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;
+&lt;a class=&quot;btn&quot; href=&quot;https://github.com/lydiazly/python-intro/raw/master/notebooks/python-intro.zip&quot;&gt;&lt;i class=&quot;fa fa-download fa-fw&quot;&gt;&lt;/i&gt;Jupyter Notebook&lt;/a&gt;
+&lt;wbr&gt; &lt;a class=&quot;btn&quot; href=&quot;https://pan.baidu.com/s/1nwsIcDr?pwd=s5re&quot;&gt;&lt;i class=&quot;fa fa-download fa-fw&quot;&gt;&lt;/i&gt;FITS Data&lt;/a&gt;
+&lt;/p&gt;
+&lt;h2 id=&quot;anaconda&quot;&gt;&lt;a href=&quot;#anaconda&quot;
+class=&quot;headerlink&quot;&gt;&lt;/a&gt;Anaconda&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;A &lt;strong&gt;conda package&lt;/strong&gt; is a compressed tarball file that
+contains system-level libraries, Python or other modules, executable
+programs and other components. &lt;strong&gt;Conda&lt;/strong&gt; keeps track of the
+dependencies between packages and platforms.&lt;br&gt;
+(https://conda.io/docs/user-guide/concepts.html)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;凡使用 &lt;span style=&quot;color:blue&quot;&gt;pip install&lt;/span&gt;
+安装的包均为编译安装, &lt;span style=&quot;color:blue&quot;&gt;conda install&lt;/span&gt;
+安装的则为编译好的二进制包.&lt;/li&gt;
+&lt;li&gt;conda 包可以打包其他语言, pip 包容易出现系统依赖问题&lt;/li&gt;
+&lt;li&gt;conda 包的依赖管理更完善&lt;/li&gt;
+&lt;li&gt;conda 环境下仍可使用 pip 进行安装, 但所使用的 pip 命令和系统中的 pip
+互不影响, 安装的包的位置也在 conda 本身的目录下.&lt;/li&gt;
+&lt;li&gt;每个环境互不影响, 各环境下的包虽然必须分别安装 (也可以 clone
+一个现有环境),&lt;br&gt; 但如果有不同环境中有重复的包 conda 将默认使用
+&lt;em&gt;hard link&lt;/em&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;(更多讨论参考 &lt;a
+href=&quot;https://jakevdp.github.io/blog/2016/08/25/conda-myths-and-misconceptions/)&quot;
+class=&quot;uri&quot;&gt;https://jakevdp.github.io/blog/2016/08/25/conda-myths-and-misconceptions/)&lt;/a&gt;</summary>
+    
+    
+    
+    <category term="Lecture Topics" scheme="https://lydiazly.github.io/categories/Lecture-Topics/"/>
+    
+    
+    <category term="python" scheme="https://lydiazly.github.io/tags/python/"/>
+    
+    <category term="conda" scheme="https://lydiazly.github.io/tags/conda/"/>
+    
+    <category term="jupyter" scheme="https://lydiazly.github.io/tags/jupyter/"/>
+    
+    <category term="astropy" scheme="https://lydiazly.github.io/tags/astropy/"/>
+    
+    <category term="sunpy" scheme="https://lydiazly.github.io/tags/sunpy/"/>
+    
+    <category term="astronomy" scheme="https://lydiazly.github.io/tags/astronomy/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Python 简易教程 (lecture for Solar Group)</title>
+    <link href="https://lydiazly.github.io/main"/>
+    <id>https://lydiazly.github.io/main</id>
+    <published>2018-07-03T03:56:13.000Z</published>
+    <updated>2018-07-03T03:56:13.000Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;
+&lt;a class=&quot;btn&quot; href=&quot;https://github.com/lydiazly/python-intro/raw/master/notebooks/python-intro.zip&quot;&gt;&lt;i class=&quot;fa fa-download fa-fw&quot;&gt;&lt;/i&gt;Jupyter Notebook&lt;/a&gt;
+&lt;wbr&gt; &lt;a class=&quot;btn&quot; href=&quot;https://pan.baidu.com/s/1nwsIcDr?pwd=s5re&quot;&gt;&lt;i class=&quot;fa fa-download fa-fw&quot;&gt;&lt;/i&gt;FITS Data&lt;/a&gt;
+&lt;/p&gt;
+&lt;h2 id=&quot;简介&quot;&gt;&lt;a href=&quot;#简介&quot; class=&quot;headerlink&quot;&gt;&lt;/a&gt;简介&lt;/h2&gt;
+&lt;p&gt;优势: 开源, 用户广, 用途广, 社区完善, 新手友好&lt;/p&gt;
+&lt;p&gt;&lt;a
+href=&quot;https://www.jetbrains.com/research/python-developers-survey-2017/&quot;
+class=&quot;uri&quot;&gt;https://www.jetbrains.com/research/python-developers-survey-2017/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;2017年的 python 使用调查报告 &lt;a
+href=&quot;https://www.jetbrains.com/research/python-developers-survey-2017/&quot;
+class=&quot;uri&quot;&gt;https://www.jetbrains.com/research/python-developers-survey-2017/&lt;/a&gt;
+&lt;img data-src=&#39;/main/Python Developers Survey 2017 - Results-018.png&#39; &gt;
+&lt;img data-src=&#39;/main/Python Developers Survey 2017 - Results-019.png&#39; &gt;
+&lt;img data-src=&#39;/main/Python Developers Survey 2017 - Results-020.png&#39; &gt;&lt;/p&gt;
+&lt;p&gt;参考网站:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;官方网站: &lt;a href=&quot;https://www.python.org/&quot;
+class=&quot;uri&quot;&gt;https://www.python.org/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;stackoverflow &lt;a
+href=&quot;https://stackoverflow.com/questions/tagged/python&quot;
+class=&quot;uri&quot;&gt;https://stackoverflow.com/questions/tagged/python&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;官方文档 &lt;a href=&quot;https://docs.python.org&quot;
+class=&quot;uri&quot;&gt;https://docs.python.org&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;廖雪峰的网站 (包含 python2.7 和 python3 的教程) &lt;a
+href=&quot;https://www.liaoxuefeng.com&quot;
+class=&quot;uri&quot;&gt;https://www.liaoxuefeng.com&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;wikibooks &lt;a href=&quot;https://en.wikibooks.org/wiki/Python_Programming&quot;
+class=&quot;uri&quot;&gt;https://en.wikibooks.org/wiki/Python_Programming&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;演示代码执行过程的工具 &lt;a href=&quot;http://pythontutor.com/&quot;
+class=&quot;uri&quot;&gt;http://pythontutor.com/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;天文相关教程 (较新) &lt;a href=&quot;https://python4astronomers.github.io&quot;
+class=&quot;uri&quot;&gt;https://python4astronomers.github.io&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;br&gt; 获取 python 包/模块/函数的帮助:&lt;/p&gt;
+&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# python&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;&amp;gt;&amp;gt;&amp;gt; &lt;/span&gt;&lt;span class=&quot;built_in&quot;&gt;help&lt;/span&gt;(name)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;figure class=&quot;highlight sh&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# shell&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ pydoc &amp;lt;name&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ pydoc -w &amp;lt;name&amp;gt;  &lt;span class=&quot;comment&quot;&gt;# 生成一个 html 帮助文件&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# ipython/jupyter&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;name?  &lt;span class=&quot;comment&quot;&gt;# 弹出帮助文档, `Esc` 退出文档&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
+    
+    
+    
+    <category term="Lecture Topics" scheme="https://lydiazly.github.io/categories/Lecture-Topics/"/>
+    
+    
+    <category term="python" scheme="https://lydiazly.github.io/tags/python/"/>
+    
+    <category term="jupyter" scheme="https://lydiazly.github.io/tags/jupyter/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Python 安装和配置</title>
+    <link href="https://lydiazly.github.io/installpy"/>
+    <id>https://lydiazly.github.io/installpy</id>
+    <published>2018-07-03T03:45:13.000Z</published>
+    <updated>2018-07-03T03:45:13.000Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;
+&lt;a class=&quot;btn&quot; href=&quot;https://github.com/lydiazly/python-intro/raw/master/notebooks/installpy.zip&quot;&gt;&lt;i class=&quot;fa fa-download fa-fw&quot;&gt;&lt;/i&gt;Jupyter Notebook&lt;/a&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;small&gt;&lt;font color=gray&gt;[Update 2022-07-12] Some outputs were updated
+with python 3.10.&lt;/font&gt;&lt;/small&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Lecture Topics" scheme="https://lydiazly.github.io/categories/Lecture-Topics/"/>
+    
+    
+    <category term="python" scheme="https://lydiazly.github.io/tags/python/"/>
+    
+    <category term="conda" scheme="https://lydiazly.github.io/tags/conda/"/>
+    
+    <category term="jupyter" scheme="https://lydiazly.github.io/tags/jupyter/"/>
+    
+    <category term="astropy" scheme="https://lydiazly.github.io/tags/astropy/"/>
+    
+    <category term="sunpy" scheme="https://lydiazly.github.io/tags/sunpy/"/>
+    
+    <category term="install" scheme="https://lydiazly.github.io/tags/install/"/>
+    
+    <category term="astronomy" scheme="https://lydiazly.github.io/tags/astronomy/"/>
+    
+  </entry>
+  
+</feed>

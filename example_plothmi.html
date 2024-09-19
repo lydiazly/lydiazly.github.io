@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 7.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+  <link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha256-XOqroi11tY4EFQMR9ZYwZWKj5ZXiftSx36RRuC3anlA=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"lydiazly.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.20.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12,"width":250},"copycode":{"enable":true,"style":"mac"},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":true,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":false,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"none","post_header":"none","post_body":"none","coll_header":"fadeInLeft","sidebar":"none"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="Jupyter Notebook  Example Data  User Module (source &#x2F; doc)  12345678910111213141516171819202122from __future__ import division, print_function# Reload user modules automatically# %load_ext autoreload">
+<meta property="og:type" content="blog">
+<meta property="og:title" content="Example: Plot HMI">
+<meta property="og:url" content="https://lydiazly.github.io/example_plothmi">
+<meta property="og:site_name" content="Lydia&#39;s notes">
+<meta property="og:description" content="Jupyter Notebook  Example Data  User Module (source &#x2F; doc)  12345678910111213141516171819202122from __future__ import division, print_function# Reload user modules automatically# %load_ext autoreload">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://lydiazly.github.io/example_plothmi/plothmi1.png">
+<meta property="og:image" content="https://lydiazly.github.io/example_plothmi/plothmi2.png">
+<meta property="og:image" content="https://lydiazly.github.io/example_plothmi/plothmi3.png">
+<meta property="og:image" content="https://lydiazly.github.io/example_plothmi/plothmi4.png">
+<meta property="og:image" content="https://lydiazly.github.io/example_plothmi/plothmi5.png">
+<meta property="article:published_time" content="2018-10-14T23:06:23.000Z">
+<meta property="article:modified_time" content="2018-10-14T23:06:23.000Z">
+<meta property="article:author" content="Lydia Zhang">
+<meta property="article:tag" content="python">
+<meta property="article:tag" content="jupyter">
+<meta property="article:tag" content="sunpy">
+<meta property="article:tag" content="astronomy">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://lydiazly.github.io/example_plothmi/plothmi1.png">
+
+
+<link rel="canonical" href="https://lydiazly.github.io/example_plothmi.html">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"https://lydiazly.github.io/example_plothmi","path":"/example_plothmi.html","title":"Example: Plot HMI"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>Example: Plot HMI | Lydia's notes</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/atom.xml" title="Lydia's notes" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">Lydia's notes</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">Tips about Python and Linux.</p>
+      <img class="custom-logo-image" src="/images/logo2.png" alt="Lydia's notes">
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="Search" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags<span class="badge">11</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories<span class="badge">4</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">15</span></a></li><li class="menu-item menu-item-rss"><a href="/atom.xml" rel="section"><i class="fa fa-rss fa-fw"></i>RSS</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="Searching..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#read-data"><span class="nav-number">1.</span> <span class="nav-text">Read
+data</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#plot"><span class="nav-number">2.</span> <span class="nav-text">Plot</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#submap"><span class="nav-number">3.</span> <span class="nav-text">Submap</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#without-disambiguation"><span class="nav-number">3.1.</span> <span class="nav-text">Without disambiguation:</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Lydia Zhang</p>
+  <div class="site-description" itemprop="description">Tips about Python and Linux.</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">15</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">11</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="mailto:lydiazly2@nju.edu.cn" title="E-Mail → mailto:lydiazly2@nju.edu.cn" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i></a>
+      </span>
+  </div>
+  <div class="cc-license animated" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.en" class="cc-opacity" rel="noopener" target="_blank"><img src="https://cdnjs.cloudflare.com/ajax/libs/creativecommons-vocabulary/2020.11.3/assets/license_badges/big/by_sa.svg" alt="Creative Commons"></a>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="sidebar-inner sidebar-blogroll">
+      <div class="links-of-blogroll animated">
+        <div class="links-of-blogroll-title"><i class="fa fa-globe fa-fw"></i>
+          Links
+        </div>
+        <ul class="links-of-blogroll-list">
+            <li class="links-of-blogroll-item">
+              <a href="https://github.com/lydiazly/scripts-sunpy" title="https:&#x2F;&#x2F;github.com&#x2F;lydiazly&#x2F;scripts-sunpy" rel="noopener" target="_blank">My SunPy scripts</a>
+            </li>
+        </ul>
+      </div>
+    </div>
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://lydiazly.github.io/example_plothmi">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Lydia Zhang">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Lydia's notes">
+      <meta itemprop="description" content="Tips about Python and Linux.">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="Example: Plot HMI | Lydia's notes">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Example: Plot HMI
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2018-10-14 16:06:23" itemprop="dateCreated datePublished" datetime="2018-10-14T16:06:23-07:00">2018-10-14</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Lecture-Topics/" itemprop="url" rel="index"><span itemprop="name">Lecture Topics</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="Views" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">Views: </span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><p>
+<a class="btn" target="_blank" rel="noopener" href="https://github.com/lydiazly/python-intro/raw/master/notebooks/example_hmi.zip"><i class="fa fa-download fa-fw"></i>Jupyter Notebook</a>
+<wbr> <a class="btn" target="_blank" rel="noopener" href="https://pan.baidu.com/s/1nwsIcDr?pwd=s5re"><i class="fa fa-download fa-fw"></i>Example Data</a> <wbr> <a class="btn" target="_blank" rel="noopener" href="https://github.com/lydiazly/python-intro/raw/master/sunpy-modules.zip"><i class="fa fa-download fa-fw"></i>User Module</a><nobr>
+(<a target="_blank" rel="noopener" href="https://github.com/lydiazly/scripts-sunpy/tree/master/modules">source</a>
+/ <a href="/usr_sunpy.html">doc</a>)
+</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> __future__ <span class="keyword">import</span> division, print_function</span><br><span class="line"></span><br><span class="line"><span class="comment"># Reload user modules automatically</span></span><br><span class="line"><span class="comment"># %load_ext autoreload</span></span><br><span class="line"><span class="comment"># %autoreload 2</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># notebook, inline, ...</span></span><br><span class="line">%matplotlib notebook</span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> astropy.coordinates <span class="keyword">import</span> SkyCoord</span><br><span class="line"><span class="keyword">import</span> astropy.units <span class="keyword">as</span> u</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> sunpy.<span class="built_in">map</span></span><br><span class="line"><span class="keyword">from</span> copy <span class="keyword">import</span> deepcopy</span><br><span class="line"></span><br><span class="line"><span class="comment"># To use user modules</span></span><br><span class="line"><span class="keyword">import</span> sys</span><br><span class="line">sys.path.append(<span class="string">&#x27;../modules&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># print(&#x27;Python version: %s&#x27; % sys.version.split(&#x27;(&#x27;)[0])  # Python version: 3.6.6 |Anaconda, Inc.| </span></span><br><span class="line"><span class="comment"># print(&#x27;SunPy version: %s&#x27; % sunpy.__version__)  # SunPy version: 0.9.3</span></span><br></pre></td></tr></table></figure>
+<span id="more"></span>
+<h2 id="read-data"><a href="#read-data" class="headerlink"></a>Read
+data</h2>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">fnames = (<span class="string">&#x27;data/hmi.B_720s.20150827_052400_TAI.field.fits&#x27;</span>,</span><br><span class="line">          <span class="string">&#x27;data/hmi.B_720s.20150827_052400_TAI.inclination.fits&#x27;</span>,</span><br><span class="line">          <span class="string">&#x27;data/hmi.B_720s.20150827_052400_TAI.azimuth.fits&#x27;</span>,</span><br><span class="line">          <span class="string">&#x27;data/hmi.B_720s.20150827_052400_TAI.disambig.fits&#x27;</span>)</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> usr_sunpy <span class="keyword">import</span> read_sdo</span><br><span class="line">mapb, mapi, mapa, mapd = <span class="built_in">list</span>(<span class="built_in">map</span>(read_sdo, fnames))</span><br></pre></td></tr></table></figure>
+<pre><code>hmi.B_720s.20150827_052400_TAI.field.fits   [4096, 4096]
+hmi.B_720s.20150827_052400_TAI.inclination.fits [4096, 4096]
+hmi.B_720s.20150827_052400_TAI.azimuth.fits [4096, 4096]
+hmi.B_720s.20150827_052400_TAI.disambig.fits    [4096, 4096]</code></pre>
+<ul>
+<li>Disambiguate:</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mapa.data[mapd.data &gt; <span class="number">3</span>] += <span class="number">180.</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>Transform to vector components:</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">mapbx = deepcopy(mapb)</span><br><span class="line">mapby = deepcopy(mapb)</span><br><span class="line">mapbz = deepcopy(mapb)</span><br><span class="line">mapbx.data[:] = mapb.data * np.sin(np.deg2rad(mapi.data)) * np.cos(np.deg2rad(mapa.data + <span class="number">270.</span>))</span><br><span class="line">mapby.data[:] = mapb.data * np.sin(np.deg2rad(mapi.data)) * np.sin(np.deg2rad(mapa.data + <span class="number">270.</span>))</span><br><span class="line">mapbz.data[:] = mapb.data * np.cos(np.deg2rad(mapi.data))</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Suppress metadata warnings</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> &#123;mapbx, mapby, mapbz&#125;:</span><br><span class="line">    i.meta[<span class="string">&#x27;hgln_obs&#x27;</span>] = <span class="number">0.</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mapbz</span><br></pre></td></tr></table></figure>
+<pre><code>SunPy Map
+---------
+Observatory:         SDO
+Instrument:      HMI SIDE1
+Detector:        HMI
+Measurement:         hmi
+Wavelength:      6173.0
+Observation Date:    2015-08-27 05:22:21
+Exposure Time:       0.000000 s
+Dimension:       [4096. 4096.] pix
+Coordinate System:   helioprojective
+Scale:           [0.504376 0.504376] arcsec / pix
+Reference Pixel:     [2033.825928 2053.603271] pix
+Reference Coord:     [0. 0.] arcsec
+array([[nan, nan, nan, ..., nan, nan, nan],
+       [nan, nan, nan, ..., nan, nan, nan],
+       [nan, nan, nan, ..., nan, nan, nan],
+       ...,
+       [nan, nan, nan, ..., nan, nan, nan],
+       [nan, nan, nan, ..., nan, nan, nan],
+       [nan, nan, nan, ..., nan, nan, nan]])</code></pre>
+<ul>
+<li>Use <code>sunpy.instr.aia.aiaprep()</code> Processes a level 1
+AIAMap into a level 1.5 AIAMap.<br> <a
+target="_blank" rel="noopener" href="https://docs.sunpy.org/en/stable/api/sunpy.instr.aia.aiaprep.html"
+class="uri">https://docs.sunpy.org/en/stable/api/sunpy.instr.aia.aiaprep.html</a></li>
+</ul>
+<blockquote>
+<p>From <strong>sunpy 0.9.3</strong>,
+<code>sunpy.instr.aia.aiaprep()</code> supports both <code>AIAMap</code>
+&amp; <code>HMIMap</code> objects.</p>
+</blockquote>
+<p><strong>Note</strong>: Improve <code>aiaprep</code> in
+<code>&lt;python_path&gt;/site-packages/sunpy/instr/aia.py</code>:<br>
+   at line: <code>tempmap = aiamap.rotate(...)</code><br>    add
+<code>order=3</code> (recommend, this will keep NaNs) and set
+<code>missing=np.nan</code> in <code>rotate()</code></p>
+<p>There is a modified function <code>aiaprep_usr()</code> in
+<code>usr_sunpy</code></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># After `aiaprep`:</span></span><br><span class="line"><span class="comment"># - North is aligned with the y axis.</span></span><br><span class="line"><span class="comment"># - Each pixel is 0.6 arcsec across.</span></span><br><span class="line"><span class="comment"># - The center of the sun is at the center of the image.</span></span><br><span class="line"><span class="comment"># This may be a bit slow.</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># from sunpy.instr.aia import aiaprep</span></span><br><span class="line"><span class="keyword">from</span> usr_sunpy <span class="keyword">import</span> aiaprep_usr <span class="keyword">as</span> aiaprep</span><br><span class="line"><span class="keyword">import</span> warnings</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;level 1 -&gt; level 1.5 ...&#x27;</span>)</span><br><span class="line"><span class="keyword">with</span> warnings.catch_warnings():</span><br><span class="line">    warnings.simplefilter(<span class="string">&quot;ignore&quot;</span>)</span><br><span class="line">    mapbx = aiaprep(mapbx)</span><br><span class="line">    mapby = aiaprep(mapby)</span><br><span class="line">    mapbz = aiaprep(mapbz)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;level    =&#x27;</span>, mapbz.meta[<span class="string">&#x27;lvl_num&#x27;</span>])</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;rsun_obs =&#x27;</span>, mapbz.meta[<span class="string">&#x27;rsun_obs&#x27;</span>] * u.arcsec)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;r_sun    =&#x27;</span>, mapbz.meta[<span class="string">&#x27;r_sun&#x27;</span>] * u.pix)</span><br></pre></td></tr></table></figure>
+<pre><code>level 1 -&gt; level 1.5 ...
+level    = 1.5
+rsun_obs = 949.495178 arcsec
+r_sun    = 1582.4919633333334 pix</code></pre>
+<ul>
+<li><strong>Or</strong>, use <code>rotate()</code> manually:</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># DO NOT execute this cell if `sunpy.instr.aia.aiaprep()` has been called.</span></span><br><span class="line"><span class="comment"># `rotate` function will remove old CROTA keywords.</span></span><br><span class="line"><span class="comment"># This may be a bit slow if order = 3.</span></span><br><span class="line"><span class="keyword">if</span> <span class="string">&#x27;lvl_num&#x27;</span> <span class="keyword">not</span> <span class="keyword">in</span> mapbz.meta <span class="keyword">or</span> mapbz.meta[<span class="string">&#x27;lvl_num&#x27;</span>] &lt; <span class="number">1.5</span>:</span><br><span class="line">    order = <span class="number">3</span></span><br><span class="line">    scale_factor = (mapbz.scale[<span class="number">0</span>] / <span class="number">0.6</span>).value</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;rotate(CCW) &amp; recenter &amp; rescale ...&#x27;</span>)</span><br><span class="line">    <span class="comment"># Suppress warnings of NaNs:</span></span><br><span class="line">    <span class="keyword">with</span> np.errstate(invalid=<span class="string">&#x27;ignore&#x27;</span>):</span><br><span class="line">        mapbx = mapbx.rotate(order=order, recenter=<span class="literal">True</span>, scale=scale_factor, missing=np.nan)</span><br><span class="line">        mapby = mapby.rotate(order=order, recenter=<span class="literal">True</span>, scale=scale_factor, missing=np.nan)</span><br><span class="line">        mapbz = mapbz.rotate(order=order, recenter=<span class="literal">True</span>, scale=scale_factor, missing=np.nan)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;Rotation angle = %f deg (CCW)&#x27;</span> % -mapb.meta[<span class="string">&#x27;crota2&#x27;</span>])</span><br></pre></td></tr></table></figure>
+<p>Level 1.5:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mapbz</span><br></pre></td></tr></table></figure>
+<pre><code>SunPy Map
+---------
+Observatory:         SDO
+Instrument:      HMI SIDE1
+Detector:        HMI
+Measurement:         hmi
+Wavelength:      6173.0
+Observation Date:    2015-08-27 05:22:21
+Exposure Time:       0.000000 s
+Dimension:       [4096. 4096.] pix
+Coordinate System:   helioprojective
+Scale:           [0.6 0.6] arcsec / pix
+Reference Pixel:     [2048.5 2048.5] pix
+Reference Coord:     [0. 0.] arcsec
+array([[nan, nan, nan, ..., nan, nan, nan],
+       [nan, nan, nan, ..., nan, nan, nan],
+       [nan, nan, nan, ..., nan, nan, nan],
+       ...,
+       [nan, nan, nan, ..., nan, nan, nan],
+       [nan, nan, nan, ..., nan, nan, nan],
+       [nan, nan, nan, ..., nan, nan, nan]])</code></pre>
+<p>Check the disk center ('crpix1', 'crpix2'):</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># pixel number start from 1</span></span><br><span class="line">pcenter = ((mapbz.meta[<span class="string">&#x27;crpix1&#x27;</span>] - <span class="number">1</span>) * u.pix, (mapbz.meta[<span class="string">&#x27;crpix2&#x27;</span>] - <span class="number">1</span>) * u.pix)</span><br><span class="line">center = mapbz.pixel_to_world(*pcenter)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;[Image_center] (%.3f, %.3f) pixel = (%7.4f, %7.4f) arcsec  (lon, lat) = (%8.5f, %8.5f) deg&#x27;</span> %</span><br><span class="line">      ((mapbz.dimensions.x.value-<span class="number">1.</span>)/<span class="number">2.</span>, (mapbz.dimensions.y.value-<span class="number">1.</span>)/<span class="number">2.</span>,</span><br><span class="line">        mapbz.center.Tx.value, mapbz.center.Ty.value,</span><br><span class="line">        mapbz.center.heliographic_stonyhurst.lon.value, mapbz.center.heliographic_stonyhurst.lat.value))</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;[ Disk_center] (%.3f, %.3f) pixel = (%7.4f, %7.4f) arcsec  (lon, lat) = (%8.5f, %8.5f) deg&#x27;</span> %</span><br><span class="line">      (pcenter[<span class="number">0</span>].value, pcenter[<span class="number">1</span>].value, center.Tx.value, center.Ty.value,</span><br><span class="line">       center.heliographic_stonyhurst.lon.value, center.heliographic_stonyhurst.lat.value))</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;[ Observation] (lon, lat, radius) = (%g deg, %g deg, %g m)&#x27;</span> %</span><br><span class="line">      (mapbz.heliographic_longitude.value, mapbz.heliographic_latitude.value, mapbz.observer_coordinate.radius.value))</span><br></pre></td></tr></table></figure>
+<pre><code>[Image_center] (2047.500, 2047.500) pixel = ( 0.3000,  0.3000) arcsec  (lon, lat) = ( 0.01816,  7.10702) deg
+[ Disk_center] (2047.500, 2047.500) pixel = ( 0.0000,  0.0000) arcsec  (lon, lat) = ( 0.00000,  7.08900) deg
+[ Observation] (lon, lat, radius) = (0 deg, 7.089 deg, 1.51197e+11 m)</code></pre>
+<p>A quick look:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mapbz.peek()</span><br></pre></td></tr></table></figure>
+<p><img data-src="/example_plothmi/plothmi1.png" width="640"></p>
+<h2 id="plot"><a href="#plot" class="headerlink"></a>Plot</h2>
+<p><a
+target="_blank" rel="noopener" href="https://docs.sunpy.org/en/stable/guide/plotting.html?highlight=peek#plotting-maps-with-wcsaxes"
+class="uri">https://docs.sunpy.org/en/stable/guide/plotting.html?highlight=peek#plotting-maps-with-wcsaxes</a></p>
+<p>User function <code>plot_map()</code> will invoke <code>plot()</code>
+of sunpy.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> usr_sunpy <span class="keyword">import</span> plot_map</span><br><span class="line"></span><br><span class="line">fig1 = plt.figure(figsize=(<span class="number">8</span>, <span class="number">6</span>), dpi=<span class="number">100</span>)</span><br><span class="line">ax1 = fig1.add_subplot(<span class="number">111</span>, projection=mapbz)</span><br><span class="line"><span class="comment"># This plot function will simply invoke mapbz.plot(), if keyword `coords` is not specified.</span></span><br><span class="line">plot_map(mapbz, ax=ax1, vmin=-<span class="number">2000.</span>, vmax=<span class="number">2000.</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Properties</span></span><br><span class="line">mapbz.draw_limb(axes=ax1, color=<span class="string">&#x27;b&#x27;</span>, linewidth=<span class="number">1.5</span>)  <span class="comment"># default zorder=100 in `draw_limb()`</span></span><br><span class="line">ax1.plot_coord(mapbz.center, <span class="string">&#x27;rx&#x27;</span>, markersize=<span class="number">10</span>, linewidth=<span class="number">1.5</span>, label=<span class="string">&#x27;Image center&#x27;</span>)</span><br><span class="line"><span class="keyword">try</span>:</span><br><span class="line">    ax1.plot_coord(center, <span class="string">&#x27;bx&#x27;</span>, markersize=<span class="number">10</span>, linewidth=<span class="number">1.5</span>, label=<span class="string">&#x27;Disk center&#x27;</span>)</span><br><span class="line"><span class="keyword">except</span>:</span><br><span class="line">    <span class="keyword">pass</span></span><br><span class="line">ax1.legend(loc=<span class="string">&#x27;upper right&#x27;</span>, fontsize=<span class="number">8</span>, markerscale=<span class="number">0.6</span>);</span><br><span class="line"><span class="comment"># fig1.savefig(&#x27;example_plothmi_disk.png&#x27;, dpi=200, bbox_inches=&#x27;tight&#x27;)</span></span><br></pre></td></tr></table></figure>
+<p><img data-src="/example_plothmi/plothmi2.png" width="800"></p>
+<h2 id="submap"><a href="#submap" class="headerlink"></a>Submap</h2>
+<p><a
+target="_blank" rel="noopener" href="http://docs.sunpy.org/en/v0.9.3/code_ref/map.html?highlight=peek#sunpy.map.mapbase.GenericMap.submap"
+class="uri">http://docs.sunpy.org/en/v0.9.3/code_ref/map.html?highlight=peek#sunpy.map.mapbase.GenericMap.submap</a><br>
+<a
+target="_blank" rel="noopener" href="http://docs.astropy.org/en/stable/api/astropy.coordinates.SkyCoord.html"
+class="uri">http://docs.astropy.org/en/stable/api/astropy.coordinates.SkyCoord.html</a></p>
+<p><strong><code>submap(bottom_left, top_right=None)</code><br></strong>
+* <strong>bottom_left</strong> (astropy.units.Quantity or SkyCoord) –
+The bottom_left coordinate of the rectangle.<br> If a SkyCoord it can
+have shape (2,) and also define top_right.<br> If specifying pixel
+coordinates it must be given as an Quantity object with units of pixel.
+* <strong>top_right</strong> (astropy.units.Quantity or SkyCoord) – The
+top_right coordinate of the rectangle.<br> Can only be omitted if
+bottom_left has shape (2,).</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">xrange = (<span class="number">300.</span>, <span class="number">800.</span>) * u.arcsec</span><br><span class="line">yrange = (-<span class="number">500.</span>, -<span class="number">100.</span>) * u.arcsec</span><br><span class="line"></span><br><span class="line">subcoord = SkyCoord(xrange, yrange, frame=mapbz.coordinate_frame)</span><br><span class="line">smapbx = mapbx.submap(subcoord)</span><br><span class="line">smapby = mapby.submap(subcoord)</span><br><span class="line">smapbz = mapbz.submap(subcoord)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;Submap: (%s, %s) arcsec  (%d x %d)&#x27;</span></span><br><span class="line">      % (xrange.value, yrange.value, *smapbz.data.shape[::-<span class="number">1</span>]))</span><br></pre></td></tr></table></figure>
+<pre><code>Submap: ([300. 800.], [-500. -100.]) arcsec  (833 x 666)</code></pre>
+<p><strong><code>draw_rectangle(bottom_left, width, height, axes=None, **kwargs)</code></strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> usr_sunpy <span class="keyword">import</span> plot_map</span><br><span class="line"></span><br><span class="line">fig1 = plt.figure(figsize=(<span class="number">8</span>, <span class="number">6</span>), dpi=<span class="number">100</span>)</span><br><span class="line">ax1 = fig1.add_subplot(<span class="number">111</span>, projection=mapbz)</span><br><span class="line">plot_map(mapbz, ax=ax1, vmin=-<span class="number">2000.</span>, vmax=<span class="number">2000.</span>, grid_color=<span class="string">&#x27;w&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># mapbz.draw_limb(axes=ax1, color=&#x27;b&#x27;, linewidth=1.5)</span></span><br><span class="line">mapbz.draw_rectangle(subcoord[<span class="number">0</span>], xrange[<span class="number">1</span>]-xrange[<span class="number">0</span>], yrange[<span class="number">1</span>]-yrange[<span class="number">0</span>], axes=ax1, color=<span class="string">&#x27;yellow&#x27;</span>, linewidth=<span class="number">1.5</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Specify xlim, ylim by pixels</span></span><br><span class="line"><span class="comment"># lim_arcsec = ((-1000.1, 1000.1) * u.arcsec, (-1000.1, 1000.1) * u.arcsec)</span></span><br><span class="line"><span class="comment"># lim_pix = mapbz.world_to_pixel(SkyCoord(*lim_arcsec, frame=mapbz.coordinate_frame))  # pix</span></span><br><span class="line"><span class="comment"># ax1.set_xlim(lim_pix[0].value)  # pix</span></span><br><span class="line"><span class="comment"># ax1.set_ylim(lim_pix[1].value);  # pix</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Clip NaNs</span></span><br><span class="line">valid_index = np.where(np.isfinite(mapbz.data))</span><br><span class="line">ax1.set_xlim((valid_index[<span class="number">0</span>].<span class="built_in">min</span>()-<span class="number">100</span>, valid_index[<span class="number">0</span>].<span class="built_in">max</span>()+<span class="number">100</span>))  <span class="comment"># pix</span></span><br><span class="line">ax1.set_ylim((valid_index[<span class="number">1</span>].<span class="built_in">min</span>()-<span class="number">100</span>, valid_index[<span class="number">1</span>].<span class="built_in">max</span>()+<span class="number">100</span>));  <span class="comment"># pix</span></span><br></pre></td></tr></table></figure>
+<p><img data-src="/example_plothmi/plothmi3.png" width="800"></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> usr_sunpy <span class="keyword">import</span> plot_map, plot_vmap</span><br><span class="line"></span><br><span class="line">fig2 = plt.figure(figsize=(<span class="number">9</span>, <span class="number">6</span>), dpi=<span class="number">100</span>)</span><br><span class="line">ax2 = fig2.add_subplot(<span class="number">111</span>, projection=smapbz)</span><br><span class="line">im2 = plot_map(smapbz, ax=ax2, vmin=-<span class="number">2000.</span>, vmax=<span class="number">2000.</span>, grid=<span class="number">10</span>*u.deg, title=mapbz.latex_name+<span class="string">&#x27; (submap)&#x27;</span>)</span><br><span class="line">plot_vmap(smapbx, smapby, smapbz, ax2, cmin=<span class="number">20.</span>, vmax=<span class="number">500.</span>, cmap=<span class="string">&#x27;binary&#x27;</span>,</span><br><span class="line">          scale_units=<span class="string">&#x27;xy&#x27;</span>, scale=<span class="number">1</span>/<span class="number">0.05</span>, minlength=<span class="number">0.02</span>);</span><br></pre></td></tr></table></figure>
+<p><img data-src="/example_plothmi/plothmi4.png" width="900"></p>
+<h3 id="without-disambiguation"><a href="#without-disambiguation"
+class="headerlink"></a>Without disambiguation:</h3>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> usr_sunpy <span class="keyword">import</span> plot_map, plot_vmap</span><br><span class="line"></span><br><span class="line">fig2 = plt.figure(figsize=(<span class="number">9</span>, <span class="number">6</span>), dpi=<span class="number">100</span>)</span><br><span class="line">ax2 = fig2.add_subplot(<span class="number">111</span>, projection=smapbz)</span><br><span class="line">im2 = plot_map(smapbz, ax=ax2, vmin=-<span class="number">2000.</span>, vmax=<span class="number">2000.</span>, grid=<span class="number">10</span>*u.deg, title=mapbz.latex_name+<span class="string">&#x27; (submap)&#x27;</span>)</span><br><span class="line">plot_vmap(smapbx, smapby, smapbz, ax2, cmin=<span class="number">20.</span>, vmax=<span class="number">500.</span>, cmap=<span class="string">&#x27;binary&#x27;</span>,</span><br><span class="line">          scale_units=<span class="string">&#x27;xy&#x27;</span>, scale=<span class="number">1</span>/<span class="number">0.05</span>, minlength=<span class="number">0.02</span>);</span><br></pre></td></tr></table></figure>
+<p><img data-src="/example_plothmi/plothmi5.png" width="900"></p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/python/" rel="tag"><i class="fa fa-tag"></i> python</a>
+              <a href="/tags/jupyter/" rel="tag"><i class="fa fa-tag"></i> jupyter</a>
+              <a href="/tags/sunpy/" rel="tag"><i class="fa fa-tag"></i> sunpy</a>
+              <a href="/tags/astronomy/" rel="tag"><i class="fa fa-tag"></i> astronomy</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2018-10-14-sunpy-scripts-updates" rel="prev" title="SunPy Scripts Updates">
+                  <i class="fa fa-angle-left"></i> SunPy Scripts Updates
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/example_projection" rel="next" title="Example: Projection">
+                  Example: Projection <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 2018 – 
+    <span itemprop="copyrightYear">2024</span>
+    <span class="with-love">
+      <i class=""></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Lydia Zhang</span>
+  </div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="Total Visitors">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="Total Views">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="Back to top">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/next-theme-pjax/0.6.0/pjax.min.js" integrity="sha256-vxLn1tSKWD4dqbMRyv940UYw4sXgMtYcK6reefzZrao=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/medium-zoom/1.1.0/medium-zoom.min.js" integrity="sha256-ZgMyDAIYDYGxbcpJcfUnYwNevG/xi9OHKaR/8GK+jWc=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lozad.js/1.16.0/lozad.min.js" integrity="sha256-mOFREFhqmHeQbXpK2lp4nA3qooVgACfh88fpJftLBbc=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/sidebar.js"></script><script src="/js/next-boot.js"></script><script src="/js/pjax.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+
+
+
+
+
+  
+  <script data-pjax async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"all","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
+<script src="/js/third-party/math/mathjax.js"></script>
+
+
+
+</body>
+</html>

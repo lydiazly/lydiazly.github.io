@@ -1,0 +1,951 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 7.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+  <link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha256-XOqroi11tY4EFQMR9ZYwZWKj5ZXiftSx36RRuC3anlA=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"lydiazly.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.20.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12,"width":250},"copycode":{"enable":true,"style":"mac"},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":true,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":false,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"none","post_header":"none","post_body":"none","coll_header":"fadeInLeft","sidebar":"none"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="Jupyter Notebook  FITS Data  简介 优势: 开源, 用户广, 用途广, 社区完善, 新手友好 https:&#x2F;&#x2F;www.jetbrains.com&#x2F;research&#x2F;python-developers-survey-2017&#x2F; 2017年的 python 使用调查报告 https:&#x2F;&#x2F;www.jetbrains.com&#x2F;research&#x2F;python-developer">
+<meta property="og:type" content="blog">
+<meta property="og:title" content="Python 简易教程 (lecture for Solar Group)">
+<meta property="og:url" content="https://lydiazly.github.io/main">
+<meta property="og:site_name" content="Lydia&#39;s notes">
+<meta property="og:description" content="Jupyter Notebook  FITS Data  简介 优势: 开源, 用户广, 用途广, 社区完善, 新手友好 https:&#x2F;&#x2F;www.jetbrains.com&#x2F;research&#x2F;python-developers-survey-2017&#x2F; 2017年的 python 使用调查报告 https:&#x2F;&#x2F;www.jetbrains.com&#x2F;research&#x2F;python-developer">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://lydiazly.github.io/main/Python%20Developers%20Survey%202017%20-%20Results-018.png">
+<meta property="og:image" content="https://lydiazly.github.io/main/Python%20Developers%20Survey%202017%20-%20Results-019.png">
+<meta property="og:image" content="https://lydiazly.github.io/main/Python%20Developers%20Survey%202017%20-%20Results-020.png">
+<meta property="og:image" content="https://lydiazly.github.io/main/logo-large.72ad8bf1.svg">
+<meta property="og:image" content="https://lydiazly.github.io/main/DataScienceLibraries-01.png">
+<meta property="og:image" content="https://lydiazly.github.io/main/Conda-DistributionDiagram-01.png">
+<meta property="og:image" content="https://lydiazly.github.io/main/Conda%20%E2%80%94%20Conda%20documentation.png">
+<meta property="og:image" content="https://lydiazly.github.io/main/IPython.png">
+<meta property="og:image" content="https://lydiazly.github.io/main/jupyterlogo.png">
+<meta property="og:image" content="https://lydiazly.github.io/main/nbviewer.png">
+<meta property="og:image" content="https://lydiazly.github.io/main/SciPy.png">
+<meta property="og:image" content="https://lydiazly.github.io/main/scikitlogo.png">
+<meta property="og:image" content="https://lydiazly.github.io/main/skimage01.png">
+<meta property="og:image" content="https://lydiazly.github.io/main/Matplotlib.png">
+<meta property="og:image" content="https://lydiazly.github.io/main/annotation_demo2_00.png">
+<meta property="og:image" content="https://lydiazly.github.io/main/contour_demo_05.png">
+<meta property="og:image" content="https://lydiazly.github.io/main/named_colors.png">
+<meta property="og:image" content="https://lydiazly.github.io/main/astropy_banner.svg">
+<meta property="og:image" content="https://lydiazly.github.io/main/Screenshot_20180625-005924.png">
+<meta property="og:image" content="https://lydiazly.github.io/main/sphx_glr_lat_lon_lines_001.png">
+<meta property="og:image" content="https://lydiazly.github.io/main/sphx_glr_submaps_and_cropping_001.png">
+<meta property="og:image" content="https://lydiazly.github.io/main/main_126_1.png">
+<meta property="og:image" content="https://lydiazly.github.io/main/pycharm.jpg">
+<meta property="og:image" content="https://lydiazly.github.io/main/jupyterlab.png">
+<meta property="article:published_time" content="2018-07-03T03:56:13.000Z">
+<meta property="article:modified_time" content="2018-07-03T03:56:13.000Z">
+<meta property="article:author" content="Lydia Zhang">
+<meta property="article:tag" content="python">
+<meta property="article:tag" content="jupyter">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://lydiazly.github.io/main/Python%20Developers%20Survey%202017%20-%20Results-018.png">
+
+
+<link rel="canonical" href="https://lydiazly.github.io/main.html">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"https://lydiazly.github.io/main","path":"/main.html","title":"Python 简易教程 (lecture for Solar Group)"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>Python 简易教程 (lecture for Solar Group) | Lydia's notes</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/atom.xml" title="Lydia's notes" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">Lydia's notes</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">Tips about Python and Linux.</p>
+      <img class="custom-logo-image" src="/images/logo2.png" alt="Lydia's notes">
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="Search" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags<span class="badge">11</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories<span class="badge">4</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">15</span></a></li><li class="menu-item menu-item-rss"><a href="/atom.xml" rel="section"><i class="fa fa-rss fa-fw"></i>RSS</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="Searching..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AE%80%E4%BB%8B"><span class="nav-number">1.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95"><span class="nav-number">2.</span> <span class="nav-text">基本语法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AF%AD%E6%B3%95%E7%89%B9%E7%82%B9"><span class="nav-number">2.1.</span> <span class="nav-text">语法特点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#print%E5%87%BD%E6%95%B0"><span class="nav-number">2.2.</span> <span class="nav-text">print函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E8%BF%90%E7%AE%97"><span class="nav-number">2.3.</span> <span class="nav-text">基本运算</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2"><span class="nav-number">2.4.</span> <span class="nav-text">字符串</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#list-tuple-dict-set"><span class="nav-number">2.5.</span> <span class="nav-text">list, tuple, dict, set</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#if-%E8%AF%AD%E5%8F%A5"><span class="nav-number">2.6.</span> <span class="nav-text">if 语句</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%9B%B8%E5%85%B3%E5%B7%A5%E5%85%B7"><span class="nav-number">2.7.</span> <span class="nav-text">相关工具</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#pip"><span class="nav-number">2.7.1.</span> <span class="nav-text">pip</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#anaconda"><span class="nav-number">2.7.2.</span> <span class="nav-text">Anaconda</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#ipython-jupyter"><span class="nav-number">2.7.3.</span> <span class="nav-text">IPython &amp; Jupyter</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B8%B8%E7%94%A8%E5%8C%85%E4%BB%8B%E7%BB%8D"><span class="nav-number">3.</span> <span class="nav-text">常用包介绍</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#python-%E8%87%AA%E5%B8%A6%E5%8C%85%E5%92%8C%E6%A8%A1%E5%9D%97"><span class="nav-number">3.1.</span> <span class="nav-text">Python 自带包和模块</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#numpy-scipy"><span class="nav-number">3.2.</span> <span class="nav-text">NumPy, SciPy</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%A6%82%E8%A7%88"><span class="nav-number">3.2.1.</span> <span class="nav-text">概览</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%94%9F%E6%88%90-numpy.ndarray-%E6%95%B0%E7%BB%84"><span class="nav-number">3.2.2.</span> <span class="nav-text">生成 numpy.ndarray 数组</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#matplotlib"><span class="nav-number">3.3.</span> <span class="nav-text">Matplotlib</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A4%A9%E6%96%87%E7%9B%B8%E5%85%B3%E5%8C%85"><span class="nav-number">3.4.</span> <span class="nav-text">天文相关包</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#astropy"><span class="nav-number">3.4.1.</span> <span class="nav-text">Astropy</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#sunpy"><span class="nav-number">3.4.2.</span> <span class="nav-text">SunPy</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B8%B8%E8%A7%81%E6%95%B0%E6%8D%AE%E6%96%87%E4%BB%B6%E8%AF%BB%E5%86%99"><span class="nav-number">4.</span> <span class="nav-text">常见数据文件读写</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%80%E8%88%AC%E6%83%85%E5%86%B5"><span class="nav-number">4.1.</span> <span class="nav-text">一般情况</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#txt-csv-%E6%96%87%E4%BB%B6%E8%AF%BB%E5%86%99"><span class="nav-number">4.2.</span> <span class="nav-text">txt, csv 文件读写</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#numpy-save-%E6%96%87%E4%BB%B6%E8%AF%BB%E5%86%99"><span class="nav-number">4.3.</span> <span class="nav-text">numpy save 文件读写</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#idl-sav-%E6%96%87%E4%BB%B6%E8%AF%BB%E5%8F%96"><span class="nav-number">4.4.</span> <span class="nav-text">IDL sav 文件读取</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#fits-%E6%96%87%E4%BB%B6%E8%AF%BB%E5%8F%96"><span class="nav-number">4.5.</span> <span class="nav-text">FITS 文件读取</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%B6%E4%BB%96%E5%8C%85%E5%92%8C%E8%BD%AF%E4%BB%B6"><span class="nav-number">5.</span> <span class="nav-text">其他包和软件</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Lydia Zhang</p>
+  <div class="site-description" itemprop="description">Tips about Python and Linux.</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">15</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">11</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="mailto:lydiazly2@nju.edu.cn" title="E-Mail → mailto:lydiazly2@nju.edu.cn" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i></a>
+      </span>
+  </div>
+  <div class="cc-license animated" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.en" class="cc-opacity" rel="noopener" target="_blank"><img src="https://cdnjs.cloudflare.com/ajax/libs/creativecommons-vocabulary/2020.11.3/assets/license_badges/big/by_sa.svg" alt="Creative Commons"></a>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="sidebar-inner sidebar-blogroll">
+      <div class="links-of-blogroll animated">
+        <div class="links-of-blogroll-title"><i class="fa fa-globe fa-fw"></i>
+          Links
+        </div>
+        <ul class="links-of-blogroll-list">
+            <li class="links-of-blogroll-item">
+              <a href="https://github.com/lydiazly/scripts-sunpy" title="https:&#x2F;&#x2F;github.com&#x2F;lydiazly&#x2F;scripts-sunpy" rel="noopener" target="_blank">My SunPy scripts</a>
+            </li>
+        </ul>
+      </div>
+    </div>
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://lydiazly.github.io/main">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Lydia Zhang">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Lydia's notes">
+      <meta itemprop="description" content="Tips about Python and Linux.">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="Python 简易教程 (lecture for Solar Group) | Lydia's notes">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Python 简易教程 (lecture for Solar Group)
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2018-07-02 20:56:13" itemprop="dateCreated datePublished" datetime="2018-07-02T20:56:13-07:00">2018-07-02</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Lecture-Topics/" itemprop="url" rel="index"><span itemprop="name">Lecture Topics</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="Views" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">Views: </span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><p>
+<a class="btn" target="_blank" rel="noopener" href="https://github.com/lydiazly/python-intro/raw/master/notebooks/python-intro.zip"><i class="fa fa-download fa-fw"></i>Jupyter Notebook</a>
+<wbr> <a class="btn" target="_blank" rel="noopener" href="https://pan.baidu.com/s/1nwsIcDr?pwd=s5re"><i class="fa fa-download fa-fw"></i>FITS Data</a>
+</p>
+<h2 id="简介"><a href="#简介" class="headerlink"></a>简介</h2>
+<p>优势: 开源, 用户广, 用途广, 社区完善, 新手友好</p>
+<p><a
+target="_blank" rel="noopener" href="https://www.jetbrains.com/research/python-developers-survey-2017/"
+class="uri">https://www.jetbrains.com/research/python-developers-survey-2017/</a></p>
+<p>2017年的 python 使用调查报告 <a
+target="_blank" rel="noopener" href="https://www.jetbrains.com/research/python-developers-survey-2017/"
+class="uri">https://www.jetbrains.com/research/python-developers-survey-2017/</a>
+<img data-src='/main/Python Developers Survey 2017 - Results-018.png' >
+<img data-src='/main/Python Developers Survey 2017 - Results-019.png' >
+<img data-src='/main/Python Developers Survey 2017 - Results-020.png' ></p>
+<p>参考网站:</p>
+<ul>
+<li>官方网站: <a target="_blank" rel="noopener" href="https://www.python.org/"
+class="uri">https://www.python.org/</a></li>
+<li>stackoverflow <a
+target="_blank" rel="noopener" href="https://stackoverflow.com/questions/tagged/python"
+class="uri">https://stackoverflow.com/questions/tagged/python</a></li>
+<li>官方文档 <a target="_blank" rel="noopener" href="https://docs.python.org"
+class="uri">https://docs.python.org</a></li>
+<li>廖雪峰的网站 (包含 python2.7 和 python3 的教程) <a
+target="_blank" rel="noopener" href="https://www.liaoxuefeng.com"
+class="uri">https://www.liaoxuefeng.com</a></li>
+<li>wikibooks <a target="_blank" rel="noopener" href="https://en.wikibooks.org/wiki/Python_Programming"
+class="uri">https://en.wikibooks.org/wiki/Python_Programming</a></li>
+<li>演示代码执行过程的工具 <a target="_blank" rel="noopener" href="http://pythontutor.com/"
+class="uri">http://pythontutor.com/</a></li>
+<li>天文相关教程 (较新) <a target="_blank" rel="noopener" href="https://python4astronomers.github.io"
+class="uri">https://python4astronomers.github.io</a></li>
+</ul>
+<p><br> 获取 python 包/模块/函数的帮助:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># python</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="built_in">help</span>(name)</span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># shell</span></span><br><span class="line">$ pydoc &lt;name&gt;</span><br><span class="line">$ pydoc -w &lt;name&gt;  <span class="comment"># 生成一个 html 帮助文件</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># ipython/jupyter</span></span><br><span class="line">name?  <span class="comment"># 弹出帮助文档, `Esc` 退出文档</span></span><br></pre></td></tr></table></figure>
+<span id="more"></span>
+<h2 id="基本语法"><a href="#基本语法"
+class="headerlink"></a>基本语法</h2>
+<h3 id="语法特点"><a href="#语法特点"
+class="headerlink"></a>语法特点</h3>
+<ul>
+<li>对象编程的概念<br> 类 -&gt; 创建一个实例 -&gt;
+使用该实例所属的类下面的方法 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">l = [<span class="number">3</span>, <span class="number">2</span>, <span class="number">1</span>]  <span class="comment"># l 是 list 的一个实例</span></span><br><span class="line">l.reverse()  <span class="comment"># reverse 是一个方法(函数), reverse() 是一个实例</span></span><br><span class="line">l.__dir__()  <span class="comment"># 查看 l 的所有方法(函数)</span></span><br></pre></td></tr></table></figure> <br></li>
+<li>严格缩进 (通常采用4个半角空格) <figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> a &gt; <span class="number">0</span>:</span><br><span class="line">      a += <span class="number">1</span></span><br><span class="line"><span class="built_in">print</span>(a)</span><br></pre></td></tr></table></figure> <br></li>
+<li>空格不敏感 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">a + b * c ** <span class="number">2</span> / d</span><br><span class="line">f (a, b)</span><br></pre></td></tr></table></figure> <br></li>
+<li>大小写敏感, 使用大小写组合的变量名风格
+(下划线仍是合法变量名字符,但有特殊含义, 见 <a
+href="/advance.html#脚本相关">Python 进阶#脚本相关</a>) <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> scipy.interpolate <span class="keyword">import</span> BSpline</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line">dataFrame = pd.DataFrame(array)</span><br></pre></td></tr></table></figure> 见 <a href="#idl-sav-文件读取">IDL sav 文件读取</a>
+<br><br></li>
+<li>括号内换行不用换行符 <br><br></li>
+<li>单行注释 <code># ...</code> <br><br></li>
+<li>多行注释<br> 函数或模块的开头的多行注释
+(将存储在<code>__doc__</code>变量), 可以用 <code>help()</code> 打印
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">这是一个</span></span><br><span class="line"><span class="string">多行注释</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br></pre></td></tr></table></figure> <br></li>
+<li>同一行不同语句之间可用分号分隔 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">x = <span class="number">1</span>; <span class="built_in">print</span>(x)</span><br></pre></td></tr></table></figure> <br></li>
+<li>列表和数组的索引默认从<font color=red>0</font>开始 <br><br></li>
+<li>列表的最后一个元素可以加逗号 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[<span class="number">1</span>, <span class="number">2</span>,]</span><br><span class="line">&#123;<span class="string">&#x27;a&#x27;</span> : <span class="number">1</span>, <span class="string">&#x27;b&#x27;</span> : <span class="number">2</span>,&#125;</span><br></pre></td></tr></table></figure> <br></li>
+<li><em>etc.</em></li>
+</ul>
+<h3 id="print函数"><a href="#print函数"
+class="headerlink"></a>print函数</h3>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a = <span class="number">1.</span>; b = <span class="number">2.</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;a=%.3f, b=%.1e&#x27;</span> % (a, b))</span><br></pre></td></tr></table></figure>
+<pre><code>a=1.000, b=2.0e+00</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="string">f&#x27;a=<span class="subst">&#123;a&#125;</span>, b=<span class="subst">&#123;b:<span class="number">.3</span>f&#125;</span>&#x27;</span>)</span><br></pre></td></tr></table></figure>
+<pre><code>a=1.0, b=2.000</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">%%python2</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;xxx&#x27;</span>),</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;yyy&#x27;</span>)</span><br></pre></td></tr></table></figure>
+<pre><code>xxx yyy</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">%%python3</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;xxx&#x27;</span>, end=<span class="string">&#x27; &#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;yyy&#x27;</span>)</span><br></pre></td></tr></table></figure>
+<pre><code>xxx yyy</code></pre>
+<p>更多格式化参考 <a target="_blank" rel="noopener" href="https://pyformat.info/"
+class="uri">https://pyformat.info/</a></p>
+<h3 id="基本运算"><a href="#基本运算"
+class="headerlink"></a>基本运算</h3>
+<p>运算符参考:<br> <a
+target="_blank" rel="noopener" href="https://en.wikibooks.org/wiki/Python_Programming/Basic_Math"
+class="uri">https://en.wikibooks.org/wiki/Python_Programming/Basic_Math</a><br>
+<a
+target="_blank" rel="noopener" href="https://www.tutorialspoint.com/python/python_basic_operators.htm"
+class="uri">https://www.tutorialspoint.com/python/python_basic_operators.htm</a></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">a = <span class="number">1</span></span><br><span class="line">a += <span class="number">1</span>  <span class="comment"># 没有 a++ 这种语法</span></span><br><span class="line">a</span><br></pre></td></tr></table></figure>
+<pre><code>2</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">3.</span> ** <span class="number">2</span>  <span class="comment"># 自动转换数据类型</span></span><br></pre></td></tr></table></figure>
+<pre><code>9.0</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span> &lt; <span class="number">2</span> != <span class="number">3</span>  <span class="comment"># 判断, 可以连写</span></span><br></pre></td></tr></table></figure>
+<pre><code>True</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">a = <span class="literal">None</span></span><br><span class="line">a <span class="keyword">is</span> <span class="literal">None</span>  <span class="comment"># 注意这时不用 `==`</span></span><br></pre></td></tr></table></figure>
+<pre><code>True</code></pre>
+<h3 id="字符串"><a href="#字符串" class="headerlink"></a>字符串</h3>
+<p>用双引号和单引号皆可 (取决于所引内容).<br> 字符串具有和列表 (list)
+类似的运算规则 (见之后的 list 说明):</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&#x27;a&#x27;</span> * <span class="number">10</span></span><br></pre></td></tr></table></figure>
+<pre><code>&#39;aaaaaaaaaa&#39;</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&#x27;a&#x27;</span> + <span class="string">&#x27;b&#x27;</span></span><br></pre></td></tr></table></figure>
+<pre><code>&#39;ab&#39;</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&#x27;abc&#x27;</span>[<span class="number">0</span>]</span><br></pre></td></tr></table></figure>
+<pre><code>&#39;a&#39;</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;\n&#x27;</span>)</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="string">r&#x27;\n&#x27;</span>)  <span class="comment"># same as &#x27;\\n&#x27;</span></span><br></pre></td></tr></table></figure>
+<pre><code>\n</code></pre>
+<h3 id="list-tuple-dict-set"><a href="#list-tuple-dict-set"
+class="headerlink"></a>list, tuple, dict, set</h3>
+<ul>
+<li>有序表 list, tuple</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">l = [<span class="number">0</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>]  <span class="comment"># list, 元素可变</span></span><br><span class="line">t = (<span class="number">0</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>)  <span class="comment"># tuple, 元素不可变</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">l[<span class="number">0</span>:<span class="number">3</span>]  <span class="comment"># 一个切片(slice)</span></span><br></pre></td></tr></table></figure>
+<pre><code>[0, 1, 2]</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">t[<span class="number">0</span>:<span class="number">3</span>]</span><br></pre></td></tr></table></figure>
+<pre><code>(0, 1, 2)</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">l[<span class="number">1</span>:<span class="number">5</span>:<span class="number">2</span>]  <span class="comment"># 索引: [start, stop, step] (结果不包含 stop)</span></span><br></pre></td></tr></table></figure>
+<pre><code>[1, 3]</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">l[<span class="number">5</span>:<span class="number">1</span>:-<span class="number">1</span>]  <span class="comment"># step &lt; 0, 仍然不包含 stop (此例中 stop=1)</span></span><br></pre></td></tr></table></figure>
+<pre><code>[5, 4, 3, 2]</code></pre>
+<p>list 常用运算</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">l = [<span class="number">0</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>]</span><br><span class="line">l.append(<span class="string">&#x27;x&#x27;</span>)  <span class="comment"># 添加在最后</span></span><br><span class="line"><span class="built_in">print</span>(l)</span><br><span class="line">l.insert(<span class="number">3</span>, <span class="string">&#x27;y&#x27;</span>)  <span class="comment"># 添加在 l[i] 之前</span></span><br><span class="line"><span class="built_in">print</span>(l)</span><br><span class="line"><span class="built_in">print</span>(l.pop(<span class="number">1</span>))  <span class="comment"># 删除某元素并返回该值</span></span><br><span class="line"><span class="built_in">print</span>(l)</span><br></pre></td></tr></table></figure>
+<pre><code>[0, 1, 2, 3, 4, 5, &#39;x&#39;]
+[0, 1, 2, &#39;y&#39;, 3, 4, 5, &#39;x&#39;]
+1
+[0, 2, &#39;y&#39;, 3, 4, 5, &#39;x&#39;]</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(l * <span class="number">2</span>)  <span class="comment"># 重复N遍</span></span><br><span class="line"><span class="built_in">print</span>(l + [<span class="number">6</span>, <span class="number">7</span>])  <span class="comment"># 合并两个list</span></span><br></pre></td></tr></table></figure>
+<pre><code>[1, &#39;y&#39;, 2, 3, 4, 5, &#39;x&#39;, 1, &#39;y&#39;, 2, 3, 4, 5, &#39;x&#39;]
+[1, &#39;y&#39;, 2, 3, 4, 5, &#39;x&#39;, 6, 7]</code></pre>
+<p>list 可以排序 (当元素为同一类型且可比较大小时), 返回到原列表</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">l = [<span class="string">&#x27;b&#x27;</span>, <span class="string">&#x27;a&#x27;</span>]</span><br><span class="line">l.sort()</span><br><span class="line">l</span><br></pre></td></tr></table></figure>
+<pre><code>[&#39;a&#39;, &#39;b&#39;]</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">l = [<span class="number">2</span>, <span class="number">1</span>]</span><br><span class="line">l.sort()</span><br><span class="line">l</span><br></pre></td></tr></table></figure>
+<pre><code>[1, 2]</code></pre>
+<ul>
+<li>字典 dict</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">d = &#123;<span class="string">&#x27;a&#x27;</span> : <span class="number">1</span>, <span class="string">&#x27;b&#x27;</span> : <span class="number">2</span>&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">d = <span class="built_in">dict</span>(a=<span class="number">1</span>, b=<span class="number">2</span>) <span class="comment"># 注意这时没有引号</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">d[<span class="string">&#x27;a&#x27;</span>]</span><br></pre></td></tr></table></figure>
+<pre><code>1</code></pre>
+<ul>
+<li>集合 set</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">s = &#123;<span class="number">3</span>, <span class="number">2</span>, <span class="number">1</span>, <span class="number">3</span>&#125;  <span class="comment"># set, 将自动排序并去除重复, 常用于 for 循环</span></span><br><span class="line">s  <span class="comment"># 不能用 s[i] 来索引</span></span><br></pre></td></tr></table></figure>
+<pre><code>&#123;1, 2, 3&#125;</code></pre>
+<p>set 不可索引, 但可用作 for 循环. 见 <a
+href="/advance.html#循环-迭代器-生成器">Python 进阶#迭代器</a></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> s:</span><br><span class="line">    <span class="built_in">print</span>(i)</span><br></pre></td></tr></table></figure>
+<pre><code>1
+2
+3</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">l2 = [i <span class="keyword">for</span> i <span class="keyword">in</span> s]</span><br><span class="line"><span class="built_in">print</span>(l2)</span><br></pre></td></tr></table></figure>
+<pre><code>[1, 2, 3]</code></pre>
+<h3 id="if-语句"><a href="#if-语句" class="headerlink"></a>if 语句</h3>
+<p>python 里没有 <code>case</code>, 只有 <code>if</code>
+(非零数值、非空字符串、非空 list 等皆为 True) <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> &lt;条件判断<span class="number">1</span>&gt;:</span><br><span class="line">    &lt;执行<span class="number">1</span>&gt;</span><br><span class="line"><span class="keyword">elif</span> &lt;条件判断<span class="number">2</span>&gt;:</span><br><span class="line">    &lt;执行<span class="number">2</span>&gt;</span><br><span class="line"><span class="keyword">elif</span> &lt;条件判断<span class="number">3</span>&gt;:</span><br><span class="line">    &lt;执行<span class="number">3</span>&gt;</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    &lt;执行<span class="number">4</span>&gt;</span><br></pre></td></tr></table></figure></p>
+<h3 id="相关工具"><a href="#相关工具"
+class="headerlink"></a>相关工具</h3>
+<h4 id="pip"><a href="#pip" class="headerlink"></a>pip</h4>
+<p><img data-src='/main/logo-large.72ad8bf1.svg' /></p>
+<blockquote>
+<p>The <strong>Python Package Index (PyPI)</strong> is a repository of
+software for the Python programming language.<br/> PyPI helps you find
+and install software developed and shared by the Python community.<br/>
+<a target="_blank" rel="noopener" href="https://pypi.org/" class="uri">https://pypi.org/</a></p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ pip install &lt;pkg_name&gt;</span><br></pre></td></tr></table></figure>
+<p>    (其他命令见 <a
+href="/installpy.html#用-pip-安装-python-包">Python 安装和配置#用 pip
+安装 python 包</a>)</p>
+<h4 id="anaconda"><a href="#anaconda"
+class="headerlink"></a>Anaconda</h4>
+<p><img data-src='/main/DataScienceLibraries-01.png' />
+<img data-src='/main/Conda-DistributionDiagram-01.png' /></p>
+<p><img data-src='/main/Conda — Conda documentation.png' /></p>
+<p><strong>Anaconda</strong> (https://www.anaconda.com/)<br> 安装好的
+conda 包含独立于系统的 python 版本, 一部分已编译好的包, pip 工具,
+以及不同环境的子目录.<br/> 可根据需要切换不同的 conda 环境以使用不同的
+python 版本或不同的包的组合.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ conda install &lt;pkg_name&gt;</span><br></pre></td></tr></table></figure>
+<p>其他命令见 <a href="/installpy.html#使用-conda-命令">Python
+安装和配置#使用 conda 命令</a><br> 详细说明见 <a
+href="/advance.html#anaconda">Python 进阶#Anaconda</a></p>
+<h4 id="ipython-jupyter"><a href="#ipython-jupyter"
+class="headerlink"></a>IPython &amp; Jupyter</h4>
+<p><img style='float: center;' data-src='/main/IPython.png' /></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Have a look (ipython)</span></span><br><span class="line">!cd &amp;&amp; gnome-terminal --window-<span class="keyword">with</span>-profile=<span class="string">&#x27;lydia_white&#x27;</span></span><br><span class="line">!sleep <span class="number">0.5</span> &amp;&amp; xdotool <span class="built_in">type</span> --delay <span class="number">200</span> <span class="string">&quot;ipython&quot;</span> &amp;&amp; xdotool key Return</span><br><span class="line">!sleep <span class="number">3</span> &amp;&amp; xdotool <span class="built_in">type</span> --delay <span class="number">200</span> <span class="string">&quot;!idl&quot;</span> &amp;&amp; xdotool key Return</span><br><span class="line">!sleep <span class="number">3</span> &amp;&amp; xdotool key Ctrl+d</span><br><span class="line">!sleep <span class="number">1</span> &amp;&amp; xdotool <span class="built_in">type</span> --delay <span class="number">200</span> <span class="string">&quot;!csh -c sswidl&quot;</span> &amp;&amp; xdotool key Return</span><br></pre></td></tr></table></figure>
+<center>
+<a target="_blank" rel="noopener" href="http://jupyter.org/" class="uri">http://jupyter.org/</a>
+</center>
+<p><img style='float: center;' data-src='/main/jupyterlogo.png' /></p>
+<center>
+<a target="_blank" rel="noopener" href="https://nbviewer.jupyter.org/"
+class="uri">https://nbviewer.jupyter.org/</a>
+</center>
+<p><img style='float: center;' data-src='/main/nbviewer.png' /></p>
+<p>参考文档 <a target="_blank" rel="noopener" href="http://jupyter-notebook.readthedocs.io/en/stable/"
+class="uri">http://jupyter-notebook.readthedocs.io/en/stable/</a></p>
+<ul>
+<li>打开 <code>jupyter notebook</code>:</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ jupyter notebook [filename]</span><br></pre></td></tr></table></figure>
+<h2 id="常用包介绍"><a href="#常用包介绍"
+class="headerlink"></a>常用包介绍</h2>
+<h3 id="python-自带包和模块"><a href="#python-自带包和模块"
+class="headerlink"></a>Python 自带包和模块</h3>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> math <span class="keyword">import</span> * <span class="comment"># 包含 pi 等, 但更推荐 numpy</span></span><br><span class="line"><span class="keyword">from</span> copy <span class="keyword">import</span> deepcopy</span><br><span class="line"><span class="keyword">from</span> pprint <span class="keyword">import</span> pprint  <span class="comment"># 打印 list, dict 等更好看</span></span><br><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">import</span> sys</span><br></pre></td></tr></table></figure>
+<h3 id="numpy-scipy"><a href="#numpy-scipy"
+class="headerlink"></a>NumPy, SciPy</h3>
+<h4 id="概览"><a href="#概览" class="headerlink"></a>概览</h4>
+<center>
+<a target="_blank" rel="noopener" href="https://www.scipy.org" class="uri">https://www.scipy.org</a>
+</center>
+<p><img data-src='/main/SciPy.png' /></p>
+<center>
+<a target="_blank" rel="noopener" href="http://scikit-image.org"
+class="uri">http://scikit-image.org</a>
+</center>
+<p><img data-src='/main/scikitlogo.png' />
+<img data-src='/main/skimage01.png' /></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br></pre></td></tr></table></figure>
+<p>导入包的不同方式将在各例子中看到.</p>
+<p>参考:</p>
+<ul>
+<li>NumPy User Guide <a target="_blank" rel="noopener" href="https://docs.scipy.org/doc/numpy/user/"
+class="uri">https://docs.scipy.org/doc/numpy/user/</a></li>
+<li>NumPy Reference <a
+target="_blank" rel="noopener" href="https://docs.scipy.org/doc/numpy/reference/"
+class="uri">https://docs.scipy.org/doc/numpy/reference/</a></li>
+<li>ndarray<br><a
+target="_blank" rel="noopener" href="https://docs.scipy.org/doc/numpy/reference/arrays.ndarray.html"
+class="uri">https://docs.scipy.org/doc/numpy/reference/arrays.ndarray.html</a></li>
+<li>Array manipulation routines<br><a
+target="_blank" rel="noopener" href="https://docs.scipy.org/doc/numpy/reference/routines.array-manipulation.html"
+class="uri">https://docs.scipy.org/doc/numpy/reference/routines.array-manipulation.html</a></li>
+<li>SciPy Cookbook <a target="_blank" rel="noopener" href="http://scipy-cookbook.readthedocs.io/"
+class="uri">http://scipy-cookbook.readthedocs.io/</a></li>
+<li>与 IDL 的语法对照
+<ul>
+<li><a target="_blank" rel="noopener" href="http://mathesaurus.sourceforge.net/idl-numpy.html"
+class="uri">http://mathesaurus.sourceforge.net/idl-numpy.html</a></li>
+<li><a
+target="_blank" rel="noopener" href="http://blog.rtwilson.com/ten-little-idl-programs-in-python/"
+class="uri">http://blog.rtwilson.com/ten-little-idl-programs-in-python/</a></li>
+<li><a target="_blank" rel="noopener" href="http://www.astrobetter.com/blog/2009/05/04/idl-vs-python/"
+class="uri">http://www.astrobetter.com/blog/2009/05/04/idl-vs-python/</a></li>
+</ul></li>
+</ul>
+<h4 id="生成-numpy.ndarray-数组"><a href="#生成-numpy.ndarray-数组"
+class="headerlink"></a>生成 numpy.ndarray 数组</h4>
+<p>将 list 或 tuple 转换为 <code>numpy.ndarray</code> <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line">a = np.array([<span class="number">0</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>])</span><br><span class="line"><span class="comment"># 切片(slice), 索引可以是 int 或 list (python list 只支持 list作为索引)</span></span><br><span class="line">a[<span class="number">0</span>]          <span class="comment"># 0</span></span><br><span class="line">a[-<span class="number">1</span>]         <span class="comment"># 4</span></span><br><span class="line">a[<span class="number">0</span>:<span class="number">3</span>]        <span class="comment"># array([0, 1, 2]) 注意!</span></span><br><span class="line">a[:<span class="number">3</span>]         <span class="comment"># array([0, 1, 2])</span></span><br><span class="line">a[<span class="number">2</span>:<span class="number">4</span>]        <span class="comment"># array([2, 3])</span></span><br><span class="line">a[<span class="number">2</span>:-<span class="number">1</span>]       <span class="comment"># array([2, 3]) 注意!</span></span><br><span class="line">a[<span class="number">2</span>:]         <span class="comment"># array([2, 3, 4])</span></span><br><span class="line">a[<span class="number">0</span>:<span class="number">4</span>:<span class="number">2</span>]      <span class="comment"># array([0, 2])</span></span><br><span class="line">a[<span class="number">4</span>:<span class="number">2</span>:-<span class="number">1</span>]     <span class="comment"># array([4, 3])</span></span><br><span class="line">a[[<span class="number">1</span>, <span class="number">4</span>, <span class="number">3</span>]]  <span class="comment"># array([1, 4, 3]) 花式切片, 索引是一个 list (不能是tuple)</span></span><br></pre></td></tr></table></figure></p>
+<p>多维:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a = np.array([[<span class="number">0</span>, <span class="number">1</span>, <span class="number">2</span>], [<span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>]]); a</span><br></pre></td></tr></table></figure>
+<pre><code>array([[0, 1, 2],
+       [3, 4, 5]])</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">a = np.array(((<span class="number">0</span>, <span class="number">1</span>, <span class="number">2</span>), (<span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>))); a</span><br><span class="line"><span class="comment"># 这里的tuple已转成ndarray, 于是结果是可变的</span></span><br></pre></td></tr></table></figure>
+<pre><code>array([[0, 1, 2],
+       [3, 4, 5]])</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a[<span class="number">0</span>, <span class="number">1</span>]</span><br></pre></td></tr></table></figure>
+<pre><code>1</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a[<span class="number">0</span>][<span class="number">1</span>]</span><br></pre></td></tr></table></figure>
+<pre><code>1</code></pre>
+<p>从一维数组转变为多维:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">a = np.arange(<span class="number">12</span>).reshape((<span class="number">3</span>, -<span class="number">1</span>)); a</span><br><span class="line"><span class="comment"># reshape 的参数为 &lt; 0 表示该维度自动判断元素个数</span></span><br><span class="line"><span class="comment"># reshape 的参数是一个 list 或 tuple, 括号可以展开 (详见帮助文档)</span></span><br><span class="line"><span class="comment"># 此例中 reshape((3, 2)), reshape(3, 2), reshape((3, -1)), reshape(3, -1) 等价</span></span><br></pre></td></tr></table></figure>
+<pre><code>array([[ 0,  1,  2,  3],
+       [ 4,  5,  6,  7],
+       [ 8,  9, 10, 11]])</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">b = a.reshape(-<span class="number">1</span>); b  <span class="comment"># reshape 的参数只有一个维度且 &lt; 0(自动)  =&gt; 展开成一维</span></span><br></pre></td></tr></table></figure>
+<pre><code>array([ 0,  1,  2,  3,  4,  5,  6,  7,  8,  9, 10, 11])</code></pre>
+<p>花式切片的多维例子:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">a = np.arange(<span class="number">12</span>).reshape(<span class="number">3</span>, -<span class="number">1</span>)</span><br><span class="line">a[[<span class="number">0</span>, <span class="number">1</span>],[<span class="number">0</span>, <span class="number">2</span>]]</span><br><span class="line"><span class="comment"># a[col_inds, row_inds], 此例等价于 a[[[0, 1], [0, 2]]], a[([0, 1], [0, 2])]</span></span><br></pre></td></tr></table></figure>
+<pre><code>array([0, 6])</code></pre>
+<ul>
+<li><strong>np.zeros</strong>(shape,
+dtype=float), <strong>np.ones</strong>(shape, dtype=float)</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">np.zeros((<span class="number">2</span>, <span class="number">3</span>))  <span class="comment"># 默认浮点型</span></span><br></pre></td></tr></table></figure>
+<pre><code>array([[0., 0., 0.],
+       [0., 0., 0.]])</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">np.ones((<span class="number">2</span>, <span class="number">3</span>))  <span class="comment"># 默认浮点型</span></span><br></pre></td></tr></table></figure>
+<pre><code>array([[1., 1., 1.],
+       [1., 1., 1.]])</code></pre>
+<ul>
+<li><strong>np.arange</strong>([start,] stop[, step,], dtype=None)</li>
+</ul>
+<p>生成的数组元素数据类型和参数一致.<br><br> 方便记忆: 最简形式
+<code>np.arange</code>(<em>N</em>) 中的整数 <em>N</em> 即为
+<em>元素个数</em>.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">np.arange(<span class="number">6</span>).reshape((<span class="number">3</span>, <span class="number">2</span>))</span><br></pre></td></tr></table></figure>
+<pre><code>array([[0, 1],
+       [2, 3],
+       [4, 5]])</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">np.arange(<span class="number">6</span>).reshape((<span class="number">3</span>, -<span class="number">1</span>))</span><br></pre></td></tr></table></figure>
+<pre><code>array([[0, 1],
+       [2, 3],
+       [4, 5]])</code></pre>
+<ul>
+<li><strong>np.linspace</strong>(start, stop, num=50,
+<strong>endpoint=True</strong>, retstep=False, dtype=None)<br>
+默认生成的元素是浮点型<br> 注意 <code>np.linspace</code> 和
+<code>np.arange</code> 的不同规则</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">np.linspace(<span class="number">0</span>, <span class="number">1</span>, <span class="number">2</span>)</span><br></pre></td></tr></table></figure>
+<pre><code>array([0., 1.])</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">np.linspace(<span class="number">0</span>, <span class="number">1</span>, <span class="number">2</span>, endpoint=<span class="literal">False</span>) </span><br></pre></td></tr></table></figure>
+<pre><code>array([0. , 0.5])</code></pre>
+<p>更多数组创建方法见 numpy 官网:<br> <a
+target="_blank" rel="noopener" href="https://docs.scipy.org/doc/numpy/reference/routines.array-creation.html"
+class="uri">https://docs.scipy.org/doc/numpy/reference/routines.array-creation.html</a><br>
+<a
+target="_blank" rel="noopener" href="https://docs.scipy.org/doc/numpy/user/basics.creation.html#arrays-creation"
+class="uri">https://docs.scipy.org/doc/numpy/user/basics.creation.html#arrays-creation</a></p>
+<ul>
+<li>转置</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a = np.arange(<span class="number">12</span>).reshape(<span class="number">3</span>, -<span class="number">1</span>); a</span><br></pre></td></tr></table></figure>
+<pre><code>array([[ 0,  1,  2,  3],
+       [ 4,  5,  6,  7],
+       [ 8,  9, 10, 11]])</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a.T</span><br></pre></td></tr></table></figure>
+<pre><code>array([[ 0,  4,  8],
+       [ 1,  5,  9],
+       [ 2,  6, 10],
+       [ 3,  7, 11]])</code></pre>
+<p>更多数组操作见 numpy 官网 <a
+target="_blank" rel="noopener" href="https://docs.scipy.org/doc/numpy/reference/routines.array-manipulation.html"
+class="uri">https://docs.scipy.org/doc/numpy/reference/routines.array-manipulation.html</a>
+矩阵操作见 <a href="/advance.html#矩阵">Python 进阶#矩阵</a></p>
+<h3 id="matplotlib"><a href="#matplotlib"
+class="headerlink"></a>Matplotlib</h3>
+<ul>
+<li><p>官方示例 <a target="_blank" rel="noopener" href="https://matplotlib.org/tutorials/index.html"
+class="uri">https://matplotlib.org/tutorials/index.html</a>
+<img data-src='/main/Matplotlib.png' />
+<img data-src='/main/annotation_demo2_00.png' />
+<img data-src='/main/contour_demo_05.png' /></p></li>
+<li><p>官方教程 <a
+target="_blank" rel="noopener" href="https://matplotlib.org/tutorials/introductory/usage.html"
+class="uri">https://matplotlib.org/tutorials/introductory/usage.html</a></p></li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br></pre></td></tr></table></figure>
+<p>创建一个图像 (三种写法皆可):</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fig, ax = plt.subplots()</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">fig = plt.figure(<span class="number">1</span>, (<span class="number">12</span>, <span class="number">6</span>), dpi=<span class="number">100</span>)</span><br><span class="line">ax = fig.add_subplot(<span class="number">111</span>)  <span class="comment"># 数字 (ijk) 表示: 这是一共i行j列中的组图中的第k个图</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">fig = plt.gcf()</span><br><span class="line">ax = plt.gca()</span><br></pre></td></tr></table></figure>
+<p>获取帮助:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">help</span>(ax)</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 查看某对象包含的方法</span></span><br><span class="line">ax.<span class="comment"># &lt;Tab&gt;, &lt;Shift-Tab&gt;</span></span><br><span class="line">plt.<span class="comment"># &lt;Tab&gt;, &lt;Shift-Tab&gt;</span></span><br></pre></td></tr></table></figure>
+<p>例:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">%matplotlib?</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">%matplotlib</span><br><span class="line">%run -e <span class="string">&#x27;examples/test_plot.py&#x27;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">%matplotlib</span><br><span class="line">%run -e <span class="string">&#x27;examples/test_imshow.py&#x27;</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>颜色 <a
+target="_blank" rel="noopener" href="https://matplotlib.org/examples/color/colormaps_reference.html"
+class="uri">https://matplotlib.org/examples/color/colormaps_reference.html</a></li>
+<li>legend <a target="_blank" rel="noopener" href="https://matplotlib.org/users/legend_guide.html"
+class="uri">https://matplotlib.org/users/legend_guide.html</a> <br>
+<img data-src='/main/named_colors.png' /></li>
+</ul>
+<h3 id="天文相关包"><a href="#天文相关包"
+class="headerlink"></a>天文相关包</h3>
+<h4 id="astropy"><a href="#astropy" class="headerlink"></a>Astropy</h4>
+<p><img data-src='/main/astropy_banner.svg' /></p>
+<p>官方文档 <a target="_blank" rel="noopener" href="http://docs.astropy.org/en/stable/index.html"
+class="uri">http://docs.astropy.org/en/stable/index.html</a></p>
+<p>坐标系统 <a
+target="_blank" rel="noopener" href="http://docs.astropy.org/en/stable/coordinates/index.html"
+class="uri">http://docs.astropy.org/en/stable/coordinates/index.html</a></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> astropy <span class="keyword">import</span> units <span class="keyword">as</span> u</span><br><span class="line"><span class="keyword">from</span> astropy.coordinates <span class="keyword">import</span> SkyCoord</span><br></pre></td></tr></table></figure>
+<p>参考 <a
+target="_blank" rel="noopener" href="https://python4astronomers.github.io/astropy/astropy.html"
+class="uri">https://python4astronomers.github.io/astropy/astropy.html</a></p>
+<h4 id="sunpy"><a href="#sunpy" class="headerlink"></a>SunPy</h4>
+<p><img data-src='/main/Screenshot_20180625-005924.png' />
+<img data-src='/main/sphx_glr_lat_lon_lines_001.png' />
+<img data-src='/main/sphx_glr_submaps_and_cropping_001.png' /></p>
+<p><br> HMI 示例见 <a href="/advance.html#sunpy-示例">Python 进阶#SunPy
+示例</a><br> <a target="_blank" rel="noopener" href="https://github.com/lydiazly/scripts-sunpy"
+class="uri">https://github.com/lydiazly/scripts-sunpy</a></p>
+<p><br><br> 参考:</p>
+<ul>
+<li>Gallery <a
+target="_blank" rel="noopener" href="http://docs.sunpy.org/en/stable/generated/gallery/index.html"
+class="uri">http://docs.sunpy.org/en/stable/generated/gallery/index.html</a></li>
+<li>SunPy Guide <a
+target="_blank" rel="noopener" href="http://docs.sunpy.org/en/stable/guide/index.html"
+class="uri">http://docs.sunpy.org/en/stable/guide/index.html</a></li>
+<li>SunPy Map<br><a
+target="_blank" rel="noopener" href="http://docs.sunpy.org/en/stable/code_ref/map.html#sunpy.map.mapbase.GenericMap"
+class="uri">http://docs.sunpy.org/en/stable/code_ref/map.html#sunpy.map.mapbase.GenericMap</a></li>
+<li>Example Gallery <a
+target="_blank" rel="noopener" href="http://docs.sunpy.org/en/stable/generated/gallery/index.html"
+class="uri">http://docs.sunpy.org/en/stable/generated/gallery/index.html</a></li>
+<li>A brief tour of SunPy <a
+target="_blank" rel="noopener" href="http://docs.sunpy.org/en/stable/guide/tour.html"
+class="uri">http://docs.sunpy.org/en/stable/guide/tour.html</a></li>
+<li>Finding and Downloading Data using Fido<br><a
+target="_blank" rel="noopener" href="http://docs.sunpy.org/en/stable/guide/acquiring_data/fido.html"
+class="uri">http://docs.sunpy.org/en/stable/guide/acquiring_data/fido.html</a></li>
+</ul>
+<p>简单的例子 (来自官网):</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">%matplotlib inline</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> sunpy.<span class="built_in">map</span></span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="keyword">import</span> sunpy.data.sample</span><br><span class="line"></span><br><span class="line">aia = sunpy.<span class="built_in">map</span>.Map(sunpy.data.sample.AIA_171_IMAGE)</span><br><span class="line"></span><br><span class="line">fig = plt.figure(<span class="number">1</span>, (<span class="number">5</span>, <span class="number">5</span>), dpi=<span class="number">100</span>)</span><br><span class="line">ax = plt.subplot(<span class="number">111</span>, projection=aia)</span><br><span class="line"></span><br><span class="line">aia.plot()</span><br><span class="line">aia.draw_limb()</span><br><span class="line">aia.draw_grid()</span><br><span class="line">aia.draw_limb()</span><br><span class="line">plt.colorbar();</span><br><span class="line"></span><br><span class="line"><span class="comment"># plt.show()</span></span><br></pre></td></tr></table></figure>
+<pre><code>/home/lydia/miniconda3/lib/python3.6/site-packages/sunpy/map/sources/sdo.py:48: SunpyDeprecationWarning: Use Matplotlib to load the colormaps
+  self.plot_settings[&#39;cmap&#39;] = cm.get_cmap(self._get_cmap_name())</code></pre>
+<figure>
+<img data-src="/main/main_126_1.png" alt="png" />
+<figcaption aria-hidden="true">png</figcaption>
+</figure>
+<p>获取一些常数:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> sunpy.sun <span class="keyword">import</span> constants <span class="keyword">as</span> con</span><br><span class="line"><span class="comment"># one astronomical unit (the average distance between the Sun and Earth)</span></span><br><span class="line"><span class="built_in">print</span>(con.au)</span><br></pre></td></tr></table></figure>
+<pre><code>  Name   = Astronomical Unit
+  Value  = 149597870700.0
+  Uncertainty  = 0.0
+  Unit  = m
+  Reference = IAU 2012 Resolution B2</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># the solar radius</span></span><br><span class="line"><span class="built_in">print</span>(con.radius)</span><br></pre></td></tr></table></figure>
+<pre><code>  Name   = Solar radius
+  Value  = 695508000.0
+  Uncertainty  = 26000.0
+  Unit  = m
+  Reference = Allen&#39;s Astrophysical Quantities 4th Ed.</code></pre>
+<h2 id="常见数据文件读写"><a href="#常见数据文件读写"
+class="headerlink"></a>常见数据文件读写</h2>
+<h3 id="一般情况"><a href="#一般情况"
+class="headerlink"></a>一般情况</h3>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">f = <span class="built_in">open</span>(filename, <span class="string">&#x27;w&#x27;</span>)  <span class="comment"># &#x27;w&#x27;, &#x27;r&#x27;, ...</span></span><br><span class="line">...</span><br><span class="line">...</span><br><span class="line">f.close()</span><br></pre></td></tr></table></figure>
+<p>更好的用法: <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">with</span> <span class="built_in">open</span>(filename, <span class="string">&#x27;w&#x27;</span>) <span class="keyword">as</span> f:  <span class="comment"># &#x27;w&#x27;, &#x27;r&#x27;, ...</span></span><br><span class="line">    ...</span><br><span class="line">    ...</span><br></pre></td></tr></table></figure></p>
+<h3 id="txt-csv-文件读写"><a href="#txt-csv-文件读写"
+class="headerlink"></a>txt, csv 文件读写</h3>
+<ul>
+<li>逐行读取整行的方式:<br> 使用 <code>strip</code>
+可以用来去掉读入的每行末尾的 ''</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">lines = []</span><br><span class="line"><span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&#x27;data/data.csv&#x27;</span>, <span class="string">&#x27;r&#x27;</span>) <span class="keyword">as</span> f:</span><br><span class="line">    <span class="keyword">for</span> line <span class="keyword">in</span> f:</span><br><span class="line">        lines.append(line.strip().split(<span class="string">&#x27;,&#x27;</span>))</span><br><span class="line">lines</span><br></pre></td></tr></table></figure>
+<pre><code>[[&#39;col1&#39;, &#39;col2&#39;, &#39;col3&#39;],
+ [&#39;row1&#39;, &#39;1&#39;, &#39;1e1&#39;],
+ [&#39;row2&#39;, &#39;2&#39;, &#39;2e-1&#39;],
+ [&#39;row3&#39;, &#39;3&#39;, &#39;3e+2&#39;]]</code></pre>
+<ul>
+<li>使用 numpy, 读取后直接转成数组的方式 (推荐):<br>
+<code>np.loadtxt</code>, <code>np.genfromtxt</code> (写文件是
+<code>np.savetxt</code>)<br> 超大文件读取建议用 pandas 包.</li>
+</ul>
+<p>e.g.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>arr = np.loadtxt(fname, skiprows=<span class="number">1</span>, delimiter=<span class="string">&#x27;,&#x27;</span>) <span class="comment"># 默认分割符为空格</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>col1, col2 = np.loadtxt(fname, skiprows=<span class="number">1</span>, usecols=(<span class="number">1</span>, <span class="number">2</span>), unpack=<span class="literal">True</span>)</span><br></pre></td></tr></table></figure>
+<p><code>np.genfromtxt</code> 和 <code>np.loadtxt</code> 类似,
+增加了处理 missing values 的功能.<br> (但参数 skiprows=1 需替换为
+skip_header=1)</p>
+<p>例 (这里使用功能更多的 <code>np.genfromtxt</code> 代替
+<code>np.loadtxt</code>):</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">arr = np.genfromtxt(<span class="string">&#x27;data/data.csv&#x27;</span>,</span><br><span class="line">                    skip_header=<span class="number">1</span>,</span><br><span class="line">                    names=(<span class="string">&#x27;col1&#x27;</span>, <span class="string">&#x27;col2&#x27;</span>, <span class="string">&#x27;col3&#x27;</span>),</span><br><span class="line">                    dtype=(<span class="string">&#x27;U15&#x27;</span>, <span class="string">&#x27;int&#x27;</span>, <span class="string">&#x27;float&#x27;</span>),</span><br><span class="line">                    delimiter=<span class="string">&#x27;,&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(arr[[<span class="string">&#x27;col1&#x27;</span>, <span class="string">&#x27;col2&#x27;</span>]])  <span class="comment"># 设定了 names 之后, 可以用名称索引</span></span><br></pre></td></tr></table></figure>
+<pre><code>[(&#39;row1&#39;, 1) (&#39;row2&#39;, 2) (&#39;row3&#39;, 3)]</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">arr = np.genfromtxt(<span class="string">&#x27;data/data2.csv&#x27;</span>,</span><br><span class="line">                    skip_header=<span class="number">1</span>,</span><br><span class="line">                    names=(<span class="string">&#x27;col1&#x27;</span>, <span class="string">&#x27;col2&#x27;</span>, <span class="string">&#x27;col3&#x27;</span>),</span><br><span class="line">                    dtype=(<span class="string">&#x27;U15&#x27;</span>, <span class="string">&#x27;int&#x27;</span>, <span class="string">&#x27;float&#x27;</span>),</span><br><span class="line">                    missing_values=<span class="literal">None</span>,</span><br><span class="line">                    filling_values=(<span class="string">&#x27;&#x27;</span>, <span class="number">0</span>, np.nan),  <span class="comment"># 分开指定</span></span><br><span class="line">                    delimiter=<span class="string">&#x27;,&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(arr)</span><br></pre></td></tr></table></figure>
+<pre><code>[(&#39;row1&#39;, 0, 10. ) (&#39;&#39;, 2,  0.2) (&#39;row3&#39;, 3,  nan)]</code></pre>
+<ul>
+<li>一般而言, 对于一个由分隔符分隔的字符串, 转成一个数组的方式:<br>
+<code>np.fromstring(string, dtype=float, count=-1, sep='')</code></li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">np.fromstring(<span class="string">&#x27;0 1 2&#x27;</span>, dtype=<span class="built_in">int</span>, sep=<span class="string">&#x27; &#x27;</span>)</span><br></pre></td></tr></table></figure>
+<pre><code>array([0, 1, 2])</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">np.fromstring(<span class="string">&#x27;0., 1., 2.&#x27;</span>, sep=<span class="string">&#x27;,&#x27;</span>)</span><br></pre></td></tr></table></figure>
+<pre><code>array([0., 1., 2.])</code></pre>
+<h3 id="numpy-save-文件读写"><a href="#numpy-save-文件读写"
+class="headerlink"></a>numpy save 文件读写</h3>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">np.save(<span class="string">&#x27;fname&#x27;</span>, arr)  <span class="comment"># &#x27;fname.npy&#x27;</span></span><br><span class="line">np.savez(<span class="string">&#x27;fname&#x27;</span>, arr)  <span class="comment"># &#x27;fname.npz&#x27;, 多个变量</span></span><br><span class="line">np.savez_compressed(<span class="string">&#x27;fname&#x27;</span>, arr)  <span class="comment"># &#x27;fname.npz&#x27;, 多个变量 &amp; 压缩</span></span><br><span class="line">np.load(<span class="string">&#x27;fname.npz&#x27;</span>)  <span class="comment"># Load the files created by savez_compressed.</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 存入</span></span><br><span class="line">arr = np.ones(<span class="number">5</span>)  <span class="comment"># 默认 `float64`</span></span><br><span class="line">np.savez(<span class="string">&#x27;data/np_array&#x27;</span>, a=arr, b=<span class="number">0</span>)</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ls data/*.npz</span><br></pre></td></tr></table></figure>
+<pre><code>data/np_array.npz</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 载入</span></span><br><span class="line">data = np.load(<span class="string">&#x27;data/np_array.npz&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>((data[<span class="string">&#x27;a&#x27;</span>], data[<span class="string">&#x27;b&#x27;</span>], <span class="built_in">int</span>(data[<span class="string">&#x27;b&#x27;</span>])))  <span class="comment"># 默认以`ndarray`读取</span></span><br></pre></td></tr></table></figure>
+<pre><code>(array([1., 1., 1., 1., 1.]), array(0), 0)</code></pre>
+<h3 id="idl-sav-文件读取"><a href="#idl-sav-文件读取"
+class="headerlink"></a>IDL sav 文件读取</h3>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> scipy.io.idl <span class="keyword">import</span> readsav</span><br><span class="line">data = readsav(<span class="string">&#x27;dname.sav&#x27;</span>, verbose=<span class="literal">True</span>, python_dict=<span class="literal">False</span>)</span><br></pre></td></tr></table></figure>
+<p>默认读出的是<code>scipy.io.idl.AttrDict</code>类型, 即 key
+的大小写不敏感.<br> 想要得到大小写敏感的 python dict, 设置
+<code>python_dict=True</code> 即可. <br><br> 例:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> scipy.io.idl <span class="keyword">import</span> readsav</span><br><span class="line">data = readsav(<span class="string">&#x27;data/myidlfile.sav&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">type</span>(data))</span><br><span class="line"><span class="built_in">print</span>(data.keys())  <span class="comment"># 注意返回的是一个`dict_keys`对象, 如需索引需要手动转为list</span></span><br><span class="line"><span class="built_in">print</span>(data[<span class="string">&#x27;X&#x27;</span>].shape)  <span class="comment"># 大小写不敏感</span></span><br><span class="line">data = readsav(<span class="string">&#x27;data/myidlfile.sav&#x27;</span>, python_dict=<span class="literal">True</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">type</span>(data))</span><br><span class="line"><span class="built_in">print</span>(data[<span class="string">&#x27;x&#x27;</span>].shape)  <span class="comment"># 大小写敏感</span></span><br></pre></td></tr></table></figure>
+<pre><code>&lt;class &#39;scipy.io.idl.AttrDict&#39;&gt;
+dict_keys([&#39;x&#39;, &#39;y&#39;, &#39;str&#39;])
+(25,)
+&lt;class &#39;dict&#39;&gt;
+(25,)</code></pre>
+<h3 id="fits-文件读取"><a href="#fits-文件读取"
+class="headerlink"></a>FITS 文件读取</h3>
+<ul>
+<li>Astropy</li>
+</ul>
+<p>参考:<br> <a target="_blank" rel="noopener" href="http://docs.astropy.org/en/stable/io/fits"
+class="uri">http://docs.astropy.org/en/stable/io/fits</a><br> <a
+target="_blank" rel="noopener" href="https://python4astronomers.github.io/astropy/fits.html"
+class="uri">https://python4astronomers.github.io/astropy/fits.html</a></p>
+<blockquote>
+<p>[Note]<br> If you are already familiar with PyFITS, astropy.io.fits
+is in fact the same code as the latest version of PyFITS, and you can
+adapt old scripts that use PyFITS to use Astropy by simply doing:
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> astropy.io <span class="keyword">import</span> fits <span class="keyword">as</span> pyfits</span><br></pre></td></tr></table></figure> However, for new scripts, we recommend the following
+import: <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> astropy.io <span class="keyword">import</span> fits</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<p><code>fits.open</code> <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">from</span> astropy.io <span class="keyword">import</span> fits</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>hdulist = fits.<span class="built_in">open</span>(<span class="string">&#x27;&lt;filename&gt;.fit&#x27;</span>)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>hdulist.info()  <span class="comment"># hdulist 是一个由 HDU objects 组成的类似列表的对象</span></span><br><span class="line">Filename: &lt;filename&gt;.fit</span><br><span class="line">No.    Name         <span class="type">Type</span>      Cards   Dimensions   Format</span><br><span class="line"><span class="number">0</span>    PRIMARY     PrimaryHDU    ...       ...        ...</span><br><span class="line"><span class="number">1</span>    ENERGIES    BinTableHDU   ...       ...        ...</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>hdu = hdulist[<span class="number">0</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>hdu.data  <span class="comment"># ndarray</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>hdu.header[<span class="string">&#x27;&lt;key&gt;&#x27;</span>]  <span class="comment"># 得到某个 header keyword</span></span><br><span class="line"><span class="comment"># 修改数据后</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>hdu.writeto(<span class="string">&#x27;&lt;filename&gt;.fits&#x27;</span>) <span class="comment"># 保存 HDU object</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>hdulist.writeto(<span class="string">&#x27;&lt;filename&gt;.fits&#x27;</span>)  <span class="comment"># 或保存整个表</span></span><br></pre></td></tr></table></figure> <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 创建一个 fits Primary HDU object</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>hdu = fits.PrimaryHDU()</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>hdu.writeto(<span class="string">&#x27;&lt;filename&gt;.fits&#x27;</span>)  <span class="comment"># 保存 HDU object</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>hdu.writeto(<span class="string">&#x27;&lt;filename&gt;.fits&#x27;</span>, clobber=<span class="literal">True</span>)  <span class="comment"># 保存到已存在文件</span></span><br></pre></td></tr></table></figure>
+<code>fits.getdata</code>, <code>fits.getheader</code> <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>data = fits.getdata(<span class="string">&#x27;&lt;filename&gt;.fit&#x27;</span>)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>header = fits.getheader(<span class="string">&#x27;&lt;filename&gt;.fit&#x27;</span>)</span><br></pre></td></tr></table></figure>
+<br> * SunPy</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">import</span> sunpy.io</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>hdulist = sunpy.io.read_file(<span class="string">&#x27;&lt;filename&gt;.fits&#x27;</span>)  <span class="comment"># 自动判断文件类型</span></span><br><span class="line"><span class="comment"># or use `hdulist = sunpy.io.fits.read(&#x27;&lt;filename&gt;.fits&#x27;)`</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>hdu = hdulist[<span class="number">1</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>hdu.data  <span class="comment"># ndarray</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">import</span> sunpy.<span class="built_in">map</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>smap = sunpy.<span class="built_in">map</span>.Map(<span class="string">&#x27;&lt;filename&gt;.fits&#x27;</span>)</span><br><span class="line"><span class="comment"># 得到一个 sunpy `GenericMap` object</span></span><br></pre></td></tr></table></figure>
+<p>例:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> astropy.io <span class="keyword">import</span> fits</span><br><span class="line">fname = <span class="string">&#x27;scripts-sunpy/plothmi/data/hmi.B_720s.20150827_052400_TAI.field.fits&#x27;</span></span><br><span class="line">hdulist = fits.<span class="built_in">open</span>(fname)</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hdulist.info()</span><br></pre></td></tr></table></figure>
+<pre><code>Filename: scripts-sunpy/plothmi/data/hmi.B_720s.20150827_052400_TAI.field.fits
+No.    Name      Ver    Type      Cards   Dimensions   Format
+  0  PRIMARY       1 PrimaryHDU       6   ()      
+  1                1 CompImageHDU    155   (4096, 4096)   int32   </code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hdulist.verify(<span class="string">&#x27;silentfix+warn&#x27;</span>)</span><br><span class="line">hdu = hdulist[<span class="number">1</span>]</span><br><span class="line">hdu.data.shape</span><br></pre></td></tr></table></figure>
+<pre><code>(4096, 4096)</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> sunpy.io</span><br><span class="line">hdulist = sunpy.io.read_file(fname)</span><br><span class="line">hdu = hdulist[<span class="number">1</span>]</span><br><span class="line">hdu.data.shape</span><br></pre></td></tr></table></figure>
+<pre><code>(4096, 4096)</code></pre>
+<h2 id="其他包和软件"><a href="#其他包和软件"
+class="headerlink"></a>其他包和软件</h2>
+<ul>
+<li>Astroconda <a target="_blank" rel="noopener" href="https://astroconda.readthedocs.io/en/latest/"
+class="uri">https://astroconda.readthedocs.io/en/latest/</a> &gt;
+AstroConda is a free Conda channel maintained by the Space Telescope
+Science Institute (STScI) in Baltimore, Maryland. This channel provides
+tools and utilities required to process and analyze data from the Hubble
+Space Telescope (HST), James Webb Space Telescope (JWST), and others.
+<br><br></li>
+<li>PyCharm <a target="_blank" rel="noopener" href="https://www.jetbrains.com/pycharm/"
+class="uri">https://www.jetbrains.com/pycharm/</a>
+<img data-src='/main/pycharm.jpg' > <br><br></li>
+<li>Jupyterlab <a target="_blank" rel="noopener" href="http://jupyterlab.readthedocs.io/en/stable/"
+class="uri">http://jupyterlab.readthedocs.io/en/stable/</a>
+<img data-src='/main/jupyterlab.png' ></li>
+</ul>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/python/" rel="tag"><i class="fa fa-tag"></i> python</a>
+              <a href="/tags/jupyter/" rel="tag"><i class="fa fa-tag"></i> jupyter</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/installpy" rel="prev" title="Python 安装和配置">
+                  <i class="fa fa-angle-left"></i> Python 安装和配置
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/advance" rel="next" title="Python 进阶 (lecture for Solar Group)">
+                  Python 进阶 (lecture for Solar Group) <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 2018 – 
+    <span itemprop="copyrightYear">2024</span>
+    <span class="with-love">
+      <i class=""></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Lydia Zhang</span>
+  </div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="Total Visitors">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="Total Views">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="Back to top">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/next-theme-pjax/0.6.0/pjax.min.js" integrity="sha256-vxLn1tSKWD4dqbMRyv940UYw4sXgMtYcK6reefzZrao=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/medium-zoom/1.1.0/medium-zoom.min.js" integrity="sha256-ZgMyDAIYDYGxbcpJcfUnYwNevG/xi9OHKaR/8GK+jWc=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lozad.js/1.16.0/lozad.min.js" integrity="sha256-mOFREFhqmHeQbXpK2lp4nA3qooVgACfh88fpJftLBbc=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/sidebar.js"></script><script src="/js/next-boot.js"></script><script src="/js/pjax.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+
+
+
+
+
+  
+  <script data-pjax async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"all","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
+<script src="/js/third-party/math/mathjax.js"></script>
+
+
+
+</body>
+</html>
